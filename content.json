@@ -1,0 +1,57 @@
+{
+  "intro":
+  {
+    "text": "this is the intro text",
+    "choices":
+      [
+        "choice 1",
+        "choice 2",
+        "choice 3",
+        "choice 4"
+      ]
+  },
+  "choice 1":
+  {
+    "text": "this is the text for choice 1",
+    "choices":
+      [
+        "intro",
+        "choice 2",
+        "choice 3",
+        "choice 4"
+      ]
+  },
+  "choice 2":
+  {
+    "text": "this text is for choice 2",
+    "choices":
+      [
+        "choice 1",
+        "intro",
+        "choice 3",
+        "choice 4"
+      ]
+  },
+  "choice 3":
+  {
+    "text": "if you see this text you chose choice 3",
+    "choices":
+      [
+        "choice 1",
+        "choice 2",
+        "intro",
+        "choice 4"
+      ]
+  },
+  "choice 4":
+  {
+    "text": "this is choice 4's text",
+    "choices":
+      [
+        "choice 1",
+        "choice 2",
+        "choice 3",
+        "intro"
+      ]
+  }
+}

@@ -1,10 +1,11 @@
 extends Control
 
 signal goto_mainmenu
-
-# Called when the node enters the scene tree for the first time.
-func _ready():
-	pass # Replace with function body.
+signal goto_testmodule
 
 func _on_back_button_down():
 	emit_signal("goto_mainmenu")
+
+
+func _on_TestModule_button_down():
+	emit_signal("goto_testmodule")

@@ -28,24 +28,41 @@ margin_bottom = 600.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 
-[node name="ColorRect" type="ColorRect" parent="HBoxContainer/VBoxContainer"]
+[node name="ColorRect3" type="ColorRect" parent="HBoxContainer/VBoxContainer"]
 margin_right = 725.0
-margin_bottom = 84.0
+margin_bottom = 44.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 size_flags_stretch_ratio = 0.2
 color = Color( 1, 1, 1, 0 )
 
-[node name="back" type="Button" parent="HBoxContainer/VBoxContainer"]
-margin_top = 88.0
+[node name="TestModule" type="Button" parent="HBoxContainer/VBoxContainer"]
+margin_top = 48.0
 margin_right = 725.0
-margin_bottom = 511.0
+margin_bottom = 273.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+text = "Test Module"
+
+[node name="ColorRect" type="ColorRect" parent="HBoxContainer/VBoxContainer"]
+margin_top = 277.0
+margin_right = 725.0
+margin_bottom = 322.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+size_flags_stretch_ratio = 0.2
+color = Color( 1, 1, 1, 0 )
+
+[node name="Back" type="Button" parent="HBoxContainer/VBoxContainer"]
+margin_top = 326.0
+margin_right = 725.0
+margin_bottom = 551.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 text = "Back"
 
 [node name="ColorRect2" type="ColorRect" parent="HBoxContainer/VBoxContainer"]
-margin_top = 515.0
+margin_top = 555.0
 margin_right = 725.0
 margin_bottom = 600.0
 size_flags_horizontal = 3
@@ -62,4 +79,5 @@ size_flags_vertical = 3
 size_flags_stretch_ratio = 0.2
 color = Color( 1, 1, 1, 0 )
 
-[connection signal="button_down" from="HBoxContainer/VBoxContainer/back" to="." method="_on_back_button_down"]
+[connection signal="button_down" from="HBoxContainer/VBoxContainer/TestModule" to="." method="_on_TestModule_button_down"]
+[connection signal="button_down" from="HBoxContainer/VBoxContainer/Back" to="." method="_on_back_button_down"]
