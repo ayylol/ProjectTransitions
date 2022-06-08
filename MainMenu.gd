@@ -5,9 +5,6 @@ signal goto_adventure
 signal goto_directory
 signal goto_options
 
-func _ready():
-	pass # Replace with function body.
-
 func _on_Adventure_Button_button_down():
 	emit_signal("goto_adventure")
 

@@ -1,9 +1,5 @@
 extends Control
 
-# Called when the node enters the scene tree for the first time.
-func _ready():
-	pass # Replace with function body.
-
 # Main Menu Goto's
 func _on_Main_Menu_goto_adventure():
 	$"Main Menu".hide()
@@ -23,3 +19,12 @@ func _on_AdventureMenu_goto_testmodule():
 func _on_Test_Module_goto_adventure():
 	$"Test Module".hide()
 	$"AdventureMenu".show()
+
+
+func _on_Main_Menu_goto_options():
+	$"Main Menu".hide()
+	$"SaveTesting".show()
+
+
+func _on_SaveTesting_save():
+	$GameState.save_game()
