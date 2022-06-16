@@ -5,8 +5,7 @@ var _module_flags
 
 func _ready():
 	load_module("module1")
-	
- 
+
 func load_module(module_name : String):
 	var file = File.new()
 	file.open("res://content/" + module_name + "_content.json", file.READ)
@@ -18,3 +17,12 @@ func get_text(title : String):
 	
 func get_choice(title : String, index : int):
 	return _module_content[title]["choices"][index]
+	
+# Wrapper function for returning text + their choices
+func get(title : String):
+	# TODO: do flag checking edit text according to rules
+	var data = {
+		"text" : _module_content[title]["text"],
+		"choices" : _module_content[title]["choices"]
+	}
+	return data

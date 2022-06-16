@@ -30,5 +30,3 @@ func _on_Main_Menu_goto_options():
 	$"SaveTesting".show()
 
 
-func _on_SaveTesting_save():
-	GameState.save_game()

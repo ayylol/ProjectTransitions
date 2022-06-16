@@ -7,17 +7,13 @@ func _ready():
 	update_menu("intro")
 
 func update_menu(label):
-	$VBoxContainer/HBoxContainer/RichTextLabel.text = Database.get_text(label)
-	var counter = 0
-	for b in $VBoxContainer/GridContainer.get_children():
-		b.text = Database.get_choice(label, counter)
-		counter += 1
-
+	var data = Database.get(label)
+	$VBoxContainer/HBoxContainer/RichTextLabel.text = data["text"]
+	for i in range(data["choices"].size()):
+		get_node("VBoxContainer/GridContainer/Button" + String(i)).text = data["choices"][i]
 
 func _on_Button_button_down(extra_arg_0):
 	update_menu(get_node("VBoxContainer/GridContainer/" + extra_arg_0).text)
-
-
 
 func _on_Back_Button_button_down():
 	emit_signal("goto_adventure")

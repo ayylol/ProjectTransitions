@@ -27,4 +27,3 @@ visible = false
 [connection signal="goto_mainmenu" from="AdventureMenu" to="." method="_on_AdventureMenu_goto_mainmenu"]
 [connection signal="goto_testmodule" from="AdventureMenu" to="." method="_on_AdventureMenu_goto_testmodule"]
 [connection signal="goto_adventure" from="Module" to="." method="_on_Test_Module_goto_adventure"]
-[connection signal="save" from="SaveTesting" to="." method="_on_SaveTesting_save"]

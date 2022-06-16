@@ -1,7 +1,5 @@
 extends Control
 
-signal save
-
 func _ready():
 	if(OS.is_userfs_persistent()):
 		$VBoxContainer/Label.text = "True"
@@ -19,4 +17,4 @@ func load_state(state_dict):
 
 
 func _on_Button_button_up():
-	emit_signal("save")
+	GameState.save_game()
