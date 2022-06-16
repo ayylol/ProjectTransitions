@@ -9,8 +9,14 @@ func _ready():
 func update_menu(label):
 	var data = Database.get(label)
 	$VBoxContainer/HBoxContainer/RichTextLabel.text = data["text"]
-	for i in range(data["choices"].size()):
-		get_node("VBoxContainer/GridContainer/Button" + String(i)).text = data["choices"][i]
+	var i = 0
+	for b in $VBoxContainer/GridContainer.get_children():
+		if i < data["choices"].size():
+			b.text = data["choices"][i]
+			b.show()
+		else:
+			b.hide()
+		i+=1
 
 func _on_Button_button_down(extra_arg_0):
 	update_menu(get_node("VBoxContainer/GridContainer/" + extra_arg_0).text)

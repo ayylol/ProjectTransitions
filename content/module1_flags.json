@@ -1,0 +1,20 @@
+{
+  "flag 1":
+  [
+    ["aflag3", "aflag4"],
+    ["flag 2", "aflag3"]
+  ],
+  "flag 2":
+  [
+    ["aflag3", "aflag1"],
+    ["aflag4", "aflag3"]
+  ],
+  "flag 3":
+  [
+    ["aflag1", "aflag2"]
+  ],
+  "aflag1": true,
+  "aflag2": true,
+  "aflag3": false,
+  "aflag4": false
+}
