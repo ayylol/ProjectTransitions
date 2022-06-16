@@ -3,7 +3,7 @@ extends Node
 func save_game():	
 	var save_file = File.new()
 	save_file.open("user://savegame.save", File.WRITE)
-	var nodes_to_save = get_tree().get_nodes_in_group("Persist")
+	var nodes_to_save = $"../Game".get_tree().get_nodes_in_group("Persist")
 	for node in nodes_to_save:
 		if node.filename.empty():
 			print("'%s' is not an instanced scene, skipping", node.name)
@@ -28,15 +28,9 @@ func load_game():
 		var data = JSON.parse(save_file.get_line()).result
 		if not typeof(data) == TYPE_DICTIONARY:
 			continue
-		var node = get_tree().get_root().get_node(data["path"])
+		var node = $"../Game".get_node(data["path"])
 		if !node.has_method("load_state"):
 			print("'%s' is missing load_state() function, skipping", node.name)
 			continue
 		node.call("load_state", data)
 	save_file.close()
-
-func _ready():
-	load_game()
-
-func _exit_tree():
-	save_game()

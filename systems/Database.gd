@@ -5,6 +5,7 @@ var _module_flags
 
 func _ready():
 	load_module("module1")
+	
  
 func load_module(module_name : String):
 	var file = File.new()
