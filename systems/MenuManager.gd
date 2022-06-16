@@ -13,11 +13,11 @@ func _on_AdventureMenu_goto_mainmenu():
 
 func _on_AdventureMenu_goto_testmodule():
 	$"AdventureMenu".hide()
-	$"Test Module".show()
+	$"Module".show()
 
 
 func _on_Test_Module_goto_adventure():
-	$"Test Module".hide()
+	$"Module".hide()
 	$"AdventureMenu".show()
 
 

@@ -1,11 +1,11 @@
 [gd_scene load_steps=7 format=2]
 
-[ext_resource path="res://MainMenu.tscn" type="PackedScene" id=1]
-[ext_resource path="res://AdventureMenu.tscn" type="PackedScene" id=2]
-[ext_resource path="res://GameState.gd" type="Script" id=3]
-[ext_resource path="res://Test Module.tscn" type="PackedScene" id=4]
-[ext_resource path="res://SaveTesting.tscn" type="PackedScene" id=5]
-[ext_resource path="res://MenuManager.gd" type="Script" id=6]
+[ext_resource path="res://scenes/MainMenu.tscn" type="PackedScene" id=1]
+[ext_resource path="res://scenes/AdventureMenu.tscn" type="PackedScene" id=2]
+[ext_resource path="res://systems/GameState.gd" type="Script" id=3]
+[ext_resource path="res://scenes/Module.tscn" type="PackedScene" id=4]
+[ext_resource path="res://scenes/SaveTesting.tscn" type="PackedScene" id=5]
+[ext_resource path="res://systems/MenuManager.gd" type="Script" id=6]
 
 [node name="Root" type="Control"]
 anchor_right = 1.0
@@ -17,7 +17,7 @@ script = ExtResource( 6 )
 [node name="AdventureMenu" parent="." instance=ExtResource( 2 )]
 visible = false
 
-[node name="Test Module" parent="." instance=ExtResource( 4 )]
+[node name="Module" parent="." instance=ExtResource( 4 )]
 visible = false
 
 [node name="SaveTesting" parent="." instance=ExtResource( 5 )]
@@ -30,5 +30,5 @@ script = ExtResource( 3 )
 [connection signal="goto_options" from="Main Menu" to="." method="_on_Main_Menu_goto_options"]
 [connection signal="goto_mainmenu" from="AdventureMenu" to="." method="_on_AdventureMenu_goto_mainmenu"]
 [connection signal="goto_testmodule" from="AdventureMenu" to="." method="_on_AdventureMenu_goto_testmodule"]
-[connection signal="goto_adventure" from="Test Module" to="." method="_on_Test_Module_goto_adventure"]
+[connection signal="goto_adventure" from="Module" to="." method="_on_Test_Module_goto_adventure"]
 [connection signal="save" from="SaveTesting" to="." method="_on_SaveTesting_save"]
