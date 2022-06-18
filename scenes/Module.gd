@@ -4,6 +4,8 @@ export var topic := "intro"
 signal goto_adventure
 
 func _ready():
+	Database.load_flags()
+	Database.load_module("module1")
 	update_menu("intro")
 
 func update_menu(label):
