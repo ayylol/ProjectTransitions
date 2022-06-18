@@ -1,66 +1,337 @@
 {
+
   "intro":
   {
-    "text": "this is the intro text",
+    "text": "You must be the new student.\nIt's so nice to finally see you!",
     "choices":
       [
-        "choice 1",
-        "choice 2",
-        "choice 3",
-        {
-          "flag": "!aflag1",
-          "choice": "choice 4"
-        }
+        "intro 2"
       ]
   },
-  "choice 1":
+  "intro 2":
   {
-    "text": "this is the text for choice 1",
+    "text": "I hope you didn't get lost finding this building...",
     "choices":
       [
-        "intro",
-        "choice 2",
-        "choice 3",
-        "choice 4"
-      ],
-    "effect": {
-      "aflag1": true
-    }
-  },
-  "choice 2":
-  {
-    "text": "this text is for choice 2",
-    "choices":
-      [
-        "choice 1",
-        "intro",
-        "choice 3",
-        "choice 4"
-      ],
-    "effect": {
-      "aflag1": false
-    }
-  },
-  "choice 3":
-  {
-    "text": "if you see this text you chose choice 3",
-    "choices":
-      [
-        "choice 1",
-        "choice 2",
-        "intro",
-        "choice 4"
+        "intro 3"
       ]
   },
-  "choice 4":
+  "intro 3":
   {
-    "text": "this is choice 4's text",
+    "text": "I would have started my shift early if you did.\nAnd I'm just not that kind of employee",
     "choices":
       [
-        "choice 1",
-        "choice 2",
-        "choice 3",
-        "intro"
+        "intro 4"
+      ]
+  },
+  "intro 4":
+  {
+    "text": "Oh! And don't be shy to ask any questions.\nJust raise your right hand.",
+    "choices":
+      [
+        "intro 5"
+      ]
+  },
+  "intro 5":
+  {
+    "text": "You're also free to keep note of {certain words} I say.\nJust tap to remember the keyword and raise your hand for further details",
+    "choices":
+      [
+        "Nice to meet you too!\nWho are you exactly?",
+        "I did not get lost.",
+        "What exactly IS your job?"
+      ]
+  },
+
+  "Nice to meet you too!\nWho are you exactly?":
+  {
+    "text": "{Pompom}.\nNo last name.\nJust. Pompom.",
+    "choices":
+      [
+        "who are you 2"
+      ]
+  },
+  "who are you 2":
+  {
+    "text": "As you can see,\nI take on many forms.\nAnimal companions are quite popular with the humans I hear.",
+    "choices":
+      [
+        "who are you 3"
+      ]
+  },
+  "who are you 3":
+  {
+    "text": "But my gods!\nIt is a pain to be coddled all the time.",
+    "choices":
+      [
+        "who are you 4"
+      ]
+  },
+  "who are you 4":
+  {
+    "text": "But my gods!\nIt is a pain to be coddled all the time.",
+    "choices":
+      [
+        "who are you 5"
+      ]
+  },
+  "who are you 5":
+  {
+    "text": "At times I just turn into the creature I become.\nIn both body and mind!",
+    "choices":
+      [
+        "who are you 6"
+      ]
+  },
+  "who are you 6":
+  {
+    "text": "Regardless, I just hope you like what I've become for you.",
+    "choices":
+      [
+        "main"
+      ]
+  },
+
+  "I did not get lost.":
+  {
+    "text": "Oh good!\n That's good to hear...",
+    "choices":
+      [
+        "not lost 2"
+      ]
+  },
+  "not lost 2":
+  {
+    "text": "When you have guided so many over the millenia you start to wonder how many of them wanted to end up there in the first place!",
+    "choices":
+      [
+        "not lost 3"
+      ]
+  },
+  "not lost 3":
+  {
+    "text": "So, I am happy that you seem to know what you want.",
+    "choices":
+      [
+        "not lost 4"
+      ]
+  },
+  "not lost 4":
+  {
+    "text": "I, myself, have had a hard time figuring out what i wanted in my younger days.",
+    "choices":
+      [
+        "main"
+      ]
+  },
+
+  "What exactly IS your job?":
+  {
+    "text": "I am a guide.\nWhat sort of guide you ask?\n Well, it depends!",
+    "choices":
+      [
+        "what job 2"
+      ]
+  },
+  "what job 2":
+  {
+    "text": "Depending on who you are, what you believe in, and your state of being, I can be the guide that one either seeks OR needs.",
+    "choices":
+      [
+        "what job 3"
+      ]
+  },
+  "what job 3":
+  {
+    "text": "In the case of this {digital realm} I am a teacher.",
+    "choices":
+      [
+        "what job 4"
+      ]
+  },
+  "what job 4":
+  {
+    "text": "Among many others",
+    "choices":
+      [
+        "main"
+      ]
+  },
+
+  "main":
+  {
+    "text": "I will be one of your guides here.\nYou have brought yourself to this place.\nAs you have chosen to take on a pursuit into your education!",
+    "choices":
+      [
+        "main 2"
+      ]
+  },
+  "main 2":
+  {
+    "text": "A post-secondary education to be specific.",
+    "choices":
+      [
+        "main 3"
+      ]
+  },
+  "main 3":
+  {
+    "text": "And this play space and your avatar in which you possess will be assets to prepare you for your journey into your post-secondary experience!",
+    "choices":
+      [
+        "What exactly will I be learning?",
+        "I don't think i have \"chosen\" anything just yet"
+      ]
+  },
+
+  "What exactly will I be learning?":
+  {
+    "text": "I'm glad you asked.",
+    "choices":
+      [
+        "learning 2"
+      ]
+  },
+  "learning 2":
+  {
+    "text": "Not many adventurers question the quests they are given. Expectations are often led astray for the lack of such introspection.",
+    "choices":
+      [
+        "learning 3"
+      ]
+  },
+  "learning 3":
+  {
+    "text": "It costed those men and women plenty",
+    "choices":
+      [
+        "learning 4"
+      ]
+  },
+  "learning 4":
+  {
+    "text": "The things you will be learning are the necessary preparations and benefits that are designed to help neurodiverse students transition into their post-secondary education.",
+    "choices":
+      [
+        "learning 5"
+      ]
+  },
+  "learning 5":
+  {
+    "text": "Let me show you some of the buildings you will be entering soon... Each with their own experts.",
+    "choices":
+      [
+        "counseling office"
+      ]
+  },
+  "counseling office":
+  {
+    "text": "The counselling office",
+    "choices":
+      [
+        "counseling office 2"
+      ]
+  },
+  "counseling office 2":
+  {
+    "text": "Here you will learn about your disability. To understand it and the stigma behind it. This is where you will properly start.",
+    "choices":
+      [
+        "counseling office 3"
+      ]
+  },
+  "counseling office 3":
+  {
+    "text": "(The Wise) will be teaching you",
+    "choices":
+      [
+        "Lecture Hall"
+      ]
+  },
+
+  "Lecture Hall":
+  {
+    "text": "The Lecture Hall",
+    "choices":
+      [
+        "Lecture Hall 2"
+      ]
+  },
+  "Lecture Hall 2":
+  {
+    "text": "High School and Post-Secondary are hardly ever the same thing. Here you will learn exactly what those differences are.",
+    "choices":
+      [
+        "Lecture Hall 3"
+      ]
+  },
+  "Lecture Hall 3":
+  {
+    "text": "(The Skeptic) will be teaching you.",
+    "choices":
+      [
+        "Counselling Office 4"
+      ]
+  },
+
+  "Counselling Office 4":
+  {
+    "text": "Counselling Office",
+    "choices":
+      [
+        "Counselling Office 5"
+      ]
+  },
+  "Counselling Office 5":
+  {
+    "text": "I believe that it is you that made the choice to head into post-secondary. Therefore, you must choose your field of study.",
+    "choices":
+      [
+        "Counselling Office 6"
+      ]
+  },
+  "Counselling Office 5":
+  {
+    "text": "I believe that it is you that made the choice to head into post-secondary. Therefore, you must choose your field of study.",
+    "choices":
+      [
+        "Counselling Office 6"
+      ]
+  },
+  "Counselling Office 6":
+  {
+    "text": "(The Brave) will make those choices clear.",
+    "choices":
+      [
+        "learning 6"
+      ]
+  },
+  "learning 6":
+  {
+    "text": "We like to take things slow around here. So, many buildings will be kept a secret from you until you have triumphed the first one.",
+    "choices":
+      [
+        "main 4"
+      ]
+  },
+  
+  "I don't think i have \"chosen\" anything just yet":
+  {
+    "text": "And this play space and your avatar in which you possess will be assets to prepare you for your journey into your post-secondary experience!",
+    "choices":
+      [
+        "What exactly will I be learning?",
+        "I don't think i have \"chosen\" anything just yet"
+      ]
+  },
+
+  "main 4":
+  {
+    "text": "We like to take things slow around here. So, many buildings will be kept a secret from you until you have triumphed the first one.",
+    "choices":
+      [
+        "main 4"
       ]
   }
+
 }
