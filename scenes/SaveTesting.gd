@@ -1,5 +1,5 @@
 extends Control
-
+# DELTE THIS AND THE SCENE EVENTUALLY
 func _ready():
 	if(OS.is_userfs_persistent()):
 		$VBoxContainer/Label.text = "True"
@@ -14,7 +14,6 @@ func save_state():
 
 func load_state(state_dict):
 	$VBoxContainer/TextEdit.text = state_dict["text"]
-
 
 func _on_Button_button_up():
 	GameState.save_game()

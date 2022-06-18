@@ -1,9 +1,12 @@
 extends Node
+#TODO: INTEGRATE THIS CODE INTO THE MODULE NODE
+# This does not need to be an autoload script
+
+var edited_flags := []
 
 var _module_name
 var _module_content
 var _flags
-var _edited_flags := []
 
 func load_flags():
 	# Loading flags
@@ -31,7 +34,7 @@ func eval(flag_name : String):
 	var flag = _flags[flag_name]
 	var val
 	if typeof(flag) == TYPE_BOOL:
-		val = flag if not flag_name in _edited_flags else not flag
+		val = flag if not flag_name in edited_flags else not flag
 	else:
 		val = true
 		for and_flag in flag:
@@ -46,12 +49,11 @@ func eval(flag_name : String):
 	return val if not negate else !val
 
 func change(flag_name, value):
-	var default_flag = _flags[flag_name]
-	if typeof(default_flag) == TYPE_BOOL:
-		if flag_name in _edited_flags and value == default_flag:
-			_edited_flags.erase(flag_name)
-		elif not flag_name in _edited_flags and value != _flags[flag_name]:
-			_edited_flags.append(flag_name)
+	if typeof(_flags[flag_name]) == TYPE_BOOL:
+		if flag_name in edited_flags and value == _flags[flag_name]:
+			edited_flags.erase(flag_name)
+		elif not flag_name in edited_flags and value != _flags[flag_name]:
+			edited_flags.append(flag_name)
 	else:
 		print("can't change the value of non-atomic flag")
 

@@ -36,7 +36,10 @@
         "intro",
         "choice 3",
         "choice 4"
-      ]
+      ],
+    "effect": {
+      "aflag1": false
+    }
   },
   "choice 3":
   {
