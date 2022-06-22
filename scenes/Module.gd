@@ -4,7 +4,7 @@ export var topic := "intro"
 signal goto_adventure
 
 func _ready():
-	GameState.load_game()
+	#GameState.load_game()
 	Database.load_flags()
 	Database.load_module("module1")
 	update_menu(topic)

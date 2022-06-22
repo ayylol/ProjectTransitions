@@ -317,21 +317,720 @@
   
   "I don't think i have \"chosen\" anything just yet":
   {
-    "text": "And this play space and your avatar in which you possess will be assets to prepare you for your journey into your post-secondary experience!",
+    "text": "This is valid and acceptable.\nWe hope by the end of this journey you will come to a choice.\n There are many things to figure out!\n{Interests}, {Work Values}, {Traits}, and {Skills}.",
     "choices":
       [
-        "What exactly will I be learning?",
-        "I don't think i have \"chosen\" anything just yet"
+        "chosen 2"
+      ]
+  },
+  "chosen 2":
+  {
+    "text": "In fact...",
+    "choices":
+      [
+        "chosen 3"
+      ]
+  },
+  "chosen 3":
+  {
+    "text": "Let's start figuring you out right now!",
+    "choices":
+      [
+        "chosen 4"
+      ]
+  },
+  "chosen 4":
+  {
+    "text": "So what exactly are you trying to figure out?",
+    "choices":
+      [
+        {
+        "flag": "show interests",
+        "choice": "What interests me."
+        },
+        {
+        "flag": "show values",
+        "choice": "What do I value in work?"
+        },
+        {
+        "flag": "show skills",
+        "choice": "I am unsure what my skills actually are"
+        },
+        {
+        "flag": "show traits",
+        "choice": "I'd like to know more about my work traits"
+        },
+        {
+          "flag": "can continue",
+          "choice": "move on"
+        }
+      ]
+  },
+
+  "What interests me.":
+  {
+    "text": "Very well, we can figure that out right.",
+    "choices":
+      [
+        "(INTERESTS QUIZ)"
+      ],
+      "effect": {
+        "show interests": false
+      }
+  },
+  "(INTERESTS QUIZ)":
+  {
+    "text": "Interests Quiz",
+    "choices":
+      [
+        "interests 2"
+      ]
+  },
+  "interests 2":
+  {
+    "text": "In my younger years, there really wasn't much to do.\nThe sun had yet to form and no lives to interact with\nso it took me a while to know what exactly interested me.",
+    "choices":
+      [
+        "interests 3"
+      ]
+  },
+  "interests 3":
+  {
+    "text": "Luckily for you\nmy experience gave me the wisdom to process your input;\nyou're interested in (result)",
+    "choices":
+      [
+        "chosen 4"
+      ]
+  },
+
+  "What do I value in work?":
+  {
+    "text": "Very well, we can figure that out right now",
+    "choices":
+      [
+        "(VALUE QUIZ)"
+      ],
+      "effect": {
+        "show values": false
+      }
+  },
+  "(VALUE QUIZ)":
+  {
+    "text": "(VALUE QUIZ)",
+    "choices":
+      [
+        "value work 2"
+      ]
+  },
+  "value work 2":
+  {
+    "text": "Everyone is unique. Different.\nWork is something to be done\nout of necessity or passion.",
+    "choices":
+      [
+        "value work 3"
+      ]
+  },
+  "value work 3":
+  {
+    "text": "The latter is the type of work all intelligent life strives for.\nAnd to do that, one must understand themselves in what it is\nThat they value in terms of work.",
+    "choices":
+      [
+        "value work 4"
+      ]
+  },
+  "value work 4":
+  {
+    "text": "you value\n(result)",
+    "choices":
+      [
+        "chosen 4"
+      ]
+  },
+
+  "I am unsure what my skills actually are":
+  {
+    "text": "Very well we can figure it out",
+    "choices":
+      [
+        "(SKILLS QUIZ)"
+      ],
+      "effect": {
+        "show skills": false
+      }
+  },
+  "(SKILLS QUIZ)":
+  {
+    "text": "(SKILLS QUIZ)",
+    "choices":
+      [
+        "my skills 2"
+      ]
+  },
+  "my skills 2":
+  {
+    "text": "Nobody is ever born knowing their purpose\nnor the specific skills or physical ability it takes\ntoget to said purpose.",
+    "choices":
+      [
+        "my skills 3"
+      ]
+  },
+  "my skills 3":
+  {
+    "text": "But I am here to help\nthis may even change in the future!\nand i look forward\nto seeing you here again when that time comes.",
+    "choices":
+      [
+        "my skills 4"
+      ]
+  },
+  "my skills 4":
+  {
+    "text": "You have (results)\nas your skills",
+    "choices":
+      [
+        "chosen 4"
+      ]
+  },
+
+  "I'd like to know more about my work traits":
+  {
+    "text": "I'm certain after a couple of questions\nwe'll be able to find something!",
+    "choices":
+      [
+        "(TRAITS QUIZ)"
+      ],
+      "effect": {
+        "show traits": false
+      }
+  },
+  "(TRAITS QUIZ)":
+  {
+    "text": "(TRAITS QUIZ)",
+    "choices":
+      [
+        "traits 2"
+      ]
+  },
+  "traits 2":
+  {
+    "text": "It's nice that we took this time to get to know you more!\nYou have the traits of (result)",
+    "choices":
+      [
+        "chosen 4"
+      ]
+  },
+
+  "move on":
+  {
+    "text": "I hope that my assessments helped you\nunderstand yourself a little more to make a proper conclusion as to whether or not you want\nto attend a post-secondary education.",
+    "choices":
+      [
+        "main 4"
       ]
   },
 
   "main 4":
   {
-    "text": "We like to take things slow around here. So, many buildings will be kept a secret from you until you have triumphed the first one.",
+    "text": "Moving forward...",
     "choices":
       [
-        "main 4"
+        "main 5"
+      ]
+  },
+  "main 5":
+  {
+    "text": "Let me guide you on growth and fixed {mindsets}\nare you familiar with the concept?",
+    "choices":
+      [
+        "Yes, I have heard of this",
+        "I don't think I have"
+      ]
+  },
+
+  "Yes, I have heard of this":
+  {
+    "text": "Well, that's good!",
+    "choices":
+      [
+        "have heard 2"
+      ]
+  },
+  "have heard 2":
+  {
+    "text": "Then this is some sort of review then,\nAs this is essential to having a manageable post-secondary life.",
+    "choices":
+      [
+        "mindsets"
+      ]
+  },
+  "I don't think I have":
+  {
+    "text": "Let me show you then!",
+    "choices":
+      [
+        "mindsets"
+      ]
+  },
+
+  "mindsets":
+  {
+    "text": "The \"mindset\" is a term\nUsed to describe an individual's thoughts on their own\ntalents and abilities.",
+    "choices":
+      [
+        "mindsets 2"
+      ]
+  },
+  "mindsets 2":
+  {
+    "text": "Carol Dweck, creator of the term,\nstates that there are two mindsets\nthat and individual possesses.\nA {Fixed Mindset} and {Growth Mindset}.",
+    "choices":
+      [
+        "What are those?",
+        "Which one do you think I am?"
+      ]
+  },
+  "What are those?":
+  {
+    "text": "Fixed Mindsets involve the thought of the \"innate\" talent\nwhere one's unique skills are to be born with\nand not developed.",
+    "choices":
+      [
+        "what are they 2"
+      ]
+  },
+  "what are they 2":
+  {
+    "text": "This often leads into a lack of a drive for self-improvement\nAs the self-made argument presents the individual like this...",
+    "choices":
+      [
+        "what are they 3"
+      ]
+  },
+  "what are they 3":
+  {
+    "text": "\"Since talent is born you can't be better than how you are now\"",
+    "choices":
+      [
+        "what are they 4"
+      ]
+  },
+  "what are they 4":
+  {
+    "text": "The Growth Mindset involves the thought of improvement.\nIndividuals with this mindset are not bound by innate limits.",
+    "choices":
+      [
+        "what are they 5"
+      ]
+  },
+  "what are they 5":
+  {
+    "text": "In fact, ...",
+    "choices":
+      [
+        "what are they 6"
+      ]
+  },
+  "what are they 6":
+  {
+    "text": "Growth Mindset individuals do not define them to be \"limits\"\nbut rather \"potential\"",
+    "choices":
+      [
+        "what are they 7"
+      ]
+  },
+  "what are they 7":
+  {
+    "text": "And thus, said potential can be cultivated and improved\nthrough routine or practice.",
+    "choices":
+      [
+        "what are they 8"
+      ]
+  },
+  "what are they 8":
+  {
+    "text": "I, myself, was never the guide that I am today\nwithout this mindset.",
+    "choices":
+      [
+        "what are they 9"
+      ]
+  },
+  "what are they 9":
+  {
+    "text": "Given immortality like me,\nyou'll eventually want to.",
+    "choices":
+      [
+        "what are they 10"
+      ]
+  },
+  "what are they 10":
+  {
+    "text": "But it all starts with a choice on wanting to improve.",
+    "choices":
+      [
+        "I want to improve"
+      ]
+  },
+  "I want to improve":
+  {
+    "text": "That's the spirit!",
+    "choices":
+      [
+        "want to improve 2"
+      ]
+  },
+  "want to improve 2":
+  {
+    "text": "And the first step to this would be\nto understand the \"{Spirals}\"",
+    "choices":
+      [
+        "want to improve 3"
+      ]
+  },
+  "want to improve 3":
+  {
+    "text": "No, it is not a strong source of energy\nfrom some work of fiction.",
+    "choices":
+      [
+        "want to improve 4"
+      ]
+  },
+  "want to improve 4":
+  {
+    "text": "It refers to the workflow of how one approaches\nchallenges and tasks.",
+    "choices":
+      [
+        "want to improve 5"
+      ]
+  },
+  "want to improve 5":
+  {
+    "text": "When given a challenge, how do you approach it?",
+    "choices":
+      [
+        "I struggle quite greatly with the given task",
+        "I keep going until I lose success"
+      ]
+  },
+
+  "I struggle quite greatly with the given task":
+  {
+    "text": "And i assume the more you struggle with said task\nthe more you find yourself in doubt and criticism?\nwhich in term leads to GREATER doubt\nand HARSHER criticisms in your own work.",
+    "choices":
+      [
+        "struggle 2"
+      ],
+    "effect": 
+      {
+      "struggle spiral": true
+      }
+  },
+  "struggle 2":
+  {
+    "text": "And in the end, you find yourself avoiding said challenge\nas it swallows you whole in a cycle of frustration.",
+    "choices":
+      [
+        "struggle 3"
+      ]
+  },
+  "struggle 3":
+  {
+    "text": "This is known as a\n\"Struggle Spiral\"",
+    "choices":
+      [
+        {
+        "flag": "success spiral",
+        "choice": "spirals"
+        },
+        {
+        "flag": "!success spiral",
+        "choice": "I keep going until I lose success"
+        }
+      ]
+  },
+
+  "I keep going until I lose success":
+  {
+    "text": "Although it is good to succeed at the task\nover and over again.",
+    "choices":
+      [
+        "success 2"
+      ],
+    "effect": 
+      {
+      "success spiral": true
+      }
+  },
+  "success 2":
+  {
+    "text": "We fuel our motivation as long as success is met.\nSometimes leading us into more challenges and into new activities.",
+    "choices":
+      [
+        "success 3"
+      ]
+  },
+  "success 3":
+  {
+    "text": "Until said success disappears...",
+    "choices":
+      [
+        "success 4"
+      ]
+  },
+  "success 4":
+  {
+    "text": "The streak is lost and the motivation is gone\nyour very foundations of improvement are crumbled\nall because you had one instance of failure.",
+    "choices":
+      [
+        "success 5"
+      ]
+  },
+  "success 5":
+  {
+    "text": "This is what's known as the\n\"Success Spiral\"",
+    "choices":
+      [
+        {
+        "flag": "struggle spiral",
+        "choice": "spirals"
+        },
+        {
+        "flag": "!struggle spiral",
+        "choice": "I struggle quite greatly with the given task"
+        }
+      ]
+  },
+
+  "spirals":
+  {
+    "text": "Both spirals showcase how we can easily fall victim\nto a mindset that can greatly reduce in productivity\nwhich will hinder you from thriving in\na post-secondary environment.",
+    "choices":
+      [
+        "Then what does it take to improve?",
+        "Seriously, do i have to be immortal?"
+      ]
+  },
+
+  "Then what does it take to improve?":
+  {
+    "text": "Well, there are multiple things to consider...\nThough it may not be the exact solutions\nThese are simply thoughts for guidance.",
+    "choices":
+      [
+        "what it takes 2"
+      ]
+  },
+  "what it takes 2":
+  {
+    "text": "...",
+    "choices":
+      [
+        "what it takes 3"
+      ]
+  },
+  "what it takes 3":
+  {
+    "text": "\"Experiment\"",
+    "choices":
+      [
+        "what it takes 4"
+      ]
+  },
+  "what it takes 4":
+  {
+    "text": "The process of learning something new is not linear.",
+    "choices":
+      [
+        "what it takes 5"
+      ]
+  },
+  "what it takes 5":
+  {
+    "text": "Experimenting on new ideas is a part of the learning process\nwhen approaching such material, it is important to adopt\nand approach as you gather info, process, and strategize\nyour way through the challenges that comes with ADHD and LD.",
+    "choices":
+      [
+        "what it takes 6"
+      ]
+  },
+  "what it takes 6":
+  {
+    "text": "The key is to remind yourself that experimentation\nis all a part of the learning process.",
+    "choices":
+      [
+        "what it takes 7"
+      ]
+  },
+  "what it takes 7":
+  {
+    "text": "Failure is necessary\nto bring you closer to your goal.\n A malleable yellow dog once told me that.",
+    "choices":
+      [
+        "what it takes 8"
+      ]
+  },
+  "what it takes 8":
+  {
+    "text": "\"Simple does not equal to easy\"",
+    "choices":
+      [
+        "what it takes 9"
+      ]
+  },
+  "what it takes 9":
+  {
+    "text": "When trying new things, sometimes said thing\nlooks deceptively simple and that it is a challenge to implement",
+    "choices":
+      [
+        "what it takes 10"
+      ]
+  },
+  "what it takes 10":
+  {
+    "text": "And with certain strategies of approach being quite popular.\nI would understand why one were to get frustrated\nwhen the popular strategy is done with difficulty\nwhile everyone else seems to do it with ease.",
+    "choices":
+      [
+        "what it takes 11"
+      ]
+  },
+  "what it takes 11":
+  {
+    "text": "Remember that experimentation is all a part of the process\nwith each failure, or success, it will always bring you closer\nto your goals.",
+    "choices":
+      [
+        "what it takes 12"
+      ]
+  },
+  "what it takes 12":
+  {
+    "text": "It is hardly a waste of time as what does NOT work\nhelps you on what works and what does not work",
+    "choices":
+      [
+        "what it takes 13"
+      ]
+  },
+  "what it takes 13":
+  {
+    "text": "\"Past Performance Does Not Equal Future Performance\"",
+    "choices":
+      [
+        "what it takes 14"
+      ]
+  },
+  "what it takes 14":
+  {
+    "text": "Your past should never define you",
+    "choices":
+      [
+        "what it takes 15"
+      ]
+  },
+  "what it takes 15":
+  {
+    "text": "Though you may fail to the point of giving up,\nthose past mistakes are meant to be learnt from\nand so you must move on.",
+    "choices":
+      [
+        "what it takes 16"
+      ]
+  },
+  "what it takes 16":
+  {
+    "text": "Consider learning these to work towards your future goals...",
+    "choices":
+      [
+        "what it takes 17"
+      ]
+  },
+  "what it takes 17":
+  {
+    "text": "Upgrade your skills...",
+    "choices":
+      [
+        "what it takes 18"
+      ]
+  },
+  "what it takes 18":
+  {
+    "text": "...Bounce back from failure\nand user the experience to course correct...",
+    "choices":
+      [
+        "what it takes 19"
+      ]
+  },
+  "what it takes 19":
+  {
+    "text": "...address your challenges,\nincluding ADHD and Learning Disabilities,\nto make your life easier...",
+    "choices":
+      [
+        "what it takes 20"
+      ]
+  },
+  "what it takes 20":
+  {
+    "text": "...access the resources you need to chart a new course",
+    "choices":
+      [
+        "what it takes 21"
+      ]
+  },
+  "what it takes 21":
+  {
+    "text": "There is always something to learn.\nNO matter the failures.",
+    "choices":
+      [
+        "what it takes 22"
+      ]
+  },
+  "what it takes 22":
+  {
+    "text": "And lastly\nEvaluate your progress",
+    "choices":
+      [
+        "what it takes 23"
+      ]
+  },
+  "what it takes 23":
+  {
+    "text": "After experimenting what does and does not work,\nit is best to be kind to yourself and show yourself\nthat no progress is truly linear and struggle is natural",
+    "choices":
+      [
+        "conclusion"
+      ]
+  },
+
+  "Seriously, do i have to be immortal?":
+  {
+    "text": "No\nNo, you don't\nas limited human life is compared to mine.",
+    "choices":
+      [
+        "immortal 2"
+      ]
+  },
+  "immortal 2":
+  {
+    "text": "Your own life is long enough and worth spending\nas much time to think about what exactly it is\nyou find to be the best route for you to grow\nand this journey is meant for you to realize that you can grow.\nNot to be fixed unto one spot.",
+    "choices":
+      [
+        "conclusion"
+      ]
+  },
+
+  "conclusion":
+  {
+    "text": "When you can approach your learning with curiosity\nyour chances of success will increase\nand will help motivate you to figure out\nthe best path forward for you",
+    "choices":
+      [
+        "conclusion 2"
+      ]
+  },
+  "conclusion 2":
+  {
+    "text": "I welcome you to this journey.",
+    "choices":
+      [
+        "conclusion 3"
+      ]
+  },
+  "conclusion 2":
+  {
+    "text": "Have fun.",
+    "choices":
+      [
       ]
   }
-
 }

@@ -1,10 +1,12 @@
 {
-  "flag 1":
+  "show interests": true,
+  "show values": true,
+  "show skills": true,
+  "show traits": true,
+  "can continue":
   [
-    ["!aflag3"]
+    ["!show interests", "!show values", "!show skills", "!show traits"]
   ],
-  "aflag1": false,
-  "aflag2": true,
-  "aflag3": false,
-  "aflag4": false
+  "struggle spiral": false,
+  "success spiral": false
 }

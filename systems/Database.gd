@@ -36,15 +36,15 @@ func eval(flag_name : String):
 	if typeof(flag) == TYPE_BOOL:
 		val = flag if not flag_name in edited_flags else not flag
 	else:
-		val = true
-		for and_flag in flag:
-			var and_clause_value = false
-			for or_flag in and_flag:
-				if eval(or_flag):
-					and_clause_value = true
+		val = false
+		for or_clause in flag:
+			var or_clause_value = true
+			for and_clause in or_clause:
+				if not eval(and_clause):
+					or_clause_value = false
 					break
-			if not and_clause_value:
-				val = false
+			if or_clause_value:
+				val = true
 				break
 	return val if not negate else !val
 
