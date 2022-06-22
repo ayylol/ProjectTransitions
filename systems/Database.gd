@@ -8,10 +8,10 @@ var _module_name
 var _module_content
 var _flags
 
-func load_flags():
+func load_flags(flags_file_name : String):
 	# Loading flags
 	var file = File.new()
-	file.open("res://content/flags.json", file.READ)
+	file.open("res://content/" + flags_file_name + ".json", file.READ)
 	var content = file.get_as_text()
 	_flags = parse_json(content)
 	file.close()
@@ -50,9 +50,14 @@ func eval(flag_name : String):
 
 func change(flag_name, value):
 	if typeof(_flags[flag_name]) == TYPE_BOOL:
-		if flag_name in edited_flags and value == _flags[flag_name]:
+		var bool_val
+		if typeof(value) == TYPE_BOOL:
+			bool_val = value
+		else:
+			bool_val = eval(value)
+		if flag_name in edited_flags and bool_val == _flags[flag_name]:
 			edited_flags.erase(flag_name)
-		elif not flag_name in edited_flags and value != _flags[flag_name]:
+		elif not flag_name in edited_flags and bool_val != _flags[flag_name]:
 			edited_flags.append(flag_name)
 	else:
 		print("can't change the value of non-atomic flag")
@@ -66,9 +71,9 @@ func get(title : String):
 	# get list of available choices
 	var choices = []
 	for choice in content["choices"]:
-		if typeof(choice) == TYPE_DICTIONARY:
+		if typeof(choice) == TYPE_DICTIONARY and "flag" in choice:
 			if eval(choice["flag"]):
-				choices.append(choice["choice"])
+				choices.append(choice)
 		else:
 			choices.append(choice)
 	

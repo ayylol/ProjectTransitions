@@ -5,7 +5,10 @@
     "text": "You must be the new student.\nIt's so nice to finally see you!",
     "choices":
       [
-        "intro 2"
+        {
+          "text": "next",
+          "label": "intro 2"
+        }
       ]
   },
   "intro 2":
@@ -13,7 +16,10 @@
     "text": "I hope you didn't get lost finding this building...",
     "choices":
       [
-        "intro 3"
+        {
+          "text": "next",
+          "label": "intro 3"
+        }
       ]
   },
   "intro 3":
@@ -21,7 +27,10 @@
     "text": "I would have started my shift early if you did.\nAnd I'm just not that kind of employee",
     "choices":
       [
-        "intro 4"
+        {
+          "text": "next",
+          "label": "intro 4"
+        }
       ]
   },
   "intro 4":
@@ -29,7 +38,10 @@
     "text": "Oh! And don't be shy to ask any questions.\nJust raise your right hand.",
     "choices":
       [
-        "intro 5"
+        {
+          "text": "next",
+          "label": "intro 5"
+        }
       ]
   },
   "intro 5":
@@ -37,18 +49,30 @@
     "text": "You're also free to keep note of {certain words} I say.\nJust tap to remember the keyword and raise your hand for further details",
     "choices":
       [
-        "Nice to meet you too!\nWho are you exactly?",
-        "I did not get lost.",
-        "What exactly IS your job?"
+        {
+          "text": "Nice to meet you too!\nWho are you exactly?",
+          "label": "who are you 1"
+        },
+        {
+          "text": "I did not get lost.",
+          "label": "not lost 1"
+        },
+        {
+          "text": "What exactly IS your job?",
+          "label": "what job 1"
+        }
       ]
   },
 
-  "Nice to meet you too!\nWho are you exactly?":
+  "who are you 1":
   {
     "text": "{Pompom}.\nNo last name.\nJust. Pompom.",
     "choices":
       [
-        "who are you 2"
+        {
+          "text": "next",
+          "label": "who are you 2"
+        }
       ]
   },
   "who are you 2":
@@ -56,7 +80,10 @@
     "text": "As you can see,\nI take on many forms.\nAnimal companions are quite popular with the humans I hear.",
     "choices":
       [
-        "who are you 3"
+        {
+          "text": "next",
+          "label": "who are you 3"
+        }
       ]
   },
   "who are you 3":
@@ -64,7 +91,10 @@
     "text": "But my gods!\nIt is a pain to be coddled all the time.",
     "choices":
       [
-        "who are you 4"
+        {
+          "text": "next",
+          "label": "who are you 4"
+        }
       ]
   },
   "who are you 4":
@@ -72,7 +102,10 @@
     "text": "But my gods!\nIt is a pain to be coddled all the time.",
     "choices":
       [
-        "who are you 5"
+        {
+          "text": "next",
+          "label": "who are you 5"
+        }
       ]
   },
   "who are you 5":
@@ -80,7 +113,10 @@
     "text": "At times I just turn into the creature I become.\nIn both body and mind!",
     "choices":
       [
-        "who are you 6"
+        {
+          "text": "next",
+          "label": "who are you 6"
+        }
       ]
   },
   "who are you 6":
@@ -88,16 +124,22 @@
     "text": "Regardless, I just hope you like what I've become for you.",
     "choices":
       [
-        "main"
+        {
+          "text": "next",
+          "label": "main"
+        }
       ]
   },
 
-  "I did not get lost.":
+  "not lost 1":
   {
     "text": "Oh good!\n That's good to hear...",
     "choices":
       [
-        "not lost 2"
+        {
+          "text": "next",
+          "label": "not lost 2"
+        }
       ]
   },
   "not lost 2":
@@ -105,7 +147,10 @@
     "text": "When you have guided so many over the millenia you start to wonder how many of them wanted to end up there in the first place!",
     "choices":
       [
-        "not lost 3"
+        {
+          "text": "next",
+          "label": "not lost 3"
+        }
       ]
   },
   "not lost 3":
@@ -113,7 +158,10 @@
     "text": "So, I am happy that you seem to know what you want.",
     "choices":
       [
-        "not lost 4"
+        {
+          "text": "next",
+          "label": "not lost 4"
+        }
       ]
   },
   "not lost 4":
@@ -121,16 +169,22 @@
     "text": "I, myself, have had a hard time figuring out what i wanted in my younger days.",
     "choices":
       [
-        "main"
+        {
+          "text": "next",
+          "label": "main"
+        }
       ]
   },
 
-  "What exactly IS your job?":
+  "what job 1":
   {
     "text": "I am a guide.\nWhat sort of guide you ask?\n Well, it depends!",
     "choices":
       [
-        "what job 2"
+        {
+          "text": "next",
+          "label": "what job 2"
+        }
       ]
   },
   "what job 2":
@@ -138,7 +192,10 @@
     "text": "Depending on who you are, what you believe in, and your state of being, I can be the guide that one either seeks OR needs.",
     "choices":
       [
-        "what job 3"
+        {
+          "text": "next",
+          "label": "what job 3"
+        }
       ]
   },
   "what job 3":
@@ -146,7 +203,10 @@
     "text": "In the case of this {digital realm} I am a teacher.",
     "choices":
       [
-        "what job 4"
+        {
+          "text": "next",
+          "label": "what job 4"
+        }
       ]
   },
   "what job 4":
@@ -154,7 +214,10 @@
     "text": "Among many others",
     "choices":
       [
-        "main"
+        {
+          "text": "next",
+          "label": "main"
+        }
       ]
   },
 
@@ -163,7 +226,10 @@
     "text": "I will be one of your guides here.\nYou have brought yourself to this place.\nAs you have chosen to take on a pursuit into your education!",
     "choices":
       [
-        "main 2"
+        {
+          "text": "next",
+          "label": "main 2"
+        }
       ]
   },
   "main 2":
@@ -171,7 +237,10 @@
     "text": "A post-secondary education to be specific.",
     "choices":
       [
-        "main 3"
+        {
+          "text": "next",
+          "label": "main 3"
+        }
       ]
   },
   "main 3":
@@ -179,17 +248,26 @@
     "text": "And this play space and your avatar in which you possess will be assets to prepare you for your journey into your post-secondary experience!",
     "choices":
       [
-        "What exactly will I be learning?",
-        "I don't think i have \"chosen\" anything just yet"
+        {
+          "text": "What exactly will I be learning?",
+          "label": "learning 1"
+        },
+        {
+          "text": "I don't think i have \"chosen\" anything just yet",
+          "label": "chosen 1"
+        }
       ]
   },
 
-  "What exactly will I be learning?":
+  "learning 1":
   {
     "text": "I'm glad you asked.",
     "choices":
       [
-        "learning 2"
+        {
+          "text": "next",
+          "label": "learning 2"
+        }
       ]
   },
   "learning 2":
@@ -197,7 +275,10 @@
     "text": "Not many adventurers question the quests they are given. Expectations are often led astray for the lack of such introspection.",
     "choices":
       [
-        "learning 3"
+        {
+          "text": "next",
+          "label": "learning 3"
+        }
       ]
   },
   "learning 3":
@@ -205,7 +286,10 @@
     "text": "It costed those men and women plenty",
     "choices":
       [
-        "learning 4"
+        {
+          "text": "next",
+          "label": "learning 4"
+        }
       ]
   },
   "learning 4":
@@ -213,7 +297,10 @@
     "text": "The things you will be learning are the necessary preparations and benefits that are designed to help neurodiverse students transition into their post-secondary education.",
     "choices":
       [
-        "learning 5"
+        {
+          "text": "next",
+          "label": "learning 5"
+        }
       ]
   },
   "learning 5":
@@ -221,7 +308,10 @@
     "text": "Let me show you some of the buildings you will be entering soon... Each with their own experts.",
     "choices":
       [
-        "counseling office"
+        {
+          "text": "next",
+          "label": "counseling office"
+        }
       ]
   },
   "counseling office":
@@ -229,7 +319,10 @@
     "text": "The counselling office",
     "choices":
       [
-        "counseling office 2"
+        {
+          "text": "next",
+          "label": "counseling office 2"
+        }
       ]
   },
   "counseling office 2":
@@ -237,7 +330,10 @@
     "text": "Here you will learn about your disability. To understand it and the stigma behind it. This is where you will properly start.",
     "choices":
       [
-        "counseling office 3"
+        {
+          "text": "next",
+          "label": "counseling office 3"
+        }
       ]
   },
   "counseling office 3":
@@ -245,7 +341,10 @@
     "text": "(The Wise) will be teaching you",
     "choices":
       [
-        "Lecture Hall"
+        {
+          "text": "next",
+          "label": "Lecture Hall"
+        }
       ]
   },
 
@@ -254,7 +353,10 @@
     "text": "The Lecture Hall",
     "choices":
       [
-        "Lecture Hall 2"
+        {
+          "text": "next",
+          "label": "Lecture Hall 2"
+        }
       ]
   },
   "Lecture Hall 2":
@@ -262,7 +364,10 @@
     "text": "High School and Post-Secondary are hardly ever the same thing. Here you will learn exactly what those differences are.",
     "choices":
       [
-        "Lecture Hall 3"
+        {
+          "text": "next",
+          "label": "Lecture Hall 3"
+        }
       ]
   },
   "Lecture Hall 3":
@@ -270,7 +375,10 @@
     "text": "(The Skeptic) will be teaching you.",
     "choices":
       [
-        "Counselling Office 4"
+        {
+          "text": "next",
+          "label": "Counselling Office 4"
+        }
       ]
   },
 
@@ -279,7 +387,10 @@
     "text": "Counselling Office",
     "choices":
       [
-        "Counselling Office 5"
+        {
+          "text": "next",
+          "label": "Counselling Office 5"
+        }
       ]
   },
   "Counselling Office 5":
@@ -287,7 +398,10 @@
     "text": "I believe that it is you that made the choice to head into post-secondary. Therefore, you must choose your field of study.",
     "choices":
       [
-        "Counselling Office 6"
+        {
+          "text": "next",
+          "label": "Counselling Office 6"
+        }
       ]
   },
   "Counselling Office 5":
@@ -295,7 +409,10 @@
     "text": "I believe that it is you that made the choice to head into post-secondary. Therefore, you must choose your field of study.",
     "choices":
       [
-        "Counselling Office 6"
+        {
+          "text": "next",
+          "label": "Counselling Office 6"
+        }
       ]
   },
   "Counselling Office 6":
@@ -303,7 +420,10 @@
     "text": "(The Brave) will make those choices clear.",
     "choices":
       [
-        "learning 6"
+        {
+          "text": "next",
+          "label": "learning 6"
+        }
       ]
   },
   "learning 6":
@@ -311,16 +431,22 @@
     "text": "We like to take things slow around here. So, many buildings will be kept a secret from you until you have triumphed the first one.",
     "choices":
       [
-        "main 4"
+        {
+          "text": "next",
+          "label": "main 4"
+        }
       ]
   },
   
-  "I don't think i have \"chosen\" anything just yet":
+  "chosen 1":
   {
     "text": "This is valid and acceptable.\nWe hope by the end of this journey you will come to a choice.\n There are many things to figure out!\n{Interests}, {Work Values}, {Traits}, and {Skills}.",
     "choices":
       [
-        "chosen 2"
+        {
+          "text": "next",
+          "label": "chosen 2"
+        }
       ]
   },
   "chosen 2":
@@ -328,7 +454,10 @@
     "text": "In fact...",
     "choices":
       [
-        "chosen 3"
+        {
+          "text": "next",
+          "label": "chosen 3"
+        }
       ]
   },
   "chosen 3":
@@ -336,7 +465,10 @@
     "text": "Let's start figuring you out right now!",
     "choices":
       [
-        "chosen 4"
+        {
+          "text": "next",
+          "label": "chosen 4"
+        }
       ]
   },
   "chosen 4":
@@ -345,29 +477,34 @@
     "choices":
       [
         {
-        "flag": "show interests",
-        "choice": "What interests me."
+          "flag": "show interests",
+          "text": "What interests me.",
+          "label": "interests 1"
         },
         {
-        "flag": "show values",
-        "choice": "What do I value in work?"
+          "flag": "show values",
+          "text": "What do I value in work?",
+          "label": "value work 1"
         },
         {
-        "flag": "show skills",
-        "choice": "I am unsure what my skills actually are"
+          "flag": "show skills",
+          "text": "I am unsure what my skills actually are",
+          "label": "my skills 1"
         },
         {
-        "flag": "show traits",
-        "choice": "I'd like to know more about my work traits"
+          "flag": "show traits",
+          "text": "I'd like to know more about my work traits",
+          "label": "traits 1"
         },
         {
           "flag": "can continue",
-          "choice": "move on"
+          "text": "move on",
+          "label": "move on"
         }
       ]
   },
 
-  "What interests me.":
+  "interests 1":
   {
     "text": "Very well, we can figure that out right.",
     "choices":
@@ -383,7 +520,10 @@
     "text": "Interests Quiz",
     "choices":
       [
-        "interests 2"
+        {
+          "text": "next",
+          "label": "interests 2"
+        }
       ]
   },
   "interests 2":
@@ -391,7 +531,10 @@
     "text": "In my younger years, there really wasn't much to do.\nThe sun had yet to form and no lives to interact with\nso it took me a while to know what exactly interested me.",
     "choices":
       [
-        "interests 3"
+        {
+          "text": "next",
+          "label": "interests 3"
+        }
       ]
   },
   "interests 3":
@@ -399,11 +542,14 @@
     "text": "Luckily for you\nmy experience gave me the wisdom to process your input;\nyou're interested in (result)",
     "choices":
       [
-        "chosen 4"
+        {
+          "text": "next",
+          "label": "chosen 4"
+        }
       ]
   },
 
-  "What do I value in work?":
+  "value work 1":
   {
     "text": "Very well, we can figure that out right now",
     "choices":
@@ -419,7 +565,10 @@
     "text": "(VALUE QUIZ)",
     "choices":
       [
-        "value work 2"
+        {
+          "text": "next",
+          "label": "value work 2"
+        }
       ]
   },
   "value work 2":
@@ -427,7 +576,10 @@
     "text": "Everyone is unique. Different.\nWork is something to be done\nout of necessity or passion.",
     "choices":
       [
-        "value work 3"
+        {
+          "text": "next",
+          "label": "value work 3"
+        }
       ]
   },
   "value work 3":
@@ -435,7 +587,10 @@
     "text": "The latter is the type of work all intelligent life strives for.\nAnd to do that, one must understand themselves in what it is\nThat they value in terms of work.",
     "choices":
       [
-        "value work 4"
+        {
+          "text": "next",
+          "label": "value work 4"
+        }
       ]
   },
   "value work 4":
@@ -443,11 +598,14 @@
     "text": "you value\n(result)",
     "choices":
       [
-        "chosen 4"
+        {
+          "text": "next",
+          "label": "chosen 4"
+        }
       ]
   },
 
-  "I am unsure what my skills actually are":
+  "my skills 1":
   {
     "text": "Very well we can figure it out",
     "choices":
@@ -463,7 +621,10 @@
     "text": "(SKILLS QUIZ)",
     "choices":
       [
-        "my skills 2"
+        {
+          "text": "next",
+          "label": "my skills 2"
+        }
       ]
   },
   "my skills 2":
@@ -471,7 +632,10 @@
     "text": "Nobody is ever born knowing their purpose\nnor the specific skills or physical ability it takes\ntoget to said purpose.",
     "choices":
       [
-        "my skills 3"
+        {
+          "text": "next",
+          "label": "my skills 3"
+        }
       ]
   },
   "my skills 3":
@@ -479,7 +643,10 @@
     "text": "But I am here to help\nthis may even change in the future!\nand i look forward\nto seeing you here again when that time comes.",
     "choices":
       [
-        "my skills 4"
+        {
+          "text": "next",
+          "label": "my skills 4"
+        }
       ]
   },
   "my skills 4":
@@ -487,11 +654,14 @@
     "text": "You have (results)\nas your skills",
     "choices":
       [
-        "chosen 4"
+        {
+          "text": "next",
+          "label": "chosen 4"
+        }
       ]
   },
 
-  "I'd like to know more about my work traits":
+  "traits 1":
   {
     "text": "I'm certain after a couple of questions\nwe'll be able to find something!",
     "choices":
@@ -507,7 +677,10 @@
     "text": "(TRAITS QUIZ)",
     "choices":
       [
-        "traits 2"
+        {
+          "text": "next",
+          "label": "traits 2"
+        }
       ]
   },
   "traits 2":
@@ -515,7 +688,10 @@
     "text": "It's nice that we took this time to get to know you more!\nYou have the traits of (result)",
     "choices":
       [
-        "chosen 4"
+        {
+          "text": "next",
+          "label": "chosen 4"
+        }
       ]
   },
 
@@ -524,7 +700,10 @@
     "text": "I hope that my assessments helped you\nunderstand yourself a little more to make a proper conclusion as to whether or not you want\nto attend a post-secondary education.",
     "choices":
       [
-        "main 4"
+        {
+          "text": "next",
+          "label": "main 4"
+        }
       ]
   },
 
@@ -533,7 +712,10 @@
     "text": "Moving forward...",
     "choices":
       [
-        "main 5"
+        {
+          "text": "next",
+          "label": "main 5"
+        }
       ]
   },
   "main 5":
@@ -541,17 +723,26 @@
     "text": "Let me guide you on growth and fixed {mindsets}\nare you familiar with the concept?",
     "choices":
       [
-        "Yes, I have heard of this",
-        "I don't think I have"
+        {
+          "text": "Yes, I have heard of this",
+          "label": "have heard 1"
+        },
+        {
+          "text": "I don't think I have",
+          "label": "have not heard 1"
+        }
       ]
   },
 
-  "Yes, I have heard of this":
+  "have heard 1":
   {
     "text": "Well, that's good!",
     "choices":
       [
-        "have heard 2"
+        {
+          "text": "next",
+          "label": "have heard 2"
+        }
       ]
   },
   "have heard 2":
@@ -559,15 +750,21 @@
     "text": "Then this is some sort of review then,\nAs this is essential to having a manageable post-secondary life.",
     "choices":
       [
-        "mindsets"
+        {
+          "text": "next",
+          "label": "mindsets"
+        }
       ]
   },
-  "I don't think I have":
+  "have not heard 1":
   {
     "text": "Let me show you then!",
     "choices":
       [
-        "mindsets"
+        {
+          "text": "next",
+          "label": "mindsets"
+        }
       ]
   },
 
@@ -576,7 +773,10 @@
     "text": "The \"mindset\" is a term\nUsed to describe an individual's thoughts on their own\ntalents and abilities.",
     "choices":
       [
-        "mindsets 2"
+        {
+          "text": "next",
+          "label": "mindsets 2"
+        }
       ]
   },
   "mindsets 2":
@@ -584,16 +784,25 @@
     "text": "Carol Dweck, creator of the term,\nstates that there are two mindsets\nthat and individual possesses.\nA {Fixed Mindset} and {Growth Mindset}.",
     "choices":
       [
-        "What are those?",
-        "Which one do you think I am?"
+        {
+          "text": "What are those?",
+          "label": "what are they 1"
+        },
+        {
+          "text": "Which one do you think I am?",
+          "label": "mindsets 2"
+        }
       ]
   },
-  "What are those?":
+  "what are they 1":
   {
     "text": "Fixed Mindsets involve the thought of the \"innate\" talent\nwhere one's unique skills are to be born with\nand not developed.",
     "choices":
       [
-        "what are they 2"
+        {
+          "text": "next",
+          "label": "what are they 2"
+        }
       ]
   },
   "what are they 2":
@@ -601,7 +810,10 @@
     "text": "This often leads into a lack of a drive for self-improvement\nAs the self-made argument presents the individual like this...",
     "choices":
       [
-        "what are they 3"
+        {
+          "text": "next",
+          "label": "what are they 3"
+        }
       ]
   },
   "what are they 3":
@@ -609,7 +821,10 @@
     "text": "\"Since talent is born you can't be better than how you are now\"",
     "choices":
       [
-        "what are they 4"
+        {
+          "text": "next",
+          "label": "what are they 4"
+        }
       ]
   },
   "what are they 4":
@@ -617,7 +832,10 @@
     "text": "The Growth Mindset involves the thought of improvement.\nIndividuals with this mindset are not bound by innate limits.",
     "choices":
       [
-        "what are they 5"
+        {
+          "text": "next",
+          "label": "what are they 5"
+        }
       ]
   },
   "what are they 5":
@@ -625,7 +843,10 @@
     "text": "In fact, ...",
     "choices":
       [
-        "what are they 6"
+        {
+          "text": "next",
+          "label": "what are they 6"
+        }
       ]
   },
   "what are they 6":
@@ -633,7 +854,10 @@
     "text": "Growth Mindset individuals do not define them to be \"limits\"\nbut rather \"potential\"",
     "choices":
       [
-        "what are they 7"
+        {
+          "text": "next",
+          "label": "what are they 7"
+        }
       ]
   },
   "what are they 7":
@@ -641,7 +865,10 @@
     "text": "And thus, said potential can be cultivated and improved\nthrough routine or practice.",
     "choices":
       [
-        "what are they 8"
+        {
+          "text": "next",
+          "label": "what are they 8"
+        }
       ]
   },
   "what are they 8":
@@ -649,7 +876,10 @@
     "text": "I, myself, was never the guide that I am today\nwithout this mindset.",
     "choices":
       [
-        "what are they 9"
+        {
+          "text": "next",
+          "label": "what are they 9"
+        }
       ]
   },
   "what are they 9":
@@ -657,7 +887,10 @@
     "text": "Given immortality like me,\nyou'll eventually want to.",
     "choices":
       [
-        "what are they 10"
+        {
+          "text": "next",
+          "label": "what are they 10"
+        }
       ]
   },
   "what are they 10":
@@ -665,7 +898,10 @@
     "text": "But it all starts with a choice on wanting to improve.",
     "choices":
       [
-        "I want to improve"
+        {
+          "text": "next",
+          "label": "I want to improve"
+        }
       ]
   },
   "I want to improve":
@@ -673,7 +909,10 @@
     "text": "That's the spirit!",
     "choices":
       [
-        "want to improve 2"
+        {
+          "text": "next",
+          "label": "want to improve 2"
+        }
       ]
   },
   "want to improve 2":
@@ -681,7 +920,10 @@
     "text": "And the first step to this would be\nto understand the \"{Spirals}\"",
     "choices":
       [
-        "want to improve 3"
+        {
+          "text": "next",
+          "label": "want to improve 3"
+        }
       ]
   },
   "want to improve 3":
@@ -689,7 +931,10 @@
     "text": "No, it is not a strong source of energy\nfrom some work of fiction.",
     "choices":
       [
-        "want to improve 4"
+        {
+          "text": "next",
+          "label": "want to improve 4"
+        }
       ]
   },
   "want to improve 4":
@@ -697,7 +942,10 @@
     "text": "It refers to the workflow of how one approaches\nchallenges and tasks.",
     "choices":
       [
-        "want to improve 5"
+        {
+          "text": "next",
+          "label": "want to improve 5"
+        }
       ]
   },
   "want to improve 5":
@@ -705,17 +953,26 @@
     "text": "When given a challenge, how do you approach it?",
     "choices":
       [
-        "I struggle quite greatly with the given task",
-        "I keep going until I lose success"
+        {
+          "text": "I struggle quite greatly with the given task",
+          "label": "struggle 1"
+        },
+        {
+          "text": "I keep going until I lose success",
+          "label": "<++>"
+        }
       ]
   },
 
-  "I struggle quite greatly with the given task":
+  "struggle 1":
   {
     "text": "And i assume the more you struggle with said task\nthe more you find yourself in doubt and criticism?\nwhich in term leads to GREATER doubt\nand HARSHER criticisms in your own work.",
     "choices":
       [
-        "struggle 2"
+        {
+          "text": "next",
+          "label": "struggle 2"
+        }
       ],
     "effect": 
       {
@@ -727,7 +984,10 @@
     "text": "And in the end, you find yourself avoiding said challenge\nas it swallows you whole in a cycle of frustration.",
     "choices":
       [
-        "struggle 3"
+        {
+          "text": "next",
+          "label": "struggle 3"
+        }
       ]
   },
   "struggle 3":
@@ -737,21 +997,26 @@
       [
         {
         "flag": "success spiral",
-        "choice": "spirals"
+        "text": "moving on",
+        "label": "spirals"
         },
         {
         "flag": "!success spiral",
-        "choice": "I keep going until I lose success"
+        "text": "Spirals as in plural, what's the other?",
+        "label": "success 1"
         }
       ]
   },
 
-  "I keep going until I lose success":
+  "success 1":
   {
     "text": "Although it is good to succeed at the task\nover and over again.",
     "choices":
       [
-        "success 2"
+        {
+          "text": "next",
+          "label": "success 2"
+        }
       ],
     "effect": 
       {
@@ -763,7 +1028,10 @@
     "text": "We fuel our motivation as long as success is met.\nSometimes leading us into more challenges and into new activities.",
     "choices":
       [
-        "success 3"
+        {
+          "text": "next",
+          "label": "success 3"
+        }
       ]
   },
   "success 3":
@@ -771,7 +1039,10 @@
     "text": "Until said success disappears...",
     "choices":
       [
-        "success 4"
+        {
+          "text": "next",
+          "label": "success 4"
+        }
       ]
   },
   "success 4":
@@ -779,7 +1050,10 @@
     "text": "The streak is lost and the motivation is gone\nyour very foundations of improvement are crumbled\nall because you had one instance of failure.",
     "choices":
       [
-        "success 5"
+        {
+          "text": "next",
+          "label": "success 5"
+        }
       ]
   },
   "success 5":
@@ -789,11 +1063,13 @@
       [
         {
         "flag": "struggle spiral",
-        "choice": "spirals"
+        "text": "moving on",
+        "label": "spirals"
         },
         {
         "flag": "!struggle spiral",
-        "choice": "I struggle quite greatly with the given task"
+        "text": "Spirals as in plural, what's the other?",
+        "label": "struggle 1"
         }
       ]
   },
@@ -803,17 +1079,26 @@
     "text": "Both spirals showcase how we can easily fall victim\nto a mindset that can greatly reduce in productivity\nwhich will hinder you from thriving in\na post-secondary environment.",
     "choices":
       [
-        "Then what does it take to improve?",
-        "Seriously, do i have to be immortal?"
+        {
+          "text": "Then what does it take to improve?",
+          "label": "what it takes 1"
+        },
+        {
+          "text": "Seriously, do i have to be immortal?",
+          "label": "what it takes 1"
+        }
       ]
   },
 
-  "Then what does it take to improve?":
+  "what it takes 1":
   {
     "text": "Well, there are multiple things to consider...\nThough it may not be the exact solutions\nThese are simply thoughts for guidance.",
     "choices":
       [
-        "what it takes 2"
+        {
+          "text": "next",
+          "label": "what it takes 2"
+        }
       ]
   },
   "what it takes 2":
@@ -821,7 +1106,10 @@
     "text": "...",
     "choices":
       [
-        "what it takes 3"
+        {
+          "text": "next",
+          "label": "what it takes 3"
+        }
       ]
   },
   "what it takes 3":
@@ -829,7 +1117,10 @@
     "text": "\"Experiment\"",
     "choices":
       [
-        "what it takes 4"
+        {
+          "text": "next",
+          "label": "what it takes 4"
+        }
       ]
   },
   "what it takes 4":
@@ -837,7 +1128,10 @@
     "text": "The process of learning something new is not linear.",
     "choices":
       [
-        "what it takes 5"
+        {
+          "text": "next",
+          "label": "what it takes 5"
+        }
       ]
   },
   "what it takes 5":
@@ -845,7 +1139,10 @@
     "text": "Experimenting on new ideas is a part of the learning process\nwhen approaching such material, it is important to adopt\nand approach as you gather info, process, and strategize\nyour way through the challenges that comes with ADHD and LD.",
     "choices":
       [
-        "what it takes 6"
+        {
+          "text": "next",
+          "label": "what it takes 6"
+        }
       ]
   },
   "what it takes 6":
@@ -853,7 +1150,10 @@
     "text": "The key is to remind yourself that experimentation\nis all a part of the learning process.",
     "choices":
       [
-        "what it takes 7"
+        {
+          "text": "next",
+          "label": "what it takes 7"
+        }
       ]
   },
   "what it takes 7":
@@ -861,7 +1161,10 @@
     "text": "Failure is necessary\nto bring you closer to your goal.\n A malleable yellow dog once told me that.",
     "choices":
       [
-        "what it takes 8"
+        {
+          "text": "next",
+          "label": "what it takes 8"
+        }
       ]
   },
   "what it takes 8":
@@ -869,7 +1172,10 @@
     "text": "\"Simple does not equal to easy\"",
     "choices":
       [
-        "what it takes 9"
+        {
+          "text": "next",
+          "label": "what it takes 9"
+        }
       ]
   },
   "what it takes 9":
@@ -877,7 +1183,10 @@
     "text": "When trying new things, sometimes said thing\nlooks deceptively simple and that it is a challenge to implement",
     "choices":
       [
-        "what it takes 10"
+        {
+          "text": "next",
+          "label": "what it takes 10"
+        }
       ]
   },
   "what it takes 10":
@@ -885,7 +1194,10 @@
     "text": "And with certain strategies of approach being quite popular.\nI would understand why one were to get frustrated\nwhen the popular strategy is done with difficulty\nwhile everyone else seems to do it with ease.",
     "choices":
       [
-        "what it takes 11"
+        {
+          "text": "next",
+          "label": "what it takes 11"
+        }
       ]
   },
   "what it takes 11":
@@ -893,7 +1205,10 @@
     "text": "Remember that experimentation is all a part of the process\nwith each failure, or success, it will always bring you closer\nto your goals.",
     "choices":
       [
-        "what it takes 12"
+        {
+          "text": "next",
+          "label": "what it takes 12"
+        }
       ]
   },
   "what it takes 12":
@@ -901,7 +1216,10 @@
     "text": "It is hardly a waste of time as what does NOT work\nhelps you on what works and what does not work",
     "choices":
       [
-        "what it takes 13"
+        {
+          "text": "next",
+          "label": "what it takes 13"
+        }
       ]
   },
   "what it takes 13":
@@ -909,7 +1227,10 @@
     "text": "\"Past Performance Does Not Equal Future Performance\"",
     "choices":
       [
-        "what it takes 14"
+        {
+          "text": "next",
+          "label": "what it takes 14"
+        }
       ]
   },
   "what it takes 14":
@@ -917,7 +1238,10 @@
     "text": "Your past should never define you",
     "choices":
       [
-        "what it takes 15"
+        {
+          "text": "next",
+          "label": "what it takes 15"
+        }
       ]
   },
   "what it takes 15":
@@ -925,7 +1249,10 @@
     "text": "Though you may fail to the point of giving up,\nthose past mistakes are meant to be learnt from\nand so you must move on.",
     "choices":
       [
-        "what it takes 16"
+        {
+          "text": "next",
+          "label": "what it takes 16"
+        }
       ]
   },
   "what it takes 16":
@@ -933,7 +1260,10 @@
     "text": "Consider learning these to work towards your future goals...",
     "choices":
       [
-        "what it takes 17"
+        {
+          "text": "next",
+          "label": "what it takes 17"
+        }
       ]
   },
   "what it takes 17":
@@ -941,7 +1271,10 @@
     "text": "Upgrade your skills...",
     "choices":
       [
-        "what it takes 18"
+        {
+          "text": "next",
+          "label": "what it takes 18"
+        }
       ]
   },
   "what it takes 18":
@@ -949,7 +1282,10 @@
     "text": "...Bounce back from failure\nand user the experience to course correct...",
     "choices":
       [
-        "what it takes 19"
+        {
+          "text": "next",
+          "label": "what it takes 19"
+        }
       ]
   },
   "what it takes 19":
@@ -957,7 +1293,10 @@
     "text": "...address your challenges,\nincluding ADHD and Learning Disabilities,\nto make your life easier...",
     "choices":
       [
-        "what it takes 20"
+        {
+          "text": "next",
+          "label": "what it takes 20"
+        }
       ]
   },
   "what it takes 20":
@@ -965,7 +1304,10 @@
     "text": "...access the resources you need to chart a new course",
     "choices":
       [
-        "what it takes 21"
+        {
+          "text": "next",
+          "label": "what it takes 21"
+        }
       ]
   },
   "what it takes 21":
@@ -973,7 +1315,10 @@
     "text": "There is always something to learn.\nNO matter the failures.",
     "choices":
       [
-        "what it takes 22"
+        {
+          "text": "next",
+          "label": "what it takes 22"
+        }
       ]
   },
   "what it takes 22":
@@ -981,7 +1326,10 @@
     "text": "And lastly\nEvaluate your progress",
     "choices":
       [
-        "what it takes 23"
+        {
+          "text": "next",
+          "label": "what it takes 23"
+        }
       ]
   },
   "what it takes 23":
@@ -989,16 +1337,22 @@
     "text": "After experimenting what does and does not work,\nit is best to be kind to yourself and show yourself\nthat no progress is truly linear and struggle is natural",
     "choices":
       [
-        "conclusion"
+        {
+          "text": "next",
+          "label": "conclusion"
+        }
       ]
   },
 
-  "Seriously, do i have to be immortal?":
+  "immortal 1":
   {
     "text": "No\nNo, you don't\nas limited human life is compared to mine.",
     "choices":
       [
-        "immortal 2"
+        {
+          "text": "next",
+          "label": "immortal 2"
+        }
       ]
   },
   "immortal 2":
@@ -1006,7 +1360,10 @@
     "text": "Your own life is long enough and worth spending\nas much time to think about what exactly it is\nyou find to be the best route for you to grow\nand this journey is meant for you to realize that you can grow.\nNot to be fixed unto one spot.",
     "choices":
       [
-        "conclusion"
+        {
+          "text": "next",
+          "label": "conclusion"
+        }
       ]
   },
 
@@ -1015,7 +1372,10 @@
     "text": "When you can approach your learning with curiosity\nyour chances of success will increase\nand will help motivate you to figure out\nthe best path forward for you",
     "choices":
       [
-        "conclusion 2"
+        {
+          "text": "next",
+          "label": "conclusion 2"
+        }
       ]
   },
   "conclusion 2":
@@ -1023,7 +1383,10 @@
     "text": "I welcome you to this journey.",
     "choices":
       [
-        "conclusion 3"
+        {
+          "text": "next",
+          "label": "conclusion 3"
+        }
       ]
   },
   "conclusion 2":

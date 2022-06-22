@@ -1,0 +1,46 @@
+{
+
+  "intro":
+  {
+    "text": "This is test text",
+    "choices":
+      [
+        {
+        "label": "intro 2"
+        },
+        {
+          "text": "false flag",
+          "label": "intro 2",
+          "flag": "flag1"
+        },
+        {
+          "text": "no flag",
+          "label": "intro 2"
+        },
+        {
+          "label": "intro 2",
+          "flag": "flag2"
+        },
+        {
+          "text": "true flag",
+          "label": "intro 2",
+          "flag": "flag2"
+        }
+      ],
+    "effects":
+      [
+      ]
+  },
+  "intro 2":
+  {
+    "text": "This is test text 2",
+    "choices":
+      [
+        "intro"
+      ],
+    "effects":
+      [
+      ]
+  }
+
+}

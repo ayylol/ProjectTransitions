@@ -100,7 +100,7 @@ size_flags_horizontal = 3
 size_flags_vertical = 3
 
 [connection signal="button_down" from="VBoxContainer/Back Button" to="." method="_on_Back_Button_button_down"]
-[connection signal="button_down" from="VBoxContainer/GridContainer/Button0" to="." method="_on_Button_button_down" binds= [ "Button0" ]]
-[connection signal="button_down" from="VBoxContainer/GridContainer/Button1" to="." method="_on_Button_button_down" binds= [ "Button1" ]]
-[connection signal="button_down" from="VBoxContainer/GridContainer/Button2" to="." method="_on_Button_button_down" binds= [ "Button2" ]]
-[connection signal="button_down" from="VBoxContainer/GridContainer/Button3" to="." method="_on_Button_button_down" binds= [ "Button3" ]]
+[connection signal="button_down" from="VBoxContainer/GridContainer/Button0" to="." method="_on_Button_button_down" binds= [ 0 ]]
+[connection signal="button_down" from="VBoxContainer/GridContainer/Button1" to="." method="_on_Button_button_down" binds= [ 1 ]]
+[connection signal="button_down" from="VBoxContainer/GridContainer/Button2" to="." method="_on_Button_button_down" binds= [ 2 ]]
+[connection signal="button_down" from="VBoxContainer/GridContainer/Button3" to="." method="_on_Button_button_down" binds= [ 3 ]]
