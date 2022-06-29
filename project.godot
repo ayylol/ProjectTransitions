@@ -16,7 +16,7 @@ config/icon="res://resources/icon.png"
 
 [autoload]
 
-Database="*res://systems/Database.gd"
+Database="res://systems/Database.gd"
 GameState="*res://systems/GameState.gd"
 
 [global]

@@ -2,7 +2,7 @@
 
   "intro":
   {
-    "text": "This is test text",
+    "text": "[color=aqua]This[/color] [i]is[/i] [b]text[/b]",
     "choices":
       [
         {
