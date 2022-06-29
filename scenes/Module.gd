@@ -20,7 +20,7 @@ func _ready():
 	timer.wait_time = text_speed
 	
 func start():
-	GameState.load_game()
+	#GameState.load_game()
 	load_flags("test_flags")
 	load_module("test")
 	update_menu(topic)
@@ -142,7 +142,6 @@ func load_module(module_name : String):
 
 
 func _on_Timer_timeout():
-	print("new character")
 	dialogue_box.visible_characters += 1
 	if not dialogue_box.visible_characters >= dialogue_box.bbcode_text.length():
 		timer.start()

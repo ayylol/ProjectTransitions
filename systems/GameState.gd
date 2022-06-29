@@ -11,7 +11,7 @@ func save_game():
 		if !node.has_method("save_state"):
 			print("'%s' is missing save_state() function, skipping", node.name)
 			continue
-		print("saving data from ", node.name)
+		#print("saving data from ", node.name)
 		var to_save = node.call("save_state")
 		to_save["path"] = node.get_path()
 		save_file.store_line(to_json(to_save))
