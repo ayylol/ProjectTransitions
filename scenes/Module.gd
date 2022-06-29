@@ -1,29 +1,38 @@
 extends Control
 
+signal goto_adventure
+
+export var text_speed = 0.01
+
 var topic := "intro"
 var choices = []
-signal goto_adventure
 
 var _module_name
 var _module_content
 var _flags
 var _edited_flags := []
 
+onready var dialogue_box = $VBoxContainer/HBoxContainer/RichTextLabel
+onready var options = $VBoxContainer/Options
+onready var timer = $Timer
+
 func _ready():
-	#GameState.load_game()
-	#load_flags("flags")
-	#load_module("module1")
+	timer.wait_time = text_speed
+	
+func start():
+	GameState.load_game()
 	load_flags("test_flags")
 	load_module("test")
 	update_menu(topic)
 
-func update_menu(label):
+func update_menu(label : String):
 	topic = label
 	var data = get(label)
-	$VBoxContainer/HBoxContainer/RichTextLabel.bbcode_text = data["text"]
+	dialogue_box.bbcode_text = data["text"]
+	dialogue_box.visible_characters = 0
 	choices = data["choices"]
 	var i = 0
-	for b in $VBoxContainer/GridContainer.get_children():
+	for b in options.get_children():
 		if i < choices.size():
 			var text = (
 				choices[i] if typeof(choices[i]) == TYPE_STRING 
@@ -34,8 +43,9 @@ func update_menu(label):
 		else:
 			b.hide()
 		i+=1
+		timer.start()
 
-func _on_Button_button_down(extra_arg_0):
+func _on_Button_button_down(extra_arg_0 : int):
 	if typeof(choices[extra_arg_0]) == TYPE_STRING:
 		update_menu(choices[extra_arg_0])
 	else:
@@ -44,37 +54,8 @@ func _on_Button_button_down(extra_arg_0):
 
 func _on_Back_Button_button_down():
 	emit_signal("goto_adventure")
-	
-func save_state():
-	var save_dict = {
-		"topic" : topic,
-		"edited_flags" : _edited_flags
-	}
-	return save_dict
 
-func load_state(state_dict):
-	topic = state_dict["topic"]
-	_edited_flags = state_dict["edited_flags"]
-
-func load_flags(flags_file_name : String):
-	# Loading flags
-	var file = File.new()
-	file.open("res://content/" + flags_file_name + ".json", file.READ)
-	var content = file.get_as_text()
-	_flags = parse_json(content)
-	file.close()
-	
-func load_module(module_name : String):
-	_module_name = module_name 
-	# Load content
-	var file = File.new()
-	file.open("res://content/" + module_name + "_content.json", file.READ)
-	var content = file.get_as_text()
-	_module_content = parse_json(content)
-	file.close()
-
-	
-func eval(flag_name : String):
+func eval(flag_name : String) -> bool:
 	var negate = false
 	if flag_name.begins_with("!"):
 		negate = true
@@ -96,7 +77,8 @@ func eval(flag_name : String):
 				break
 	return val if not negate else !val
 
-func change(flag_name, value):
+#Value should either be a type or a string corresponding to a flag to evaluate
+func change_flag(flag_name : String, value):
 	if typeof(_flags[flag_name]) == TYPE_BOOL:
 		var bool_val
 		if typeof(value) == TYPE_BOOL:
@@ -110,23 +92,57 @@ func change(flag_name, value):
 	else:
 		print("can't change the value of non-atomic flag")
 
-# Wrapper function for returning text + their choices
-func get(title : String):
+func get(title : String) -> Dictionary:
 	var content = _module_content[title]
 	if "effect" in content:
 		for key in content["effect"]:
-			change(key, content["effect"][key])
+			change_flag(key, content["effect"][key])
 	# get list of available choices
-	var choices = []
+	var available_choices = []
 	for choice in content["choices"]:
 		if typeof(choice) == TYPE_DICTIONARY and "flag" in choice:
 			if eval(choice["flag"]):
-				choices.append(choice)
+				available_choices.append(choice)
 		else:
-			choices.append(choice)
+			available_choices.append(choice)
 	
 	var data = {
 		"text" : content["text"],
-		"choices" : choices
+		"choices" : available_choices
 	}
 	return data
+
+func save_state() -> Dictionary:
+	var save_dict = {
+		"topic" : topic,
+		"edited_flags" : _edited_flags
+	}
+	return save_dict
+
+func load_state(state_dict : Dictionary):
+	topic = state_dict["topic"]
+	_edited_flags = state_dict["edited_flags"]
+
+func load_flags(flags_file_name : String):
+	# Loading flags
+	var file = File.new()
+	file.open("res://content/" + flags_file_name + ".json", file.READ)
+	var content = file.get_as_text()
+	_flags = parse_json(content)
+	file.close()
+	
+func load_module(module_name : String):
+	_module_name = module_name 
+	# Load content
+	var file = File.new()
+	file.open("res://content/" + module_name + "_content.json", file.READ)
+	var content = file.get_as_text()
+	_module_content = parse_json(content)
+	file.close()
+
+
+func _on_Timer_timeout():
+	print("new character")
+	dialogue_box.visible_characters += 1
+	if not dialogue_box.visible_characters >= dialogue_box.bbcode_text.length():
+		timer.start()

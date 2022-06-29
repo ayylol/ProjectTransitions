@@ -1,10 +1,5 @@
 extends Control
 
-func _ready():
-	pass
-	# TODO: think about where this 
-	#GameState.load_game()
-
 # Main Menu Goto's
 func _on_Main_Menu_goto_adventure():
 	$"Main Menu".hide()
@@ -19,6 +14,7 @@ func _on_AdventureMenu_goto_mainmenu():
 func _on_AdventureMenu_goto_testmodule():
 	$"AdventureMenu".hide()
 	$"Module".show()
+	$"Module".start()
 
 
 func _on_Test_Module_goto_adventure():

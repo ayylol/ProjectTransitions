@@ -64,7 +64,7 @@ margin_right = 1024.0
 margin_bottom = 189.0
 size_flags_stretch_ratio = 0.6
 
-[node name="GridContainer" type="GridContainer" parent="VBoxContainer"]
+[node name="Options" type="GridContainer" parent="VBoxContainer"]
 margin_top = 410.0
 margin_right = 1024.0
 margin_bottom = 600.0
@@ -72,36 +72,41 @@ size_flags_horizontal = 3
 size_flags_vertical = 3
 columns = 2
 
-[node name="Button0" type="Button" parent="VBoxContainer/GridContainer"]
+[node name="Button0" type="Button" parent="VBoxContainer/Options"]
 margin_right = 510.0
 margin_bottom = 93.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 
-[node name="Button1" type="Button" parent="VBoxContainer/GridContainer"]
+[node name="Button1" type="Button" parent="VBoxContainer/Options"]
 margin_left = 514.0
 margin_right = 1024.0
 margin_bottom = 93.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 
-[node name="Button2" type="Button" parent="VBoxContainer/GridContainer"]
+[node name="Button2" type="Button" parent="VBoxContainer/Options"]
 margin_top = 97.0
 margin_right = 510.0
 margin_bottom = 190.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 
-[node name="Button3" type="Button" parent="VBoxContainer/GridContainer"]
+[node name="Button3" type="Button" parent="VBoxContainer/Options"]
 margin_left = 514.0
 margin_top = 97.0
 margin_right = 1024.0
 margin_bottom = 190.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 0.001
+one_shot = true
 
 [connection signal="button_down" from="VBoxContainer/Back Button" to="." method="_on_Back_Button_button_down"]
-[connection signal="button_down" from="VBoxContainer/GridContainer/Button0" to="." method="_on_Button_button_down" binds= [ 0 ]]
-[connection signal="button_down" from="VBoxContainer/GridContainer/Button1" to="." method="_on_Button_button_down" binds= [ 1 ]]
-[connection signal="button_down" from="VBoxContainer/GridContainer/Button2" to="." method="_on_Button_button_down" binds= [ 2 ]]
-[connection signal="button_down" from="VBoxContainer/GridContainer/Button3" to="." method="_on_Button_button_down" binds= [ 3 ]]
+[connection signal="button_down" from="VBoxContainer/Options/Button0" to="." method="_on_Button_button_down" binds= [ 0 ]]
+[connection signal="button_down" from="VBoxContainer/Options/Button1" to="." method="_on_Button_button_down" binds= [ 1 ]]
+[connection signal="button_down" from="VBoxContainer/Options/Button2" to="." method="_on_Button_button_down" binds= [ 2 ]]
+[connection signal="button_down" from="VBoxContainer/Options/Button3" to="." method="_on_Button_button_down" binds= [ 3 ]]
+[connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]
