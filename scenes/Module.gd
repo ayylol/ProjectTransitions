@@ -2,22 +2,25 @@ extends Control
 
 signal goto_adventure
 
-export var text_speed = 0.01
+export var text_speed := 0.75
 
 var topic := "intro"
-var choices = []
+var choices := []
+var character := ""
+var emotion := ""
 
 var _module_name
 var _module_content
 var _flags
 var _edited_flags := []
+var _visible_char_float := 0.0
 
 onready var dialogue_box = $VBoxContainer/HBoxContainer/RichTextLabel
 onready var options = $VBoxContainer/Options
 onready var timer = $Timer
 
 func _ready():
-	timer.wait_time = text_speed
+	set_process(false)
 	
 func start():
 	#GameState.load_game()
@@ -27,23 +30,42 @@ func start():
 
 func update_menu(label : String):
 	topic = label
-	var data = get(label)
-	dialogue_box.bbcode_text = data["text"]
-	dialogue_box.visible_characters = 0
-	choices = data["choices"]
-	var i = 0
-	for b in options.get_children():
-		if i < choices.size():
-			var text = (
-				choices[i] if typeof(choices[i]) == TYPE_STRING 
-				else choices[i]["label"] if not "text" in choices[i] 
-				else choices[i]["text"])
-			b.text = text
-			b.show()
+	#Check for correct formating
+	assert(label in _module_content, "label not in module")
+	var content = _module_content[label]
+	assert("text" in content, "No text in label")
+	assert("choices" in content, "No choices in label")
+	
+	if "effect" in content:
+		for key in content["effect"]:
+			change_flag(key, content["effect"][key])
+	
+	# get list of available choices
+	choices.clear()
+	for choice in content["choices"]:
+		if typeof(choice) == TYPE_DICTIONARY and "flag" in choice:
+			if eval(choice["flag"]):
+				choices.append(choice)
 		else:
-			b.hide()
-		i+=1
-		timer.start()
+			choices.append(choice)
+	dialogue_box.bbcode_text = "[color=#474920]" + content["text"] + "[/color]"
+	#dialogue_box.bbcode_text = content["text"]
+	
+	var update_portraits = false
+	if "character" in content:
+		character = content["character"]
+		update_portraits = true
+	if "emotion" in content:
+		emotion = content["emotion"]
+		update_portraits = true
+	if update_portraits:
+		update_portraits()
+	
+	_visible_char_float = 0.0
+	dialogue_box.visible_characters = _visible_char_float
+	for b in options.get_children():
+		b.hide()
+	set_process(true)
 
 func _on_Button_button_down(extra_arg_0 : int):
 	if typeof(choices[extra_arg_0]) == TYPE_STRING:
@@ -92,26 +114,14 @@ func change_flag(flag_name : String, value):
 	else:
 		print("can't change the value of non-atomic flag")
 
-func get(title : String) -> Dictionary:
-	var content = _module_content[title]
-	if "effect" in content:
-		for key in content["effect"]:
-			change_flag(key, content["effect"][key])
-	# get list of available choices
-	var available_choices = []
-	for choice in content["choices"]:
-		if typeof(choice) == TYPE_DICTIONARY and "flag" in choice:
-			if eval(choice["flag"]):
-				available_choices.append(choice)
-		else:
-			available_choices.append(choice)
-	
-	var data = {
-		"text" : content["text"],
-		"choices" : available_choices
-	}
-	return data
+func update_portraits():
+	var path_to_portrait = "res://resources/portraits/"+character+"/"+emotion+".png"
+	var directory = Directory.new();
+	assert(not directory.dir_exists(path_to_portrait), path_to_portrait + " does not exist")
+	var sprite = load(path_to_portrait)
+	$VBoxContainer/MainCharacter.texture = sprite
 
+# GAME STATE FUNCTIONS
 func save_state() -> Dictionary:
 	var save_dict = {
 		"topic" : topic,
@@ -122,6 +132,7 @@ func save_state() -> Dictionary:
 func load_state(state_dict : Dictionary):
 	topic = state_dict["topic"]
 	_edited_flags = state_dict["edited_flags"]
+# END OF GAME STATE FUNCTIONS
 
 func load_flags(flags_file_name : String):
 	# Loading flags
@@ -140,8 +151,18 @@ func load_module(module_name : String):
 	_module_content = parse_json(content)
 	file.close()
 
-
-func _on_Timer_timeout():
-	dialogue_box.visible_characters += 1
-	if not dialogue_box.visible_characters >= dialogue_box.bbcode_text.length():
-		timer.start()
+func _process(delta):
+	_visible_char_float += text_speed
+	dialogue_box.visible_characters = round(_visible_char_float)
+	if dialogue_box.visible_characters > dialogue_box.text.length():
+		var i = 0
+		for o in choices:
+			var text = (
+					choices[i] if typeof(choices[i]) == TYPE_STRING 
+					else choices[i]["label"] if not "text" in choices[i] 
+					else choices[i]["text"])
+			var button = options.get_child(i)
+			button.text = text
+			button.show()
+			i+=1
+		set_process(false)

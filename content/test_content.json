@@ -2,44 +2,33 @@
 
   "intro":
   {
-    "text": "[color=aqua]This[/color] [i]is[/i] [b]text[/b]",
+    "character": "pompom",
+    "emotion": "dwayne",
+    "text": "[color=blue]This[/color] is [b]text[/b]",
     "choices":
       [
         {
-        "label": "intro 2"
-        },
-        {
-          "text": "false flag",
-          "label": "intro 2",
-          "flag": "flag1"
-        },
-        {
           "text": "no flag",
           "label": "intro 2"
-        },
-        {
-          "label": "intro 2",
-          "flag": "flag2"
-        },
-        {
-          "text": "true flag",
-          "label": "intro 2",
-          "flag": "flag2"
         }
-      ],
-    "effects":
-      [
       ]
   },
   "intro 2":
   {
-    "text": "This is test text 2",
+    "emotion": "angry",
+    "text": "[wave][color=red]This[/color][/wave] is [color=yellow][b][i]test[/i][/b][/color] [b]text[/b] 2",
     "choices":
       [
-        "intro"
-      ],
-    "effects":
+        "intro 3" 
+      ]
+  },
+  "intro 3":
+  {
+    "emotion": "happy",
+    "text": "[shake][color=purple][b]This[/b][/color][/shake] is the last test [wave]text[/wave]",
+    "choices":
       [
+        "intro" 
       ]
   }
 
