@@ -15,7 +15,7 @@ var _flags
 var _edited_flags := []
 var _visible_char_float := 0.0
 
-onready var dialogue_box = $VBoxContainer/HBoxContainer/RichTextLabel
+onready var dialogue_box = $VBoxContainer/HBoxContainer/TextBox/RichTextLabel
 onready var options = $VBoxContainer/Options
 onready var timer = $Timer
 
