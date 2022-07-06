@@ -8,7 +8,7 @@
     "choices":
       [
         {
-          "text": "next",
+          "text": "{next}",
           "label": "intro 2"
         }
       ]
@@ -20,7 +20,7 @@
     "choices":
       [
         {
-          "text": "next",
+          "text": "{next}",
           "label": "intro 3"
         }
       ]
@@ -31,7 +31,12 @@
     "text": "[shake][color=purple][b]This[/b][/color][/shake] is the last test [wave]text[/wave]",
     "choices":
       [
-        "intro" 
+        {
+          "text": "{quiz}",
+          "group": "test quiz",
+          "reversed": false,
+          "label": "intro"
+        }
       ]
   }
 

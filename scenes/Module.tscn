@@ -153,9 +153,74 @@ margin_bottom = 184.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 
+[node name="QuizOptions" type="HBoxContainer" parent="VBoxContainer"]
+visible = false
+margin_top = 415.0
+margin_right = 1024.0
+margin_bottom = 600.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Button1" type="Button" parent="VBoxContainer/QuizOptions"]
+margin_right = 142.0
+margin_bottom = 185.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+text = "1"
+
+[node name="Button2" type="Button" parent="VBoxContainer/QuizOptions"]
+margin_left = 146.0
+margin_right = 289.0
+margin_bottom = 185.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Button3" type="Button" parent="VBoxContainer/QuizOptions"]
+margin_left = 293.0
+margin_right = 436.0
+margin_bottom = 185.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Button4" type="Button" parent="VBoxContainer/QuizOptions"]
+margin_left = 440.0
+margin_right = 583.0
+margin_bottom = 185.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Button5" type="Button" parent="VBoxContainer/QuizOptions"]
+margin_left = 587.0
+margin_right = 730.0
+margin_bottom = 185.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Button6" type="Button" parent="VBoxContainer/QuizOptions"]
+margin_left = 734.0
+margin_right = 877.0
+margin_bottom = 185.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Button7" type="Button" parent="VBoxContainer/QuizOptions"]
+margin_left = 881.0
+margin_right = 1024.0
+margin_bottom = 185.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+text = "7"
+
 [connection signal="button_down" from="VBoxContainer/Back Button" to="." method="_on_Back_Button_button_down"]
 [connection signal="pressed" from="VBoxContainer/HBoxContainer/TextBox/TextButton" to="." method="_on_TextButton_pressed"]
 [connection signal="button_down" from="VBoxContainer/Options/Button0" to="." method="_on_Button_button_down" binds= [ 0 ]]
 [connection signal="button_down" from="VBoxContainer/Options/Button1" to="." method="_on_Button_button_down" binds= [ 1 ]]
 [connection signal="button_down" from="VBoxContainer/Options/Button2" to="." method="_on_Button_button_down" binds= [ 2 ]]
 [connection signal="button_down" from="VBoxContainer/Options/Button3" to="." method="_on_Button_button_down" binds= [ 3 ]]
+[connection signal="button_down" from="VBoxContainer/QuizOptions/Button1" to="." method="_on_quiz_button_down" binds= [ 1 ]]
+[connection signal="button_down" from="VBoxContainer/QuizOptions/Button2" to="." method="_on_quiz_button_down" binds= [ 2 ]]
+[connection signal="button_down" from="VBoxContainer/QuizOptions/Button3" to="." method="_on_quiz_button_down" binds= [ 3 ]]
+[connection signal="button_down" from="VBoxContainer/QuizOptions/Button4" to="." method="_on_quiz_button_down" binds= [ 4 ]]
+[connection signal="button_down" from="VBoxContainer/QuizOptions/Button5" to="." method="_on_quiz_button_down" binds= [ 5 ]]
+[connection signal="button_down" from="VBoxContainer/QuizOptions/Button6" to="." method="_on_quiz_button_down" binds= [ 6 ]]
+[connection signal="button_down" from="VBoxContainer/QuizOptions/Button7" to="." method="_on_quiz_button_down" binds= [ 7 ]]

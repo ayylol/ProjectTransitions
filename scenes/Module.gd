@@ -23,6 +23,7 @@ var _module_name
 var _module_content
 var _flags
 var _edited_flags := []
+var _quiz_answers := {}
 
 var _visible_char_float := 0.0
 var _current_options_size := 0.0
@@ -174,8 +175,9 @@ func _process(delta):
 			if dialogue_box.visible_characters > dialogue_box.text.length():
 				state = State.SHOW_OPTIONS
 		State.SHOW_OPTIONS:
+			#ADD QUIZ OPTIONS
 			if not options.visible:
-				if "text" in choices[0] and choices[0]["text"] == "next":
+				if "text" in choices[0] and choices[0]["text"] == "{next}":
 					dialogue_box_button.show()
 					continue_indicator.show()
 					return
@@ -214,6 +216,11 @@ func _process(delta):
 			state = State.IDLE
 			set_process(false)
 
-
 func _on_TextButton_pressed():
 	update_menu(choices[0]["label"])
+
+
+func _on_quiz_button_down(extra_arg_0):
+	print(extra_arg_0)
+	update_menu(choices[0]["label"])
+
