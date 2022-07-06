@@ -1,8 +1,18 @@
 extends Control
 
+enum State {
+	IDLE,
+	SHOW_TEXT,
+	SHOW_OPTIONS,
+	HIDE_OPTIONS,
+}
+var state = State.IDLE
+
 signal goto_adventure
 
 export var text_speed := 0.75
+export var options_size := 1.0
+export var options_delta_size := 0.1
 
 var topic := "intro"
 var choices := []
@@ -13,11 +23,14 @@ var _module_name
 var _module_content
 var _flags
 var _edited_flags := []
+
 var _visible_char_float := 0.0
+var _current_options_size := 0.0
 
 onready var dialogue_box = $VBoxContainer/HBoxContainer/TextBox/RichTextLabel
+onready var continue_indicator = $VBoxContainer/HBoxContainer/TextBox/ContinueIndicator
+onready var dialogue_box_button = $VBoxContainer/HBoxContainer/TextBox/TextButton
 onready var options = $VBoxContainer/Options
-onready var timer = $Timer
 
 func _ready():
 	set_process(false)
@@ -62,9 +75,8 @@ func update_menu(label : String):
 		update_portraits()
 	
 	_visible_char_float = 0.0
-	dialogue_box.visible_characters = _visible_char_float
-	for b in options.get_children():
-		b.hide()
+	dialogue_box.visible_characters = _visible_char_float		
+	state = State.HIDE_OPTIONS
 	set_process(true)
 
 func _on_Button_button_down(extra_arg_0 : int):
@@ -152,17 +164,56 @@ func load_module(module_name : String):
 	file.close()
 
 func _process(delta):
-	_visible_char_float += text_speed
-	dialogue_box.visible_characters = round(_visible_char_float)
-	if dialogue_box.visible_characters > dialogue_box.text.length():
-		var i = 0
-		for o in choices:
-			var text = (
-					choices[i] if typeof(choices[i]) == TYPE_STRING 
-					else choices[i]["label"] if not "text" in choices[i] 
-					else choices[i]["text"])
-			var button = options.get_child(i)
-			button.text = text
-			button.show()
-			i+=1
-		set_process(false)
+	#TODO: Change to use tweens for option growing/shrinking
+	match state:
+		State.IDLE:
+			set_process(false)
+		State.SHOW_TEXT:
+			_visible_char_float += text_speed
+			dialogue_box.visible_characters = round(_visible_char_float)
+			if dialogue_box.visible_characters > dialogue_box.text.length():
+				state = State.SHOW_OPTIONS
+		State.SHOW_OPTIONS:
+			if not options.visible:
+				if "text" in choices[0] and choices[0]["text"] == "next":
+					dialogue_box_button.show()
+					continue_indicator.show()
+					return
+				options.show()
+				var i = 0
+				for o in choices:
+					var text = (
+							choices[i] if typeof(choices[i]) == TYPE_STRING 
+							else choices[i]["label"] if not "text" in choices[i] 
+							else choices[i]["text"])
+					var button = options.get_child(i)
+					button.text = text
+					button.show()
+					i+=1
+				options.size_flags_stretch_ratio = 0.0
+			else:
+				options.size_flags_stretch_ratio += options_delta_size
+				if options.size_flags_stretch_ratio >= options_size:
+					state = State.IDLE
+		State.HIDE_OPTIONS:
+			if continue_indicator.visible:
+				continue_indicator.hide()
+				dialogue_box_button.hide()
+				state = State.SHOW_TEXT
+			elif options.visible:
+				options.size_flags_stretch_ratio -= options_delta_size
+				if options.size_flags_stretch_ratio <= 0.0:
+					for b in options.get_children():
+						b.hide()
+					options.hide()
+					state = State.SHOW_TEXT
+			else:
+				state = State.SHOW_TEXT
+				continue_indicator.hide()
+		_:
+			state = State.IDLE
+			set_process(false)
+
+
+func _on_TextButton_pressed():
+	update_menu(choices[0]["label"])

@@ -8,7 +8,7 @@
     "choices":
       [
         {
-          "text": "no flag",
+          "text": "next",
           "label": "intro 2"
         }
       ]
@@ -19,7 +19,10 @@
     "text": "[wave][color=red]This[/color][/wave] is [color=yellow][b][i]test[/i][/b][/color] [b]text[/b] 2",
     "choices":
       [
-        "intro 3" 
+        {
+          "text": "next",
+          "label": "intro 3"
+        }
       ]
   },
   "intro 3":
