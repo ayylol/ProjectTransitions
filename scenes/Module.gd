@@ -10,9 +10,9 @@ var state = State.IDLE
 
 signal goto_adventure
 
-export var text_speed := 0.75
+export var text_speed := 100.0
 export var options_size := 1.0
-export var options_delta_size := 0.1
+export var options_delta_size := 10.0
 
 var topic := "intro"
 var choices := []
@@ -27,15 +27,18 @@ var _quiz_answers := {}
 
 var _visible_char_float := 0.0
 var _current_options_size := 0.0
+var _current_option_type
 
 onready var dialogue_box = $VBoxContainer/HBoxContainer/TextBox/RichTextLabel
 onready var continue_indicator = $VBoxContainer/HBoxContainer/TextBox/ContinueIndicator
 onready var dialogue_box_button = $VBoxContainer/HBoxContainer/TextBox/TextButton
 onready var options = $VBoxContainer/Options
+onready var quiz_options = $VBoxContainer/QuizOptions
 
 func _ready():
 	set_process(false)
 	
+#TODO: Eventually make this load the correct module
 func start():
 	#GameState.load_game()
 	load_flags("test_flags")
@@ -80,16 +83,6 @@ func update_menu(label : String):
 	state = State.HIDE_OPTIONS
 	set_process(true)
 
-func _on_Button_button_down(extra_arg_0 : int):
-	if typeof(choices[extra_arg_0]) == TYPE_STRING:
-		update_menu(choices[extra_arg_0])
-	else:
-		update_menu(choices[extra_arg_0]["label"])
-	GameState.save_game()
-
-func _on_Back_Button_button_down():
-	emit_signal("goto_adventure")
-
 func eval(flag_name : String) -> bool:
 	var negate = false
 	if flag_name.begins_with("!"):
@@ -111,6 +104,14 @@ func eval(flag_name : String) -> bool:
 				val = true
 				break
 	return val if not negate else !val
+
+func get_quiz_result(quiz_name : String) -> float:
+	if not quiz_name in _quiz_answers:
+		return -1.0
+	var total = 0.0
+	for ans in _quiz_answers[quiz_name].values():
+		total += ans
+	return total/_quiz_answers[quiz_name].size()
 
 #Value should either be a type or a string corresponding to a flag to evaluate
 func change_flag(flag_name : String, value):
@@ -170,44 +171,48 @@ func _process(delta):
 		State.IDLE:
 			set_process(false)
 		State.SHOW_TEXT:
-			_visible_char_float += text_speed
+			_visible_char_float += text_speed * delta
 			dialogue_box.visible_characters = round(_visible_char_float)
 			if dialogue_box.visible_characters > dialogue_box.text.length():
 				state = State.SHOW_OPTIONS
 		State.SHOW_OPTIONS:
-			#ADD QUIZ OPTIONS
-			if not options.visible:
+			if not options.visible and not quiz_options.visible:
 				if "text" in choices[0] and choices[0]["text"] == "{next}":
 					dialogue_box_button.show()
 					continue_indicator.show()
 					return
-				options.show()
-				var i = 0
-				for o in choices:
-					var text = (
-							choices[i] if typeof(choices[i]) == TYPE_STRING 
-							else choices[i]["label"] if not "text" in choices[i] 
-							else choices[i]["text"])
-					var button = options.get_child(i)
-					button.text = text
-					button.show()
-					i+=1
-				options.size_flags_stretch_ratio = 0.0
+				elif "text" in choices[0] and choices[0]["text"] == "{quiz}":
+					_current_option_type = quiz_options
+				else:
+					_current_option_type = options
+					var i = 0
+					for o in choices:
+						var text = (
+								choices[i] if typeof(choices[i]) == TYPE_STRING 
+								else choices[i]["label"] if not "text" in choices[i] 
+								else choices[i]["text"])
+						var button = options.get_child(i)
+						button.text = text
+						button.show()
+						i+=1
+				_current_option_type.show()
+				_current_option_type.size_flags_stretch_ratio = 0.0
 			else:
-				options.size_flags_stretch_ratio += options_delta_size
-				if options.size_flags_stretch_ratio >= options_size:
+				_current_option_type.size_flags_stretch_ratio += options_delta_size * delta
+				if _current_option_type.size_flags_stretch_ratio >= options_size:
 					state = State.IDLE
 		State.HIDE_OPTIONS:
 			if continue_indicator.visible:
 				continue_indicator.hide()
 				dialogue_box_button.hide()
 				state = State.SHOW_TEXT
-			elif options.visible:
-				options.size_flags_stretch_ratio -= options_delta_size
-				if options.size_flags_stretch_ratio <= 0.0:
-					for b in options.get_children():
-						b.hide()
-					options.hide()
+			elif _current_option_type and _current_option_type.visible:
+				_current_option_type.size_flags_stretch_ratio -= options_delta_size * delta
+				if _current_option_type.size_flags_stretch_ratio <= 0.0:
+					if _current_option_type == options:
+						for b in options.get_children():
+							b.hide()
+					_current_option_type.hide()
 					state = State.SHOW_TEXT
 			else:
 				state = State.SHOW_TEXT
@@ -216,11 +221,29 @@ func _process(delta):
 			state = State.IDLE
 			set_process(false)
 
+func _on_Button_button_down(extra_arg_0 : int):
+	if typeof(choices[extra_arg_0]) == TYPE_STRING:
+		update_menu(choices[extra_arg_0])
+	else:
+		update_menu(choices[extra_arg_0]["label"])
+	GameState.save_game()
+
+func _on_quiz_button_down(extra_arg_0):
+	var val = extra_arg_0
+	var qst = choices[0]
+	if qst["reversed"]:
+		val = 8 - val
+	if not qst["group"] in _quiz_answers:
+		_quiz_answers[qst["group"]] = {}
+	_quiz_answers[qst["group"]][qst["name"]] = val
+	print()
+	print("Value picked: " + String(val))
+	print("Answers: " + String(_quiz_answers))
+	print("Average: " + String(get_quiz_result(qst["group"])))
+	update_menu(choices[0]["label"])
+
 func _on_TextButton_pressed():
 	update_menu(choices[0]["label"])
 
-
-func _on_quiz_button_down(extra_arg_0):
-	print(extra_arg_0)
-	update_menu(choices[0]["label"])
-
+func _on_Back_Button_button_down():
+	emit_signal("goto_adventure")

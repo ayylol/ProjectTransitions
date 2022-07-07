@@ -21,23 +21,65 @@
       [
         {
           "text": "{next}",
-          "label": "intro 3"
+          "label": "quiz 1"
         }
       ]
   },
-  "intro 3":
+  "quiz 1":
   {
-    "emotion": "happy",
-    "text": "[shake][color=purple][b]This[/b][/color][/shake] is the last test [wave]text[/wave]",
+    "emotion": "blank",
+    "text": "[shake][color=purple][b]This[/b][/color][/shake] is a test [wave]question[/wave]",
     "choices":
       [
         {
           "text": "{quiz}",
           "group": "test quiz",
+          "name": "test question 1",
           "reversed": false,
+          "label": "quiz 2"
+        }
+      ]
+  },
+  "quiz 2":
+  {
+    "emotion": "worried",
+    "text": "[shake][color=green][b]This[/b][/color][/shake] is the second test [wave]question[/wave]",
+    "choices":
+      [
+        {
+          "text": "{quiz}",
+          "group": "test quiz",
+          "name": "test question 2",
+          "reversed": true,
+          "label": "quiz 3"
+        }
+      ]
+  },
+  "quiz 3":
+  {
+    "emotion": "surprised",
+    "text": "[shake][color=blue][b]This[/b][/color][/shake] is the last test [wave]question[/wave]",
+    "choices":
+      [
+        {
+          "text": "{quiz}",
+          "group": "test quiz",
+          "name": "test question 3",
+          "reversed": true,
+          "label": "show result"
+        }
+      ]
+  },
+  "show result":
+  {
+    "emotion": "happy",
+    "text": "{result}",
+    "choices":
+      [
+        {
+          "text": "goto 1",
           "label": "intro"
         }
       ]
   }
-
 }

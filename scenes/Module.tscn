@@ -1,10 +1,78 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://scenes/Module.gd" type="Script" id=1]
 [ext_resource path="res://resources/portraits/pompom/angry.png" type="Texture" id=2]
 [ext_resource path="res://scenes/Padding.tscn" type="PackedScene" id=3]
 [ext_resource path="res://resources/frame.png" type="Texture" id=4]
 [ext_resource path="res://resources/continue.png" type="Texture" id=5]
+
+[sub_resource type="Animation" id=1]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:rect_scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 0.6, 0.6 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath(".:anchor_top")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ 1.0 ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath(".:anchor_bottom")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ 1.0 ]
+}
+
+[sub_resource type="Animation" id=2]
+resource_name = "grow"
+length = 0.8
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:anchor_top")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.4, 0.8 ),
+"transitions": PoolRealArray( 1, 0.732042, 1 ),
+"update": 0,
+"values": [ 1.0, 0.96, 1.0 ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath(".:anchor_bottom")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.4, 0.8 ),
+"transitions": PoolRealArray( 1.62451, 0.63728, 0.707107 ),
+"update": 0,
+"values": [ 1.0, 0.97, 1.0 ]
+}
 
 [node name="Test Module" type="Control"]
 anchor_right = 1.0
@@ -88,6 +156,11 @@ margin_top = -40.0
 rect_scale = Vector2( 0.6, 0.6 )
 texture = ExtResource( 5 )
 expand = true
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="VBoxContainer/HBoxContainer/TextBox/ContinueIndicator"]
+autoplay = "grow"
+anims/RESET = SubResource( 1 )
+anims/grow = SubResource( 2 )
 
 [node name="TextButton" type="Button" parent="VBoxContainer/HBoxContainer/TextBox"]
 visible = false
