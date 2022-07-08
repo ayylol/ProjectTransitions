@@ -29,7 +29,7 @@ var _visible_char_float := 0.0
 var _current_options_size := 0.0
 var _current_option_type
 
-onready var dialogue_box = $VBoxContainer/HBoxContainer/TextBox/RichTextLabel
+onready var dialogue_box = $VBoxContainer/HBoxContainer/TextBox/MarginContainer/RichTextLabel
 onready var continue_indicator = $VBoxContainer/HBoxContainer/TextBox/ContinueIndicator
 onready var dialogue_box_button = $VBoxContainer/HBoxContainer/TextBox/TextButton
 onready var options = $VBoxContainer/Options
@@ -37,7 +37,7 @@ onready var quiz_options = $VBoxContainer/QuizOptions
 
 func _ready():
 	set_process(false)
-	
+
 #TODO: Eventually make this load the correct module
 func start():
 	#GameState.load_game()
@@ -83,27 +83,47 @@ func update_menu(label : String):
 	state = State.HIDE_OPTIONS
 	set_process(true)
 
-func eval(flag_name : String) -> bool:
-	var negate = false
-	if flag_name.begins_with("!"):
-		negate = true
-		flag_name = flag_name.trim_prefix("!")
-	var flag = _flags[flag_name]
-	var val
-	if typeof(flag) == TYPE_BOOL:
-		val = flag if not flag_name in _edited_flags else not flag
-	else:
-		val = false
-		for or_clause in flag:
-			var or_clause_value = true
-			for and_clause in or_clause:
-				if not eval(and_clause):
-					or_clause_value = false
-					break
-			if or_clause_value:
-				val = true
-				break
-	return val if not negate else !val
+func eval(command: String) -> bool:
+	#Getting Variables to replace
+	var parsed = command
+	var regex = RegEx.new()
+	regex.compile("{[A-Z]}[a-zA-Z0-9_]+")
+	var m = regex.search(parsed)
+	while m:
+		var type = m.get_string()[1]
+		var var_name = m.get_string().substr(3)
+		var to_replace := ""
+		match type:
+			'F': # Variable is a flag
+				var flag = _flags[var_name]
+				if var_name in _edited_flags:
+					flag = not flag
+				to_replace = String(flag).to_lower()
+			'Q': # Variable is a quiz result
+				var quiz_result = get_quiz_result(var_name)
+				if quiz_result < 0:
+					print("error with quiz: " + var_name)
+					return false
+				to_replace = String(quiz_result)
+			_:
+				print("Invalid variable type: {" + type + "}")
+				return false
+		parsed.erase(m.get_start(), m.get_end()-m.get_start())
+		parsed = parsed.insert(m.get_start(), to_replace)
+		m = regex.search(parsed)
+	
+	# Evaluating expression
+	var expression = Expression.new()
+	var error = expression.parse(parsed)
+	if error != OK:
+		print("Error parsing command: " + command)
+		push_error(expression.get_error_text())
+		return false
+	var result = expression.execute()
+	if not expression.has_execute_failed() and typeof(result)==TYPE_BOOL:
+		return result
+	print("Execution of " + command + " failed to return a boolean")
+	return false
 
 func get_quiz_result(quiz_name : String) -> float:
 	if not quiz_name in _quiz_answers:
@@ -175,7 +195,7 @@ func _process(delta):
 			dialogue_box.visible_characters = round(_visible_char_float)
 			if dialogue_box.visible_characters > dialogue_box.text.length():
 				state = State.SHOW_OPTIONS
-		State.SHOW_OPTIONS:
+		State.SHOW_OPTIONS: # TODO: add an option for no choices???
 			if not options.visible and not quiz_options.visible:
 				if "text" in choices[0] and choices[0]["text"] == "{next}":
 					dialogue_box_button.show()
@@ -236,10 +256,6 @@ func _on_quiz_button_down(extra_arg_0):
 	if not qst["group"] in _quiz_answers:
 		_quiz_answers[qst["group"]] = {}
 	_quiz_answers[qst["group"]][qst["name"]] = val
-	print()
-	print("Value picked: " + String(val))
-	print("Answers: " + String(_quiz_answers))
-	print("Average: " + String(get_quiz_result(qst["group"])))
 	update_menu(choices[0]["label"])
 
 func _on_TextButton_pressed():
