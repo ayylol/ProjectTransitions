@@ -65,8 +65,15 @@ func update_menu(label : String):
 				choices.append(choice)
 		else:
 			choices.append(choice)
-	dialogue_box.bbcode_text = "[color=#474920]" + content["text"] + "[/color]"
-	#dialogue_box.bbcode_text = content["text"]
+	var new_text=""
+	if typeof(content["text"])==TYPE_STRING:
+		new_text=content["text"]
+	elif typeof(content["text"])==TYPE_DICTIONARY:
+		for cond in content["text"].keys():
+			if(eval(cond)):
+				new_text = content["text"][cond]
+				break
+	dialogue_box.bbcode_text = "[color=#474920]" + new_text + "[/color]"
 	
 	var update_portraits = false
 	if "character" in content:

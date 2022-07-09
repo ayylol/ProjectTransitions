@@ -4,7 +4,7 @@
   {
     "character": "pompom",
     "emotion": "dwayne",
-    "text": "[color=blue]This[/color] is [b]text[/b]",
+    "text": "[color=blue]This[/color] is the original [b]text[/b]",
     "choices":
       [
         {
@@ -78,19 +78,14 @@
   "show result":
   {
     "emotion": "happy",
-    "text": "{result}",
+    "text":{
+      "{Q}test_quiz <= 2": "your result was less than or equal to 2",
+      "{Q}test_quiz <= 4": "your result was less than or equal to 4",
+      "{Q}test_quiz <= 7": "your result was less than or equal to 7",
+      "true": "idk lol"
+    },
     "choices":
       [
-        {
-          "text": "flag choice 1",
-          "label": "intro",
-          "flag": "{F}flag1"
-        },
-        {
-          "text": "flag choice 2",
-          "label": "intro",
-          "flag": "{F}flag2"
-        },
         {
           "text": "goto 1",
           "label": "intro"
