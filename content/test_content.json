@@ -4,11 +4,16 @@
   {
     "character": "pompom",
     "emotion": "dwayne",
-    "text": "[color=blue]This[/color] is the original [b]text[/b]",
+    "text": "[color=blue]This[/color] is [wave][b]audio[/b][/wave]",
+    "audio": "intro",
     "choices":
       [
         {
-          "text": "{next}",
+          "text": "choice 1",
+          "label": "intro 2"
+        },
+        {
+          "text": "choice 2",
           "label": "intro 2"
         }
       ],

@@ -289,6 +289,8 @@ size_flags_horizontal = 3
 size_flags_vertical = 3
 text = "7"
 
+[node name="AudioSource" type="AudioStreamPlayer" parent="."]
+
 [connection signal="button_down" from="VBoxContainer/Back Button" to="." method="_on_Back_Button_button_down"]
 [connection signal="pressed" from="VBoxContainer/HBoxContainer/TextBox/TextButton" to="." method="_on_TextButton_pressed"]
 [connection signal="button_down" from="VBoxContainer/Options/Button0" to="." method="_on_Button_button_down" binds= [ 0 ]]
@@ -302,3 +304,4 @@ text = "7"
 [connection signal="button_down" from="VBoxContainer/QuizOptions/Button5" to="." method="_on_quiz_button_down" binds= [ 5 ]]
 [connection signal="button_down" from="VBoxContainer/QuizOptions/Button6" to="." method="_on_quiz_button_down" binds= [ 6 ]]
 [connection signal="button_down" from="VBoxContainer/QuizOptions/Button7" to="." method="_on_quiz_button_down" binds= [ 7 ]]
+[connection signal="finished" from="AudioSource" to="." method="_audio_done"]

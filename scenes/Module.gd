@@ -28,12 +28,14 @@ var _quiz_answers := {}
 var _visible_char_float := 0.0
 var _current_options_size := 0.0
 var _current_option_type
+var _is_audio_done := true
 
 onready var dialogue_box = $VBoxContainer/HBoxContainer/TextBox/MarginContainer/RichTextLabel
 onready var continue_indicator = $VBoxContainer/HBoxContainer/TextBox/ContinueIndicator
 onready var dialogue_box_button = $VBoxContainer/HBoxContainer/TextBox/TextButton
 onready var options = $VBoxContainer/Options
 onready var quiz_options = $VBoxContainer/QuizOptions
+onready var audio = $AudioSource
 
 func _ready():
 	set_process(false)
@@ -47,7 +49,7 @@ func start():
 
 func update_menu(label : String):
 	topic = label
-	#Check for correct formating
+	# Check for correct formating
 	assert(label in _module_content, "label not in module")
 	var content = _module_content[label]
 	assert("text" in content, "No text in label")
@@ -57,7 +59,7 @@ func update_menu(label : String):
 		for key in content["effect"]:
 			change_flag(key, content["effect"][key])
 	
-	# get list of available choices
+	# Get list of available choices
 	choices.clear()
 	for choice in content["choices"]:
 		if typeof(choice) == TYPE_DICTIONARY and "flag" in choice:
@@ -65,6 +67,8 @@ func update_menu(label : String):
 				choices.append(choice)
 		else:
 			choices.append(choice)
+	
+	# Set the text
 	var new_text=""
 	if typeof(content["text"])==TYPE_STRING:
 		new_text=content["text"]
@@ -75,6 +79,7 @@ func update_menu(label : String):
 				break
 	dialogue_box.bbcode_text = "[color=#474920]" + new_text + "[/color]"
 	
+	# Set portrait
 	var update_portraits = false
 	if "character" in content:
 		character = content["character"]
@@ -84,6 +89,13 @@ func update_menu(label : String):
 		update_portraits = true
 	if update_portraits:
 		update_portraits()
+	
+	# Set audio
+	if "audio" in content:
+		_is_audio_done = false
+		audio.stream = load("res://resources/audio/"+ _module_name + "/" + content["audio"] + ".ogg")
+		audio.play()
+	
 	
 	_visible_char_float = 0.0
 	dialogue_box.visible_characters = _visible_char_float		
@@ -198,9 +210,10 @@ func _process(delta):
 		State.IDLE:
 			set_process(false)
 		State.SHOW_TEXT:
-			_visible_char_float += text_speed * delta
-			dialogue_box.visible_characters = round(_visible_char_float)
-			if dialogue_box.visible_characters > dialogue_box.text.length():
+			if dialogue_box.visible_characters < dialogue_box.text.length():
+				_visible_char_float += text_speed * delta
+				dialogue_box.visible_characters = round(_visible_char_float)
+			elif _is_audio_done:
 				state = State.SHOW_OPTIONS
 		State.SHOW_OPTIONS: # TODO: add an option for no choices???
 			if not options.visible and not quiz_options.visible:
@@ -255,7 +268,7 @@ func _on_Button_button_down(extra_arg_0 : int):
 		update_menu(choices[extra_arg_0]["label"])
 	GameState.save_game()
 
-func _on_quiz_button_down(extra_arg_0):
+func _on_quiz_button_down(extra_arg_0: int):
 	var val = extra_arg_0
 	var qst = choices[0]
 	if qst["reversed"]:
@@ -270,3 +283,6 @@ func _on_TextButton_pressed():
 
 func _on_Back_Button_button_down():
 	emit_signal("goto_adventure")
+
+func _audio_done():
+	_is_audio_done = true
