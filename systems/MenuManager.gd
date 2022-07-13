@@ -21,4 +21,5 @@ func _on_Test_Module_goto_adventure():
 	$"Module".hide()
 	$"AdventureMenu".show()
 
-
+func _on_Main_Menu_goto_directory():
+	pass # Replace with function body.

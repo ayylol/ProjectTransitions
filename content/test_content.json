@@ -7,16 +7,11 @@
     "text": "[color=blue]This[/color] is [wave][b]audio[/b][/wave]",
     "conditional":
     {
-      "{F}flag1":{
+      "{F}str_flag":{
         "text":"this text is only shown if flag1 is true",
 	"audio": "intro",
 	"character" : "pompom",
 	"emotion": "angry"
-      },
-      "{F}flag2":{
-        "text":"this text is only shown if the above was false and flag2 is true",
-	"audio": "intro",
-	"emotion": "happy"
       }
     },
     "choices":

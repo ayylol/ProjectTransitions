@@ -21,6 +21,7 @@ visible = false
 visible = false
 
 [connection signal="goto_adventure" from="Main Menu" to="." method="_on_Main_Menu_goto_adventure"]
+[connection signal="goto_directory" from="Main Menu" to="." method="_on_Main_Menu_goto_directory"]
 [connection signal="goto_options" from="Main Menu" to="." method="_on_Main_Menu_goto_options"]
 [connection signal="goto_mainmenu" from="AdventureMenu" to="." method="_on_AdventureMenu_goto_mainmenu"]
 [connection signal="goto_testmodule" from="AdventureMenu" to="." method="_on_AdventureMenu_goto_testmodule"]

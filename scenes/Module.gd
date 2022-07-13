@@ -48,12 +48,13 @@ func start():
 	update_menu(topic)
 
 func update_menu(label : String):
+	var directory = Directory.new(); # For file checking
 	topic = label
 	# Check for correct formating
 	assert(label in _module_content, "label not in module")
 	var content = _module_content[label]
-	assert("text" in content, "No text in label")
-	assert("choices" in content, "No choices in label")
+	assert("text" in content, "No text in label") # probably doesn't need to be asserted
+	assert("choices" in content, "No choices in label") # ?
 	
 	if "effect" in content:
 		for key in content["effect"]:
@@ -68,39 +69,59 @@ func update_menu(label : String):
 		else:
 			choices.append(choice)
 	
-	# Set the text
-	var new_text=""
-	if typeof(content["text"])==TYPE_STRING:
-		new_text=content["text"]
-	elif typeof(content["text"])==TYPE_DICTIONARY:
-		for cond in content["text"].keys():
-			if(eval(cond)):
-				new_text = content["text"][cond]
+	# Get content to display
+	var to_show = {"text": "", "audio": "", "character": "", "emotion": ""}
+	get_label_vals(content, to_show)
+	if "conditional" in content:
+		for cond in content["conditional"].keys():
+			if eval(cond):
+				get_label_vals(content["conditional"][cond], to_show)
 				break
-	dialogue_box.bbcode_text = "[color=#474920]" + new_text + "[/color]"
 	
-	# Set portrait
-	var update_portraits = false
-	if "character" in content:
-		character = content["character"]
-		update_portraits = true
-	if "emotion" in content:
-		emotion = content["emotion"]
-		update_portraits = true
-	if update_portraits:
-		update_portraits()
+	# Update text
+	dialogue_box.bbcode_text = "[color=#474920]" + to_show["text"] + "[/color]"
 	
-	# Set audio
-	if "audio" in content:
-		_is_audio_done = false
-		audio.stream = load("res://resources/audio/"+ _module_name + "/" + content["audio"] + ".ogg")
-		audio.play()
+	# Update audio
+	if to_show["audio"]!="":
+		var path_to_audio = "res://resources/audio/"+ _module_name + "/" + to_show["audio"] + ".ogg"
+		print(path_to_audio)
+		if directory.file_exists(path_to_audio):
+			_is_audio_done=false
+			audio.stream = load(path_to_audio)
+			audio.play()
+		else:
+			print("heheehe")
 	
+	# Update character portrait
+	var update_portrait=false
+	var next_character = character
+	var next_emotion = emotion
+	if to_show["character"]!="":
+		next_character = to_show["character"]
+		update_portrait=true
+	if to_show["emotion"]!="":
+		next_emotion = to_show["emotion"]
+		update_portrait=true
+	if update_portrait:
+		var path_to_portrait = "res://resources/portraits/"+next_character+"/"+next_emotion+".png"
+		if directory.file_exists(path_to_portrait):
+			var sprite = load(path_to_portrait)
+			$VBoxContainer/MainCharacter.texture = sprite
 	
 	_visible_char_float = 0.0
-	dialogue_box.visible_characters = _visible_char_float		
+	dialogue_box.visible_characters = _visible_char_float
 	state = State.HIDE_OPTIONS
 	set_process(true)
+
+func get_label_vals(input: Dictionary, to_show: Dictionary):
+	if "text" in input:
+		to_show["text"] = input["text"]
+	if "audio" in input:
+		to_show["audio"] = input["audio"]
+	if "character" in input:
+		to_show["character"] = input["character"]
+	if "emotion" in input:
+		to_show["emotion"] = input["emotion"]
 
 func eval(command: String) -> bool:
 	#Getting Variables to replace
@@ -115,8 +136,14 @@ func eval(command: String) -> bool:
 		match type:
 			'F': # Variable is a flag
 				var flag = _flags[var_name]
-				if var_name in _edited_flags:
-					flag = not flag
+				if typeof(flag) == TYPE_BOOL:
+					if var_name in _edited_flags:
+						flag = not flag
+				elif typeof(flag) == TYPE_STRING:
+					flag = eval(flag)
+				else:
+					print("flag " + var_name + " is not a boolean nor a string")
+					return false
 				to_replace = String(flag).to_lower()
 			'Q': # Variable is a quiz result
 				var quiz_result = get_quiz_result(var_name)
@@ -167,13 +194,6 @@ func change_flag(flag_name : String, value):
 	else:
 		print("can't change the value of non-atomic flag")
 
-func update_portraits():
-	var path_to_portrait = "res://resources/portraits/"+character+"/"+emotion+".png"
-	var directory = Directory.new();
-	assert(not directory.dir_exists(path_to_portrait), path_to_portrait + " does not exist")
-	var sprite = load(path_to_portrait)
-	$VBoxContainer/MainCharacter.texture = sprite
-
 # GAME STATE FUNCTIONS
 func save_state() -> Dictionary:
 	var save_dict = {
@@ -195,14 +215,10 @@ func load_flags(flags_file_name : String):
 	_flags = parse_json(content)
 	file.close()
 	
-func load_module(module_name : String):
+func load_module(module_name : String):	
+	var path_to_content = "res://content/" + module_name + "_content.json"
+	_module_content = Database.get_content(path_to_content)
 	_module_name = module_name 
-	# Load content
-	var file = File.new()
-	file.open("res://content/" + module_name + "_content.json", file.READ)
-	var content = file.get_as_text()
-	_module_content = parse_json(content)
-	file.close()
 
 func _process(delta):
 	#TODO: Change to use tweens for option growing/shrinking
