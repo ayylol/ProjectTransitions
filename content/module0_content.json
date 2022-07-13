@@ -1,0 +1,1796 @@
+{
+
+  "intro":
+  {
+    "character": "pompom",
+    "emotion": "glad",
+    "text": "You must be the new student!It is wonderful to finally meet you on these campus grounds!",
+    "choices":
+      [
+        {
+          "text": "{next}",
+          "label": "intro 2"
+        }
+      ]
+  },
+  
+  "intro 2":
+  {
+    "emotion": "happy",
+    "text": "The name is Pompom.Tour guide and mascot of this place.",
+    "choices":
+      [
+        {
+          "text": "{next}",
+          "label": "intro 3"
+        }
+      ]
+  },
+
+  "intro 3":
+  {
+    "text": "I am sure you have some questions.Like why is a cat talking?",
+    "choices":
+      [
+        {
+          "text": "{next}",
+          "label": "intro 4"
+        }
+      ]
+  },
+  
+
+  "intro 4":
+  {
+    "text": "Simply raise your hand and ask away!",
+    "choices":
+      [
+        {
+          "text": "Why is the cat talking?",
+          "label": "intro 5"
+        },
+        {
+          "text": "Honestly thought you were a bunny",
+          "label": "intro 4.1"
+        }
+      ]
+  },
+
+  "intro 4.1":
+  {
+    "text": "Haha! Who knows!",
+    "choices":
+      [
+        {
+          "text": "{next}",
+          "label": "intro 5"
+        }
+      ]
+  },
+
+  "intro 5":
+  {
+    "emotion": "dwayne",
+    "text": "Maybe for another time.",
+    "choices":
+      [
+        {
+          "text": "{next}",
+          "label": "intro 5.1"
+        }
+      ]
+  },
+
+  "intro 5.1":
+  {
+    "emotion": "happy",
+    "text": "Before we begin our tour...",
+    "choices":
+      [
+        {
+          "text": "{next}",
+          "label": "intro 5.2"
+        }
+      ]
+  },
+
+  "intro 5.2":
+  {
+    "text": "I'd like to ask you a few questions to better understand you and your expectations",
+    "choices":
+      [
+        {
+          "text": "{next}",
+          "label": "intro 5.3"
+        }
+      ]
+  },
+
+  "intro 5.3":
+  {
+    "emotion": "dwayne",
+    "text": "Post secondary institutions have a different approach to course material as compared to high school and below...",
+    "choices":
+      [
+        {
+          "text": "{next}",
+          "label": "intro 5.4"
+        }
+      ]
+  },
+
+  "intro 5.4":
+  {
+    "emotion": "happy",
+    "text": "So how confident are you to be able to understand the complex material you will be receiving?",
+    "choices":
+      [
+        {
+          "text": "{quiz}",
+          "group": "Self_Efficacy",
+          "name": "SELP 1",
+          "reversed": false,
+          "label": "intro 5.5"
+        }
+      ]
+  },
+
+  "intro 5.5":
+  {
+    "emotion": "glad",
+    "text": "Said materials include assignments and tests. How is your confidence on that?",
+    "choices":
+      [
+        {
+          "text": "{quiz}",
+          "group": "Self_Efficacy",
+          "name": "SELP 2",
+          "reversed": false,
+          "label": "intro 5.6"
+          
+        }
+      ]
+  },
+
+  "intro 5.6":
+  {
+    "emotion": "surprised",
+    "text": "Fascinating!",
+    "choices":
+      [
+        {
+          "text": "{next}",
+          "label": "intro 5.7"
+        }
+      ]
+  },
+
+  "intro 5.7":
+  {
+    "emotion": "glad",
+    "text": "I look forward to improving these expectations",
+    "choices":
+      [
+        {
+          "text": "{next}",
+          "label": "intro 6"
+        }
+      ]
+  },
+
+  "intro 6":
+  {
+    "emotion":"happy",
+    "text": "Let's begin the tour!",
+    "choices":
+      [
+        {
+          "text": "{next}",
+          "label": "intro 7"
+        }
+      ]
+  },
+
+  "intro 7":
+  {
+    "text": "*walking*",
+    "choices":
+      [
+        {
+          "text": "{next}",
+          "label": "intro 8"
+        }
+      ]
+  },
+
+  "intro 8":
+  {
+    "text": "*walking*",
+    "choices":
+      [
+        {
+          "text": "{next}",
+          "label": "intro 9"
+        }
+      ]
+  },
+
+  "intro 9":
+  {
+    "emotion": "worried",
+    "text": "I was not gifted with a walking animation.But don't worry,I will not be doing that for every action I do",
+    "choices":
+      [
+        {
+          "text": "{next}",
+          "label": "intro 10"
+        }
+      ]
+  },
+
+  "intro 10":
+  {
+    "emotion": "dwayne",
+    "text": "*wink*",
+    "choices":
+      [
+        {
+          "text": "{next}",
+          "label": "intro 11"
+        }
+      ]
+  },
+
+  "intro 11":
+  {
+    "emotion":"happy",
+    "text": "Here , You will taught the necessary preparations for attending a post secondary institute",
+    "choices":
+      [
+        {
+          "text": "{next}",
+          "label": "intro 12"
+        }
+      ]
+  },
+
+  "intro 12":
+  {
+    "text": "In this particular tour with me,we will be covering...",
+    "choices":
+      [
+        {
+          "text": "{next}",
+          "label": "intro 13"
+        }
+      ]
+  }, 
+
+  "intro 13":
+  {
+    "text": "The concept of Spirals,Mindsets,and a summary of some of modules you will be learning.",
+    "choices":
+      [
+        {
+          "text": "{next}",
+          "label": "intro 14"
+        }
+      ]
+  },
+
+  "intro 14":
+  {
+    "text": "Feel free to tell me which one do you want to start on first",
+    "choices":
+      [
+        {
+          "text": "Spirals",
+          "label": "Spirals 1"
+        },
+        {
+          "text": "Mindsets",
+          "label": "Mindsets 1"
+        },
+        {
+          "text": "Modules",
+          "label": "Modules 1"
+        },
+        {
+          "text": "The talking cat",
+          "label": "pompom 1"
+        }
+      ]
+  },
+
+  "Something else":
+  {
+    "text": "What else do you wanna talk about?",
+    "choices":
+      [
+        {
+          "text": "Spirals",
+          "label": "Spirals 1"
+        },
+        {
+          "text": "Mindsets",
+          "label": "Mindsets 1"
+        },
+        {
+          "text": "Modules",
+          "label": "Modules 1"
+        },
+        {
+          "text": "The talking cat",
+          "label": "pompom 1"
+        }
+      ]
+  },
+
+  "Spirals 1":
+  {
+    "emotion":"dwayne",
+    "text": "Being a cat has its benefits of being able to observe all kinds of students throughout the campus",
+    "choices":
+      [
+        {
+          "text": "{next}",
+          "label": "Spirals 2"
+        }
+      ]
+  },
+
+  "Spirals 2":
+  {
+    "emotion":"blank",
+    "text": "Mostly through the windows as animals are not allowed inside of facilities",
+    "choices":
+      [
+        {
+          "text": "{next}",
+          "label": "Spirals 3"
+        }
+      ]
+  },
+
+  "Spirals 3":
+  {
+    "emotion":"happy",
+    "text": "And out of concern for those with cat allergies.",
+    "choices":
+      [
+        {
+          "text": "{next}",
+          "label": "Spirals 4"
+        }
+      ]
+  },
+
+  "Spirals 4":
+  {
+    "text": "Point being...",
+    "choices":
+      [
+        {
+          "text": "{next}",
+          "label": "Spirals 5"
+        }
+      ]
+  },
+
+  "Spirals 5":
+  {
+    "text": "I've seen professors,and the like, give challenges and tasks to students.",
+    "choices":
+      [
+        {
+          "text": "{next}",
+          "label": "Spirals 6"
+        }
+      ]
+  },
+
+  "Spirals 6":
+  {
+    "text": "-To be replaced dialogue here-",
+    "choices":
+      [
+        {
+          "text": "{next}",
+          "label": "Spirals 7"
+        }
+      ]
+  },
+
+  "Spirals 7":
+  {
+    "text": "The individual approach and outcome to a task are whats known as [shake rate=10 level=5]Spirals[/shake]",
+    "choices":
+      [
+        {
+          "text": "{next}",
+          "label": "Spirals 8"
+        }
+      ]
+  },
+
+  "Spirals 8":
+  {
+    "text": "And there are one of two ways this usually goes for the student ",
+    "choices":
+      [
+        {
+          "text": "{next}",
+          "label": "Spirals 9"
+        }
+      ]
+  },
+
+  "Spirals 9":
+  {
+    "text": "Would you like to try and see which one you fall under?",
+    "choices":
+      [
+        {
+          "text": "Yes",
+          "label": "Spiral Quiz 1"
+        },
+        {
+          "text": "No",
+          "label": "Spiral Lecture 1"
+        }
+      ]
+  },
+  
+  "Spiral Quiz 1":
+  {
+    "emotion":"glad",
+    "text": "Exciting!",
+    "choices":
+      [
+        {
+          "text": "{next}",
+          "label": "Spiral Quiz 2"
+        }
+      ]
+  },
+
+  "Spiral Quiz 2":
+  {
+    "emotion":"happy",
+    "text": "When succesful at a task what do you do {next}?",
+    "choices":
+      [
+        {
+          "text": "Self Criticize for future improvements (+1 Str)",
+          "label": "Spiral Quiz 3"
+        },
+        {
+          "text": "Move on to the {next} task (+1 Suc)",
+          "label": "Spiral Quiz 3"
+        }
+      ]
+  },
+
+  "Spiral Quiz 3":
+  {
+    "text": "Do you find yourself struggling before the task is completed? ",
+    "choices":
+      [
+        {
+          "text": "Yes (+1 Str)", 
+          "label": "Spiral Quiz 4"
+        },
+        {
+          "text": "No (+1 Suc)",
+          "label": "Spiral Quiz 4"
+        }
+      ]
+  },
+
+  "Spiral Quiz 4":
+  {
+    "text": "At what point do you feel like stopping your work?",
+    "choices":
+      [
+        {
+          "text": "When a streak of success ends (+1 Suc)",
+          "label": "Spiral Quiz 5"
+        },
+        {
+          "text": "I find a problem unsolvable (+1 Str)",
+          "label": "Spiral Quiz 5"
+        }
+      ]
+  },
+
+  "Spiral Quiz 5":
+  {
+    "text": "It appears that during your work periods you find yourself in a...",
+    "choices":
+      [
+        {
+          "text": "{next}",
+          "label": "Spiral Quiz 6"
+        }
+      ]
+  },
+
+  "Spiral Quiz 6":
+  {
+    "text": "[Success/Struggle] Spiral",
+    "choices":
+      [
+        {
+          "text": "{next}",
+          "label": "Spiral Quiz 7"
+        }
+      ]
+  },
+
+  "Spiral Quiz 7":
+  {
+    "text": "-Work in Progress dialogue-\nWork at a later time.",
+    "choices":
+      [
+        {
+          "text": "Let's talk about something else",
+          "label": "Something else"
+        }
+      ]
+  },
+
+  "Mindsets 1":
+  {
+    "text": "The concept of the \"Mindset\" refers to the way one thinks about their own talents and abilities. ",
+    "choices":
+      [
+        {
+          "text": "{next}",
+          "label": "Mindsets 2"
+        }
+      ]
+  },
+
+  "Mindsets 2":
+  {
+    "text": "Tell me...",
+    "choices":
+      [
+        {
+          "text": "{next}",
+          "label": "Mindsets 3"
+        }
+      ]
+  },
+
+  "Mindsets 3":
+  {
+    "text": "If you try hard enough, will you be able to understand the course material?",
+    "choices":
+      [
+        {
+          "text": "{quiz}",
+          "group":"Self_Belief",
+          "name":"CSB 1",
+          "reversed":false,
+          "label": "Mindsets 4"
+        }
+      ]
+  },
+
+  "Mindsets 4":
+  {
+    "text": "Your answer to this particular question and any other questions like it, will determine where you stand in terms of mindsets. ",
+    "choices":
+      [
+        {
+          "text": "{next}",
+          "label": "Mindsets 5"
+        }
+      ]
+  },
+  "Mindsets 5":
+  {
+    "text": "You see mindsets fall under a continuum of either \"Fixed\" or \"Growth\" mindsets.",
+    "choices":
+      [
+        {
+          "text": "{next}",
+          "label": "Mindsets 6"
+        }
+      ]
+  },
+  "Mindsets 6":
+  {
+    "text": "Take a look at that student who is most definitely here right now in front of me! What do you think they're doing?",
+    "choices":
+      [
+        {
+          "text": "Practicing their boomerang throw",
+          "label": "Mindsets Frisbee 1"
+        },
+        {
+          "text": "Reading a textbook",
+          "label": "Mindsets Book 1"
+        },
+        {
+          "text": "Rehearsing for a play",
+          "label": "Mindsets Rehearse 1"
+        }
+      ]
+  },
+
+
+
+  "Mindsets Frisbee 1":
+  {
+    "emotion": "glad",
+    "text": "I recognize him! That's Kilograw. Resident boomerang athlete of our university.",
+    "choices":
+      [
+        {
+          "text": "{next}",
+          "label": "Mindsets Frisbee 1.1"
+        }
+      ]
+  },
+  
+  
+  "Mindsets Frisbee 1.1":
+  {
+    "emotion":"blank",
+    "text": "Capable of throwing boomerangs as fast as the world's fastest baseball pitch.",
+    "choices":
+      [
+        {
+          "text": "{next}",
+          "label": "Mindsets Frisbee 2"
+        }
+      ]
+  },
+
+  "Mindsets Frisbee 2":
+  {
+    "emotion":"surprised",
+    "text": "Watchout!",
+    "choices":
+      [
+        {
+          "text": "{next}",
+          "label": "Mindsets Frisbee 3"
+        }
+      ]
+  },
+
+  "Mindsets Frisbee 3":
+  {
+    "emotion":"surprised-transparent",
+    "text": "*A boomerang approaches*",
+    "choices":
+      [
+        {
+          "text": "Catch the boomerang!",
+          "label": "Catch 1"
+        },
+        {
+          "text": "Dodge the Boomerang!",
+          "label": "Dodge 1"
+        },
+        {
+          "text": "Save Pompom",
+          "label": "Save 1"
+        },
+        {
+          "text":"Sacrifice Pompom",
+          "label":"Sacrifice 1"
+        }
+      ]
+  },
+
+  "Catch 1":
+  {
+    "emotion":"happy-transparent",
+    "text": "*You catch the boomerang with absolute confidence...on the outside*",
+    "choices":
+      [
+        {
+          "text": "{next}",
+          "label": "Catch 1.1"
+        }
+      ]
+  },
+
+  "Catch 1.1":
+  {
+    "text": "The sudden stop of the thrown boomerang resulted in a gust of strong winds towards you. Your face looks like a loose latex mask.",
+    "choices":
+      [
+        {
+          "text": "{next}",
+          "label": "Catch 2"
+        }
+      ]
+  },
+
+  "Catch 2":
+  {
+    "emotion":"glad",
+    "text": "WOAH! Nice catch bud!",
+    "choices":
+      [
+        {
+          "text": "Internalize Pain",
+          "label": "Catch 3"
+        }
+      ]
+  },
+
+  "Catch 3":
+  {
+    "emotion": "glad-transparent",
+    "text": "+100 Public Image\n-25 Limbs",
+    "choices":
+      [
+        {
+          "text": "{next}",
+          "label": "Moving On 1"
+        }
+      ]
+  },
+  
+
+
+  "Dodge 1":
+  {
+    "emotion":"happy-transparent",
+    "text": "You and Pompom duck to avoid the boomerang.",
+    "choices":
+      [
+        {
+          "text": "{next}",
+          "label": "Dodge 2"
+        }
+      ]
+  },
+
+  "Dodge 2":
+  {
+    "text": "You and Pompom stand.",
+    "choices":
+      [
+        {
+          "text": "{next}",
+          "label": "Dodge 3"
+        }
+      ]
+  },
+
+  "Dodge 3":
+  {
+    "emotion":"blank-transparent",
+    "text": "The boomerang passes by your side with winds of what felt like jet engines!",
+    "choices":
+      [
+        {
+          "text": "{next}",
+          "label": "Dodge 4"
+        }
+      ]
+  },
+
+  "Dodge 4":
+  {
+    "emotion":"blank-transparent",
+    "text": "+101 BPM\n+0 Neck\n+7 Tomorrows",
+    "choices":
+      [
+        {
+          "text": "{next}",
+          "label": "Dodge 6"
+        }
+      ]
+  },
+
+  "Dodge 6":
+  {
+    "emotion":"angry",
+    "text": "Hold on! I'm way shorter than the boomerang's elevation! Why did I even duck?!",
+    "choices":
+      [
+        {
+          "text": "{next}",
+          "label": "Moving On 1"
+        }
+      ]
+  },
+
+  "Sacrifice 1":
+  {
+    "emotion":"surprised-transparent",
+    "text": "You fling Pompom onto boomerang height.",
+    "choices":
+      [
+        {
+          "text":"{next}",
+          "label":"Sacrifice 1.1"
+        }
+      ]
+  },
+
+  "Sacrifice 1.1":
+  {
+    "emotion":"blank-transparent",
+    "text": "Pompom's shade turns murky black. Every bit of fur on him had suddenly hardened into metal. And his eyes suddenly narrowed deadset onto the incoming projectile.",
+    "choices":
+      [
+        {
+          "text":"{next}",
+          "label":"Sacrifice 2"
+        }
+      ]
+  },
+
+  "Sacrifice 2":
+  {
+    "text": "Pompom kicks the boomerang in lightning speed and turns towards you...",
+    "choices":
+      [
+        {
+          "text": "{next}",
+          "label": "Sacrifice 3"
+        }
+      ]
+  },
+  "Sacrifice 3":
+  {
+    "text": "...and he sticks the landing...Safe...",
+    "choices":
+      [
+        {
+          "text": "{next}",
+          "label": "Sacrifice 4"
+        }
+      ]
+  },
+  "Sacrifice 4":
+  {
+    "emotion":"blank",
+    "text": "...",
+    "choices":
+      [
+        {
+          "text": "{next}",
+          "label": "Sacrifice 4.1"
+        }
+      ]
+  },
+
+  "Sacrifice 4.1":
+  {
+    "emotion":"worried",
+    "text": ".....",
+    "choices":
+      [
+        {
+          "text": "{next}",
+          "label": "Sacrifice 5"
+        }
+      ]
+  },
+
+  "Sacrifice 5":
+  {
+    "emotion":"surprised",
+    "text": ".....",
+    "choices":
+      [
+        {
+          "text": "{next}",
+          "label": "Sacrifice 6"
+        }
+      ]
+  },
+
+  "Sacrifice 6":
+  {
+    "text": "(?)Pompom will remember that\n+5 Self-Doubt",
+    "choices":
+      [
+        {
+          "text": "{next}",
+          "label": "Moving On 1"
+        }
+      ]
+  },
+
+  "Save 1":
+  {
+    "emotion":"blank",
+    "text": "I got this.",
+    "choices":
+      [
+        {
+          "text": "{next}",
+          "label": "Save 2"
+        }
+      ]
+  },
+  "Save 2":
+  {
+    "emotion":"surprised-transparent",
+    "text": "You push Pompom out of the way! He felt heavier for some reason...",
+    "choices":
+      [
+        {
+          "text": "{next}",
+          "label": "Save 3"
+        }
+      ]
+  },
+  "Save 3":
+  {
+    "emotion":"surprised-transparent",
+    "text": "You took the full force of the boomerang. You got knocked onto the grass field.",
+    "choices":
+      [
+        {
+          "text": "{next}",
+          "label": "Save 4"
+        }
+      ]
+  },
+
+  "Save 4":
+  {
+    "emotion":"glad-transparent",
+    "text": "But atleast Pompom is safe...",
+    "choices":
+      [
+        {
+          "text": "{next}",
+          "label": "Save 5"
+        }
+      ]
+  },
+
+  "Save 5":
+  {
+    "emotion":"happy",
+    "text": "Wow you took that like a champ!",
+    "choices":
+    [
+      {
+        "text": "{next}",
+        "label": "Save 6"
+      }
+    ]
+  },
+
+  "Save 6":
+  {
+    "text": "+200 Public Image\n+100 Respect\n-100 All over",
+    "choices":
+      [
+        {
+          "text": "{next}",
+          "label": "Moving On 1"
+        }
+      ]
+  },
+
+  "Moving On 1":
+  {
+    "emotion":"glad",
+    "text": "Moving On!",
+    "choices":
+      [
+        {
+          "text": "{next}",
+          "label": "Growth Mindsets 1"
+        }
+      ]
+  },
+  "Growth Mindsets 1":
+  {
+    "text": "Kilograw here is a psychology major with an athletic career on the side.",
+    "choices":
+      [
+        {
+          "text": "{next}",
+          "label": "Growth Mindsets 2"
+        }
+      ]
+  },
+  "Growth Mindsets 2":
+  {
+    "emotion":"worried",
+    "text": "And that amount of work and dedication is tough.",
+    "choices":
+      [
+        {
+          "text": "{next}",
+          "label": "Growth Mindsets 3"
+        }
+      ]
+  },
+
+  "Growth Mindsets 3":
+  {
+    "emotion":"angry",
+    "text": "Like really tough! You gotta have the guts y'hear?",
+    "choices":
+      [
+        {
+          "text":"{next}",
+          "label": "Growth Mindsets 4"
+        }
+      ]
+  },
+
+  "Growth Mindsets 4":
+  {
+    "text": "The guts to do this do not come out straight away.",
+    "choices":
+      [
+        {
+          "text": "{next}",
+          "label": "Growth Mindsets 5"
+        }
+      ]
+  },
+
+  "Growth Mindsets 5":
+  {
+    "text": "The [b]Growth Mindset[/b] is something Kilograw had to develop himself.",
+    "choices":
+      [
+        {
+          "text": "{next}",
+          "label": "Growth Mindsets 6"
+        }
+      ]
+  },
+
+  "Growth Mindsets 6":
+  {
+    "text": "Individuals with the [b]growth mindsets[/b] have a thought process in which their performance quality of a task is something to be nurtured and practiced regularly. ",
+    "choices":
+      [
+        {
+          "text": "{next}",
+          "label": "Growth Mindsets 7"
+        }
+      ]
+  },
+
+  "Growth Mindsets 7":
+  {
+    "text": "The lack of such a routine is believed to be a cause for their natural abilities to stagnate.",
+    "choices":
+      [
+        {
+          "text": "{next}",
+          "label": "Growth Mindsets 8"
+        }
+      ]
+  },
+  "Growth Mindsets 8":
+  {
+    "text": "And \"Failure\" is just a means of learning further and is an opporunity to either pivot or restrategize the approach. And the same can be said for constructive feedback",
+    "choices":
+      [
+        {
+          "text": "{next}",
+          "label": "Growth Mindsets 9"
+        }
+      ]
+  },
+
+  "Growth Mindsets 9":
+  {
+    "text": "Kilograw had been practicing his boomerang throw every single day on that one spot.",
+    "choices":
+      [
+        {
+          "text": "{next}",
+          "label": "Growth Mindsets 10"
+        }
+      ]
+  },
+
+  "Growth Mindsets 10":
+  {
+    "text": "The grass that he stands on had actually died because his feet were on those two spots that often!",
+    "choices":
+      [
+        {
+          "text": "{next}",
+          "label": "Growth Mindsets 11"
+        }
+      ]
+  },
+  "Growth Mindsets 11":
+  {
+    "text": "I've known him long enough to know that he would take on the hardest challenges his professors had to throw at him for extra credit.",
+    "choices":
+      [
+        {
+          "text": "{next}",
+          "label": "Growth Mindsets 13"
+        }
+      ]
+  },
+
+  "Growth Mindsets 13":
+  {
+    "text": "Not because he needed more things to fill his portfolio or his accomplishments.",
+    "choices":
+      [
+        {
+          "text": "{next}",
+          "label": "Growth Mindsets 14"
+        }
+      ]
+  },
+  "Growth Mindsets 14":
+  {
+    "text": "Although that is a HUGE plus.",
+    "choices":
+      [
+        {
+          "text": "{next}",
+          "label": "Growth Mindsets 15"
+        }
+      ]
+  },
+  "Growth Mindsets 15":
+  {
+    "text": "He does it for his own self improvement.",
+    "choices":
+      [
+        {
+          "text": "{next}",
+          "label": "Growth Mindsets 16"
+        }
+      ]
+  },
+  "Growth Mindsets 16":
+  {
+    "text": "My past conversations with him showed that he was not always like this.",
+    "choices":
+      [
+        {
+          "text": "What happened?",
+          "label": "Kilograw 1"
+        },
+        {
+          "text":"Don't you need to \"fall\" into the growth mindset?",
+          "label":"Growth Mindsets 17"
+        }
+      ]
+  },
+  "Kilograw 1":
+  {
+    "text": "As his friend, I could not give details. Perhaps you should ask him in the future.",
+    "choices":
+      [
+        {
+          "text": "{next}",
+          "label": "Kilograw 2"
+        }
+      ]
+  },
+
+  "Kilograw 2":
+  {
+    "text": "I am certain he would be open about it! You'll know where to find him anyways.",
+    "choices":
+      [
+        {
+          "text": "{next}",
+          "label": "Kilograw 3"
+        }
+      ]
+  },
+
+  "Kilograw 3":
+  {
+    "text": "+200 Curiosity",
+    "choices":
+      [
+        {
+          "text": "{next}",
+          "label": "Growth Mindsets 17"
+        }
+      ]
+  },
+
+  "Growth Mindsets 17":
+  {
+    "text": "Although it is true that once you learn about the different mindsets you will self-assess yourself and have you falling into one end of the continuum.",
+    "choices":
+      [
+        {
+          "text": "{next}",
+          "label": "Growth Mindsets 18"
+        }
+      ]
+  },
+  "Growth Mindsets 18":
+  {
+    "text": "There is a big possibility that your mindset may change over time...",
+    "choices":
+      [
+        {
+          "text": "{next}",
+          "label": "Growth Mindsets 19"
+        }
+      ]
+  },
+  "Growth Mindsets 19":
+  {
+    "text": "...for better or for worse.",
+    "choices":
+      [
+        {
+          "text": "{next}",
+          "label": "Growth Mindsets 20"
+        }
+      ]
+  },
+  "Growth Mindsets 20":
+  {
+    "text": "And so even getting towards the Growth Mindset will require your own efforts and decision to improve at some point in your life.",
+    "choices":
+      [
+        {
+          "text": "{next}",
+          "label": "Growth Mindsets 21"
+        }
+      ]
+  },
+  "Growth Mindsets 21":
+  {
+    "text": "A \"Grown\" Growth Mindset requires a spark from an even smaller Growth Mindset. ",
+    "choices":
+      [
+        {
+          "text": "{next}",
+          "label": "Growth Mindsets 22"
+        }
+      ]
+  },
+  "Growth Mindsets 22":
+  {
+    "text": "And I believe in you and your potential to make it there one day. Like getting the good grades and such!",
+    "choices":
+      [
+        {
+          "text": "{next}",
+          "label": "Growth Mindsets 23"
+        }
+      ]
+  },
+
+  "Growth Mindsets 23":
+  {
+    "text": "Do you think so as well?",
+    "choices":
+      [
+        {
+          "text": "{next}",
+          "label": "Growth Mindsets 23.1"
+        }
+      ]
+  },
+
+  "Growth Mindsets 23.1":
+  {
+    "text": "Do you believe that you will receive excellent grades in post secondary?",
+    "choices":
+      [
+        {
+          "text": "{quiz}",
+          "group": "Self_Efficacy",
+          "name":"SELP 3",
+          "reversed":false,
+          "label": "Growth Mindsets 24"
+        }
+      ]
+  },
+
+  "Growth Mindsets 24":
+  {
+    "text": "That covers the topic of the Growth Mindset. Let's go observe another student! \n(YOU RECEIVED THE GROWTH MINDSET KEYWORD!)",
+    "choices":
+      [
+        {
+          "text": "{next}",
+          "label": "Mindsets 6"
+        }
+      ]
+  },
+
+  "Mindsets Book 1":
+  {
+    "text": "Timothy Putty!",
+    "choices":
+      [
+        {
+          "text": "{next}",
+          "label": "Mindsets Book 2"
+        }
+      ]
+  },
+  "Mindsets Book 2":
+  {
+    "text": "Quite a stoic that one.",
+    "choices":
+      [
+        {
+          "text": "{next}",
+          "label": "want to improve 4"
+        }
+      ]
+  },
+
+  "want to improve 4":
+  {
+    "text": "It refers to the workflow of how one approaches\nchallenges and tasks.",
+    "choices":
+      [
+        {
+          "text": "{next}",
+          "label": "want to improve 5"
+        }
+      ]
+  },
+  "want to improve 5":
+  {
+    "text": "When given a challenge, how do you approach it?",
+    "choices":
+      [
+        {
+          "text": "I struggle quite greatly with the given task",
+          "label": "struggle 1"
+        },
+        {
+          "text": "I keep going until I lose success",
+          "label": "<++>"
+        }
+      ]
+  },
+
+  "struggle 1":
+  {
+    "text": "And i assume the more you struggle with said task\nthe more you find yourself in doubt and criticism?\nwhich in term leads to GREATER doubt\nand HARSHER criticisms in your own work.",
+    "choices":
+      [
+        {
+          "text": "{next}",
+          "label": "struggle 2"
+        }
+      ],
+    "effect": 
+      {
+      "struggle spiral": true
+      }
+  },
+  "struggle 2":
+  {
+    "text": "And in the end, you find yourself avoiding said challenge\nas it swallows you whole in a cycle of frustration.",
+    "choices":
+      [
+        {
+          "text": "{next}",
+          "label": "struggle 3"
+        }
+      ]
+  },
+  "struggle 3":
+  {
+    "text": "This is known as a\n\"Struggle Spiral\"",
+    "choices":
+      [
+        {
+        "flag": "success spiral",
+        "text": "moving on",
+        "label": "spirals"
+        },
+        {
+        "flag": "!success spiral",
+        "text": "Spirals as in plural, what's the other?",
+        "label": "success 1"
+        }
+      ]
+  },
+
+  "success 1":
+  {
+    "text": "Although it is good to succeed at the task\nover and over again.",
+    "choices":
+      [
+        {
+          "text": "{next}",
+          "label": "success 2"
+        }
+      ],
+    "effect": 
+      {
+      "success spiral": true
+      }
+  },
+  "success 2":
+  {
+    "text": "We fuel our motivation as long as success is met.\nSometimes leading us into more challenges and into new activities.",
+    "choices":
+      [
+        {
+          "text": "{next}",
+          "label": "success 3"
+        }
+      ]
+  },
+  "success 3":
+  {
+    "text": "Until said success disappears...",
+    "choices":
+      [
+        {
+          "text": "{next}",
+          "label": "success 4"
+        }
+      ]
+  },
+  "success 4":
+  {
+    "text": "The streak is lost and the motivation is gone\nyour very foundations of improvement are crumbled\nall because you had one instance of failure.",
+    "choices":
+      [
+        {
+          "text": "{next}",
+          "label": "success 5"
+        }
+      ]
+  },
+  "success 5":
+  {
+    "text": "This is what's known as the\n\"Success Spiral\"",
+    "choices":
+      [
+        {
+        "flag": "struggle spiral",
+        "text": "moving on",
+        "label": "spirals"
+        },
+        {
+        "flag": "!struggle spiral",
+        "text": "Spirals as in plural, what's the other?",
+        "label": "struggle 1"
+        }
+      ]
+  },
+
+  "spirals":
+  {
+    "text": "Both spirals showcase how we can easily fall victim\nto a mindset that can greatly reduce in productivity\nwhich will hinder you from thriving in\na post-secondary environment.",
+    "choices":
+      [
+        {
+          "text": "Then what does it take to improve?",
+          "label": "what it takes 1"
+        },
+        {
+          "text": "Seriously, do i have to be immortal?",
+          "label": "what it takes 1"
+        }
+      ]
+  },
+
+  "what it takes 1":
+  {
+    "text": "Well, there are multiple things to consider...\nThough it may not be the exact solutions\nThese are simply thoughts for guidance.",
+    "choices":
+      [
+        {
+          "text": "{next}",
+          "label": "what it takes 2"
+        }
+      ]
+  },
+  "what it takes 2":
+  {
+    "text": "...",
+    "choices":
+      [
+        {
+          "text": "{next}",
+          "label": "what it takes 3"
+        }
+      ]
+  },
+  "what it takes 3":
+  {
+    "text": "\"Experiment\"",
+    "choices":
+      [
+        {
+          "text": "{next}",
+          "label": "what it takes 4"
+        }
+      ]
+  },
+  "what it takes 4":
+  {
+    "text": "The process of learning something new is not linear.",
+    "choices":
+      [
+        {
+          "text": "{next}",
+          "label": "what it takes 5"
+        }
+      ]
+  },
+  "what it takes 5":
+  {
+    "text": "Experimenting on new ideas is a part of the learning process\nwhen approaching such material, it is important to adopt\nand approach as you gather info, process, and strategize\nyour way through the challenges that comes with ADHD and LD.",
+    "choices":
+      [
+        {
+          "text": "{next}",
+          "label": "what it takes 6"
+        }
+      ]
+  },
+  "what it takes 6":
+  {
+    "text": "The key is to remind yourself that experimentation\nis all a part of the learning process.",
+    "choices":
+      [
+        {
+          "text": "{next}",
+          "label": "what it takes 7"
+        }
+      ]
+  },
+  "what it takes 7":
+  {
+    "text": "Failure is necessary\nto bring you closer to your goal.\n A malleable yellow dog once told me that.",
+    "choices":
+      [
+        {
+          "text": "{next}",
+          "label": "what it takes 8"
+        }
+      ]
+  },
+  "what it takes 8":
+  {
+    "text": "\"Simple does not equal to easy\"",
+    "choices":
+      [
+        {
+          "text": "{next}",
+          "label": "what it takes 9"
+        }
+      ]
+  },
+  "what it takes 9":
+  {
+    "text": "When trying new things, sometimes said thing\nlooks deceptively simple and that it is a challenge to implement",
+    "choices":
+      [
+        {
+          "text": "{next}",
+          "label": "what it takes 10"
+        }
+      ]
+  },
+  "what it takes 10":
+  {
+    "text": "And with certain strategies of approach being quite popular.\nI would understand why one were to get frustrated\nwhen the popular strategy is done with difficulty\nwhile everyone else seems to do it with ease.",
+    "choices":
+      [
+        {
+          "text": "{next}",
+          "label": "what it takes 11"
+        }
+      ]
+  },
+  "what it takes 11":
+  {
+    "text": "Remember that experimentation is all a part of the process\nwith each failure, or success, it will always bring you closer\nto your goals.",
+    "choices":
+      [
+        {
+          "text": "{next}",
+          "label": "what it takes 12"
+        }
+      ]
+  },
+  "what it takes 12":
+  {
+    "text": "It is hardly a waste of time as what does NOT work\nhelps you on what works and what does not work",
+    "choices":
+      [
+        {
+          "text": "{next}",
+          "label": "what it takes 13"
+        }
+      ]
+  },
+  "what it takes 13":
+  {
+    "text": "\"Past Performance Does Not Equal Future Performance\"",
+    "choices":
+      [
+        {
+          "text": "{next}",
+          "label": "what it takes 14"
+        }
+      ]
+  },
+  "what it takes 14":
+  {
+    "text": "Your past should never define you",
+    "choices":
+      [
+        {
+          "text": "{next}",
+          "label": "what it takes 15"
+        }
+      ]
+  },
+  "what it takes 15":
+  {
+    "text": "Though you may fail to the point of giving up,\nthose past mistakes are meant to be learnt from\nand so you must move on.",
+    "choices":
+      [
+        {
+          "text": "{next}",
+          "label": "what it takes 16"
+        }
+      ]
+  },
+  "what it takes 16":
+  {
+    "text": "Consider learning these to work towards your future goals...",
+    "choices":
+      [
+        {
+          "text": "{next}",
+          "label": "what it takes 17"
+        }
+      ]
+  },
+  "what it takes 17":
+  {
+    "text": "Upgrade your skills...",
+    "choices":
+      [
+        {
+          "text": "{next}",
+          "label": "what it takes 18"
+        }
+      ]
+  },
+  "what it takes 18":
+  {
+    "text": "...Bounce back from failure\nand user the experience to course correct...",
+    "choices":
+      [
+        {
+          "text": "{next}",
+          "label": "what it takes 19"
+        }
+      ]
+  },
+  "what it takes 19":
+  {
+    "text": "...address your challenges,\nincluding ADHD and Learning Disabilities,\nto make your life easier...",
+    "choices":
+      [
+        {
+          "text": "{next}",
+          "label": "what it takes 20"
+        }
+      ]
+  },
+  "what it takes 20":
+  {
+    "text": "...access the resources you need to chart a new course",
+    "choices":
+      [
+        {
+          "text": "{next}",
+          "label": "what it takes 21"
+        }
+      ]
+  },
+  "what it takes 21":
+  {
+    "text": "There is always something to learn.\nNO matter the failures.",
+    "choices":
+      [
+        {
+          "text": "{next}",
+          "label": "what it takes 22"
+        }
+      ]
+  },
+  "what it takes 22":
+  {
+    "text": "And lastly\nEvaluate your progress",
+    "choices":
+      [
+        {
+          "text": "{next}",
+          "label": "what it takes 23"
+        }
+      ]
+  },
+  "what it takes 23":
+  {
+    "text": "After experimenting what does and does not work,\nit is best to be kind to yourself and show yourself\nthat no progress is truly linear and struggle is natural",
+    "choices":
+      [
+        {
+          "text": "{next}",
+          "label": "conclusion"
+        }
+      ]
+  },
+
+  "immortal 1":
+  {
+    "text": "No\nNo, you don't\nas limited human life is compared to mine.",
+    "choices":
+      [
+        {
+          "text": "{next}",
+          "label": "immortal 2"
+        }
+      ]
+  },
+  "immortal 2":
+  {
+    "text": "Your own life is long enough and worth spending\nas much time to think about what exactly it is\nyou find to be the best route for you to grow\nand this journey is meant for you to realize that you can grow.\nNot to be fixed unto one spot.",
+    "choices":
+      [
+        {
+          "text": "{next}",
+          "label": "conclusion"
+        }
+      ]
+  },
+
+  "conclusion":
+  {
+    "text": "When you can approach your learning with curiosity\nyour chances of success will increase\nand will help motivate you to figure out\nthe best path forward for you",
+    "choices":
+      [
+        {
+          "text": "{next}",
+          "label": "conclusion 2"
+        }
+      ]
+  },
+  "conclusion 2":
+  {
+    "text": "I welcome you to this journey.",
+    "choices":
+      [
+        {
+          "text": "{next}",
+          "label": "conclusion 3"
+        }
+      ]
+  },
+  "conclusion 2":
+  {
+    "text": "Have fun.",
+    "choices":
+      [
+      ]
+  }
+}

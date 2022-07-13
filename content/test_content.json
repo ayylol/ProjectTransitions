@@ -5,7 +5,20 @@
     "character": "pompom",
     "emotion": "dwayne",
     "text": "[color=blue]This[/color] is [wave][b]audio[/b][/wave]",
-    "audio": "intro",
+    "conditional":
+    {
+      "{F}flag1":{
+        "text":"this text is only shown if flag1 is true",
+	"audio": "intro",
+	"character" : "pompom",
+	"emotion": "angry"
+      },
+      "{F}flag2":{
+        "text":"this text is only shown if the above was false and flag2 is true",
+	"audio": "intro",
+	"emotion": "happy"
+      }
+    },
     "choices":
       [
         {
@@ -16,12 +29,7 @@
           "text": "choice 2",
           "label": "intro 2"
         }
-      ],
-    "effect":
-    {
-      "flag1": true,
-      "flag2": "not (not {F}flag1 or 3>1)"
-    }
+      ]
   },
   "intro 2":
   {
@@ -83,11 +91,13 @@
   "show result":
   {
     "emotion": "happy",
-    "text":{
-      "{Q}test_quiz <= 2": "your result was less than or equal to 2",
-      "{Q}test_quiz <= 4": "your result was less than or equal to 4",
-      "{Q}test_quiz <= 7": "your result was less than or equal to 7",
-      "true": "idk lol"
+    "text": "idk lol",
+    "conditionals": {
+      "{Q}test_quiz <= 2": 
+      {
+	"emotion": "dwayne",
+	"text": "test quiz <= 2"
+      }
     },
     "choices":
       [
