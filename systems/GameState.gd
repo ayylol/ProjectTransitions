@@ -1,9 +1,11 @@
 extends Node
 
-func save_game():	
+# THIS NEEDS TO CHANGE TO BE MORE MODULAR
+
+func save_game():
 	var save_file = File.new()
 	save_file.open("user://savegame.save", File.WRITE)
-	var nodes_to_save = $"../Game".get_tree().get_nodes_in_group("Persist")
+	var nodes_to_save = $"../Camera/UI".get_tree().get_nodes_in_group("Persist")
 	for node in nodes_to_save:
 		if node.filename.empty():
 			print("'%s' is not an instanced scene, skipping", node.name)

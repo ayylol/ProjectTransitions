@@ -96,22 +96,22 @@ __meta__ = {
 
 [node name="Back Button" type="Button" parent="VBoxContainer"]
 margin_right = 1024.0
-margin_bottom = 20.0
+margin_bottom = 65.0
 text = "back"
 
 [node name="MainCharacter" type="TextureRect" parent="VBoxContainer"]
-margin_top = 24.0
+margin_top = 69.0
 margin_right = 1024.0
-margin_bottom = 301.0
+margin_bottom = 324.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 texture = ExtResource( 2 )
 stretch_mode = 6
 
 [node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer"]
-margin_top = 305.0
+margin_top = 328.0
 margin_right = 1024.0
-margin_bottom = 582.0
+margin_bottom = 583.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 
@@ -119,13 +119,13 @@ size_flags_vertical = 3
 anchor_right = 0.0
 anchor_bottom = 0.0
 margin_right = 117.0
-margin_bottom = 277.0
+margin_bottom = 255.0
 size_flags_stretch_ratio = 0.15
 
 [node name="TextBox" type="NinePatchRect" parent="VBoxContainer/HBoxContainer"]
 margin_left = 121.0
 margin_right = 902.0
-margin_bottom = 277.0
+margin_bottom = 255.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 texture = ExtResource( 4 )
@@ -144,7 +144,7 @@ margin_bottom = -10.0
 
 [node name="RichTextLabel" type="RichTextLabel" parent="VBoxContainer/HBoxContainer/TextBox/MarginContainer"]
 margin_right = 761.0
-margin_bottom = 267.0
+margin_bottom = 245.0
 rect_clip_content = false
 size_flags_horizontal = 7
 size_flags_vertical = 7
@@ -179,13 +179,13 @@ anchor_right = 0.0
 anchor_bottom = 0.0
 margin_left = 906.0
 margin_right = 1024.0
-margin_bottom = 277.0
+margin_bottom = 255.0
 size_flags_stretch_ratio = 0.15
 
 [node name="Padding" parent="VBoxContainer" instance=ExtResource( 3 )]
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_top = 586.0
+margin_top = 587.0
 margin_right = 1024.0
 margin_bottom = 600.0
 size_flags_stretch_ratio = 0.05
@@ -291,6 +291,7 @@ text = "7"
 
 [node name="AudioSource" type="AudioStreamPlayer" parent="."]
 
+[connection signal="visibility_changed" from="." to="." method="_on_visibility_changed"]
 [connection signal="button_down" from="VBoxContainer/Back Button" to="." method="_on_Back_Button_button_down"]
 [connection signal="pressed" from="VBoxContainer/HBoxContainer/TextBox/TextButton" to="." method="_on_TextButton_pressed"]
 [connection signal="button_down" from="VBoxContainer/Options/Button0" to="." method="_on_Button_button_down" binds= [ 0 ]]

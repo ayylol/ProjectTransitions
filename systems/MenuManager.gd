@@ -1,25 +1,13 @@
-extends Control
+extends Camera2D
 
-# Main Menu Goto's
-func _on_Main_Menu_goto_adventure():
-	$"Main Menu".hide()
-	$"AdventureMenu".show()
+var _ui_node_path = "UI/"
+var current_screen : Node
 
+func _ready():
+	current_screen = get_node(_ui_node_path + "MainMenu")
+	current_screen.show()
 
-func _on_AdventureMenu_goto_mainmenu():
-	$"AdventureMenu".hide()
-	$"Main Menu".show()
-
-
-func _on_AdventureMenu_goto_testmodule():
-	$"AdventureMenu".hide()
-	$"Module".show()
-	$"Module".start()
-
-
-func _on_Test_Module_goto_adventure():
-	$"Module".hide()
-	$"AdventureMenu".show()
-
-func _on_Main_Menu_goto_directory():
-	pass # Replace with function body.
+func _show_menu(node_name: String):
+	current_screen.hide()
+	current_screen = get_node(_ui_node_path +  node_name)
+	current_screen.show()

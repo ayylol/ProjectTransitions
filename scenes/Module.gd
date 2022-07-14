@@ -302,3 +302,7 @@ func _on_Back_Button_button_down():
 
 func _audio_done():
 	_is_audio_done = true
+
+func _on_visibility_changed():
+	if visible:
+		start()

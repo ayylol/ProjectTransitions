@@ -22,6 +22,12 @@ GameState="*res://systems/GameState.gd"
 [global]
 
 viewport=false
+theme=false
+
+[gui]
+
+theme/custom="res://resources/default_theme.tres"
+theme/custom_font="res://resources/fonts/tex_regular.tres"
 
 [importer_defaults]
 

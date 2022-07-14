@@ -33,7 +33,7 @@ anchor_bottom = 0.0
 margin_right = 725.0
 margin_bottom = 44.0
 
-[node name="TestModule" type="Button" parent="HBoxContainer/VBoxContainer"]
+[node name="Module" type="Button" parent="HBoxContainer/VBoxContainer"]
 margin_top = 48.0
 margin_right = 725.0
 margin_bottom = 273.0
@@ -70,5 +70,5 @@ margin_left = 878.0
 margin_right = 1024.0
 margin_bottom = 600.0
 
-[connection signal="button_down" from="HBoxContainer/VBoxContainer/TestModule" to="." method="_on_TestModule_button_down"]
+[connection signal="button_down" from="HBoxContainer/VBoxContainer/Module" to="." method="_on_Module_button_down"]
 [connection signal="button_down" from="HBoxContainer/VBoxContainer/Back" to="." method="_on_back_button_down"]
