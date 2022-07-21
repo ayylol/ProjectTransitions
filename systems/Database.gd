@@ -1,11 +1,11 @@
 extends Node
 
-func get_content(file_path : String) -> Dictionary:
+func get_content(file_path : String):
 	# Load content
 	var file = File.new()
 	assert(file.file_exists(file_path), file_path + " does not exist.")
 	file.open(file_path, file.READ)
-	var content = file.get_as_text()
-	var dict = parse_json(content)
+	var text = file.get_as_text()
+	var content = parse_json(text)
 	file.close()
-	return dict
+	return content

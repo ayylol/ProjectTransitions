@@ -7,9 +7,8 @@
     "text": "[color=blue]This[/color] is [wave][b]audio[/b][/wave]",
     "conditional":
     {
-      "{F}str_flag":{
+      "{F}flag1":{
         "text":"this text is only shown if flag1 is true",
-	"audio": "intro",
 	"character" : "pompom",
 	"emotion": "angry"
       }
@@ -18,7 +17,8 @@
       [
         {
           "text": "choice 1",
-          "label": "intro 2"
+          "label": "intro 2",
+          "flag": "{F}flag1}"
         },
         {
           "text": "choice 2",
@@ -36,7 +36,11 @@
           "text": "{next}",
           "label": "quiz 1"
         }
-      ]
+      ],
+    "effect":
+    {
+      "flag1": true
+    }
   },
   "quiz 1":
   {

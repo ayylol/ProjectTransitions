@@ -1,0 +1,20 @@
+{
+  "Growth_Mindset" : false,
+  "Fixed_Mindset" : false,
+  "Developing_Mindset" : false,
+
+  "Mindsets" : "not({F}Growth_Mindset and {F}Fixed_Mindset and {F}Developing_Mindset)",
+
+  "Cat": false,
+
+  "Spirals": false,
+
+  "Facilities": true,
+  "Student": true,
+  "Preparations": true,
+  "Accomodations": true,
+
+  "Modules" : "({F}Facilities and {F}Preparations and {F}Accomodations and {F}Student)",
+
+  "Ancient_Lit": false
+}

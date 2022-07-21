@@ -14,7 +14,7 @@ export var text_speed := 100.0
 export var options_size := 1.0
 export var options_delta_size := 10.0
 
-var topic := "intro"
+var topic := "Module 14"
 var choices := []
 var character := ""
 var emotion := ""
@@ -43,8 +43,8 @@ func _ready():
 #TODO: Eventually make this load the correct module
 func start():
 	#GameState.load_game()
-	load_flags("test_flags")
-	load_module("test")
+	load_flags("flags")
+	load_module("module0")
 	update_menu(topic)
 
 func update_menu(label : String):
