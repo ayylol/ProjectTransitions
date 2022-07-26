@@ -14,7 +14,7 @@ export var text_speed := 100.0
 export var options_size := 1.0
 export var options_delta_size := 10.0
 
-var topic := "Module 14"
+var topic := "intro"
 var choices := []
 var character := ""
 var emotion := ""
@@ -90,7 +90,7 @@ func update_menu(label : String):
 			audio.stream = load(path_to_audio)
 			audio.play()
 		else:
-			print("heheehe")
+			print("No such audio file")
 	
 	# Update character portrait
 	var update_portrait=false
@@ -107,6 +107,10 @@ func update_menu(label : String):
 		if directory.file_exists(path_to_portrait):
 			var sprite = load(path_to_portrait)
 			$VBoxContainer/MainCharacter.texture = sprite
+			character = next_character
+			emotion = next_emotion
+		else:
+			print(path_to_portrait + " does not exist")
 	
 	_visible_char_float = 0.0
 	dialogue_box.visible_characters = _visible_char_float
