@@ -4,5 +4,11 @@
     "choices":
     ["4","3","1"],
     "answer": 0
+  },
+  "choose the right answer":
+  {
+    "choices":
+    ["not this","this one","this is wrong"],
+    "answer": 1
   }
 }
