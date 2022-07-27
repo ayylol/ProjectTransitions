@@ -13,15 +13,7 @@ var questions
 onready var lanes = get_tree().get_nodes_in_group("Lane")
 onready var lane_parent = $Lanes
 onready var player = $Player
-
-# TO TEST SPAWNING
-func _unhandled_input(event):
-	if event.is_action_pressed("test1"):
-		lane_parent.spawn_obstacles()
-	elif event.is_action_pressed("ui_accept"):
-		show_question()
-	elif event.is_action_pressed("ui_right"): # THIS NEED TO BE MOVED
-		answer_question()
+onready var question_timer = $QuestionTimer
 
 func _ready():
 	player_lane = int(lanes.size()/2)
@@ -54,3 +46,12 @@ func _on_Player_moving(direction):
 func _on_ObstacleTrash_area_entered(area):
 	if area.is_in_group("Trashable"):
 		area.queue_free()
+
+
+func _on_Player_answer_question():
+	answer_question()
+	question_timer.start()
+
+
+func _on_QuestionTimer_timeout():
+	show_question()

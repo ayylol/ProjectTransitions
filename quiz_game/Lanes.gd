@@ -32,23 +32,22 @@ func _on_Runner_chose_answer(answer):
 		lane.hide_text()
 
 func spawn_obstacles():
-#	var choices = range(patterns.size())
-#	var i = 0
-#	print(choices)
-#	while i < choices.size():
-#		var valid_next = false
-#		for j in range(patterns[_last_pattern].size()):
-#			if (not patterns[i][j]) and (not patterns[_last_pattern][j]):
-#				i+=1
-#				valid_next = true
-#				break
-#		if valid_next: continue
-#		choices.pop_at(i)
-#	var choice = choices[randi()%choices.size()]
-#	_last_pattern = choice
-	var pattern = patterns[randi()%patterns.size()]
+	var choices = range(patterns.size())
 	var i = 0
+	while i < choices.size():
+		var valid_next = false
+		for j in range(patterns[_last_pattern].size()):
+			if (not patterns[i][j]) and (not patterns[_last_pattern][j]):
+				i+=1
+				valid_next = true
+				break
+		if valid_next: continue
+		choices.pop_at(i)
+	var choice = choices[randi()%choices.size()]
+	_last_pattern = choice
+	var pattern = patterns[choice]
+	var k = 0
 	for lane in lanes:
-		if pattern[i]:
-			lane.spawn()
-		i+=1
+		if pattern[k]:
+			lane.spawn(10)
+		k+=1

@@ -15,12 +15,12 @@ onready var text_tween = $TextAnim
 onready var text_rest_pos = $TextRestPos
 onready var text_end_pos = $TextEndPos
 
-func spawn():
+func spawn(speed : int):
 	var instance = obstacle.instance()
 	add_child(instance)
 	instance.position = spawn_point.position
+	instance.speed = speed
 	instance.calc_direction()
-
 
 func show_text(msg: String):
 	text.show()

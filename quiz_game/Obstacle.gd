@@ -1,7 +1,5 @@
 extends Area2D
 
-signal player_hit
-
 export var speed = 10.0
 
 var target = Vector2(0,0)
@@ -17,8 +15,6 @@ func calc_direction():
 func _physics_process(delta):
 	position = position + _dir * speed
 
-
 func _on_Obstacle_body_entered(body):
 	if body.is_in_group("Player"):
-		emit_signal("player_hit")
-		print("hit")
+		body.on_hit()
