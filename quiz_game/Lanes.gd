@@ -11,6 +11,7 @@ var patterns = [
 	[false,true,true],
 ]
 
+var _active_obstacles = 0
 var _last_pattern = 0
 
 onready var label = $Label
@@ -25,6 +26,10 @@ func _on_Runner_show_question(question, answers):
 		lane.show_text(answers[i])
 		i+=1
 
+func _on_ObstacleTrash_area_entered(area):
+	if area.is_in_group("Trashable"):
+		_active_obstacles-=1
+		area.queue_free()
 
 func _on_Runner_chose_answer(answer):
 	label.hide()
@@ -49,5 +54,12 @@ func spawn_obstacles():
 	var k = 0
 	for lane in lanes:
 		if pattern[k]:
+			_active_obstacles+=1
 			lane.spawn(10)
 		k+=1
+
+func start_obstacles():
+	obstacle_timer.start()
+
+func stop_obstacles():
+	obstacle_timer.stop()

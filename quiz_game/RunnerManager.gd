@@ -43,15 +43,11 @@ func _on_Player_moving(direction):
 		player_lane = next_lane
 	player.move_to(lanes[player_lane].position, [0.75,1,1.25][player_lane])
 
-func _on_ObstacleTrash_area_entered(area):
-	if area.is_in_group("Trashable"):
-		area.queue_free()
-
-
 func _on_Player_answer_question():
 	answer_question()
 	question_timer.start()
-
+	lane_parent.start_obstacles()
 
 func _on_QuestionTimer_timeout():
+	lane_parent.stop_obstacles()
 	show_question()
