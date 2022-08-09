@@ -4,7 +4,8 @@
   {
     "character": "pompom",
     "emotion": "glad",
-    "text": "You must be the new student! It is so great to finally meet you!",
+    "text": "You must be the new student! It is so great to finally meet you!\n[color=green](Press space to continue)[/color]",
+    "audio": "intro",
     "choices":
       [
         {
@@ -42,7 +43,21 @@
   "intro 3.1":
   {
     "emotion":"worried",
-    "text": "[i]why is the cat talking?[/i]",
+    "text": "[i]why is the cat talking?[/i] and stuff like that",
+    "choices":
+      [
+        {
+          "text": "{next}",
+          "label": "intro 3.1.1"
+        }
+      ]
+  },
+
+  
+  "intro 3.1.1":
+  {
+    "emotion":"worried",
+    "text": "[color=green]When you have a choice of what to say, you will hear a sound and the choices will appear[/color]",
     "choices":
       [
         {
@@ -52,11 +67,10 @@
       ]
   },
 
-
   "intro 4":
   {
     "emotion": "glad",
-    "text": "Simply raise your hand and ask away!\n[color=green](Click on the little man to interact)[/color]",
+    "text": "Simply raise your hand and ask away!\n[color=green]Any time you have a choice, use the arrow keys to select your answer, and press enter to confirm[/color]",
     "choices":
       [
         {
@@ -73,7 +87,20 @@
   "intro 4.1":
   {
     "emotion": "happy",
-    "text": "[wave amp=50 freq=1.5]Haha! Who knows![/wave]",
+    "text": "[wave amp=50 freq=1.5]Who knows~[/wave] I've been called many things but rest assured, I am a talking cat right now.",
+    "choices":
+      [
+        {
+          "text": "{next}",
+          "label": "intro 4.2"
+        }
+      ]
+  },
+
+  "intro 4.2":
+  {
+    "emotion": "happy",
+    "text": "[color=green]+100 Curiosity[/color]",
     "choices":
       [
         {
@@ -86,7 +113,98 @@
   "intro 5":
   {
     "emotion": "dwayne",
-    "text": "Maybe for another time.",
+    "text": "Ha! knew it! Maybe for another time.",
+    "choices":
+      [
+        {
+          "text": "{next}",
+          "label": "intro 5.1.1"
+        }
+      ]
+  },
+
+  "intro 5.1.1":
+  {
+    "emotion": "dwayne",
+    "text": "[color=green]+100 Predictability[/color]",
+    "choices":
+      [
+        {
+          "text": "{next}",
+          "label": "intro 5.01"
+        }
+      ]
+  },
+
+
+  "intro 5.01":
+  {
+    "emotion": "dwayne",
+    "text": "Oh! It looks like you just earned some points!",
+    "choices":
+      [
+        {
+          "text": "{next}",
+          "label": "intro 5.02"
+        }
+      ]
+  },
+
+   "intro 5.02":
+  {
+    "emotion": "happy",
+    "text": "When you earn a point it will look like this:\n[color=green]+1 Fake Point[/color]",
+    "choices":
+      [
+        {
+          "text": "{next}",
+          "label": "intro 5.03"
+        }
+      ]
+  },
+  "intro 5.03":
+  {
+    "emotion": "glad",
+    "text": "Points can help you earn [wave amp=50 freq=1.5] stars. [/wave]\nYou can see your stars in the top right of your screen",
+    "choices":
+      [
+        {
+          "text": "{next}",
+          "label": "intro 5.04"
+        }
+      ]
+  },
+
+  "intro 5.04":
+  {
+    "emotion": "glad",
+    "text": "What are stars you ask? Good question!",
+    "choices":
+      [
+        {
+          "text": "{next}",
+          "label": "intro 5.05"
+        }
+      ]
+  },
+
+  "intro 5.05":
+  {
+    "emotion": "glad",
+    "text": "The full term for them are wish stars and are a speciality local to this university, and they do some fun stuff when you get a hold of a couple! So try and get as many as you can",
+    "choices":
+      [
+        {
+          "text": "{next}",
+          "label": "intro 5.06"
+        }
+      ]
+  },
+
+  "intro 5.06":
+  {
+    "emotion": "glad",
+    "text": "You can earn points to fill your stars by talking to your instructor and learning new things! They're usually split up as star fragments.",
     "choices":
       [
         {
@@ -273,7 +391,7 @@
   "intro 11":
   {
     "emotion":"happy",
-    "text": "Here , You will be taught the necessary preparations for attending a post secondary institute",
+    "text": "Here in this virtual campus , You will be taught the necessary preparations for attending a post secondary institute",
     "choices":
       [
         {
@@ -299,7 +417,7 @@
   "intro 13":
   {
     "emotion":"dwayne",
-    "text": "The concept of Spirals, Mindsets, and a short summary of some of modules you will be learning after this one.",
+    "text": "The concept of Loops, Mindsets, and a short summary of some of modules you will be learning after this one.",
     "choices":
       [
         {
@@ -316,8 +434,8 @@
     "choices":
       [
         {
-          "text": "Spirals",
-          "label": "Spirals 1"
+          "text": "Loops",
+          "label": "Loops 1"
         },
         {
           "text": "Mindsets",
@@ -341,28 +459,34 @@
     "choices":
       [
         {
-          "text": "Spirals",
-          "label": "Spirals 1"
+          "text": "Loops",
+          "label": "Loops 1",
+          "flag": "not {F}Loops"
         },
         {
           "text": "Mindsets",
-          "label": "Mindsets 1",
-          "flag": "{F}Mindsets"
+          "label": "Mindsets 4.2",
+          "flag": "not {F}Mindsets"
         },
         {
           "text": "Modules",
-          "label": "Modules 1",
-          "flag" : "{F}Modules"
+          "label": "Module 1",
+          "flag" : "not {F}Modules"
         },
         {
           "text": "The talking cat",
           "label": "pompom 1",
-          "flag":"not {F}Cat"
+          "flag":"not {F}Lore"
+        },
+        {
+          "text": "Thank you for the tour!",
+          "label": "Thank you 1",
+          "flag":"{F}essentials"
         }
       ]
   },
 
-  "Spirals 1":
+  "Loops 1":
   {
     "emotion":"dwayne",
     "text": "Being a cat has its benefits of being able to observe all kinds of students throughout the campus...",
@@ -370,12 +494,12 @@
       [
         {
           "text": "{next}",
-          "label": "Spirals 2"
+          "label": "Loops 2"
         }
       ]
   },
 
-  "Spirals 2":
+  "Loops 2":
   {
     "emotion":"blank",
     "text": "Mostly through the windows since animals are not allowed inside of facilities.",
@@ -383,12 +507,12 @@
       [
         {
           "text": "{next}",
-          "label": "Spirals 3"
+          "label": "Loops 3"
         }
       ]
   },
 
-  "Spirals 3":
+  "Loops 3":
   {
     "emotion":"worried",
     "text": "And out of concern for those with cat allergies.",
@@ -396,195 +520,1162 @@
       [
         {
           "text": "{next}",
-          "label": "Spirals 4"
+          "label": "Loops 4"
         }
       ]
   },
 
-  "Spirals 4":
+  "Loops 4":
   {
     "emotion":"happy",
-    "text": "Point being...",
+    "text": "May I ask you a quick survey question?",
     "choices":
       [
         {
           "text": "{next}",
-          "label": "Spirals 5"
+          "label": "Loops 4.1"
         }
       ]
   },
 
-  "Spirals 5":
+  "Loops 4.1":
+  {
+    "emotion":"happy",
+    "text": "[b]If I don't understand my course material, it is because I didn't try hard enough.[/b]",
+    "choices":
+      [
+        {
+          "text": "{quiz}",
+          "group":"Control_Belief",
+          "name":"CSB 4",
+          "reversed":false,
+          "label": "Loops 5"
+        }
+      ]
+  },
+
+  "Loops 5":
   {
     "emotion":"glad",
-    "text": "I've seen professors,and the like, give challenges and tasks to students.",
+    "text": "Some professors give tasks to students...",
     "choices":
       [
         {
           "text": "{next}",
-          "label": "Spirals 6"
+          "label": "Loops 6"
         }
       ]
   },
 
-  "Spirals 6":
+  "Loops 6":
   {
     "emotion":"angry",
-    "text": "-To be replaced dialogue here-",
+    "text": "...some these tasks are often seen as \"challenges\" by the students.",
     "choices":
       [
         {
           "text": "{next}",
-          "label": "Spirals 7"
+          "label": "Loops 7"
         }
       ]
   },
 
-  "Spirals 7":
+  "Loops 7":
   {
     "emotion":"happy",
-    "text": "The individual approach and outcome to a task are whats known as [shake rate=10 level=5]Spirals[/shake]",
+    "text": "And how these students go about said tasks will end up going in one of two [i]Loops[/i]",
     "choices":
       [
         {
           "text": "{next}",
-          "label": "Spirals 8"
+          "label": "Loops 8"
         }
       ]
   },
 
-  "Spirals 8":
-  {
-    "emotion":"glad",
-    "text": "And there are one of two ways this usually goes for the student ",
-    "choices":
-      [
-        {
-          "text": "{next}",
-          "label": "Spirals 9"
-        }
-      ]
-  },
-
-  "Spirals 9":
+  "Loops 8":
   {
     "emotion":"happy",
-    "text": "Would you like to try and see which one you fall under?",
+    "text": "Perhaps we should try and picture a scenario to best learn about these loops...",
+    "choices":
+      [
+        {
+          "text": "{next}",
+          "label": "Loops 9"
+        }
+      ]
+  },
+
+  "Loops 9":
+  {
+    "emotion":"happy",
+    "text": "[color=blue]Pompom goes to a nearby ledge and sets up some pen, paper, an iPod[/color]",
+    "choices":
+      [
+        {
+          "text": "{next}",
+          "label": "Loops 10"
+        }
+      ]
+  },
+
+  "Loops 10":
+  {
+    "emotion":"happy",
+    "text": "[color=blue]Tavern music.mp3 plays on Pompom's iPod[/color]",
+    "choices":
+      [
+        {
+          "text": "{next}",
+          "label": "Loops 11"
+        }
+      ]
+  },
+
+  "Loops 11":
+  {
+    "emotion":"happy",
+    "text": "Your professor looks at your class with great pride after a hard day's lecture.",
+    "choices":
+      [
+        {
+          "text": "{next}",
+          "label": "Loops 12"
+        }
+      ]
+  },
+
+  "Loops 12":
+  {
+    "emotion":"happy",
+    "text": "The students' voices echo around you as dismissal conversations begin. The noises collapsing onto fixed points as peers gathered at the halls.",
+    "choices":
+      [
+        {
+          "text": "{next}",
+          "label": "Loops 13"
+        }
+      ]
+  },
+
+  "Loops 13":
+  {
+    "emotion":"happy",
+    "text": "You're the only one left in the room. Your professor approaches you and says your name!",
+    "choices":
+      [
+
+        {
+          "text": "I ask for their intentions",
+          "label": "Want 1"
+        }
+      ]
+  },
+
+  
+  "Want 1":
+  {
+    "emotion":"happy",
+    "text": "Ah! Assertive!",
+    "choices":
+      [
+        {
+          "text": "{next}",
+          "label": "Want 2"
+        }
+      ]
+  },
+
+  "Want 2":
+  {
+    "emotion":"happy",
+    "text": "Roll for initiative...",
+    "choices":
+      [
+        {
+          "text": "I don't have dice.",
+          "label": "Want 3"
+        }
+      ]
+  },
+
+  "Want 3":
+  {
+    "emotion":"happy",
+    "text": "Just grab a rock or something\n[color=green]You pick up an odd 20 sided rock[/color]",
+    "choices":
+      [
+        {
+          "text": "Roll the d20 rock",
+          "label": "Want 4"
+        }
+      ]
+  },
+
+  "Want 4":
+  {
+    "emotion":"happy",
+    "text": "Nice! It's a...",
+    "choices":
+      [
+        {
+          "text": "{next}",
+          "label": "Want 5"
+        }
+      ]
+  },
+
+  "Want 5":
+  {
+    "emotion":"happy",
+    "text": "Favorable Random Outcome!",
+    "choices":
+      [
+        {
+          "text": "\"May I help you professor?\"",
+          "label": "Want 6"
+        }
+      ]
+  },
+
+  "Want 6":
+  {
+    "emotion":"happy",
+    "text": "Your professor said that it is time for you to submit your essay topic. You are the only one who has not submitted yet.",
+    "choices":
+      [
+        {
+          "text": "{next}",
+          "label": "Want 7"
+        }
+      ]
+  },
+
+  "Want 8":
+  {
+    "emotion":"happy",
+    "text": "Roll for essay topic!",
+    "choices":
+      [
+        {
+          "text": "Roll d20 rock",
+          "label": "Worst 1"
+        },
+        {
+          "text": "Roll d20 rock",
+          "label": "Best 1"
+        },
+        {
+          "text": "Roll d20 rock",
+          "label": "Mid 1"
+        }
+      ]
+  },
+
+  "Worst 1":
+  {
+    "emotion":"happy",
+    "text": "You rolled a 2!",
+    "choices":
+      [
+        {
+          "text": "{next}",
+          "label": "Worst 2"
+        }
+      ]
+  },
+
+  "Worst 2":
+  {
+    "emotion":"happy",
+    "text": "Your professor showed visible confusion and disgust to the very topic you just proposed. They accept anyways out of the pure pressure of the \"Let's just get this over with\" mindset",
+    "choices":
+      [
+        {
+          "text": "{next}",
+          "label": "Worst 3"
+        }
+      ]
+  },
+
+  "Worst 3":
+  {
+    "emotion":"happy",
+    "text": "\"No way you could make this topic work! This better be some paper.\" They demanded.\n[color=green]-100 misfortune[/color]",
+    "choices":
+      [
+        {
+          "text": "{next}",
+          "label": "Essay 1"
+        }
+      ],
+
+      "effect":{
+        "worst_roll": true
+      }
+  },
+
+  "Best 1":
+  {
+    "emotion":"happy",
+    "text": "Natural 20! Let's gooooo!!1",
+    "choices":
+      [
+        {
+          "text": "{next}",
+          "label": "Best 2"
+        }
+      ]
+  },
+
+  "Best 2":
+  {
+    "emotion":"happy",
+    "text": "You are one lucky person!",
+    "choices":
+      [
+        {
+          "text": "{next}",
+          "label": "Best 3"
+        }
+      ]
+  },
+
+  "Best 3":
+  {
+    "emotion":"happy",
+    "text": "\"Wow! Now that is something that could go on the news! Might even win you a Nobel Prize or something! I look forward to this.\" The Professor says.\n[color=green]+250 Luck[/color]",
+    "choices":
+      [
+        {
+          "text": "{next}",
+          "label": "Essay 1"
+        }
+      ],
+      "effect":{
+        "best_roll": true
+      }
+  },
+
+  
+  "Mid 1":
+  {
+    "emotion":"happy",
+    "text": "Ah!",
+    "choices":
+      [
+        {
+          "text": "{next}",
+          "label": "Mid 2"
+        }
+      ]
+  },
+
+  "Mid 2":
+  {
+    "emotion":"happy",
+    "text": "You talk about your topic to your professor with as much detail as possible.",
+    "choices":
+      [
+        {
+          "text": "{next}",
+          "label": "Mid 3"
+        }
+      ]
+  },
+
+  "Mid 3":
+  {
+    "emotion":"happy",
+    "text": "The professor acknowledges and nods their head in contempt with your topic.",
+    "choices":
+      [
+        {
+          "text": "{next}",
+          "label": "Mid 4"
+        }
+      ]
+  },
+
+  "Mid 4":
+  {
+    "emotion":"happy",
+    "text": "\"I accept your topic! I look forward to reading your paper.\" They said",
+    "choices":
+      [
+        {
+          "text": "{next}",
+          "label": "Essay 1"
+        }
+      ],
+
+      "effect":{
+        "mid_roll": true
+      }
+  },
+
+  "Essay 1":
+  {
+    "emotion":"happy",
+    "text": "You head home and open up your laptop to begin writing your essay.",
+    "choices":
+      [
+        {
+          "text": "{next}",
+          "label": "Essay 2"
+        }
+      ]
+  },
+
+  "Essay 2":
+  {
+    "emotion":"happy",
+    "text": "The writing software opens and you type your first words...",
+    "choices":
+      [
+        {
+          "text": "Roll for Writing Proficiency",
+          "label": "Mid Essay 1"
+        },
+        {
+          "text": "Roll for Writing Proficiency",
+          "label": "Worst Essay 1"
+        },
+        {
+          "text": "Roll for Writing Proficiency",
+          "label": "Best Essay 1"
+        }
+      ]
+  },
+
+  "Mid Essay 1":
+  {
+    "emotion":"happy",
+    "text": "Your roll passed!",
+    "choices":
+      [
+        {
+          "text": "{next}",
+          "label": "Mid Essay 2"
+        }
+      ]
+  },
+
+  "Mid Essay 2":
+  {
+    "emotion":"happy",
+    "text": "You write your essay for a couple of hours...",
+    "choices":
+      [
+        {
+          "text": "{next}",
+          "label": "Mid Essay 3"
+        }
+      ]
+  },
+
+  "Mid Essay 3":
+  {
+    "emotion":"happy",
+    "text": "...with some occasional hiccups",
+    "choices":
+      [
+        {
+          "text": "{next}",
+          "label": "Mid Essay 4"
+        }
+      ]
+  },
+
+  
+  "Mid Essay 4":
+  {
+    "emotion":"happy",
+    "text": "The essay came out just fine! And you passed the assignment!",
+    "choices":
+      [
+        {
+          "text": "{next}",
+          "label": "Mid Essay 5"
+        }
+      ]
+  },
+
+  "Mid Essay 5":
+  {
+    "emotion":"happy",
+    "text": "You got a B+ on your paper the following week.\n[color=green]+80 grades[/color]",
+    "choices":
+      [
+        {
+          "text": "{next}",
+          "label": "Mid Essay 6"
+        }
+      ]
+  },
+
+  "Mid Essay 6":
+  {
+    "emotion":"happy",
+    "text": "Your professor asks you whether you would like another assignment for extra credit. Do you take this chance?",
     "choices":
       [
         {
           "text": "Yes",
-          "label": "Spiral Quiz 1"
+          "label": "Yes Success Loop"
         },
+
         {
           "text": "No",
-          "label": "Spiral Lecture 1"
+          "label": "No Success Loop"
+        }
+      ]
+  },
+
+  "Worst Essay 1":
+  {
+    "emotion":"happy",
+    "text": "You rolled poorly",
+    "choices":
+      [
+        {
+          "text": "{next}",
+          "label": "Worst Essay 1.1"
+        }
+      ]
+  },
+
+  "Worst Essay 1.1":
+  {
+    "emotion":"happy",
+    "text": "You sit down and watch your screen...",
+    "choices":
+      [
+        {
+          "text": "{next}",
+          "label": "Worst Essay 2"
+        }
+      ]
+  },
+
+  "Worst Essay 2":
+  {
+    "emotion":"happy",
+    "text": "...you sit down and continue to watch your screen...",
+    "choices":
+      [
+        {
+          "text": "{next}",
+          "label": "Worst Essay 3"
+        }
+      ]
+  },
+
+  "Worst Essay 3":
+  {
+    "emotion":"happy",
+    "text": "You sit down and continue to realize that you have had writer's block for the past 2 hours prior to midnight.",
+    "choices":
+      [
+        {
+          "text": "{next}",
+          "label": "Worst Essay 3"
+        }
+      ]
+  },
+
+  "Worst Essay 4":
+  {
+    "emotion":"happy",
+    "text": "You know you need to make this paper by morning so you soldier on and eventually finish your paper.",
+    "choices":
+      [
+        {
+          "text": "{next}",
+          "label": "Worst Essay 5"
+        }
+      ]
+  },
+
+  "Worst Essay 5":
+  {
+    "emotion":"happy",
+    "text": "You pass your paper to your professor. You almost fell asleep on your way back to your table.",
+    "choices":
+      [
+        {
+          "text": "{next}",
+          "label": "Worst Essay 6"
+        }
+      ]
+  },
+
+  "Worst Essay 6":
+  {
+    "emotion":"happy",
+    "text": "The professor approaches you the following week with your paper graded. You got a C-\n[color=green]+10 grades[/color]",
+    "choices":
+      [
+        {
+          "text": "{next}",
+          "label": "Worst Essay 7"
+        }
+      ]
+  },
+
+  "Worst Essay 7":
+  {
+    "emotion":"happy",
+    "text": "Your professor understood that you had quite a struggle writing the paper and presents to you the opportunity to replace your current grade with a new paper. Do you take this chance?",
+    "choices":
+      [
+        {
+          "text": "Yes",
+          "label": "Yes Struggle Loop"
+        },
+
+        {
+          "text": "No",
+          "label": "No Struggle Loop"
+        }
+      ]
+  },
+
+
+  "Best Essay 1":
+  {
+    "emotion":"happy",
+    "text": "You rolled incredible!",
+    "choices":
+      [
+        {
+          "text": "{next}",
+          "label": "Best Essay 2"
+        }
+      ]
+  },
+
+  "Best Essay 2":
+  {
+    "emotion":"happy",
+    "text": "You psych yourself up as you spread your fingers across the keyboard with confidence.",
+    "choices":
+      [
+        {
+          "text": "{next}",
+          "label": "Best Essay 3"
+        }
+      ]
+  },
+
+  "Best Essay 3":
+  {
+    "emotion":"happy",
+    "text": "You begin writing at rapid speeds and you know EXACTLY what you're talking about in this paper",
+    "choices":
+      [
+        {
+          "text": "{next}",
+          "label": "Best Essay 4"
+        }
+      ]
+  },
+
+  "Best Essay 4":
+  {
+    "emotion":"happy",
+    "text": "You finish the essay without a hitch and you pass it off to your professor.",
+    "choices":
+      [
+        {
+          "text": "{next}",
+          "label": "Best Essay 5"
         }
       ]
   },
   
-  "Spiral Quiz 1":
-  {
-    "emotion":"glad",
-    "text": "Exciting!",
-    "choices":
-      [
-        {
-          "text": "{next}",
-          "label": "Spiral Quiz 2"
-        }
-      ]
-  },
-
-  "Spiral Quiz 2":
+  "Best Essay 5":
   {
     "emotion":"happy",
-    "text": "When succesful at a task what do you do {next}?",
-    "choices":
-      [
-        {
-          "text": "Self Criticize for future improvements (+1 Str)",
-          "label": "Spiral Quiz 3"
-        },
-        {
-          "text": "Move on to the {next} task (+1 Suc)",
-          "label": "Spiral Quiz 3"
-        }
-      ]
-  },
-
-  "Spiral Quiz 3":
-  {
-    "text": "Do you find yourself struggling before the task is completed? ",
-    "choices":
-      [
-        {
-          "text": "Yes (+1 Str)", 
-          "label": "Spiral Quiz 4"
-        },
-        {
-          "text": "No (+1 Suc)",
-          "label": "Spiral Quiz 4"
-        }
-      ]
-  },
-
-  "Spiral Quiz 4":
-  {
-    "text": "At what point do you feel like stopping your work?",
-    "choices":
-      [
-        {
-          "text": "When a streak of success ends (+1 Suc)",
-          "label": "Spiral Quiz 5"
-        },
-        {
-          "text": "I find a problem unsolvable (+1 Str)",
-          "label": "Spiral Quiz 5"
-        }
-      ]
-  },
-
-  "Spiral Quiz 5":
-  {
-    "text": "It appears that during your work periods you find yourself in a...",
+    "text": "\"Player, this is the best darn paper I have ever read! You get an A+!\" The professor said calmly.\n[color=green]+200 grades[/color]",
     "choices":
       [
         {
           "text": "{next}",
-          "label": "Spiral Quiz 6"
+          "label": "Best Essay 6"
         }
       ]
   },
 
-  "Spiral Quiz 6":
+    "Best Essay 6":
   {
-    "text": "[Success/Struggle] Spiral",
+    "emotion":"happy",
+    "text": "They would actually like for you to write another paper for a research summit next Summer! Do you take the challenge?",
+    "choices":
+      [
+        {
+          "text": "Yes",
+          "label": "Yes Success Loop"
+        },
+
+        {
+          "text": "No",
+          "label": "No Success Loop"
+        }
+      ]
+  },
+
+  "Yes Struggle Loop":
+  {
+    "emotion":"happy",
+    "text": "You accept the task!",
     "choices":
       [
         {
           "text": "{next}",
-          "label": "Spiral Quiz 7"
+          "label": "Struggle Loop 1"
+        }
+      ],
+      "effect":{
+        "yes": true
+      }
+  },
+
+
+  "No Struggle Loop":
+  {
+    "emotion":"happy",
+    "text": "You decline the task!",
+    "choices":
+      [
+        {
+          "text": "{next}",
+          "label": "Struggle Loop 1"
+        }
+      ],
+      "effect":{
+        "no": true
+      }
+  },
+
+  "Struggle Loop 1":
+  {
+    "emotion":"happy",
+    "text": "Let's leave this short campaign on a cliff hanger for now",
+    "choices":
+      [
+        {
+          "text": "{next}",
+          "label": "Struggle Loop 2"
         }
       ]
   },
 
-  "Spiral Quiz 7":
+  "Struggle Loop 2":
   {
-    "text": "-Work in Progress dialogue-\nWork at a later time.",
+    "emotion":"happy",
+    "text": "ERROR! MESSAGE UNKNOWN?",
+    "conditional":
+    {
+      "{F}yes":{
+        "text":"That was some determination to improve you showed taking up a second chance like that!"
+      },
+
+      "{F}no":{
+        "text":"You not taking the second chance was a perfectly reasonable response. Writing is hard!"
+      }
+    },
     "choices":
       [
         {
-          "text": "Let's talk about something else",
+          "text": "{next}",
+          "label": "Struggle Loop 3"
+        }
+      ]
+  },
+
+  "Struggle Loop 3":
+  {
+    "emotion":"happy",
+    "text": "The struggle you felt while performing the task within the short campaign was actually an example of how one would go through a \"struggle loop\"",
+    "choices":
+      [
+        {
+          "text": "{next}",
+          "label": "Struggle Loop 4"
+        }
+      ]
+  },
+
+  "Struggle Loop 4":
+  {
+    "emotion":"happy",
+    "text": "Tasks are often performed with some bit of struggle, hence the name",
+    "choices":
+      [
+        {
+          "text": "{next}",
+          "label": "Struggle Loop 5"
+        }
+      ]
+  },
+
+  "Struggle Loop 5":
+  {
+    "emotion":"happy",
+    "text": "And going through this loop, some individuals often label themselves as [b]dumb[/b],[b]lazy[/b], or a [wave amp=50 freq=1.5][b]failure[/wave][/b]",
+    "choices":
+      [
+        {
+          "text": "{next}",
+          "label": "Struggle Loop 6"
+        }
+      ]
+  },
+
+  "Struggle Loop 6":
+  {
+    "emotion":"happy",
+    "text": "Which I am telling you right now!",
+    "choices":
+      [
+        {
+          "text": "{next}",
+          "label": "Struggle Loop 7"
+        }
+      ]
+  },
+
+  "Struggle Loop 7":
+  {
+    "emotion":"happy",
+    "text": "Is not true!",
+    "choices":
+      [
+        {
+          "text": "{next}",
+          "label": "Struggle Loop 8"
+        }
+      ]
+  },
+
+  "Struggle Loop 8":
+  {
+    "emotion":"happy",
+    "text": "Don't be too hard on yourself when this stuff happens.",
+    "choices":
+      [
+        {
+          "text": "{next}",
+          "label": "Struggle Loop 9"
+        }
+      ]
+  },
+
+  "Struggle Loop 9":
+  {
+    "emotion":"happy",
+    "text": "Nothing improves and labeling won't help that.",
+    "choices":
+      [
+        {
+          "text": "{next}",
+          "label": "Struggle Loop 10"
+        }
+      ]
+  },
+
+  "Struggle Loop 10":
+  {
+    "emotion":"happy",
+    "text": "The struggle loop also involves avoiding challenging tasks that will make us label ourselves more",
+    "choices":
+      [
+        {
+          "text": "{next}",
+          "label": "Struggle Loop 11"
+        }
+      ]
+  },
+
+  "Struggle Loop 11":
+  {
+    "emotion":"happy",
+    "text": "This process rinses and repeats and therefore it becomes this struggle loop.",
+    "choices":
+      [
+        {
+          "text": "{next}",
+          "label": "Cond Loops 1"
+        }
+      ],
+      "effect":{
+        "struggle": true
+      }
+  },
+
+  "Yes Success Loop":
+  {
+    "emotion":"happy",
+    "text": "You accept the task!",
+    "choices":
+      [
+        {
+          "text": "{next}",
+          "label": "Success Loop 1"
+        }
+      ],
+      "effect":{
+        "yes": true
+      }
+  },
+
+  "No Success Loop":
+  {
+    "emotion":"happy",
+    "text": "You decline the task!",
+    "choices":
+      [
+        {
+          "text": "{next}",
+          "label": "Success Loop 1"
+        }
+      ],
+      "effect":{
+        "no": true
+      }
+  },
+
+  "Success Loop 1":
+  {
+    "emotion":"happy",
+    "text": "Let's leave this short campaign on a cliff hanger for now",
+    "choices":
+      [
+        {
+          "text": "{next}",
+          "label": "Success Loop 2"
+        }
+      ]
+  },
+
+  "Success Loop 2":
+  {
+    "emotion":"happy",
+    "text": "ERROR! MESSAGE UNKNOWN?",
+    "conditional":
+    {
+      "{F}yes":{
+        "text":"I'm glad to know that you would have taken a second challenge after the first one!"
+      },
+
+      "{F}no":{
+        "text":"It was quite understandable that writing a second paper after the first one is tough and that you need to rest."
+      }
+    },
+    "choices":
+      [
+        {
+          "text": "{next}",
+          "label": "Success Loop 3"
+        }
+      ]
+  },
+
+  "Success Loop 3":
+  {
+    "emotion":"happy",
+    "text": "Big and small victories like earning a passing grade in your essay are what starts up one of the two loops known as the [wave amp=150 freq=1.5][b]success loop[/wave][/b]",
+    "choices":
+      [
+        {
+          "text": "{next}",
+          "label": "Success Loop 4"
+        }
+      ]
+  },
+
+  "Success Loop 4":
+  {
+    "emotion":"happy",
+    "text": "In the success loop, motivations are at an all time high due to the recent \"successes\"",
+    "choices":
+      [
+        {
+          "text": "{next}",
+          "label": "Success Loop 5"
+        }
+      ]
+  },
+
+  "Success Loop 5":
+  {
+    "emotion":"happy",
+    "text": "This often leads to someone performing even more tasks to succeed in. Boosting self-esteem in the process!",
+    "choices":
+      [
+        {
+          "text": "{next}",
+          "label": "Success Loop 6"
+        }
+      ]
+  },
+
+  "Success Loop 6":
+  {
+    "emotion":"happy",
+    "text": "However, the bad part about this is that the loop only goes on for as long as one's success does.",
+    "choices":
+      [
+        {
+          "text": "{next}",
+          "label": "Success Loop 7"
+        }
+      ]
+  },
+
+  "Success Loop 7":
+  {
+    "emotion":"happy",
+    "text": "Meaning one hint of failure could end up erasing all the previous motivation and momentum one had attained",
+    "choices":
+      [
+        {
+          "text": "{next}",
+          "label": "Cond Loops 1"
+        }
+      ],
+      "effect":{
+        "success": true
+      }
+  },
+
+    "Cond Loops 1":
+  {
+    "text": "ERROR! THIS AIN'T RIGHT",
+    "conditional":
+    {
+      "not {F}success":{
+        "text":"The opposite of this would be the success loop."
+      },
+
+      "not {F}struggle":{
+        "text":"The opposite of this would be the struggle loop."
+      }
+    },
+    "choices":
+      [
+        {
+          "text": "{next}",
+          "label": "Cond Loops 2"
+        }
+      ]
+  },
+
+  "Cond Loops 2":
+  {
+    "text": "ERROR! THIS AIN'T RIGHT",
+    "conditional":
+    {
+      "not {F}success":{
+        "text":"Where more tasks are being done and confidence and self-esteem are at an all time high!"
+      },
+
+      "not {F}struggle":{
+        "text":"It is a loop where the smallest bits of struggle is seen as a challenge that could ruin one's self-esteem."
+      }
+    },
+    "choices":
+      [
+        {
+          "text": "{next}",
+          "label": "Cond Loops 3"
+        }
+      ]
+  },
+
+  "Cond Loops 3":
+  {
+    "text": "ERROR! THIS AIN'T RIGHT",
+    "conditional":
+    {
+      "not {F}success":{
+        "text":"More often than not, those that are experience a success loop stop doing their task on the first failure. Losing motivation in the end."
+      },
+
+      "not {F}struggle":{
+        "text":"Those experiencing a struggle loop end up avoiding challenging tasks all together to avoid calling themselve's a failure. Which is not true and can be improved!"
+      }
+    },
+    "choices":
+      [
+        {
+          "text": "{next}",
+          "label": "Cond Loops 4"
+        }
+      ],
+      "effect":{
+        "struggle": true,
+        "success": true
+      }
+  },
+
+  "Cond Loops 4":
+  {
+    "emotion":"happy",
+    "text": "Not one loop is exclusively for one person to get into and not exactly one is better than the other either.",
+    "choices":
+      [
+        {
+          "text": "{next}",
+          "label": "Cond Loops 5"
+        }
+      ]
+  },
+
+  "Cond Loops 5":
+  {
+    "emotion":"happy",
+    "text": "We all fall under one of the two but success usually comes from a healthy mindset towards the approach to the task.",
+    "choices":
+      [
+        {
+          "text": "{next}",
+          "label": "Cond Loops 6"
+        }
+      ]
+  },
+
+  "Cond Loops 6":
+  {
+    "emotion":"happy",
+    "text": "And understanding these loops are what brings us a step closer to improving our mindsets. (YOU OBTAINED THE LOOPS KEYWORD)",
+    "choices":
+      [
+        {
+          "text": "{next}",
           "label": "Something else"
+        }
+      ]
+  },
+
+  "Mindsets 4.2":
+  {
+    "emotion":"happy",
+    "text": "The concept of the \"Mindsets\" refers to how people thinks about their own talents and abilities. ",
+    "choices":
+      [
+        {
+          "text": "{next}",
+          "label": "Mindsets 5"
         }
       ]
   },
 
   "Mindsets 1":
   {
-    "emotion":"happy",
-    "text": "The concept of the \"Mindsets\" refers to how people thinks about their own talents and abilities. ",
+    "emotion":"glad",
+    "text": "Time for a survey!",
     "choices":
       [
         {
@@ -596,34 +1687,36 @@
 
   "Mindsets 2":
   {
-    "emotion":"glad",
-    "text": "Time for a survey!",
-    "choices":
-      [
-        {
-          "text": "{next}",
-          "label": "Mindsets 3"
-        }
-      ]
-  },
-
-  "Mindsets 3":
-  {
     "emotion":"happy",
     "text": "[i]If I try hard enough, then I will understand course material.[/i]",
     "choices":
       [
         {
           "text": "{quiz}",
-          "group":"Self_Belief",
+          "group":"Control_Belief",
           "name":"CSB 1",
           "reversed":false,
-          "label": "Mindsets 4"
+          "label": "Mindsets 2.1"
         }
       ]
   },
 
-  "Mindsets 4":
+  "Mindsets 2.1":
+  {
+    "text": "[i]It is my own fault if I don't learn the material in my courses[/i]",
+    "choices":
+    [
+      {
+        "text":"{quiz}",
+        "label":"Mindsets 3",
+        "group": "Control_Belief",
+        "name": "CSB 2",
+        "reversed": false
+      }
+    ]
+  },
+
+  "Mindsets 3":
   {
     "emotion":"surprised",
     "text": "Ohhh!",
@@ -643,14 +1736,14 @@
       [
         {
           "text": "{next}",
-          "label": "Mindsets 5"
+          "label": "Mindsets 4.2"
         }
       ]
   },
   
   "Mindsets 5":
   {
-    "text": "Mindsets fall under a scale between \"Fixed\" or \"Growth\" mindsets.",
+    "text": "People can have a \"fixed\" mindset, or a \"growth\" mindet, or somewhere in between. ",
     "choices":
       [
         {
@@ -662,7 +1755,7 @@
 
   "Mindsets 6":
   {
-    "text": "Take a look at those students who are most definitely here right now in front of me! What do you think they're doing?",
+    "text": "A lot of people I know in this university I'm quite familiar with their mindsets. Perhaps we should observe one doing their thing?",
     "conditional":
     {
       "not {F}Mindsets":{
@@ -684,7 +1777,7 @@
         {
           "text": "Rehearsing for a play",
           "label": "Mindsets Rehearse 1",
-          "flag": "not {F}Developing_Mindset"
+          "flag": "not ({F}Growth_Mindset and {F}Fixed_Mindset)"
         },
         {
           "text": "Talk about something else",
@@ -764,7 +1857,7 @@
   "Catch 1":
   {
     "emotion":"happy-transparent",
-    "text": "[color=blue]You catch the boomerang with absolute confidence...on the outside[/color]",
+    "text": "[color=blue]You catch the boomerang with absolute confidence[/color]",
     "choices":
       [
         {
@@ -776,7 +1869,7 @@
 
   "Catch 1.1":
   {
-    "text": "[color=blue]The sudden stop of the thrown boomerang resulted in a gust of strong winds towards you. Your face looks like a loose latex mask.[/color]",
+    "text": "[color=blue]You feel a cold yet strong breeze rush through your face.[/color]",
     "choices":
       [
         {
@@ -840,7 +1933,7 @@
   "Dodge 3":
   {
     "emotion":"blank-transparent",
-    "text": "The boomerang passes by your side with winds of what felt like jet engines!",
+    "text": "The boomerang passes by your side with the winds of what felt like jet engines!",
     "choices":
       [
         {
@@ -866,7 +1959,7 @@
   "Dodge 6":
   {
     "emotion":"angry",
-    "text": "Hold on! The boomerang was on YOUR head. I'm basically up to YOUR knees! Why did I have to duck?",
+    "text": "Hold on! The boomerang was at your head. I'm basically up to your knees! Why did I have to duck?",
     "choices":
       [
         {
@@ -879,7 +1972,7 @@
   "Sacrifice 1":
   {
     "emotion":"surprised-transparent",
-    "text": "[color=blue]You fling Pompom onto boomerang height.[/color]",
+    "text": "[color=blue]You fling Pompom at the boomerang.[/color]",
     "choices":
       [
         {
@@ -1003,7 +2096,7 @@
   "Save 3":
   {
     "emotion":"surprised-transparent",
-    "text": "[color=blue]You took the full force of the boomerang. You got knocked onto the grass.[/color]",
+    "text": "[color=blue]You take the full force of the boomerang. You get knocked on the grass.[/color]",
     "choices":
       [
         {
@@ -1236,48 +2329,8 @@
     "choices":
       [
         {
-          "text": "What happened?",
-          "label": "Kilograw 1"
-        },
-        {
           "text":"Don't you need to \"fall\" into the growth mindset?",
           "label":"Growth Mindsets 17"
-        }
-      ]
-  },
-
-  "Kilograw 1":
-  {
-    "text": "As his friend, I could not give details. Perhaps you should ask him in the future.",
-    "choices":
-      [
-        {
-          "text": "{next}",
-          "label": "Kilograw 2"
-        }
-      ]
-  },
-
-  "Kilograw 2":
-  {
-    "text": "I am certain he would be open about it! You'll know where to find him anyways.",
-    "choices":
-      [
-        {
-          "text": "{next}",
-          "label": "Kilograw 3"
-        }
-      ]
-  },
-
-  "Kilograw 3":
-  {
-    "text": "+200 Curiosity",
-    "choices":
-      [
-        {
-          "text": "{next}",
-          "label": "Growth Mindsets 17"
         }
       ]
   },
@@ -1532,7 +2585,7 @@
         {
           "text":"How old are you?!",
           "label":"Age 1",
-          "flag":"not {F}Cat"
+          "flag":"not {F}Lore"
         }
       ]
   },
@@ -1551,7 +2604,7 @@
 
   "Age 2":
   {
-    "text": "...really old.",
+    "text": "...really old.\n[color=blue]+100 What happened?[/color]",
     "choices":
     [
       {
@@ -1631,7 +2684,7 @@
 
   "Riddle Correct 1":
   {
-    "text": "Yup! The Sun. Just like the one scorching us down in this heat right now!",
+    "text": "Yup! The Sun. Good Job!",
     "choices":
       [
         {
@@ -1975,7 +3028,7 @@
 
   "Fixed Mindset 5":
   {
-    "text": "\"Born with it\", for a lack of a better word ",
+    "text": "That they are born with their skills, and those skills cant change",
     "choices":
       [
         {
@@ -2004,49 +3057,9 @@
       [
         {
           "text": "{next}",
-          "label": "Fixed Mindset 9"
+          "label": "Fixed Mindset 12"
         }
       ]
-  },
-
-  "Fixed Mindset 9":
-  {
-    "text": "May I take this moment for a quick survey?",
-    "choices":
-    [
-      {
-        "text":"{next}",
-        "label":"Fixed Mindset 10" 
-      }
-    ]
-  },
-
-  
-  "Fixed Mindset 10":
-  {
-    "text": "[i]It is my own fault if I don't learn the material in my courses[/i]",
-    "choices":
-    [
-      {
-        "text":"{quiz}",
-        "label":"Fixed Mindset 11",
-        "group": "Self_Belief",
-        "name": "CSB 2",
-        "reversed": false
-      }
-    ]
-  },
-
-  "Fixed Mindset 11":
-  {
-    "text": "I see...",
-    "choices":
-    [
-      {
-        "text": "{next}",
-        "label": "Fixed Mindset 12"
-      }
-    ]
   },
 
   "Fixed Mindset 12":
@@ -2196,72 +3209,16 @@
 
       {
         "text": "Yes",
-        "label": "Drama 1",
-        "flag": "{F}Growth_Mindset"
+        "label": "Drama 1"
       },
 
       {
         "text": "No",
-        "label": "No Rehearse",
-        "flag": "{F}Growth_Mindset"
-      },
-
-      {
-        "text": "What's a growth mindset?",
-        "label": "What 1",
-        "flag": "not {F}Growth_Mindset"
+        "label": "No Rehearse"
       }
     ]
   },
 
-  "What 1":
-  {
-    "text": "Oh right! I never did teach you that part yet huh?",
-    "choices":
-    [
-      {
-        "text": "{next}",
-        "label": "What 2"
-      }
-    ]
-  },
-
-  "What 2":
-  {
-    "text": "I apologize I got way too ahead of myself.",
-    "choices":
-    [
-      {
-        "text": "{next}",
-        "label": "What 3"
-      }
-    ]
-  },
-
-
-  "What 3":
-  {
-    "text": "Take a look at that boomerang throwing gentleman over there.",
-    "choices":
-    [
-      {
-        "text": "{next}",
-        "label": "What 4"
-      }
-    ]
-  },
-
-  "What 4":
-  {
-    "text": "That's my good friend Kilograw. Resident boomerang athlete of this university.",
-    "choices":
-    [
-      {
-        "text": "{next}",
-        "label": "Mindsets Frisbee 2"
-      }
-    ]
-  },
 
   "No Rehearse":
   {
@@ -2301,7 +3258,7 @@
 
   "Drama 3":
   {
-    "text": "My favorite time with her was when I got a role with her in \"Alice in Wonderland\".",
+    "text": "My favorite time with Kai was when I got a role with her in \"Alice in Wonderland\".",
     "choices":
     [
       {
@@ -2452,7 +3409,7 @@
   
   "Developing 3":
   {
-    "text": "And in those interviews she is often asked the question on what is the secret to her success.",
+    "text": "And in those interviews she is often asked questions on what are secrets to her success.",
     "choices":
     [
       {
@@ -2494,18 +3451,6 @@
     [
       {
         "text": "{next}",
-        "label": "Developing 7"
-      }
-    ]
-  },
-
-  "Developing 7":
-  {
-    "text": "Here is what i got!",
-    "choices":
-    [
-      {
-        "text": "{next}",
         "label": "Developing 8"
       }
     ]
@@ -2525,7 +3470,7 @@
 
   "Experiment 1":
   {
-    "text": "First off, Experiment",
+    "text": "Tip number one would be to experiment",
     "choices":
     [
       {
@@ -2768,7 +3713,7 @@
 
   "Past 1":
   {
-    "text": "With all this talk about strategies and experimentations, \"Failure\" is necessary.",
+    "text": "With all this talk about strategies and experimentations, tip three is that \"failure\" is necessary.",
     "choices":
     [
       {
@@ -2828,7 +3773,7 @@
 
   "Past 6":
   {
-    "text": "There is so much to do in an attempt to succeed!",
+    "text": "There is so much you can do to succeed!",
     "choices":
     [
       {
@@ -2912,7 +3857,7 @@
 
   "Evaluate 1":
   {
-    "text": "Lastly, you must self evaluate yourself.",
+    "text": "Lastly, you must evaluate yourself.",
     "choices":
     [
       {
@@ -2966,7 +3911,7 @@
     [
       {
         "text": "{next}",
-        "label": "Evaluate 5"
+        "label": "Evaluate 6"
       }
     ]
   },
@@ -2997,7 +3942,7 @@
 
   "Evaluate 8":
   {
-    "text": "In what ways does this strategy/tool/task manager a good fit, or not a good fit, for me?",
+    "text": "In what ways does this strategy or tool work, or not work, for me?",
     "choices":
     [
       {
@@ -3009,7 +3954,19 @@
 
   "Evaluate 9":
   {
-    "text": "Curiousity in your approach is essential for your motivation improving and your success to happen.",
+    "text": "Curiosity about your approach is essential for improving your motivation and impoving your chances of success...",
+    "choices":
+    [
+      {
+        "text": "{next}",
+        "label": "Evaluate 9.1"
+      }
+    ]
+  },
+
+  "Evaluate 9.1":
+  {
+    "text": "...because if you are not succeeding with the approach you are using, you may not be using the right approach.",
     "choices":
     [
       {
@@ -3050,7 +4007,7 @@
     [
       {
         "text": "{quiz}",
-        "group": "Self_Belief",
+        "group": "Control_Belief",
         "name": "CSB 3",
         "reversed": false,
         "label": "Evaluate 13"
@@ -3068,7 +4025,10 @@
         "text": "{next}",
         "label": "Mindsets 6"
       }
-    ]
+    ],
+    "effect":{
+      "Developing_Mindset" : true
+    }
   },
 
   "Module 1":
@@ -3145,7 +4105,7 @@
 
   "Module 7":
   {
-    "text": "Let's go over a few of them actually!",
+    "text": "Lets go over a few of the modules!",
     "choices":
     [
       {
@@ -3226,7 +4186,7 @@
 
   "Module 13":
   {
-    "text": "Now let's introduce to you the different modules and your guides",
+    "text": "Now let's introduce to you the different modules and their respective guides",
     "choices":
     [
       {
@@ -3239,7 +4199,7 @@
   
   "Module 14":
   {
-    "text": "Any particular topics about post-secondary that interests you?",
+    "text": "Are there any particular topics about post-secondary that interests you?",
     "conditional":
     {
       "not {F}Mindsets":{
@@ -3314,14 +4274,14 @@
     [
       {
         "text": "{next}",
-        "label": "Fac 3"
+        "label": "Fac 4"
       }
     ]
   },
   
   "Fac 4":
   {
-    "text": "I will keep doing my tour guide and mascot duties to teach you the modules all about certain facilities and tools to go to when you need them.",
+    "text": "I am still your tour guide and campus mascot. And I will be teaching you all about the various campus faculties.",
     "choices":
     [
       {
@@ -3345,7 +4305,7 @@
 
 "Fac 6":
 {
-  "text": "Where I will be teaching you the common studying mistakes students make as well as the strategies that did work for them! Even strategies that work for people with ADHD and LD. ",
+  "text": "Where I will be teaching you the common studying mistakes students make as well as the strategies that did work for them! Including stratagies specifically for people with ADHD and LD",
   "choices":
   [
     {
@@ -3381,7 +4341,7 @@
 
 "Fac 9":
 {
-  "text": "Such as disclosing disabilities through the appropriate legal requirements, what the student's rights are, and the appropriate accomodations ",
+  "text": "Such as disclosing your disability to you institution, what your rights are as a student, and what accomodations you might want to have!",
   "choices":
   [
     {
@@ -3462,7 +4422,7 @@
 
 "Student College 4":
 {
-  "text": "It smelled funky but the frisbees made for great tables to write on!",
+  "text": "It smelled funky but the boomerangs made for great tables to write on!",
   "choices":
   [
     {
@@ -3539,7 +4499,7 @@
 
 "Cringe":
 {
-  "text": "[color=green]-1 humor\n(Writer's note:\"Oh come on! that was a good one! \" )[/color]",
+  "text": "[color=green]-1 humor",
   "choices":
   [
     {
@@ -3551,7 +4511,7 @@
 
 "Wheeze":
 {
-  "text": "[color=green]+80 humor\n(\"Yeahh! You get it! ;)\" -The Writer)[/color]",
+  "text": "[color=green]+80 humor",
   "choices":
   [
     {
@@ -3599,7 +4559,7 @@
 
 "Life 3":
 {
-  "text": "But you can only do that when you are comfortable with your time here.",
+  "text": "But you can only do that if you are happy and healthy",
   "choices":
   [
     {
@@ -3611,7 +4571,7 @@
 
 "Life 4":
 {
-  "text": "So you got to make the right choices and take care of yourself. Kilograw will asssisst with these matters.",
+  "text": "So you need to make the right choices and take care of yourself. Kilograw will assist with these types of things.",
   "choices":
   [
     {
@@ -3671,7 +4631,7 @@
 
 "Life 9":
 {
-  "text": "He personally volunteered to teach you some of the techniques that will keep your mental well-being in check.",
+  "text": "He personally volunteered to teach you some of the techniques that will keep your physical and mental well-being in check.",
   "choices":
   [
     {
@@ -3707,7 +4667,7 @@
 
 "Life 12":
 {
-  "text": "That's why Kilo here will show you some clubs and communities for you to meet new people in!",
+  "text": "That's why Kilo here will show you where to find clubs and communities for you to meet new people in!",
   "choices":
   [
     {
@@ -3840,18 +4800,6 @@
   [
     {
       "text": "{next}",
-      "label": "Prep 8"
-    }
-  ]
-},
-
-"Prep 8":
-{
-  "text": "He will also be giving you the rundown on [b]what to do before entering post secondary[/b]",
-  "choices":
-  [
-    {
-      "text": "{next}",
       "label": "Prep 9"
     }
   ]
@@ -3864,18 +4812,6 @@
   [
     {
       "text": "{next}",
-      "label": "Prep 10"
-    }
-  ]
-},
-
-"Prep 10":
-{
-  "text": "I am actually so proud of him for doing this he has grown so much since his First year. He's usually very shy.",
-  "choices":
-  [
-    {
-      "text": "{next}",
       "label": "Prep 11"
     }
   ]
@@ -3883,7 +4819,7 @@
 
 "Prep 11":
 {
-  "text": "Please be nice and gentle with him.",
+  "text": "I hope you get to learn alot from him! He is quite good at teaching and has potential to be professor one day.",
   "choices":
   [
     {
@@ -3894,18 +4830,13 @@
     {
       "text": "I'll try'",
       "label": "Try"
-    },
-
-    {
-      "text":"We shall bond over video games and books!",
-      "label":"Bond 1"
     }
   ]
 },
 
 "Will":
 {
-  "text": "Thank you!(YOU HAVE OBTAINED THE PREPARATIONS KEYWORD)\n[color=green]+200 Kindness[/color]",
+  "text": "Thank you!(YOU HAVE OBTAINED THE PREPARATIONS KEYWORD)\n[color=green]+200 Motivated[/color]",
   "choices":
   [
     {
@@ -3932,63 +4863,6 @@
     "Preparations":true
   }
 },
-
-"Bond 1":
-{
-  "text": "He would love that!",
-  "choices":
-  [
-    {
-      "text": "{next}",
-      "label": "Bond 2"
-    }
-  ]
-},
-
-"Bond 2":
-{
-  "text": "And tell him that I would like to borrow his...",
-  "choices":
-  [
-    {
-      "text": "{next}",
-      "label": "Bond 3"
-    }
-  ]
-},
-
-"Bond 3":
-{
-  "text": "...Ancient Literatures...",
-  "choices":
-  [
-    {
-      "text": "Sure thing!",
-      "label": "Bond 4"
-    },
-
-    {
-      "text": "Ask him yourself",
-      "label": "Bond 4"
-    }
-  ]
-},
-
-"Bond 4":
-{
-  "text": "Alright then!(YOU HAVE OBTAINED THE PREPARATIONS KEYWORD)\n[color=green]+500 Anticipating Friendship[/color]",
-  "choices":
-  [
-    {
-      "text": "{next}",
-      "label": "Module 14"
-    }
-  ],
-  "effect":{
-    "Preparations":true,    
-    "Ancient_Lit":true
-  }
-},  
 
 "Accom 1":
 {
@@ -4192,14 +5066,1590 @@
   "choices":
   [
     {
-      "text": "I need answers!",
+      "text": "I like animals and I need answers",
       "label": "pompom 4"
     },
 
     {
-      "text": "I just really like cats.",
-      "label": "pompom 4"
+      "text":"You mention some weird stuff",
+      "label":"Mention 1",
+      "flag":"not {F}essentials"
+    },
+
+    {
+      "text": "Perhaps I should talk about this another time",
+      "label": "Something else"
     }
   ]
 },
+
+"pompom 4":
+{
+  "text": "Alright! Settle down then.",
+  "choices":
+  [
+    {
+      "text": "{next}",
+      "label": "pompom 5"
+    }
+  ]
+},
+
+"pompom 5":
+{
+  "text": "I have your answers",
+  "choices":
+  [
+    {
+      "text": "{next}",
+      "label": "pompom 6"
+    }
+  ]
+},
+
+"Mention 1":
+{
+  "text": "Oh do I?",
+  "choices":
+  [
+    {
+      "text": "{next}",
+      "label": "Mention 2"
+    }
+  ]
+},
+
+"Mention 2":
+{
+  "text": "I actually never noticed!",
+  "choices":
+  [
+    {
+      "text": "{next}",
+      "label": "Mention 3"
+    }
+  ]
+},
+
+"Mention 3":
+{
+  "text": "I suppose that's just me feeling nostalgic...",
+  "choices":
+  [
+    {
+      "text": "Nostalgic?",
+      "label": "pompom 6"
+    }
+  ]
+},
+
+"pompom 6":
+{
+  "text": "I'm an immortal being born since the dawn of time...",
+  "choices":
+  [
+    {
+      "text": "{next}",
+      "label": "pompom 8"
+    }
+  ]
+},
+
+"pompom 8":
+{
+  "text": "...left to wander the earth just to simply observe...",
+  "choices":
+  [
+    {
+      "text": "{next}",
+      "label": "pompom 9"
+    },
+
+    {
+      "text": "I've learned enough.",
+      "label": "Something else"
+    }
+  ]
+},
+
+"pompom 9":
+{
+  "text": "...I don't even know where I came from.",
+  "choices":
+  [
+    {
+      "text": "{next}",
+      "label": "pompom 10"
+    }
+  ]
+},
+
+"pompom 10":
+{
+  "text": "As earth evolved, so did I.",
+  "choices":
+  [
+    {
+      "text": "{next}",
+      "label": "pompom 11"
+    }
+  ]
+},
+
+"pompom 11":
+{
+  "text": "And I made many friends!",
+  "choices":
+  [
+    {
+      "text": "{next}",
+      "label": "pompom 12"
+    }
+  ]
+},
+
+"pompom 12":
+{
+  "text": "As well as enemies.",
+  "choices":
+  [
+    {
+      "text": "{next}",
+      "label": "pompom 14"
+    },
+
+    {
+      "text": "I've learned enough.",
+      "label": "Something else"
+    }
+  ]
+},
+
+"pompom 14":
+{
+  "text": "Soon enough,some humans caught on to the fact that their \"lifelong companion\" took the title very seriously.",
+  "choices":
+  [
+    {
+      "text": "{next}",
+      "label": "pompom 15"
+    }
+  ]
+},
+
+"pompom 15":
+{
+  "text": "Back in the renaissance era, some guy shouted at a crowd...",
+  "choices":
+  [
+    {
+      "text": "{next}",
+      "label": "pompom 16"
+    }
+  ]
+},
+
+"pompom 16":
+{
+  "text": "\"Thee shouldst see this cat with nineth lives!\"",
+  "choices":
+  [
+    {
+      "text": "{next}",
+      "label": "pompom 17"
+    }
+  ]
+},
+
+"pompom 17":
+{
+  "text": "I found it pretty funny! ",
+  "choices":
+  [
+    {
+      "text": "{next}",
+      "label": "pompom 18"
+    },
+
+    {
+      "text": "I've learned enough.",
+      "label": "Something else"
+    }
+  ]
+},
+
+"pompom 18":
+{
+  "text": "But I suppose that's where the saying came from.",
+  "conditional":{
+    "{F}Lore":
+    {
+      "text":"That's all there is to know about me!\n+500 LORE"
+    },
+    "{F}End_Up or {F}name":
+    {
+      "text":"Anything else you want to talk about?"
+    }
+  },
+  "choices":
+  [
+    {
+      "text": "How did you end up here?",
+      "label": "End up 1",
+      "flag":"not {F}End_Up"
+    },
+
+    {
+      "text": "How'd you get your name?",
+      "label": "name 1",
+      "flag":"not {F}name"
+    },
+
+    {
+      "text": "Why a tour guide now and not something more?",
+      "label": "More 1",
+      "flag":"{F}Lore"
+    },
+
+    {
+      "text": "I've learned enough.",
+      "label": "Something else"
+    }
+  ]
+},
+
+"End up 1":
+{
+  "text": "I took a lot of jobs throughout the ages.",
+  "choices":
+  [
+    {
+      "text": "{next}",
+      "label": "End up 2"
+    }
+  ]
+},
+
+"End up 2":
+{
+  "text": "I served kings and common folk alike.",
+  "choices":
+  [
+    {
+      "text": "{next}",
+      "label": "End up 3"
+    },
+
+    {
+      "text": "I've learned enough.",
+      "label": "Something else"
+    }
+  ]
+},
+
+"End up 3":
+{
+  "text": "But nothing had ever made me happier...",
+  "choices":
+  [
+    {
+      "text": "{next}",
+      "label": "End up 4"
+    }
+  ]
+},
+
+"End up 4":
+{
+  "text": "...than being a guide for humanity",
+  "choices":
+  [
+    {
+      "text": "{next}",
+      "label": "End up 5"
+    }
+  ]
+},
+
+"End up 5":
+{
+  "text": "So I became a tour guide come modern day!",
+  "choices":
+  [
+    {
+      "text": "{next}",
+      "label": "End up 6"
+    }
+  ]
+},
+
+"End up 6":
+{
+  "text": "To help young folks like you find their way. And you don't have to be lost for it either. I just want to help folks!",
+  "choices":
+  [
+    {
+      "text": "{next}",
+      "label": "End up 7"
+    },
+
+    {
+      "text": "I've learned enough.",
+      "label": "Something else"
+    }
+  ]
+},
+
+"End up 7":
+{
+  "text": "In this case, I am here to introduce you to post-secondary stuff and all the teachers and topics we will be covering here.",
+  "choices":
+  [
+    {
+      "text": "I should probably get to knowing some of those.",
+      "label": "Module 1",
+      "flag": "not {F}Modules"
+    },
+
+    {
+      "text": "{next}",
+      "label": "End up 8"
+    }
+  ]
+},
+
+"End up 8":
+{
+  "text": "I did miss being the former librarian of this institution though...",
+  "choices":
+  [
+    {
+      "text": "{next}",
+      "label": "End up 9"
+    }
+  ]
+},
+
+"End up 9":
+{
+  "text": "The books were pretty neat and I got to spend a fair time of my day reading the latest book of world records.",
+  "choices":
+  [
+    {
+      "text": "{next}",
+      "label": "End up 10"
+    }
+  ]
+},
+
+"End up 10":
+{
+  "text": "Some insane feats of humanity are in display of that book!",
+  "choices":
+  [
+    {
+      "text": "{next}",
+      "label": "End up 11"
+    },
+
+    {
+      "text": "I've learned enough.",
+      "label": "Something else"
+    }
+  ]
+},
+
+"End up 11":
+{
+  "text": "I,myself, can do some of the crazy stuff found in those books.",
+  "choices":
+  [
+    {
+      "text": "{next}",
+      "label": "End up 12"
+    }
+  ]
+},
+
+"End up 12":
+{
+  "text": "Like having my skin be as tough as stone and can lay on a bed of nails with ease.",
+  "choices":
+  [
+    {
+      "text": "{next}",
+      "label": "End up 13"
+    }
+  ]
+},
+
+"End up 13":
+{
+  "text": "Or having reflexes that can stop incoming air soft gun pellets with my own paws.",
+  "choices":
+  [
+    {
+      "text": "{next}",
+      "label": "End up 14"
+    },
+
+    {
+      "text": "I've learned enough.",
+      "label": "Something else"
+    }
+  ]
+},
+
+"End up 14":
+{
+  "text": "Though these feats were not easy to do.",
+  "choices":
+  [
+    {
+      "text": "{next}",
+      "label": "End up 15"
+    }
+  ]
+},
+
+"End up 15":
+{
+  "text": "I struggled as well trying to do these things.",
+  "choices":
+  [
+    {
+      "text": "{next}",
+      "label": "End up 16"
+    }
+  ]
+},
+
+"End up 16":
+{
+  "text": "I actually ended bringing myself down to a bit of a [b]spiral[/b] situation.",
+  "choices":
+  [
+    {
+      "text": "{next}",
+      "label": "End up 17.1"
+    }
+  ]
+},
+
+"End up 16.1":
+{
+  "text": "Where when I lose my motivation on the first sign of failure after multiple successes.",
+  "choices":
+  [
+    {
+      "text": "{next}",
+      "label": "End up 16.2"
+    }
+  ]
+},
+
+"End up 16.2":
+{
+  "text": "It could even go another way! I could teach you more about it if you'd like!",
+  "conditional":
+  {
+      "{F}Loops":{
+      "text":"Loops are weird but they are a natural thing that happens to all people under a challenge"
+    }
+  },
+  "choices":
+  [
+    {
+      "text": "I'd like too",
+      "label": "Loops 1",
+      "flags": "not {F}Loops"
+    },
+
+    {
+      "text": "{next}",
+      "label":"End up 17"
+    }
+  ]
+},
+
+"End up 17":
+{
+  "text": "I think I said too much about myself here. Maybe we can talk about this some other time?",
+  "choices":
+  [
+    {
+      "text": "I suppose I should get back to the tour",
+      "label": "Something else"
+    },
+
+    {
+      "text": "Tell me more! Like your name!",
+      "label": "name 1",
+      "flag": "not {F}name"
+    },
+
+    {
+      "text": "May I ask another question?",
+      "label": "pompom 18"
+    }
+  ],
+  "effect":
+  {
+    "End_Up": true
+  }
+},
+
+"name 1":
+{
+  "text": "Oh!",
+  "choices":
+  [
+    {
+      "text": "{next}",
+      "label": "name 2"
+    }
+  ]
+},
+
+"name 2":
+{
+  "text": "You want to learn about how I got my name",
+  "choices":
+  [
+    {
+      "text": "{next}",
+      "label": "name 3"
+    }
+  ]
+},
+
+"name 3":
+{
+  "text": "My name is short for \"Psychopomp\"",
+  "choices":
+  [
+    {
+      "text": "{next}",
+      "label": "name 4"
+    }
+  ]
+},
+
+"name 4":
+{
+  "text": "Psychopomps are beings that have the task of guiding lost souls.",
+  "choices":
+  [
+    {
+      "text": "{next}",
+      "label": "name 5"
+    }
+  ]
+},
+
+
+"name 5":
+{
+  "text": "And psychopomps are widespread across many cultures and I have participated in being a psychopomp for most of them.",
+  "choices":
+  [
+    {
+      "text": "{next}",
+      "label": "name 6"
+    },
+
+    {
+      "text": "I've learned enough.",
+      "label": "Something else"
+    }
+  ]
+},
+
+"name 6":
+{
+  "text": "You know, being immortal and all, you can apply to as many jobs as you want for as long as you want!",
+  "choices":
+  [
+    {
+      "text": "{next}",
+      "label": "name 7"
+    }
+  ]
+},
+
+"name 7":
+{
+  "text": "So I took the one I was pretty good at.",
+  "choices":
+  [
+    {
+      "text": "{next}",
+      "label": "name 8"
+    }
+  ]
+},
+
+"name 8":
+{
+  "text": "Guidance",
+  "choices":
+  [
+    {
+      "text": "{next}",
+      "label": "name 9"
+    },
+
+    {
+      "text": "I've learned enough.",
+      "label": "Something else"
+    }
+  ]
+},
+
+"name 9":
+{
+  "text": "Though I was never referred to as \"Pompom\" since my birth.",
+  "choices":
+  [
+    {
+      "text": "{next}",
+      "label": "name 10"
+    }
+  ]
+},
+
+"name 10":
+{
+  "text": "It was given to me by a sweet little girl whom I played with in Ancient Egypt",
+  "choices":
+  [
+    {
+      "text": "{next}",
+      "label": "name 11"
+    }
+  ]
+},
+
+"name 11":
+{
+  "text": "I grew up by her side.",
+  "choices":
+  [
+    {
+      "text": "{next}",
+      "label": "name 12"
+    }
+  ]
+},
+
+"name 12":
+{
+  "text": "I became what is known as the \"family\" pet to those guys",
+  "choices":
+  [
+    {
+      "text": "{next}",
+      "label": "name 13"
+    },
+
+    {
+      "text": "I've learned enough.",
+      "label": "Something else"
+    }
+  ]
+},
+
+"name 13":
+{
+  "text": "At some point I learned how to talk.",
+  "choices":
+  [
+    {
+      "text": "{next}",
+      "label": "name 14"
+    }
+  ]
+},
+
+
+"name 14":
+{
+  "text": "I even got this neat little crown from her when she got older.",
+  "choices":
+  [
+    {
+      "text": "{next}",
+      "label": "name 15"
+    }
+  ]
+},
+
+"name 15":
+{
+  "text": "She made it herself actually.",
+  "choices":
+  [
+    {
+      "text": "{next}",
+      "label": "name 16"
+    },
+
+    {
+      "text": "I've learned enough.",
+      "label": "Something else"
+    }
+  ]
+},
+
+"name 16":
+{
+  "text": "It took her a while to make it",
+  "choices":
+  [
+    {
+      "text": "{next}",
+      "label": "name 17"
+    }
+  ]
+},
+
+"name 17":
+{
+  "text": "Even to the point where she thought she could never do it.",
+  "choices":
+  [
+    {
+      "text": "{next}",
+      "label": "name 18"
+    }
+  ]
+},
+
+"name 18":
+{
+  "text": "That it's just not \"in her\" to \"make things\"",
+  "choices":
+  [
+    {
+      "text": "{next}",
+      "label": "name 19"
+    }
+  ]
+},
+
+"name 19":
+{
+  "text": "She has had this [b]mindset[/b] for a while until she had developed it, for the better ,with time.",
+  "choices":
+  [
+    {
+      "text": "{next}",
+      "label": "name 20"
+    }
+  ]
+},
+
+"name 20":
+{
+  "text": "This kind of thinking is actually similar to something I should be teaching you on this tour.",
+  "conditional":
+  {
+      "{F}Mindsets":{
+      "text":"Quite a familiar example of Fixed and Growth Mindset development wouldn't you agree?"
+    }
+  },
+  "choices":
+  [
+    {
+      "text": "Yeah it is most certainly familar.",
+      "label": "name 20.1"
+    },
+
+    {
+      "text": "Show me more examples of Mindsets please",
+      "label": "Mindsets 1",
+      "flag": "not {F}Mindsets"
+    }
+  ]
+},
+
+"name 20.1":
+{
+  "text": "She was also kind of funny about failing as well. Everytime she fails a single step at making that tiara she just takes a looongg break from it.",
+  "conditional":
+  {
+      "{F}Loops":{
+      "text":"She was more of a struggle spiral kinda gal as well. One missed step and she just \"rests\" for like a week or so."
+    }
+  },
+  "choices":
+  [
+    {
+      "text": "It's one natural response to things",
+      "label": "name 21"
+    },
+
+    {
+      "text": "Is this concept a part of the tour?",
+      "label": "Loops 1",
+      "flag": "not {F}Loops"
+    }
+  ]
+},
+
+"name 21":
+{
+  "text": "Sighh...Those were good times...",
+  "choices":
+  [
+    {
+      "text": "{next}",
+      "label": "name 22"
+    }
+  ]
+},
+
+"name 22":
+{
+  "text": "I miss her",
+  "choices":
+  [
+    {
+      "text": "{next}",
+      "label": "pompom 18"
+    }
+  ],
+  "effect":
+  {
+    "name": true
+  }
+},
+
+"More 1":
+{
+  "text": "I can serve gods and beings beyond your comprehension.",
+  "choices":
+  [
+    {
+      "text": "{next}",
+      "label": "More 2"
+    }
+  ]
+},
+
+"More 2":
+{
+  "text": "But the older I get the more I realize just how stressful it all is.",
+  "choices":
+  [
+    {
+      "text": "{next}",
+      "label": "More 3"
+    }
+  ]
+},
+
+
+"More 3":
+{
+  "text": "I may have one too many lives ahead of me. But work is work.",
+  "choices":
+  [
+    {
+      "text": "{next}",
+      "label": "More 4"
+    }
+  ]
+},
+
+"More 4":
+{
+  "text": "But I just want to settle...",
+  "choices":
+  [
+    {
+      "text": "{next}",
+      "label": "More 5"
+    }
+  ]
+},
+
+"More 5":
+{
+  "text": "I want to meet new people and make new connections.",
+  "choices":
+  [
+    {
+      "text": "{next}",
+      "label": "More 6"
+    }
+  ]
+},
+
+"More 6":
+{
+  "text": "Life is so beautiful here, mortal or immortal.",
+  "choices":
+  [
+    {
+      "text": "{next}",
+      "label": "More 7"
+    }
+  ]
+},
+
+
+"More 7":
+{
+  "text": "It's nice to keep growing and learn just by...being there y'know?",
+  "choices":
+  [
+    {
+      "text": "{next}",
+      "label": "More 8"
+    }
+  ]
+},
+
+"More 8":
+{
+  "text": "That's why I am more than happy to meet you student.",
+  "choices":
+  [
+    {
+      "text": "{next}",
+      "label": "More 9"
+    }
+  ]
+},
+
+"More 9":
+{
+  "text": "You're young and you're growing and trying to become something great!",
+  "choices":
+  [
+    {
+      "text": "{next}",
+      "label": "More 10"
+    }
+  ]
+},
+
+"More 10":
+{
+  "text": "And I can't wait to see what you students have in store to better humanity no matter what challenges you might face.",
+  "choices":
+  [
+    {
+      "text": "Thank you for the tour!",
+      "label": "Thank you 1",
+      "flag":"{F}essentials"
+    },
+
+    {
+      "text": "Let's finish this tour...",
+      "label": "Something else"
+    }
+  ]
+},
+
+"Thank you 1":
+{
+  "text": "You're welcome my friend.",
+  "choices":
+  [
+    {
+      "text": "{next}",
+      "label": "Thank you 2"
+    }
+  ]
+},
+
+"Thank you 2":
+{
+  "text": "We are done with the tour.",
+  "choices":
+  [
+    {
+      "text": "{next}",
+      "label": "Thank you 3"
+    }
+  ]
+},
+
+"Thank you 3":
+{
+  "text": "Wow that was alot!",
+  "choices":
+  [
+    {
+      "text": "{next}",
+      "label": "Thank you 4"
+    }
+  ]
+},
+
+"Thank you 4":
+{
+  "text": "It's been fun, but all good things come to an end to make room for even better things.",
+  "choices":
+  [
+    {
+      "text": "{next}",
+      "label": "Thank you 4.1"
+    }
+  ]
+},
+
+"Thank you 4.1":
+{
+  "text": "Speaking of things...",
+  "choices":
+  [
+    {
+      "text": "{next}",
+      "label": "Thank you 5"
+    }
+  ]
+},
+
+"Thank you 5":
+{
+  "text": "Thank you for answering my questions earlier. They're meant to give you a better understanding of yourself based on several factors.",
+  "choices":
+  [
+    {
+      "text": "{next}",
+      "label": "Thank you 6"
+    }
+  ]
+},
+
+"Thank you 6":
+{
+  "text": "In this tour, these questions were about your \"Control of Learning Beliefs\" and \"Self-Efficacy for Learning and Performance\". Tell me which one do you wanna see your assessment on.",
+  "choices":
+  [
+    {
+      "text": "Control of Learning Beliefs",
+      "label": "Learning Beliefs 1",
+      "flag": "not {F}CLB"
+    },
+
+    {
+      "text": "Self-Efficacy for Learning and Performance",
+      "label": "Self Efficacy 1",
+      "flag": "not {F}SELP"
+    },
+
+    {
+      "text": "Both have been presented.",
+      "label": "Both 1",
+      "flag": "{F}Both_Presented"
+    }
+
+  ]
+},
+
+"Self Efficacy 1":
+{
+  "text": "ERROR! NO SCORE FOUND!",
+  "conditional":
+  {
+    "{Q}Self_Efficacy >= 6.6":{
+      "text":"You expect to do well in post-secondary, and you feel that you will be able to master the content."
+    },
+    "4.3 <= {Q}Self_Efficacy >= 6.5":{
+      "text":"You expect to do moderately well in post-secondary, /n and you feel that you may be able to master the content."
+    },
+    "{Q}Self_Efficacy <= 4.2":{
+      "text":"You expect to do poorly in post-secondary."
+    }
+  },
+  "choices":
+  [
+    {
+      "text": "{next}",
+      "label": "Self Efficacy 2"
+    }
+  ],
+
+  "effect":{
+    "SELP" : true
+  }
+},
+
+"Self Efficacy 2":
+{
+  "text": "ERROR! NO SCORE FOUND!",
+  "conditional":
+  {
+    "{Q}Self_Efficacy >= 6.6":{
+      "text":"This is a great mindset to have!"
+    },
+    "4.3 <= {Q}Self_Efficacy >= 6.5":{
+      "text":"But you also expect to experience some setbacks."
+    },
+    "{Q}Self_Efficacy <= 4.2":{
+      "text":"Which makes sense... post secondary can be hard."
+    }
+  },
+  "choices":
+  [
+    {
+      "text": "{next}",
+      "label": "Self Efficacy 3"
+    }
+  ]
+},
+
+"Self Efficacy 3":
+{
+  "text": "ERROR! NO SCORE FOUND!",
+  "conditional":
+  {
+    "{Q}Self_Efficacy >= 6.6":{
+      "text":"But be careful!"
+    },
+    "4.3 <= {Q}Self_Efficacy >= 6.5":{
+      "text":"This is great!"
+    },
+    "{Q}Self_Efficacy <= 4.2":{
+      "text":"But there are a lot of supports that you can use to increase your success!"
+    }
+  },
+  "choices":
+  [
+    {
+      "text": "{next}",
+      "label": "Self Efficacy 4"
+    }
+  ]
+},
+
+"Self Efficacy 4":
+{
+  "text": "ERROR! NO SCORE FOUND!",
+  "conditional":
+  {
+    "{Q}Self_Efficacy >= 6.6":{
+      "text":"Sometimes, when people are very confident, setbacks can be more difficult to handle."
+    },
+    "4.3 <= {Q}Self_Efficacy >= 6.5":{
+      "text":"You are confident in your abilities, but are also prepared for if something goes wrong."
+    },
+    "{Q}Self_Efficacy <= 4.2":{
+      "text":"I hope that during your time on this virtual campus you will find strategies that work for you!"
+    }
+  },
+  "choices":
+  [
+    {
+      "text": "{next}",
+      "label": "Self Efficacy 5"
+    }
+  ]
+},
+
+"Self Efficacy 5":
+{
+  "text": "ERROR! NO SCORE FOUND!",
+  "conditional":
+  {
+    "{Q}Self_Efficacy >= 6.6":{
+      "text":"Try to think about what you are going to do if you do not get a good grade. How are you going to react to a setback?"
+    },
+    "4.3 <= {Q}Self_Efficacy >= 6.5":{
+      "text":"So you will always be prepared, and be able to bounce back from a setback quicker!"
+    },
+    "{Q}Self_Efficacy <= 4.2":{
+      "text":"That way you can make the best out of post-secondary and feel confident your ability to succeed!"
+    }
+  },
+  "choices":
+  [
+    {
+      "text": "{next}",
+      "label": "Thank you 6"
+    }
+  ]
+},
+
+"Learning Beliefs 1":
+{
+  "text": "ERROR! NO SCORE FOUND!",
+  "conditional":
+  {
+    "{Q}Control_Belief >= 6.7":{
+      "text":"You believe that working hard will lead to good results, which is great since this will apply in your school work too!"
+    },
+    "6.6 <= {Q}Control_Belief >= 4.8":{
+      "text":"You believe that hard work has a chance of leaving good results, the same chances can be said about your studies."
+    },
+    "{Q}Control_Belief <= 4.7":{
+      "text":"According to your answers, you have a Fixed Mindset. "
+    }
+  },
+  "choices":
+  [
+    {
+      "text": "{next}",
+      "label": "Learning Beliefs 2"
+    }
+  ],
+
+  "effect":{
+    "CLB" : true
+  }
+},
+
+
+"Learning Beliefs 2":
+{
+  "text": "ERROR! NO SCORE FOUND!",
+  "conditional":
+  {
+    "{Q}Control_Belief >= 6.7":{
+      "text":"Your hard work will lead to success. You most definitely have a [b]Growth Mindset[/b] from this. "
+    },
+    "6.6 <= {Q}Control_Belief >= 4.8":{
+      "text":"It is important to know that studying has been shown by science to lead to better grades. "
+    },
+    "{Q}Control_Belief <= 4.7":{
+      "text":"You believe that hard work does not pay off."
+    }
+  },
+  "choices":
+  [
+    {
+      "text": "{next}",
+      "label": "Learning Beliefs 3"
+    }
+  ]
+},
+
+"Learning Beliefs 3":
+{
+  "text": "ERROR! NO SCORE FOUND!",
+  "conditional":
+  {
+    "{Q}Control_Belief >= 6.7":{
+      "text":"Be careful though, all this hard work may leave you to burn out!"
+    },
+    "6.6 <= {Q}Control_Belief >= 4.8":{
+      "text":"You likely need to have your growth mindset develop."
+    },
+    "{Q}Control_Belief <= 4.7":{
+      "text":"It is important to know that studying has been shown by science to lead to better grades. "
+    }
+  },
+  "choices":
+  [
+    {
+      "text": "{next}",
+      "label": "Learning Beliefs 4"
+    }
+  ]
+},
+
+"Learning Beliefs 4":
+{
+  "text": "This means that people can improve themselves, and improve how they learn. It can be hard as a student with a disability, as you might find that it takes more time for you to do the same thing as your peers. But stick with it, as science tells us you will see better results.",
+  "conditional":
+  {
+    "{Q}Control_Belief >= 6.7":{
+      "text":"Take some time for some self-care to fix this."
+    },
+    "6.6 <= {Q}Control_Belief >= 4.8":{
+      "text":"Perhaps revisiting the Mindsets portion of the tour in the directory could help."
+    },
+    "{Q}Control_Belief <= 4.7":{
+      "text":"This means that people can improve themselves, and improve how they learn. It can be hard as a student with a disability, as you might find that it takes more time for you to do the same thing as your peers. But stick with it, as science tells us you will see better results."
+    }
+  },
+  "choices":
+  [
+    {
+      "text": "{next}",
+      "label": "Learning Beliefs 5"
+    }
+  ]
+},
+
+"Learning Beliefs 5":
+{
+  "text": "ERROR! NO SCORE FOUND!",
+  "conditional":
+  {
+    "{Q}Control_Belief >= 6.7":{
+      "text":"Module 7 with Kilograw is all about that stuff!"
+    },
+    "6.6 <= {Q}Control_Belief >= 4.8":{
+      "text":"Just head on over to the Main Menu and press \"directory\" to review the content."
+    },
+    "{Q}Control_Belief <= 4.7":{
+      "text":"If you haven't seen results in the past, perhaps the studying strategies you employ may not be the best for you or your class, Module 5 is all about this and could help! As to improving your mindset, perhaps revisit the mindset portion of this tour in the directory. "
+    }
+  },
+  "choices":
+  [
+    {
+      "text": "{next}",
+      "label": "Thank you 6"
+    }
+  ]
+},
+
+"Both 1":
+{
+  "text": "I hope these results helped you understand more about yourself.",
+  "choices":
+  [
+    {
+      "text": "{next}",
+      "label": "Both 2"
+    }
+  ]
+},
+
+"Both 2":
+{
+  "text": "There is still much more to learn about post-secondary that I alone can't teach you!",
+  "choices":
+  [
+    {
+      "text": "{next}",
+      "label": "Both 3"
+    }
+  ]
+},
+
+"Both 3":
+{
+  "text": "Which is why Kai will teach you module 1 at the Counseling Office not to far from here.",
+  "choices":
+  [
+    {
+      "text": "{next}",
+      "label": "Both 4"
+    }
+  ]
+},
+
+"Both 4":
+{
+  "text": "We COULD magically get there by letting you go to the menu and have you move to the right then pressing spacebar.",
+  "choices":
+  [
+    {
+      "text": "{next}",
+      "label": "Both 5"
+    }
+  ]
+},
+
+"Both 5":
+{
+  "text": "Buttt I think it's more fun to work for it!",
+  "choices":
+  [
+    {
+      "text": "{next}",
+      "label": "Both 7"
+    }
+  ]
+},
+
+
+"Both 7":
+{
+  "text": "Think of it as...initiation!",
+  "choices":
+  [
+    {
+      "text": "{next}",
+      "label": "Both 8"
+    }
+  ]
+},
+
+"Both 8":
+{
+  "text": "No its NOT a hazing.",
+  "choices":
+  [
+    {
+      "text": "{next}",
+      "label": "Both 9"
+    }
+  ]
+},
+
+"Both 9":
+{
+  "text": "It's simple really. All you gotta do is chase me to the counseling office.",
+  "choices":
+  [
+    {
+      "text": "{next}",
+      "label": "Both 10"
+    }
+  ]
+},
+
+"Both 10":
+{
+  "text": "Mind you I am quite fast.",
+  "choices":
+  [
+    {
+      "text": "{next}",
+      "label": "Both 10"
+    }
+  ]
+},
+
+"Both 11":
+{
+  "text": "But that shouldn't be a problem. Remember those stars you have on you?",
+  "choices":
+  [
+    {
+      "text": "{next}",
+      "label": "Both 12"
+    }
+  ]
+},
+
+"Both 12":
+{
+  "text": "Fun stuff happens when you have them. It just needs a wish. The wish gets stronger for every star you have.",
+  "choices":
+  [
+    {
+      "text": "{next}",
+      "label": "Both 13"
+    }
+  ]
+},
+
+"Both 13":
+{
+  "text": "Just wish \"I want to catch Pompom\" and you're good to go! ",
+  "choices":
+  [
+    {
+      "text": "I want to catch Pompom",
+      "label": "Both 14"
+    }
+  ]
+},
+
+"Both 14":
+{
+  "text": "[color=blue]A surge of energy runs through you[/color] ",
+  "choices":
+  [
+    {
+      "text": "{next}",
+      "label": "Both 15"
+    }
+  ]
+},
+
+"Both 15":
+{
+  "text": "Sounds like you're good to go!",
+  "choices":
+  [
+    {
+      "text": "{next}",
+      "label": "Both 16"
+    }
+  ]
+},
+
+"Both 16":
+{
+  "text": "I will also be questioning you about our tour material as we have our little game of tag",
+  "choices":
+  [
+    {
+      "text": "{next}",
+      "label": "Both 17"
+    }
+  ]
+},
+
+"Both 17":
+{
+  "text": "Get them right or I'll have to stop to teach you some of it again. Oh! And watchout for people and stuffs you may bump into.",
+  "choices":
+  [
+    {
+      "text": "{next}",
+      "label": "Both 18"
+    }
+  ]
+},
+
+"Both 18":
+{
+  "text": "You don't want an accident now and lose some star power. But I'm sure you got this!",
+  "choices":
+  [
+    {
+      "text": "{next}",
+      "label": "Both 19"
+    }
+  ]
+},
+
+"Both 19":
+{
+  "text": "Alright counting down!",
+  "choices":
+  [
+    {
+      "text": "3",
+      "label": "Both 20"
+    }
+  ]
+},
+
+"Both 20":
+{
+  "text": "2",
+  "choices":
+  [
+    {
+      "text": "1",
+      "label": "Both 21"
+    }
+  ]
+},
+
+"Both 21":
+{
+  "text": "[color=blue]Pompom runs like lighting leaving a gust of wind behind![/color]\nSee you laterrr!!",
+  "choices":
+  [
+    {
+      "text": "RUN RUN RUN!",
+      "label": "Both 22"
+    }
+  ]
+},
+
+"Both 22":
+{
+  "text": "[color=blue](THE FINAL QUIZ BEGINS!)[/color]",
+  "choices":
+  [
+    {
+      "text": "{next}",
+      "label": "{quiz}"
+    }
+  ]
+}
 }

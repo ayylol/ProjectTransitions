@@ -43,12 +43,15 @@ func _ready():
 #TODO: Eventually make this load the correct module
 func start():
 	#GameState.load_game()
-	load_flags("flags")
-	load_module("module0")
+	load_flags("test_flags")
+	load_module("test")
 	update_menu(topic)
 
 func update_menu(label : String):
-	var directory = Directory.new(); # For file checking
+	if label == "{quiz}":
+		get_tree().change_scene("res://quiz_game/runner.tscn")
+		return
+	var directory = Directory.new() # For file checking
 	topic = label
 	# Check for correct formating
 	assert(label in _module_content, "label not in module")

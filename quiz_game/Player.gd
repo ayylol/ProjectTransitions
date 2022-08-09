@@ -1,6 +1,7 @@
 extends KinematicBody2D
 
 signal moving(direction)
+signal player_hit
 signal answer_question
 
 export var move_time = 0.1
@@ -10,13 +11,14 @@ var _can_move = true
 onready var move_tween = $MoveTween
 
 func _input(event):
-	if _can_move:
-		if event.is_action_pressed("up"):
-			emit_signal("moving", -1)
-		elif event.is_action_pressed("down"):
-			emit_signal("moving", 1)
-	if event.is_action_pressed("right"):
-		emit_signal("answer_question")
+	if $"../..".game_going:
+		if _can_move:
+			if event.is_action_pressed("up"):
+				emit_signal("moving", -1)
+			elif event.is_action_pressed("down"):
+				emit_signal("moving", 1)
+		if event.is_action_pressed("right") and $"../.."._question_ongoing:
+			emit_signal("answer_question")
 
 func move_to(new_pos : Vector2, new_scale: float):
 	assert(_can_move, "Can't move right now")
@@ -32,8 +34,9 @@ func move_to(new_pos : Vector2, new_scale: float):
 	move_tween.start()
 
 func on_hit():
-	print("hit")
+	emit_signal("player_hit")
 
 func _on_MoveTween_tween_all_completed():
 	assert(not _can_move, "Shouldn't be able to move right now")
 	_can_move = true
+

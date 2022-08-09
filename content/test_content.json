@@ -4,105 +4,19 @@
   {
     "character": "pompom",
     "emotion": "dwayne",
-    "text": "[color=blue]This[/color] is [wave][b]audio[/b][/wave]",
+    "text": "[color=blue]after[/color] this text you will go to the [wave][b]final quiz.[/b][/wave]",
+    "audio": "intro",
     "conditional":
     {
-      "{F}flag1":{
-        "text":"this text is only shown if flag1 is true",
-	"character" : "pompom",
-	"emotion": "angry"
+      "{F}flag1": {
+        "text": "flag1 was true"
       }
     },
-    "choices":
-      [
-        {
-          "text": "choice 1",
-          "label": "intro 2",
-          "flag": "{F}flag1}"
-        },
-        {
-          "text": "choice 2",
-          "label": "intro 2"
-        }
-      ]
-  },
-  "intro 2":
-  {
-    "emotion": "angry",
-    "text": "[wave][color=red]This[/color][/wave] is [color=yellow][b][i]test[/i][/b][/color] [b]text[/b] 2",
     "choices":
       [
         {
           "text": "{next}",
-          "label": "quiz 1"
-        }
-      ],
-    "effect":
-    {
-      "flag1": true
-    }
-  },
-  "quiz 1":
-  {
-    "emotion": "blank",
-    "text": "[shake][color=purple][b]This[/b][/color][/shake] is a test [wave]question[/wave]",
-    "choices":
-      [
-        {
-          "text": "{quiz}",
-          "group": "test_quiz",
-          "name": "test_question_1",
-          "reversed": false,
-          "label": "quiz 2"
-        }
-      ]
-  },
-  "quiz 2":
-  {
-    "emotion": "worried",
-    "text": "[shake][color=green][b]This[/b][/color][/shake] is the second test [wave]question[/wave]",
-    "choices":
-      [
-        {
-          "text": "{quiz}",
-          "group": "test_quiz",
-          "name": "test_question_2",
-          "reversed": false,
-          "label": "quiz 3"
-        }
-      ]
-  },
-  "quiz 3":
-  {
-    "emotion": "surprised",
-    "text": "[shake][color=blue][b]This[/b][/color][/shake] is the last test [wave]question[/wave]",
-    "choices":
-      [
-        {
-          "text": "{quiz}",
-          "group": "test_quiz",
-          "name": "test_question_3",
-          "reversed": false,
-          "label": "show result"
-        }
-      ]
-  },
-  "show result":
-  {
-    "emotion": "happy",
-    "text": "idk lol",
-    "conditionals": {
-      "{Q}test_quiz <= 2": 
-      {
-	"emotion": "dwayne",
-	"text": "test quiz <= 2"
-      }
-    },
-    "choices":
-      [
-        {
-          "text": "goto 1",
-          "label": "intro"
+          "label": "{quiz}"
         }
       ]
   }
