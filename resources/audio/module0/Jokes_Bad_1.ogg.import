@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/Jokes_Bad_1.ogg-d4e940f12b19e412868599d3f87fbea2.oggstr"
+
+[deps]
+
+source_file="res://resources/audio/module0/Jokes_Bad_1.ogg"
+dest_files=[ "res://.import/Jokes_Bad_1.ogg-d4e940f12b19e412868599d3f87fbea2.oggstr" ]
+
+[params]
+
+loop=false
+loop_offset=0

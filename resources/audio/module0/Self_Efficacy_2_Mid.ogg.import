@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/Self_Efficacy_2_Mid.ogg-46652c7530cdbb22fbcc618fb0b094e1.oggstr"
+
+[deps]
+
+source_file="res://resources/audio/module0/Self_Efficacy_2_Mid.ogg"
+dest_files=[ "res://.import/Self_Efficacy_2_Mid.ogg-46652c7530cdbb22fbcc618fb0b094e1.oggstr" ]
+
+[params]
+
+loop=false
+loop_offset=0

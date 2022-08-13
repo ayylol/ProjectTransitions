@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/Mindsets_Rehearse_5-1.ogg-b491d0a626f694a70a61ba12a5b038f5.oggstr"
+
+[deps]
+
+source_file="res://resources/audio/module0/Mindsets_Rehearse_5-1.ogg"
+dest_files=[ "res://.import/Mindsets_Rehearse_5-1.ogg-b491d0a626f694a70a61ba12a5b038f5.oggstr" ]
+
+[params]
+
+loop=false
+loop_offset=0

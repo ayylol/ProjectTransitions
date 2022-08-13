@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/Tiffany_2.ogg-99a2e5f3ccf2cbe24fdc769c50929c3c.oggstr"
+
+[deps]
+
+source_file="res://resources/audio/module0/Tiffany_2.ogg"
+dest_files=[ "res://.import/Tiffany_2.ogg-99a2e5f3ccf2cbe24fdc769c50929c3c.oggstr" ]
+
+[params]
+
+loop=false
+loop_offset=0

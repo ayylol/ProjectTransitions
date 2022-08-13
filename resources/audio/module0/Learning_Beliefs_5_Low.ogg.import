@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/Learning_Beliefs_5_Low.ogg-5b52348e08e6a75733dfe5979de29878.oggstr"
+
+[deps]
+
+source_file="res://resources/audio/module0/Learning_Beliefs_5_Low.ogg"
+dest_files=[ "res://.import/Learning_Beliefs_5_Low.ogg-5b52348e08e6a75733dfe5979de29878.oggstr" ]
+
+[params]
+
+loop=false
+loop_offset=0

@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/Growth_Mindsets_16.ogg-03a24d9e39306ac96270ce28ea53c0b1.oggstr"
+
+[deps]
+
+source_file="res://resources/audio/module0/Growth_Mindsets_16.ogg"
+dest_files=[ "res://.import/Growth_Mindsets_16.ogg-03a24d9e39306ac96270ce28ea53c0b1.oggstr" ]
+
+[params]
+
+loop=false
+loop_offset=0

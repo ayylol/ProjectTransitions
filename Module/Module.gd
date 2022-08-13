@@ -129,7 +129,7 @@ func update_menu(label : String):
 			audio.stream = load(path_to_audio)
 			audio.play()
 		else:
-			print("No such audio file")
+			print(path_to_audio + " does not exist")
 	
 	# Update character portrait
 	var update_portrait=false

@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/pompom_18_ENDUP.ogg-17b5520110689a324a4446482a56e8b7.oggstr"
+
+[deps]
+
+source_file="res://resources/audio/module0/pompom_18_ENDUP.ogg"
+dest_files=[ "res://.import/pompom_18_ENDUP.ogg-17b5520110689a324a4446482a56e8b7.oggstr" ]
+
+[params]
+
+loop=false
+loop_offset=0

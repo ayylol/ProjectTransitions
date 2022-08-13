@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/Age_2.ogg-389aff722290f06d0fb3d99610fdadf6.oggstr"
+
+[deps]
+
+source_file="res://resources/audio/module0/Age_2.ogg"
+dest_files=[ "res://.import/Age_2.ogg-389aff722290f06d0fb3d99610fdadf6.oggstr" ]
+
+[params]
+
+loop=false
+loop_offset=0

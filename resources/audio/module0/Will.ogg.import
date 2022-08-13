@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/Will.ogg-09ab3f11f12479cd60ff68a5c45aba72.oggstr"
+
+[deps]
+
+source_file="res://resources/audio/module0/Will.ogg"
+dest_files=[ "res://.import/Will.ogg-09ab3f11f12479cd60ff68a5c45aba72.oggstr" ]
+
+[params]
+
+loop=false
+loop_offset=0

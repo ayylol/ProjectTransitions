@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/Riddle_Correct_1.ogg-d148827816198b7c1f85a6f882a885fe.oggstr"
+
+[deps]
+
+source_file="res://resources/audio/module0/Riddle_Correct_1.ogg"
+dest_files=[ "res://.import/Riddle_Correct_1.ogg-d148827816198b7c1f85a6f882a885fe.oggstr" ]
+
+[params]
+
+loop=false
+loop_offset=0

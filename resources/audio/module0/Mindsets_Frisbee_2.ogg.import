@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/Mindsets_Frisbee_2.ogg-a5322f6ec17e80d6ff1d24735904c1d1.oggstr"
+
+[deps]
+
+source_file="res://resources/audio/module0/Mindsets_Frisbee_2.ogg"
+dest_files=[ "res://.import/Mindsets_Frisbee_2.ogg-a5322f6ec17e80d6ff1d24735904c1d1.oggstr" ]
+
+[params]
+
+loop=false
+loop_offset=0

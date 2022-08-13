@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/pompom_8.ogg-410e5c462aece6a5b0d5f7a9c4ec668e.oggstr"
+
+[deps]
+
+source_file="res://resources/audio/module0/pompom_8.ogg"
+dest_files=[ "res://.import/pompom_8.ogg-410e5c462aece6a5b0d5f7a9c4ec668e.oggstr" ]
+
+[params]
+
+loop=false
+loop_offset=0

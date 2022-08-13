@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/Mention_2.ogg-f39580f7e21ede2be03f4de862410eef.oggstr"
+
+[deps]
+
+source_file="res://resources/audio/module0/Mention_2.ogg"
+dest_files=[ "res://.import/Mention_2.ogg-f39580f7e21ede2be03f4de862410eef.oggstr" ]
+
+[params]
+
+loop=false
+loop_offset=0

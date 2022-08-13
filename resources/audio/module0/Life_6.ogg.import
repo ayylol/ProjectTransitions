@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/Life_6.ogg-a771eb213529dcf15ee8079304b5fc14.oggstr"
+
+[deps]
+
+source_file="res://resources/audio/module0/Life_6.ogg"
+dest_files=[ "res://.import/Life_6.ogg-a771eb213529dcf15ee8079304b5fc14.oggstr" ]
+
+[params]
+
+loop=false
+loop_offset=0

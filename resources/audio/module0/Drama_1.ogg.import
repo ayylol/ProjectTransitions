@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/Drama_1.ogg-4fbd60f0bd42207982cbb4abc43cf606.oggstr"
+
+[deps]
+
+source_file="res://resources/audio/module0/Drama_1.ogg"
+dest_files=[ "res://.import/Drama_1.ogg-4fbd60f0bd42207982cbb4abc43cf606.oggstr" ]
+
+[params]
+
+loop=false
+loop_offset=0

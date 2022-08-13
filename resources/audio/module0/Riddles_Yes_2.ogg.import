@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/Riddles_Yes_2.ogg-0cc77700ff0e1abd92e98cd3ca6d43fb.oggstr"
+
+[deps]
+
+source_file="res://resources/audio/module0/Riddles_Yes_2.ogg"
+dest_files=[ "res://.import/Riddles_Yes_2.ogg-0cc77700ff0e1abd92e98cd3ca6d43fb.oggstr" ]
+
+[params]
+
+loop=false
+loop_offset=0

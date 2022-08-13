@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/End_Up_16-1.ogg-41e1e2378da29460cf27fe2d4f2960fb.oggstr"
+
+[deps]
+
+source_file="res://resources/audio/module0/End_Up_16-1.ogg"
+dest_files=[ "res://.import/End_Up_16-1.ogg-41e1e2378da29460cf27fe2d4f2960fb.oggstr" ]
+
+[params]
+
+loop=false
+loop_offset=0

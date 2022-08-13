@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/Evaluate_13.ogg-691b4bd46a1b1387a8da0f7a983a196f.oggstr"
+
+[deps]
+
+source_file="res://resources/audio/module0/Evaluate_13.ogg"
+dest_files=[ "res://.import/Evaluate_13.ogg-691b4bd46a1b1387a8da0f7a983a196f.oggstr" ]
+
+[params]
+
+loop=false
+loop_offset=0

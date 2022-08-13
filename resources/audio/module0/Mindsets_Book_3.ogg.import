@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/Mindsets_Book_3.ogg-9911ebefd6721f9afa8c67dfec31fcb7.oggstr"
+
+[deps]
+
+source_file="res://resources/audio/module0/Mindsets_Book_3.ogg"
+dest_files=[ "res://.import/Mindsets_Book_3.ogg-9911ebefd6721f9afa8c67dfec31fcb7.oggstr" ]
+
+[params]
+
+loop=false
+loop_offset=0

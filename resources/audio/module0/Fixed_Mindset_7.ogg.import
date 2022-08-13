@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/Fixed_Mindset_7.ogg-658692d3a9eea17f5099e64aaf0e5c9e.oggstr"
+
+[deps]
+
+source_file="res://resources/audio/module0/Fixed_Mindset_7.ogg"
+dest_files=[ "res://.import/Fixed_Mindset_7.ogg-658692d3a9eea17f5099e64aaf0e5c9e.oggstr" ]
+
+[params]
+
+loop=false
+loop_offset=0

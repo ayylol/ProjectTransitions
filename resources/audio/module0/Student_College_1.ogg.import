@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/Student_College_1.ogg-58e6da82beae533113b462c32f8e283c.oggstr"
+
+[deps]
+
+source_file="res://resources/audio/module0/Student_College_1.ogg"
+dest_files=[ "res://.import/Student_College_1.ogg-58e6da82beae533113b462c32f8e283c.oggstr" ]
+
+[params]
+
+loop=false
+loop_offset=0

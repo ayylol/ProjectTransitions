@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/Mindsets_6_conditional.ogg-32becf8d2835af499f85101a362e629c.oggstr"
+
+[deps]
+
+source_file="res://resources/audio/module0/Mindsets_6_conditional.ogg"
+dest_files=[ "res://.import/Mindsets_6_conditional.ogg-32becf8d2835af499f85101a362e629c.oggstr" ]
+
+[params]
+
+loop=false
+loop_offset=0

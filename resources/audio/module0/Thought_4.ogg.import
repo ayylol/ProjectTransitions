@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/Thought_4.ogg-683f60539cc5927fb331695199fe6800.oggstr"
+
+[deps]
+
+source_file="res://resources/audio/module0/Thought_4.ogg"
+dest_files=[ "res://.import/Thought_4.ogg-683f60539cc5927fb331695199fe6800.oggstr" ]
+
+[params]
+
+loop=false
+loop_offset=0
