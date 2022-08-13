@@ -3,7 +3,7 @@
 [ext_resource path="res://menus/MainMenu.tscn" type="PackedScene" id=1]
 [ext_resource path="res://menus/AdventureMenu.tscn" type="PackedScene" id=2]
 [ext_resource path="res://menus/Quiz.gd" type="Script" id=3]
-[ext_resource path="res://menus/Module.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Module/Module.tscn" type="PackedScene" id=4]
 [ext_resource path="res://menus/Quiz.tscn" type="PackedScene" id=5]
 [ext_resource path="res://systems/MenuManager.gd" type="Script" id=6]
 
@@ -23,16 +23,15 @@ size_flags_vertical = 3
 [node name="AdventureMenu" parent="UI" instance=ExtResource( 2 )]
 visible = false
 
-[node name="Module" parent="UI" groups=["Persist"] instance=ExtResource( 4 )]
-visible = false
-
 [node name="Quiz" parent="UI" instance=ExtResource( 5 )]
 visible = false
 script = ExtResource( 3 )
+
+[node name="Module" parent="UI" instance=ExtResource( 4 )]
+visible = false
 
 [connection signal="goto_adventure" from="UI/MainMenu" to="." method="_show_menu" binds= [ "AdventureMenu" ]]
 [connection signal="goto_quiz" from="UI/MainMenu" to="." method="_show_menu" binds= [ "Quiz" ]]
 [connection signal="goto_mainmenu" from="UI/AdventureMenu" to="." method="_show_menu" binds= [ "MainMenu" ]]
 [connection signal="goto_module" from="UI/AdventureMenu" to="." method="_show_menu" binds= [ "Module" ]]
-[connection signal="goto_adventure" from="UI/Module" to="." method="_show_menu" binds= [ "AdventureMenu" ]]
 [connection signal="visibility_changed" from="UI/Quiz" to="UI/Quiz" method="_on_Quiz_visibility_changed"]

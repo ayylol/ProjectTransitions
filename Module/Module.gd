@@ -8,11 +8,22 @@ enum State {
 }
 var state = State.IDLE
 
+const quiz_choices_text = [
+	"7 - Extremely true",
+	"6 - Very true",
+	"5 - Fairly true",
+	"4 - Neither true nor false",
+	"3 - Fairly false",
+	"2 - Very false",
+	"1 - Extremely false",
+]
+
 signal goto_adventure
 
 export var text_speed := 100.0
 export var options_size := 1.0
 export var options_delta_size := 10.0
+export var showing_options_box := false
 
 var topic := "intro"
 var choices := []
@@ -26,25 +37,38 @@ var _edited_flags := []
 var _quiz_answers := {}
 
 var _visible_char_float := 0.0
-var _current_options_size := 0.0
-var _current_option_type
+var _selected_option := 0
+var _can_select_options := false
 var _is_audio_done := true
 
-onready var dialogue_box = $VBoxContainer/HBoxContainer/TextBox/MarginContainer/RichTextLabel
-onready var continue_indicator = $VBoxContainer/HBoxContainer/TextBox/ContinueIndicator
-onready var dialogue_box_button = $VBoxContainer/HBoxContainer/TextBox/TextButton
-onready var options = $VBoxContainer/Options
-onready var quiz_options = $VBoxContainer/QuizOptions
+onready var dialogue_box = $VBoxContainer/Ground/MarginContainer/RichTextLabel
+onready var continue_indicator = $VBoxContainer/Ground/MarginContainer/RichTextLabel/ContinueIndicator
+onready var options_box = $VBoxContainer/HBoxContainer/Padding/HBoxContainer/OptionsBox
+onready var representation = $VBoxContainer/HBoxContainer/Representation
 onready var audio = $AudioSource
+onready var anim = $AnimationPlayer
+
+func _unhandled_input(event):
+	if state == State.IDLE:
+		if event.is_action_pressed("ui_accept"):
+				state = State.HIDE_OPTIONS
+				set_process(true)
+		if _can_select_options:
+			if event.is_action_pressed("ui_up"):
+				_selected_option=max(0, _selected_option-1)
+				options_box.select(_selected_option)
+			if event.is_action_pressed("ui_down"):
+				var max_option = 6 if choices[0]["text"]=="{quiz}" else choices.size()-1
+				_selected_option=min(max_option,_selected_option+1)
+				options_box.select(_selected_option)
 
 func _ready():
 	set_process(false)
 
-#TODO: Eventually make this load the correct module
 func start():
 	#GameState.load_game()
-	load_flags("test_flags")
-	load_module("test")
+	load_flags("flags")
+	load_module("module0")
 	update_menu(topic)
 
 func update_menu(label : String):
@@ -65,12 +89,24 @@ func update_menu(label : String):
 	
 	# Get list of available choices
 	choices.clear()
-	for choice in content["choices"]:
-		if typeof(choice) == TYPE_DICTIONARY and "flag" in choice:
-			if eval(choice["flag"]):
+	var choices_text = []
+	if content["choices"][0]["text"] == "{quiz}":
+		#TODO: Fix quiz options
+		choices_text = quiz_choices_text
+		choices.append(content["choices"][0])
+		_selected_option = 3
+	else:
+		for choice in content["choices"]:
+			if "flag" in choice:
+				if eval(choice["flag"]):
+					choices.append(choice)
+					choices_text.append(choice["text"])
+			else:
 				choices.append(choice)
-		else:
-			choices.append(choice)
+				choices_text.append(choice["text"])
+		_selected_option=0
+	options_box.initialize_options(choices_text, _selected_option)
+	
 	
 	# Get content to display
 	var to_show = {"text": "", "audio": "", "character": "", "emotion": ""}
@@ -82,12 +118,12 @@ func update_menu(label : String):
 				break
 	
 	# Update text
-	dialogue_box.bbcode_text = "[color=#474920]" + to_show["text"] + "[/color]"
+	dialogue_box.bbcode_text = "[color=#fafac8]" + to_show["text"] + "[/color]"
+	#dialogue_box.bbcode_text = to_show["text"]
 	
 	# Update audio
 	if to_show["audio"]!="":
 		var path_to_audio = "res://resources/audio/"+ _module_name + "/" + to_show["audio"] + ".ogg"
-		print(path_to_audio)
 		if directory.file_exists(path_to_audio):
 			_is_audio_done=false
 			audio.stream = load(path_to_audio)
@@ -107,17 +143,13 @@ func update_menu(label : String):
 		update_portrait=true
 	if update_portrait:
 		var path_to_portrait = "res://resources/portraits/"+next_character+"/"+next_emotion+".png"
-		if directory.file_exists(path_to_portrait):
-			var sprite = load(path_to_portrait)
-			$VBoxContainer/MainCharacter.texture = sprite
+		if representation.update_portrait(path_to_portrait):
 			character = next_character
 			emotion = next_emotion
-		else:
-			print(path_to_portrait + " does not exist")
 	
 	_visible_char_float = 0.0
 	dialogue_box.visible_characters = _visible_char_float
-	state = State.HIDE_OPTIONS
+	state = State.SHOW_TEXT
 	set_process(true)
 
 func get_label_vals(input: Dictionary, to_show: Dictionary):
@@ -221,8 +253,8 @@ func load_flags(flags_file_name : String):
 	var content = file.get_as_text()
 	_flags = parse_json(content)
 	file.close()
-	
-func load_module(module_name : String):	
+
+func load_module(module_name : String):
 	var path_to_content = "res://content/" + module_name + "_content.json"
 	_module_content = Database.get_content(path_to_content)
 	_module_name = module_name 
@@ -238,71 +270,47 @@ func _process(delta):
 				dialogue_box.visible_characters = round(_visible_char_float)
 			elif _is_audio_done:
 				state = State.SHOW_OPTIONS
-		State.SHOW_OPTIONS: # TODO: add an option for no choices???
-			if not options.visible and not quiz_options.visible:
-				if "text" in choices[0] and choices[0]["text"] == "{next}":
-					dialogue_box_button.show()
-					continue_indicator.show()
-					return
-				elif "text" in choices[0] and choices[0]["text"] == "{quiz}":
-					_current_option_type = quiz_options
-				else:
-					_current_option_type = options
-					var i = 0
-					for o in choices:
-						var text = (
-								choices[i] if typeof(choices[i]) == TYPE_STRING 
-								else choices[i]["label"] if not "text" in choices[i] 
-								else choices[i]["text"])
-						var button = options.get_child(i)
-						button.text = text
-						button.show()
-						i+=1
-				_current_option_type.show()
-				_current_option_type.size_flags_stretch_ratio = 0.0
+		State.SHOW_OPTIONS:
+			if "text" in choices[0] and choices[0]["text"] == "{next}":
+				continue_indicator.show()
+				state = State.IDLE
 			else:
-				_current_option_type.size_flags_stretch_ratio += options_delta_size * delta
-				if _current_option_type.size_flags_stretch_ratio >= options_size:
-					state = State.IDLE
+				anim.play("slide")
+				anim.connect("animation_finished", self, "done_showing_optionbox")
+				set_process(false)
 		State.HIDE_OPTIONS:
 			if continue_indicator.visible:
 				continue_indicator.hide()
-				dialogue_box_button.hide()
-				state = State.SHOW_TEXT
-			elif _current_option_type and _current_option_type.visible:
-				_current_option_type.size_flags_stretch_ratio -= options_delta_size * delta
-				if _current_option_type.size_flags_stretch_ratio <= 0.0:
-					if _current_option_type == options:
-						for b in options.get_children():
-							b.hide()
-					_current_option_type.hide()
-					state = State.SHOW_TEXT
-			else:
-				state = State.SHOW_TEXT
-				continue_indicator.hide()
+				select()
+			elif not anim.is_playing():
+				anim.play_backwards("slide")
+				anim.connect("animation_finished", self, "done_hiding_options")
+				set_process(false)
 		_:
 			state = State.IDLE
-			set_process(false)
 
-func _on_Button_button_down(extra_arg_0 : int):
-	if typeof(choices[extra_arg_0]) == TYPE_STRING:
-		update_menu(choices[extra_arg_0])
+func done_showing_optionbox(_arg):
+	anim.disconnect("animation_finished", self, "done_hiding_options")
+	state = State.IDLE
+	_can_select_options = true
+
+func done_hiding_options(_arg):
+	anim.disconnect("animation_finished", self, "done_hiding_options")
+	_can_select_options = false
+	select()
+
+func select():
+	if choices[0]["text"] == "{quiz}":
+		var val = _selected_option + 1
+		var qst = choices[0]
+		if not qst["reversed"]:
+			val = 8 - val
+		if not qst["group"] in _quiz_answers:
+			_quiz_answers[qst["group"]] = {}
+		_quiz_answers[qst["group"]][qst["name"]] = val
+		update_menu(choices[0]["label"])
 	else:
-		update_menu(choices[extra_arg_0]["label"])
-	GameState.save_game()
-
-func _on_quiz_button_down(extra_arg_0: int):
-	var val = extra_arg_0
-	var qst = choices[0]
-	if qst["reversed"]:
-		val = 8 - val
-	if not qst["group"] in _quiz_answers:
-		_quiz_answers[qst["group"]] = {}
-	_quiz_answers[qst["group"]][qst["name"]] = val
-	update_menu(choices[0]["label"])
-
-func _on_TextButton_pressed():
-	update_menu(choices[0]["label"])
+		update_menu(choices[_selected_option]["label"])
 
 func _on_Back_Button_button_down():
 	emit_signal("goto_adventure")

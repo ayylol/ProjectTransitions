@@ -3,18 +3,36 @@
   "Fixed_Mindset" : false,
   "Developing_Mindset" : false,
 
-  "Mindsets" : "not({F}Growth_Mindset and {F}Fixed_Mindset and {F}Developing_Mindset)",
+  "Mindsets" : "({F}Growth_Mindset and {F}Fixed_Mindset and {F}Developing_Mindset)",
 
-  "Cat": false,
 
-  "Spirals": false,
+  "success": false,
+  "struggle": false,
 
-  "Facilities": true,
-  "Student": true,
-  "Preparations": true,
-  "Accomodations": true,
+  "yes" : false,
+  "no" : false,
+
+  "Loops": "({F}success and {F}struggle)",
+
+  "Facilities": false,
+  "Student": false,
+  "Preparations": false,
+  "Accomodations": false,
 
   "Modules" : "({F}Facilities and {F}Preparations and {F}Accomodations and {F}Student)",
 
-  "Ancient_Lit": false
+  "essentials" : "({F}Mindsets and {F}Modules and {F}Loops)",
+
+  "End_Up" : false,
+  "name": false,
+  "Lore":"({F}End_Up and {F}name)",
+
+  "SELP": false,
+  "CLB" : false,
+  "Both_Presented": "({F}SELP and {F}CLB)",
+
+  "worst_roll": false,
+  "mid_roll": false,
+  "best_roll": false
+
 }

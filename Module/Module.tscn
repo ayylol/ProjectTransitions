@@ -1,0 +1,225 @@
+[gd_scene load_steps=9 format=2]
+
+[ext_resource path="res://Module/Representation.tscn" type="PackedScene" id=1]
+[ext_resource path="res://resources/assets/continue.png" type="Texture" id=2]
+[ext_resource path="res://Module/Module.gd" type="Script" id=3]
+[ext_resource path="res://menus/Padding.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Module/OptionsBox.tscn" type="PackedScene" id=6]
+
+[sub_resource type="Animation" id=1]
+resource_name = "float"
+loop = true
+tracks/0/type = "bezier"
+tracks/0/path = NodePath(".:position:y")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"points": PoolRealArray( 8, -0.25, 0, 0.25, 0, 24, -0.25, 0, 0.25, 0, 8, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0, 0.5, 1 )
+}
+
+[sub_resource type="Animation" id=14]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:showing_options_box")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ false ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("VBoxContainer/HBoxContainer/Padding/HBoxContainer/OptionsBox:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ true ]
+}
+
+[sub_resource type="Animation" id=13]
+resource_name = "slide"
+length = 0.8
+tracks/0/type = "bezier"
+tracks/0/path = NodePath("VBoxContainer/HBoxContainer/Padding/HBoxContainer/Padding:size_flags_stretch_ratio")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"points": PoolRealArray( 1, -0.25, 0, 0.25, 0, 1, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0, 0.5, 0.8 )
+}
+tracks/1/type = "bezier"
+tracks/1/path = NodePath("VBoxContainer/HBoxContainer/Padding/HBoxContainer/OptionsBox:size_flags_stretch_ratio")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"points": PoolRealArray( 0, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0, 1, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0, 0.5, 0.8 )
+}
+tracks/2/type = "bezier"
+tracks/2/path = NodePath("VBoxContainer/HBoxContainer/Padding:size_flags_stretch_ratio")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"points": PoolRealArray( 0.2, -0.25, 0, 0.25, 0, 0.57, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0, 0.5 )
+}
+tracks/3/type = "bezier"
+tracks/3/path = NodePath("VBoxContainer/HBoxContainer/Padding2:size_flags_stretch_ratio")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"points": PoolRealArray( 0.2, -0.25, 0, 0.25, 0, 0.1, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0, 0.5 )
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("VBoxContainer/HBoxContainer/Padding/HBoxContainer/OptionsBox:visible")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0, 0.5, 0.8 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 1,
+"values": [ false, true, true ]
+}
+
+[node name="Module" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+script = ExtResource( 3 )
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+__meta__ = {
+"_editor_description_": ""
+}
+
+[node name="Back Button" type="Button" parent="VBoxContainer"]
+visible = false
+margin_right = 1024.0
+margin_bottom = 65.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+size_flags_stretch_ratio = 0.0
+text = "back"
+
+[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer"]
+margin_right = 1024.0
+margin_bottom = 325.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+size_flags_stretch_ratio = 0.6
+
+[node name="Padding" parent="VBoxContainer/HBoxContainer" instance=ExtResource( 4 )]
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_right = 278.0
+margin_bottom = 325.0
+
+[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer/HBoxContainer/Padding"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 8.0
+margin_top = 6.0
+
+[node name="Padding" parent="VBoxContainer/HBoxContainer/Padding/HBoxContainer" instance=ExtResource( 4 )]
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_right = 266.0
+margin_bottom = 319.0
+size_flags_stretch_ratio = 1.0
+
+[node name="OptionsBox" parent="VBoxContainer/HBoxContainer/Padding/HBoxContainer" instance=ExtResource( 6 )]
+margin_left = 270.0
+margin_right = 270.0
+margin_bottom = 319.0
+size_flags_stretch_ratio = 0.0
+
+[node name="Representation" parent="VBoxContainer/HBoxContainer" instance=ExtResource( 1 )]
+margin_left = 282.0
+margin_right = 741.0
+
+[node name="Padding2" parent="VBoxContainer/HBoxContainer" instance=ExtResource( 4 )]
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 745.0
+margin_right = 1024.0
+margin_bottom = 325.0
+
+[node name="Ground" type="ColorRect" parent="VBoxContainer"]
+margin_top = 329.0
+margin_right = 1024.0
+margin_bottom = 600.0
+size_flags_vertical = 3
+size_flags_stretch_ratio = 0.5
+color = Color( 0.196078, 0.168627, 0.0980392, 1 )
+
+[node name="MarginContainer" type="MarginContainer" parent="VBoxContainer/Ground"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 100.0
+margin_top = 10.0
+margin_right = -100.0
+margin_bottom = -10.0
+
+[node name="RichTextLabel" type="RichTextLabel" parent="VBoxContainer/Ground/MarginContainer"]
+margin_right = 824.0
+margin_bottom = 251.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+bbcode_enabled = true
+
+[node name="ContinueIndicator" type="Control" parent="VBoxContainer/Ground/MarginContainer/RichTextLabel"]
+visible = false
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -17.0
+margin_top = -32.0
+margin_right = -1.0
+rect_clip_content = true
+
+[node name="Sprite" type="Sprite" parent="VBoxContainer/Ground/MarginContainer/RichTextLabel/ContinueIndicator"]
+position = Vector2( 8, 21.6981 )
+texture = ExtResource( 2 )
+
+[node name="ContinueFloat" type="AnimationPlayer" parent="VBoxContainer/Ground/MarginContainer/RichTextLabel/ContinueIndicator/Sprite"]
+autoplay = "float"
+anims/float = SubResource( 1 )
+
+[node name="AudioSource" type="AudioStreamPlayer" parent="."]
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+playback_speed = 1.5
+anims/RESET = SubResource( 14 )
+anims/slide = SubResource( 13 )
+
+[connection signal="visibility_changed" from="." to="." method="_on_visibility_changed"]
+[connection signal="button_down" from="VBoxContainer/Back Button" to="." method="_on_Back_Button_button_down"]
+[connection signal="finished" from="AudioSource" to="." method="_audio_done"]
