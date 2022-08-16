@@ -16,9 +16,11 @@ func set_text(new_text):
 func selected(is_selected):
 	if is_selected:
 		inner_box.color = Color(0.980392, 0.980392, 0.784314)
+		color = Color(0.631373, 0.101961, 0.176471)
 		text_color = "322b19"
 	else:
 		inner_box.color = Color(0.196078, 0.168627, 0.098039)
+		color = Color(0, 0.462745, 0.388235)
 		text_color = "fafac8"
 	change_text()
 

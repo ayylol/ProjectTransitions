@@ -124,7 +124,7 @@ func update_menu(label : String):
 	# Update audio
 	if to_show["audio"]!="":
 		var path_to_audio = "res://resources/audio/"+ _module_name + "/" + to_show["audio"] + ".ogg"
-		if directory.file_exists(path_to_audio):
+		if directory.file_exists(path_to_audio + ".import"):
 			_is_audio_done=false
 			audio.stream = load(path_to_audio)
 			audio.play()
