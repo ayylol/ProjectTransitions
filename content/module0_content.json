@@ -365,6 +365,7 @@
 			}
 		]
 	},
+	
 	"intro 13": {
 		"emotion": "happy",
 		"text": "The concepts of Loops, Mindsets, and a short summary of some of modules you will be learning after this one.",
@@ -650,7 +651,7 @@
 		"choices": [
 			{
 				"text": "{next}",
-				"label": "Want 7"
+				"label": "Want 8"
 			}
 		]
 	},
@@ -1069,7 +1070,7 @@
 		}
 	},
 	"No Struggle Loop": {
-		"emotion": "happy",
+		"emotion": "surprised",
 		"text": "You decline the task!",
 		"audio": "",
 		"choices": [
@@ -1083,7 +1084,7 @@
 		}
 	},
 	"Struggle Loop 1": {
-		"emotion": "happy",
+		"emotion": "dwayne",
 		"text": "Let's leave this short campaign on a cliff hanger for now",
 		"audio": "",
 		"choices": [
@@ -1112,7 +1113,7 @@
 		]
 	},
 	"Struggle Loop 3": {
-		"emotion": "happy",
+		"emotion": "glad",
 		"text": "The struggle you felt while performing the task within the short campaign was actually an example of how one would go through a \"struggle loop\"",
 		"audio": "",
 		"choices": [
@@ -1145,7 +1146,7 @@
 		]
 	},
 	"Struggle Loop 6": {
-		"emotion": "happy",
+		"emotion": "glad",
 		"text": "Which I am telling you right now!",
 		"audio": "",
 		"choices": [
@@ -1156,7 +1157,7 @@
 		]
 	},
 	"Struggle Loop 7": {
-		"emotion": "happy",
+		"emotion": "angry",
 		"text": "Is not true!",
 		"audio": "",
 		"choices": [
@@ -1166,6 +1167,7 @@
 			}
 		]
 	},
+
 	"Struggle Loop 8": {
 		"emotion": "happy",
 		"text": "Don't be too hard on yourself when this stuff happens.",
@@ -1177,6 +1179,7 @@
 			}
 		]
 	},
+
 	"Struggle Loop 9": {
 		"emotion": "happy",
 		"text": "Nothing improves and labeling won't help that.",
@@ -1188,6 +1191,7 @@
 			}
 		]
 	},
+
 	"Struggle Loop 10": {
 		"emotion": "happy",
 		"text": "The struggle loop also involves avoiding challenging tasks that will make us label ourselves more",
@@ -1199,8 +1203,9 @@
 			}
 		]
 	},
+
 	"Struggle Loop 11": {
-		"emotion": "happy",
+		"emotion": "glad",
 		"text": "This process rinses and repeats and therefore it becomes this struggle loop.",
 		"audio": "",
 		"choices": [
@@ -1213,6 +1218,7 @@
 			"struggle": true
 		}
 	},
+
 	"Yes Success Loop": {
 		"emotion": "happy",
 		"text": "You accept the task!",
@@ -1304,7 +1310,7 @@
 		]
 	},
 	"Success Loop 6": {
-		"emotion": "happy",
+		"emotion": "worried",
 		"text": "However, the bad part about this is that the loop only goes on for as long as one's success does.",
 		"audio": "",
 		"choices": [
@@ -1315,7 +1321,7 @@
 		]
 	},
 	"Success Loop 7": {
-		"emotion": "happy",
+		"emotion": "surprised",
 		"text": "Meaning one hint of failure could end up erasing all the previous motivation and momentum one had attained",
 		"audio": "",
 		"choices": [
@@ -1329,6 +1335,7 @@
 		}
 	},
 	"Cond Loops 1": {
+		"emotion": "happy",
 		"text": "ERROR! THIS AIN'T RIGHT",
 		"conditional": {
 			"not {F}success": {
@@ -1346,6 +1353,7 @@
 		]
 	},
 	"Cond Loops 2": {
+		"emotion": "happy",
 		"text": "ERROR! THIS AIN'T RIGHT",
 		"conditional": {
 			"not {F}success": {
@@ -1363,6 +1371,7 @@
 		]
 	},
 	"Cond Loops 3": {
+		"emotion": "happy",
 		"text": "ERROR! THIS AIN'T RIGHT",
 		"conditional": {
 			"not {F}success": {
@@ -1383,8 +1392,9 @@
 			"success": true
 		}
 	},
+
 	"Cond Loops 4": {
-		"emotion": "happy",
+		"emotion": "dwayne",
 		"text": "Not one loop is exclusively for one person to get into and not exactly one is better than the other either.",
 		"audio": "",
 		"choices": [
@@ -1405,6 +1415,7 @@
 			}
 		]
 	},
+
 	"Cond Loops 6": {
 		"emotion": "happy",
 		"text": "And understanding these loops are what brings us a step closer to improving our mindsets. (YOU OBTAINED THE LOOPS KEYWORD)",
@@ -1466,6 +1477,7 @@
 		]
 	},
 	"Mindsets 4-1": {
+		"emotion": "dwayne",
 		"text": "Back in topic!",
 		"audio": "Mindsets_4-1",
 		"choices": [
@@ -1498,6 +1510,7 @@
 		]
 	},
 	"Mindsets 5": {
+		"emotion": "happy",
 		"text": "People can have either a \"fixed\" mindset, or a \"growth\" mindet, or somewhere in between. ",
 		"audio": "Mindsets_5",
 		"choices": [
@@ -1508,6 +1521,7 @@
 		]
 	},
 	"Mindsets 5-1": {
+		"emotion": "glad",
 		"text": "A growth mindset will help you get the most out of this program. Lets learn about mindsets, and figure out which one you have!",
 		"audio": "Mindsets_5-1",
 		"choices": [
@@ -1517,13 +1531,15 @@
 			}
 		]
 	},
+
 	"Mindsets 6": {
+		"emotion": "dwayne",
 		"text": "A lot of people I know in this university I'm quite familiar with their mindsets. Perhaps we should observe one doing their thing?",
 		"audio": "Mindsets_6",
 		"conditional": {
-			"not {F}Mindsets": {
+			"{F}Mindsets": {
 				"text": "It looks like we're done talking about this topic!",
-				"audio": "notMindsets_6"
+				"audio": "Mindsets_6_conditional"
 			}
 		},
 		"choices": [
@@ -1540,7 +1556,7 @@
 			{
 				"text": "Rehearsing for a play",
 				"label": "Mindsets Rehearse 1",
-				"flag": "not ({F}Growth_Mindset and {F}Fixed_Mindset)"
+				"flag": "({F}Growth_Mindset and {F}Fixed_Mindset)"
 			},
 			{
 				"text": "Talk about something else",
@@ -1631,7 +1647,7 @@
 		"audio": "Catch_2",
 		"choices": [
 			{
-				"text": "[color=blue]Internalize Pain[/color]",
+				"text": "Internalize Pain",
 				"label": "Catch 3"
 			}
 		]
@@ -1724,6 +1740,7 @@
 		]
 	},
 	"Sacrifice 2": {
+		"emotion": "blank-transparent",
 		"text": "[color=blue]Pompom kicks the boomerang midair and turns towards you...[/color]",
 		"audio": "Sacrifice_2",
 		"choices": [
@@ -1734,6 +1751,7 @@
 		]
 	},
 	"Sacrifice 3": {
+		"emotion": "blank-transparent",
 		"text": "[color=blue]...and he sticks the landing...Safe...[/color]",
 		"audio": "Sacrifice_3",
 		"choices": [
@@ -1863,6 +1881,7 @@
 		]
 	},
 	"Growth Mindsets 1": {
+		"emotion": "happy",
 		"text": "Kilograw is a psychology major with sports career!",
 		"audio": "Growth_Mindsets_1",
 		"choices": [
@@ -1895,6 +1914,7 @@
 		]
 	},
 	"Growth Mindsets 4": {
+		"emotion": "glad",
 		"text": "He was able to get through it because he has a Growth Mindset.",
 		"audio": "Growth_Mindsets_4",
 		"choices": [
@@ -1904,7 +1924,9 @@
 			}
 		]
 	},
+
 	"Growth Mindsets 4-1": {
+		"emotion": "happy",
 		"text": "Growth mindset means that Kilograw believes that with hard work and dedication that he can improve in any skill he wants.",
 		"audio": "Growth_Mindsets_4-1",
 		"choices": [
@@ -1914,7 +1936,9 @@
 			}
 		]
 	},
+
 	"Growth Mindsets 5": {
+		"emotion": "happy",
 		"text": "And this [b]Growth Mindset[/b] is something Kilograw had to develop for himself.",
 		"audio": "Growth_Mindsets_5",
 		"choices": [
@@ -1925,6 +1949,7 @@
 		]
 	},
 	"Growth Mindsets 6": {
+		"emotion": "happy",
 		"text": "And this method of developing the mindset is true!",
 		"audio": "Growth_Mindsets_6",
 		"choices": [
@@ -1935,6 +1960,7 @@
 		]
 	},
 	"Growth Mindsets 6-1": {
+		"emotion": "glad",
 		"text": "The scientists know that the harder you work and the more you believe that you can change the more you will change. ",
 		"audio": "Growth_Mindsets_6-1",
 		"choices": [
@@ -1945,6 +1971,7 @@
 		]
 	},
 	"Growth Mindsets 7": {
+		"emotion": "glad",
 		"text": "The lack of effort is believed to be the reason why their performance in tasks get worse.",
 		"audio": "Growth_Mindsets_7",
 		"choices": [
@@ -1955,6 +1982,7 @@
 		]
 	},
 	"Growth Mindsets 8": {
+		"emotion": "surprised",
 		"text": "Anyone can change, and\"Failure\" is just a word that means \"I can do better\".",
 		"audio": "Growth_Mindsets_8",
 		"choices": [
@@ -1965,6 +1993,7 @@
 		]
 	},
 	"Growth Mindsets 9": {
+		"emotion": "glad",
 		"text": "Kilograw had been practicing his boomerang throw every single day on that one spot.",
 		"audio": "Growth_Mindsets_9",
 		"choices": [
@@ -1975,6 +2004,7 @@
 		]
 	},
 	"Growth Mindsets 10": {
+		"emotion": "blank",
 		"text": "The grass that he practices on actually has his own footprints forever pressed into the dirt!",
 		"audio": "Growth_Mindsets_10",
 		"choices": [
@@ -1985,6 +2015,7 @@
 		]
 	},
 	"Growth Mindsets 11": {
+		"emotion": "happy",
 		"text": "He's the type to take whatever extra credit his professors gives to him because he knows it will help him improve.",
 		"audio": "Growth_Mindsets_11",
 		"choices": [
@@ -1995,6 +2026,7 @@
 		]
 	},
 	"Growth Mindsets 13": {
+		"emotion": "glad",
 		"text": "Not because he needed more things to fill his portfolio or his accomplishments. Although those things are nice to have overall.",
 		"audio": "Growth_Mindsets_13",
 		"choices": [
@@ -2005,6 +2037,7 @@
 		]
 	},
 	"Growth Mindsets 15": {
+		"emotion": "glad",
 		"text": "He does it for his own self improvement.",
 		"audio": "Growth_Mindsets_15",
 		"choices": [
@@ -2015,6 +2048,7 @@
 		]
 	},
 	"Growth Mindsets 16": {
+		"emotion": "happy",
 		"text": "My past conversations with him showed that he was not always the big strong guy you see right now.",
 		"audio": "Growth_Mindsets_16",
 		"choices": [
@@ -2025,6 +2059,7 @@
 		]
 	},
 	"Growth Mindsets 17": {
+		"emotion": "happy",
 		"text": "As you learn about Mindsets, you will think \"Oh yeah! I think I have this mindset!\".",
 		"audio": "Growth_Mindsets_17",
 		"choices": [
@@ -2035,6 +2070,7 @@
 		]
 	},
 	"Growth Mindsets 17-1": {
+		"emotion": "dwayne",
 		"text": "Or you may think \"I will never have this mindset\".",
 		"audio": "Growth_Mindsets_17-1",
 		"choices": [
@@ -2045,6 +2081,7 @@
 		]
 	},
 	"Growth Mindsets 18": {
+		"emotion": "dwayne",
 		"text": "but there is a big possibility that your mindset may change...",
 		"audio": "Growth_Mindsets_18",
 		"choices": [
@@ -2055,6 +2092,7 @@
 		]
 	},
 	"Growth Mindsets 20": {
+		"emotion": "glad",
 		"text": "And you need to put in your own work into maintaing a healthy mindset.",
 		"audio": "Growth_Mindsets_20",
 		"choices": [
@@ -2065,11 +2103,13 @@
 		]
 	},
 	"Growth Mindsets 21": {
+		"emotion": "angry",
 		"text": "Even if you don't have a growth mindset now, doesn't mean you won't have one in the future.",
 		"audio": "Growth_Mindsets_21",
 		"conditional": {
 			"{F}Fixed_Mindset": {
-				"text": "Even if you may have a fixed mindset now, you are capable of improvement"
+				"text": "Even if you may have a fixed mindset now, you are capable of improvement",
+				"audio": "Growth_Mindsets_21_conditional"
 			}
 		},
 		"choices": [
@@ -2080,6 +2120,7 @@
 		]
 	},
 	"Growth Mindsets 22": {
+		"emotion": "happy",
 		"text": "And I believe in you and your potential to make it there one day. Like getting the good grades and such!",
 		"audio": "Growth_Mindsets_22",
 		"choices": [
@@ -2090,6 +2131,7 @@
 		]
 	},
 	"Growth Mindsets 23": {
+		"emotion": "surprised",
 		"text": "Time for a survey, If I may!",
 		"audio": "Growth_Mindsets_23",
 		"choices": [
@@ -2100,6 +2142,7 @@
 		]
 	},
 	"Growth Mindsets 23-1": {
+		"emotion": "happy",
 		"text": "[i]I believe I will receive excellent grades in post-secondary[/i]",
 		"audio": "Growth_Mindsets_23-1",
 		"choices": [
@@ -2113,6 +2156,7 @@
 		]
 	},
 	"Growth Mindsets 24": {
+		"emotion": "glad",
 		"text": "That covers the topic of the Growth Mindset. Let's go observe another student! \n(YOU RECEIVED THE GROWTH MINDSET KEYWORD!)",
 		"audio": "Growth_Mindsets_24",
 		"choices": [
@@ -2125,7 +2169,9 @@
 			"Growth_Mindset": true
 		}
 	},
+
 	"Mindsets Book 1": {
+		"emotion": "glad",
 		"text": "Timothy Putty!",
 		"audio": "Mindsets_Book_1",
 		"choices": [
@@ -2136,6 +2182,7 @@
 		]
 	},
 	"Mindsets Book 2": {
+		"emotion": "dwayne",
 		"text": "He's the quiet type",
 		"audio": "Mindsets_Book_2",
 		"choices": [
@@ -2146,6 +2193,7 @@
 		]
 	},
 	"Mindsets Book 3": {
+		"emotion": "surprised",
 		"text": "He doesn't say much but he is a reliable guy when you need some facts told.",
 		"audio": "Mindsets_Book_3",
 		"choices": [
@@ -2156,6 +2204,7 @@
 		]
 	},
 	"Mindsets Book 4": {
+		"emotion": "dwayne",
 		"text": "He reads all kinds of books around campus! I wonder what he's reading now?",
 		"audio": "Mindsets_Book_4",
 		"choices": [
@@ -2166,6 +2215,7 @@
 		]
 	},
 	"Mindsets Book 5": {
+		"emotion": "dwayne-transparent",
 		"text": "*You squint your eyes trying to identify the book*",
 		"audio": "Mindsets_Book_5",
 		"choices": [
@@ -2184,6 +2234,7 @@
 		]
 	},
 	"Riddles 1": {
+		"emotion": "blank",
 		"text": "[i]\"Playing with people like fiddles. Riddles made for giggles.\"[/i]",
 		"audio": "Riddles_1",
 		"choices": [
@@ -2194,6 +2245,7 @@
 		]
 	},
 	"Riddles 2": {
+		"emotion": "surprised",
 		"text": "Wow. what a title.",
 		"audio": "Riddles_2",
 		"choices": [
@@ -2204,6 +2256,7 @@
 		]
 	},
 	"Riddles 3": {
+		"emotion": "dwayne",
 		"text": "I remember some pretty fun riddles back in my day! Would you like to hear one?",
 		"audio": "Riddles_3",
 		"choices": [
@@ -2218,6 +2271,7 @@
 		]
 	},
 	"Skip 1": {
+		"emotion": "worried",
 		"text": "Fair Enough.",
 		"audio": "Skip_1",
 		"choices": [
@@ -2227,7 +2281,9 @@
 			}
 		]
 	},
+
 	"Skip 2": {
+		"emotion": "dwayne",
 		"text": "You missed a pretty good one though!",
 		"audio": "Skip_2",
 		"choices": [
@@ -2237,7 +2293,9 @@
 			}
 		]
 	},
+
 	"Riddles Yes 1": {
+		"emotion": "happy",
 		"text": "An old friend from long ago taught me this one. I hope she's doing okay now.",
 		"audio": "Riddles_Yes_1",
 		"choices": [
@@ -2253,6 +2311,7 @@
 		]
 	},
 	"Age 1": {
+		"emotion": "glad",
 		"text": "I'll explain it soon. But just know I am...",
 		"audio": "Age_1",
 		"choices": [
@@ -2263,6 +2322,7 @@
 		]
 	},
 	"Age 2": {
+		"emotion": "blank",
 		"text": "...really old.\n[color=blue]+100 What happened?[/color]",
 		"audio": "Age_2",
 		"choices": [
@@ -2273,6 +2333,7 @@
 		]
 	},
 	"Age 3": {
+		"emotion": "glad",
 		"text": "Now onto the riddle!",
 		"audio": "Age_3",
 		"choices": [
@@ -2283,6 +2344,7 @@
 		]
 	},
 	"Riddles Yes 2": {
+		"emotion": "happy",
 		"text": "I view the world in little space, Am always changing place; No food I eat, but, by my power, Procure what millions do devour.",
 		"audio": "Riddles_Yes_2",
 		"choices": [
@@ -2301,6 +2363,7 @@
 		]
 	},
 	"Riddle Wrong 1": {
+		"emotion": "happy",
 		"text": "I suppose it can be interpretted like that!",
 		"audio": "Riddle_Wrong_1",
 		"choices": [
@@ -2311,6 +2374,7 @@
 		]
 	},
 	"Riddle Wrong 2": {
+		"emotion": "worried",
 		"text": "Unfortunately that's not it.",
 		"audio": "Riddle_Wrong_2",
 		"choices": [
@@ -2321,6 +2385,7 @@
 		]
 	},
 	"Riddle Wrong 3": {
+		"emotion": "happy-transparent",
 		"text": "+100 Creative Interpretation \n-50 Not it",
 		"audio": "Riddle_wrong_3",
 		"choices": [
@@ -2331,6 +2396,7 @@
 		]
 	},
 	"Riddle Correct 1": {
+		"emotion": "glad",
 		"text": "Yup! It's the Sun. Good Job!",
 		"audio": "Riddle_Correct_1",
 		"choices": [
@@ -3223,7 +3289,7 @@
 		"choices": [
 			{
 				"text": "{next}",
-				"label": "Past 3-2"
+				"label": "Past 4"
 			}
 		]
 	},
@@ -3608,11 +3674,11 @@
 		"conditional": {
 			"not {F}Mindsets": {
 				"text": "Any particular topics about post-secondary that interests you? I think you might find some of these faces familiar.",
-				"audio": "Module_14_NMindsets"
+				"audio": "Module_14_Conditional_Not_Mindsets"
 			},
 			"{F}Modules": {
 				"text": "Looks like we're all done on this topic!",
-				"audio": "Module_14_Done"
+				"audio": "Module_14_Conditional_Modules"
 			}
 		},
 		"choices": [
@@ -3845,11 +3911,11 @@
 		"audio": "Student_Class_5",
 		"choices": [
 			{
-				"text": "[color=blue]Cringe[/color]",
+				"text": "Cringe",
 				"label": "Cringe"
 			},
 			{
-				"text": "[color=blue]**Wheeze**[/color]",
+				"text": "**Wheeze**",
 				"label": "Wheeze"
 			}
 		]
@@ -4162,6 +4228,7 @@
 	},
 	"Accom 1": {
 		"text": "A dear friend of mine named Kai Mera will be handling all things accomodations related.",
+		"emotion": "happy",
 		"audio": "Accom_1",
 		"conditional": {
 			"not {F}Mindsets": {
@@ -4178,6 +4245,7 @@
 	},
 	"Accom 2": {
 		"text": "I'm actually very excited for you to meet her!",
+		"emotion": "happy",
 		"audio": "Accom_2",
 		"choices": [
 			{
@@ -4188,6 +4256,7 @@
 	},
 	"Accom 3": {
 		"text": "She's a professor here and so she knows lots of stuff.",
+		"emotion": "glad",
 		"audio": "Accom_3",
 		"choices": [
 			{
@@ -4198,6 +4267,7 @@
 	},
 	"Accom 4": {
 		"text": "That includes ADHD and LD.",
+		"emotion": "dwayne",
 		"audio": "Accom_4",
 		"choices": [
 			{
@@ -4224,6 +4294,7 @@
 	},
 	"Accom 6": {
 		"text": "Because of this, She will teach you in [b]understanding your disability[/b] in greater detail.",
+		"emotion": "glad",
 		"audio": "Accom_6",
 		"choices": [
 			{
@@ -4234,6 +4305,7 @@
 	},
 	"Accom 7": {
 		"text": "This module will include details about some learning disability,the stigma behind it,and the importance of understanding your diagnosis",
+		"emotion": "glad",
 		"audio": "Accom_7",
 		"choices": [
 			{
@@ -4244,6 +4316,7 @@
 	},
 	"Accom 8": {
 		"text": "These will benefit you in understanding your disability and what it might mean for how you learn.",
+		"emotion": "dwayne",
 		"audio": "Accom_8",
 		"choices": [
 			{
@@ -4254,6 +4327,7 @@
 	},
 	"Accom 9": {
 		"text": "Along side this, she will also help you in your finances.",
+		"emotion": "glad",
 		"audio": "Accom_9",
 		"choices": [
 			{
@@ -4284,6 +4358,7 @@
 	},
 	"Accom 12": {
 		"text": "She might even bring a student or two with her to demonstrate how to use these accomodations accordingly.",
+		"emotion": "happy",
 		"audio": "Accom_12",
 		"choices": [
 			{
@@ -4294,6 +4369,7 @@
 	},
 	"Accom 13": {
 		"text": "I am SO excited for you to meet her. Oh my goats! She's like my best friend.",
+		"emotion": "happy",
 		"audio": "Accom_13",
 		"choices": [
 			{
@@ -4307,6 +4383,7 @@
 	},
 	"pompom 1": {
 		"text": "...Oh?",
+		"emotion": "worried",
 		"audio": "pompom_1",
 		"choices": [
 			{
@@ -4317,6 +4394,7 @@
 	},
 	"pompom 2": {
 		"text": "I know you want to talk about the talking cat...",
+		"emotion": "surprised",
 		"audio": "pompom_2",
 		"choices": [
 			{
@@ -4327,6 +4405,7 @@
 	},
 	"pompom 3": {
 		"text": "...but I never knew you would wanna do it during the tour!",
+		"emotion": "worried",
 		"audio": "pompom_3",
 		"choices": [
 			{
@@ -4346,6 +4425,7 @@
 	},
 	"pompom 4": {
 		"text": "Alright! Settle down then.",
+		"emotion": "dwayne",
 		"audio": "pompom_4",
 		"choices": [
 			{
@@ -4356,6 +4436,7 @@
 	},
 	"pompom 5": {
 		"text": "I have your answers",
+		"emotion": "glad",
 		"audio": "pompom_5",
 		"choices": [
 			{
@@ -4366,6 +4447,7 @@
 	},
 	"Mention 1": {
 		"text": "Oh do I?",
+		"emotion": "surprised",
 		"audio": "Mention_1",
 		"choices": [
 			{
@@ -4376,6 +4458,7 @@
 	},
 	"Mention 2": {
 		"text": "I actually never noticed!",
+		"emotion": "dwayne",
 		"audio": "Mention_2",
 		"choices": [
 			{
@@ -4386,6 +4469,7 @@
 	},
 	"Mention 3": {
 		"text": "I suppose that's just me feeling nostalgic because...",
+		"emotion": "dwayne",
 		"audio": "Mention_3",
 		"choices": [
 			{
@@ -4396,6 +4480,7 @@
 	},
 	"pompom 6": {
 		"text": "I'm an immortal! I lived way before the dinosaurs...",
+		"emotion": "blank",
 		"audio": "pompom_6",
 		"choices": [
 			{
@@ -4406,6 +4491,7 @@
 	},
 	"pompom 8": {
 		"text": "I don't even know where I came from.",
+		"emotion": "worried",
 		"audio": "pompom_8",
 		"choices": [
 			{
@@ -4420,6 +4506,7 @@
 	},
 	"pompom 9": {
 		"text": "And I spent most of my life doing nothing but simply watch life go by.",
+		"emotion": "dwayne",
 		"audio": "pompom_9",
 		"choices": [
 			{
@@ -4430,6 +4517,7 @@
 	},
 	"pompom 10": {
 		"text": "As earth evolved, so did I.",
+		"emotion": "glad",
 		"audio": "pompom_10",
 		"choices": [
 			{
@@ -4440,6 +4528,7 @@
 	},
 	"pompom 11": {
 		"text": "And I made many friends!",
+		"emotion": "happy",
 		"audio": "pompom_11",
 		"choices": [
 			{
@@ -4450,6 +4539,7 @@
 	},
 	"pompom 12": {
 		"text": "As well as enemies.",
+		"emotion": "angry",
 		"audio": "pompom_12",
 		"choices": [
 			{
@@ -4464,6 +4554,7 @@
 	},
 	"pompom 14": {
 		"text": "Soon enough,some humans caught on to the fact that their \"lifelong companion\" took that title very seriously.",
+		"emotion": "worried",
 		"audio": "pompom_14",
 		"choices": [
 			{
@@ -4474,6 +4565,7 @@
 	},
 	"pompom 15": {
 		"text": "Back in the renaissance era, some guy shouted at a crowd...",
+		"emotion": "worried",
 		"audio": "pompom_15",
 		"choices": [
 			{
@@ -4484,6 +4576,7 @@
 	},
 	"pompom 16": {
 		"text": "\"Thee shouldst see this cat with nineth lives!\"",
+		"emotion": "dwayne",
 		"audio": "pompom_16",
 		"choices": [
 			{
@@ -4494,6 +4587,7 @@
 	},
 	"pompom 17": {
 		"text": "I found it pretty funny! ",
+		"emotion": "happy",
 		"audio": "pompom_17",
 		"choices": [
 			{
@@ -4508,6 +4602,7 @@
 	},
 	"pompom 18": {
 		"text": "But I suppose that's where the saying came from.",
+		"emotion": "dwayne",
 		"audio": "pompom_18",
 		"conditional": {
 			"{F}Lore": {
@@ -4543,6 +4638,7 @@
 	},
 	"End up 1": {
 		"text": "I took a lot of jobs throughout the ages.",
+		"emotion": "glad",
 		"audio": "End_up_1",
 		"choices": [
 			{
@@ -4553,6 +4649,7 @@
 	},
 	"End up 2": {
 		"text": "I served kings and common folk alike.",
+		"emotion": "glad",
 		"audio": "End_up_2",
 		"choices": [
 			{
@@ -4567,6 +4664,7 @@
 	},
 	"End up 3": {
 		"text": "But nothing had ever made me happier...",
+		"emotion": "glad",
 		"audio": "End_up_3",
 		"choices": [
 			{
@@ -4577,6 +4675,7 @@
 	},
 	"End up 4": {
 		"text": "...than being a guide for humanity",
+		"emotion": "happy",
 		"audio": "End_up_4",
 		"choices": [
 			{
@@ -4587,6 +4686,7 @@
 	},
 	"End up 5": {
 		"text": "So I became a tour guide come modern day!",
+		"emotion": "happy",
 		"audio": "End_up_5",
 		"choices": [
 			{
@@ -4597,6 +4697,7 @@
 	},
 	"End up 6": {
 		"text": "To help young folks like you find their way. And you don't have to be lost for it either. I just want to help folks!",
+		"emotion": "glad",
 		"audio": "End_up_6",
 		"choices": [
 			{
@@ -4611,6 +4712,7 @@
 	},
 	"End up 7": {
 		"text": "In this case, I am here to introduce you to post-secondary stuff and all the teachers and topics we will be covering here.",
+		"emotion": "glad",
 		"audio": "End_up_7",
 		"choices": [
 			{
@@ -4626,6 +4728,7 @@
 	},
 	"End up 8": {
 		"text": "I did miss being the former librarian of this institution though...",
+		"emotion": "dwayne",
 		"audio": "End_up_8",
 		"choices": [
 			{
@@ -4636,6 +4739,7 @@
 	},
 	"End up 9": {
 		"text": "The books were pretty neat and I got to spend a fair time of my day reading the latest book of world records.",
+		"emotion": "happy",
 		"audio": "End_up_9",
 		"choices": [
 			{
@@ -4646,6 +4750,7 @@
 	},
 	"End up 10": {
 		"text": "Some insane feats of humanity are in display of that book!",
+		"emotion": "worried",
 		"audio": "End_up_10",
 		"choices": [
 			{
@@ -4660,6 +4765,7 @@
 	},
 	"End up 11": {
 		"text": "I,myself, can do some of the crazy stuff found in those books.",
+		"emotion": "surprised",
 		"audio": "End_up_11",
 		"choices": [
 			{
@@ -4670,6 +4776,7 @@
 	},
 	"End up 12": {
 		"text": "Like having my skin be as tough as stone and can lay on a bed of nails with ease.",
+		"emotion": "blank",
 		"audio": "End_up_12",
 		"choices": [
 			{
@@ -4680,6 +4787,7 @@
 	},
 	"End up 13": {
 		"text": "Or having reflexes that can stop incoming air soft gun pellets with my own paws.",
+		"emotion": "happy",
 		"audio": "End_up_13",
 		"choices": [
 			{
@@ -4694,6 +4802,7 @@
 	},
 	"End up 14": {
 		"text": "Though these feats were not easy to do.",
+		"emotion": "glad",
 		"audio": "End_up_14",
 		"choices": [
 			{
@@ -4704,6 +4813,7 @@
 	},
 	"End up 15": {
 		"text": "I struggled as well trying to do these things.",
+		"emotion": "worried",
 		"audio": "End_up_15",
 		"choices": [
 			{
@@ -4714,6 +4824,7 @@
 	},
 	"End up 16": {
 		"text": "I actually ended bringing myself down to a bit of a [b]looping[/b] situation.",
+		"emotion": "blank",
 		"audio": "End_up_16",
 		"choices": [
 			{
@@ -4724,6 +4835,7 @@
 	},
 	"End up 16-1": {
 		"text": "Where when I lose my motivation on the first sign of failure after multiple successes.",
+		"emotion": "blank",
 		"audio": "End_up_16-1",
 		"choices": [
 			{
@@ -4734,6 +4846,7 @@
 	},
 	"End up 16-2": {
 		"text": "It could even go another way! I could teach you more about it if you'd like!",
+		"emotion": "glad",
 		"audio": "End_up_16-2",
 		"conditional": {
 			"{F}Loops": {
@@ -4755,6 +4868,7 @@
 	},
 	"End up 17": {
 		"text": "I think I said too much about myself here. Maybe we can talk about this some other time?",
+		"emotion": "dwayne",
 		"audio": "End_up_17",
 		"choices": [
 			{
@@ -4777,6 +4891,7 @@
 	},
 	"name 1": {
 		"text": "Oh!",
+		"emotion": "surprised",
 		"audio": "name_1",
 		"choices": [
 			{
@@ -4787,6 +4902,7 @@
 	},
 	"name 2": {
 		"text": "You want to learn about how I got my name",
+		"emotion": "surprised",
 		"audio": "name_1",
 		"choices": [
 			{
@@ -4797,6 +4913,7 @@
 	},
 	"name 3": {
 		"text": "My name is short for \"Psychopomp\"",
+		"emotion": "dwayne",
 		"audio": "name_3",
 		"choices": [
 			{
@@ -4807,6 +4924,7 @@
 	},
 	"name 4": {
 		"text": "It's an old word similar too...tour guide!",
+		"emotion": "dwayne",
 		"audio": "name_4",
 		"choices": [
 			{
@@ -4817,6 +4935,7 @@
 	},
 	"name 5": {
 		"text": "And psychopomps are widespread across many cultures and I have participated in being a psychopomp for most of them.",
+		"emotion": "glad",
 		"audio": "name_5",
 		"choices": [
 			{
@@ -4831,6 +4950,7 @@
 	},
 	"name 6": {
 		"text": "You know, being immortal and all, you can apply to as many jobs as you want for as long as you want!",
+		"emotion": "happy",
 		"audio": "name_6",
 		"choices": [
 			{
@@ -4841,6 +4961,7 @@
 	},
 	"name 7": {
 		"text": "So I took the one I was pretty good at.",
+		"emotion": "happy",
 		"audio": "name_7",
 		"choices": [
 			{
@@ -4851,6 +4972,7 @@
 	},
 	"name 8": {
 		"text": "Guidance",
+		"emotion": "dwayne",
 		"audio": "name_8",
 		"choices": [
 			{
@@ -4865,6 +4987,7 @@
 	},
 	"name 9": {
 		"text": "Though I was never referred to as \"Pompom\" since my birth.",
+		"emotion": "surprised",
 		"audio": "name_9",
 		"choices": [
 			{
@@ -4875,6 +4998,7 @@
 	},
 	"name 10": {
 		"text": "It was given to me by a sweet little girl whom I played with in Ancient Egypt",
+		"emotion": "glad",
 		"audio": "name_10",
 		"choices": [
 			{
@@ -4885,6 +5009,7 @@
 	},
 	"name 11": {
 		"text": "I grew up by her side.",
+		"emotion": "glad",
 		"audio": "name_11",
 		"choices": [
 			{
@@ -4894,7 +5019,8 @@
 		]
 	},
 	"name 12": {
-		"text": "I became what is known as the \"family\" pet to those guys",
+		"text": "I became what is known as the \"family\" pet to those folk",
+		"emotion": "happy",
 		"audio": "name_12",
 		"choices": [
 			{
@@ -4909,6 +5035,7 @@
 	},
 	"name 13": {
 		"text": "At some point I learned how to talk.",
+		"emotion": "surprised",
 		"audio": "name_13",
 		"choices": [
 			{
@@ -4919,6 +5046,7 @@
 	},
 	"name 14": {
 		"text": "I even got this neat little crown from her when she got older.",
+		"emotion": "dwayne",
 		"audio": "name_14",
 		"choices": [
 			{
@@ -4929,6 +5057,7 @@
 	},
 	"name 15": {
 		"text": "She made it herself actually.",
+		"emotion": "happy",
 		"audio": "name_15",
 		"choices": [
 			{
@@ -4943,6 +5072,7 @@
 	},
 	"name 16": {
 		"text": "It took her a while to make it",
+		"emotion": "worried",
 		"audio": "name_16",
 		"choices": [
 			{
@@ -4953,6 +5083,7 @@
 	},
 	"name 17": {
 		"text": "Even to the point where she thought she could never do it.",
+		"emotion": "worried",
 		"audio": "name_17",
 		"choices": [
 			{
@@ -4963,6 +5094,7 @@
 	},
 	"name 18": {
 		"text": "That it's just not \"in her\" to \"make things\"",
+		"emotion": "worried",
 		"audio": "name_18",
 		"choices": [
 			{
@@ -4973,6 +5105,7 @@
 	},
 	"name 19": {
 		"text": "She had this [b]fixed mindset[/b] for a while until she had developed it into a growth mindset with time.",
+		"emotion": "glad",
 		"audio": "name_19",
 		"choices": [
 			{
@@ -4983,6 +5116,7 @@
 	},
 	"name 20": {
 		"text": "This kind of thinking is actually similar to something I should be teaching you on this tour.",
+		"emotion": "surprised",
 		"audio": "name_20",
 		"conditional": {
 			"{F}Mindsets": {
@@ -5004,6 +5138,7 @@
 	},
 	"name 20-1": {
 		"text": "She was also kind of funny about failing as well. Everytime she fails a single step at making that tiara she just takes a looongg break from it.",
+		"emotion": "dwayne",
 		"audio": "name_20-1",
 		"conditional": {
 			"{F}Loops": {
@@ -5025,6 +5160,7 @@
 	},
 	"name 21": {
 		"text": "Sighh...Those were good times...",
+		"emotion": "glad",
 		"audio": "name_21",
 		"choices": [
 			{
@@ -5035,6 +5171,7 @@
 	},
 	"name 22": {
 		"text": "I miss her",
+		"emotion": "glad",
 		"audio": "name_22",
 		"choices": [
 			{
@@ -5048,6 +5185,7 @@
 	},
 	"More 1": {
 		"text": "I've served many masters across the ages.",
+		"emotion": "dwayne",
 		"audio": "More_1",
 		"choices": [
 			{
@@ -5058,6 +5196,7 @@
 	},
 	"More 2": {
 		"text": "But the older I get the more I realize just how stressful it all is.",
+		"emotion": "worried",
 		"audio": "More_2",
 		"choices": [
 			{
@@ -5068,6 +5207,7 @@
 	},
 	"More 3": {
 		"text": "I may have one too many lives ahead of me. But work is work.",
+		"emotion": "dwayne",
 		"audio": "More_3",
 		"choices": [
 			{
@@ -5078,6 +5218,7 @@
 	},
 	"More 4": {
 		"text": "But I just want to settle...",
+		"emotion": "glad",
 		"audio": "More_4",
 		"choices": [
 			{
@@ -5088,6 +5229,7 @@
 	},
 	"More 5": {
 		"text": "I want to meet new people and make new connections.",
+		"emotion": "happy",
 		"audio": "More_5",
 		"choices": [
 			{
@@ -5098,6 +5240,7 @@
 	},
 	"More 6": {
 		"text": "Life is so beautiful here, mortal or immortal.",
+		"emotion": "glad",
 		"audio": "More_6",
 		"choices": [
 			{
@@ -5107,7 +5250,8 @@
 		]
 	},
 	"More 7": {
-		"text": "It's nice to keep growing and learn just by...being there y'know?",
+		"text": "It's nice to keep growing and learning just by...being there y'know?",
+		"emotion": "happy",
 		"audio": "More_7",
 		"choices": [
 			{
@@ -5118,6 +5262,7 @@
 	},
 	"More 8": {
 		"text": "That's why I am beyond happy to meet you students.",
+		"emotion": "glad",
 		"audio": "More_8",
 		"choices": [
 			{
@@ -5128,6 +5273,7 @@
 	},
 	"More 9": {
 		"text": "You're young and you're growing and trying to become something great!",
+		"emotion": "happy",
 		"audio": "More_9",
 		"choices": [
 			{
@@ -5138,6 +5284,7 @@
 	},
 	"More 10": {
 		"text": "And I can't wait to see what you students have in store to better humanity no matter what challenges you might face.",
+		"emotion": "dwayne",
 		"audio": "More_10",
 		"choices": [
 			{
@@ -5153,6 +5300,7 @@
 	},
 	"Thank you 1": {
 		"text": "You're welcome my friend.",
+		"emotion": "glad",
 		"audio": "Thank_you_1",
 		"choices": [
 			{
@@ -5163,6 +5311,7 @@
 	},
 	"Thank you 2": {
 		"text": "We are done with the tour.",
+		"emotion": "surprised",
 		"audio": "Thank_you_2",
 		"choices": [
 			{
@@ -5173,6 +5322,7 @@
 	},
 	"Thank you 3": {
 		"text": "Wow that was alot!",
+		"emotion": "blank",
 		"audio": "Thank_you_3",
 		"choices": [
 			{
@@ -5183,6 +5333,7 @@
 	},
 	"Thank you 4": {
 		"text": "It's been fun, but all good things come to an end to make room for even better things.",
+		"emotion": "glad",
 		"audio": "Thank_you_4",
 		"choices": [
 			{
@@ -5193,6 +5344,7 @@
 	},
 	"Thank you 4-1": {
 		"text": "Speaking of things...",
+		"emotion": "dwayne",
 		"audio": "Thank_you_4-1",
 		"choices": [
 			{
@@ -5203,6 +5355,7 @@
 	},
 	"Thank you 5": {
 		"text": "Thank you for answering my questions earlier. They're meant to give you a better understanding of yourself based on several factors.",
+		"emotion": "glad",
 		"audio": "Thank_you_5",
 		"choices": [
 			{
@@ -5212,7 +5365,7 @@
 		]
 	},
 	"Thank you 6": {
-		"text": "In this tour, these questions were about your \"Control of Learning Beliefs\" and \"Self-Efficacy for Learning and Performance\". Tell me which one do you wanna see your assessment on.",
+		"text": "In this tour, these questions were about\"How well you think you can learn\" and \"How well you think you will do in post-secondary\". Tell me which one do you wanna see your assessment on.",
 		"audio": "Thank_you_6",
 		"choices": [
 			{
@@ -5238,18 +5391,21 @@
 			"{Q}Self_Efficacy < 4.2": [
 				{
 					"text": "You expect to do poorly in post-secondary.",
+					"emotion": "worried",
 					"audio": "Self_Efficacy_1_Low"
 				}
 			],
 			"{Q}Self_Efficacy < 6.5": [
 				{
-					"text": "You expect to do moderately well in post-secondary, /n and you feel that you may be able to master the content.",
+					"text": "You expect to do moderately well in post-secondary, and you feel that you may be able to master the content.",
+					"emotion": "glad",
 					"audio": "Self_Efficacy_1_Mid"
 				}
 			],
 			"{Q}Self_Efficacy >= 6.5": [
 				{
 					"text": "You expect to do well in post-secondary, and you feel that you will be able to master the content.",
+					"emotion": "glad",
 					"audio": "Self_Efficacy_1_High"
 				}
 			]
@@ -5277,6 +5433,7 @@
 	},
 	"SE_L_2": {
 		"text": "Post secondary can be hard,",
+		"emotion": "worried",
 		"audio": "SE_L_2",
 		"choices": [
 			{
@@ -5287,6 +5444,7 @@
 	},
 	"SE_L_3": {
 		"text": "but there are a lot of supports that you can use to increase your success.",
+		"emotion": "glad",
 		"audio": "SE_L_3",
 		"choices": [
 			{
@@ -5297,6 +5455,7 @@
 	},
 	"SE_L_4": {
 		"text": "This app is full of strategies and advice that can help you make the best out of post-secondary.",
+		"emotion": "happy",
 		"audio": "SE_L_4",
 		"choices": [
 			{
@@ -5306,7 +5465,8 @@
 		]
 	},
 	"SE_L_5": {
-		"text": "As you go through this app try to keep an open mind! /n You might learn something that will help you be successful!",
+		"text": "As you go through this app try to keep an open mind! You might learn something that will help you be successful!",
+		"emotion": "dwayne",
 		"audio": "SE_L_5",
 		"choices": [
 			{
@@ -5317,6 +5477,7 @@
 	},
 	"SE_M_2": {
 		"text": "But you also think that you may experience some setbacks.",
+		"emotion": "surprised",
 		"audio": "SE_M_2",
 		"choices": [
 			{
@@ -5327,6 +5488,7 @@
 	},
 	"SE_M_3": {
 		"text": "This is good because it means that you are confident in your abilities,",
+		"emotion": "happy",
 		"audio": "SE_M_2",
 		"choices": [
 			{
@@ -5337,7 +5499,52 @@
 	},
 	"SE_M_4": {
 		"text": "but are also prepared for if something goes wrong.",
-		"audio": "SE_M_2",
+		"emotion": "glad",
+		"audio": "SE_M_4",
+		"choices": [
+			{
+				"text": "{next}",
+				"label": "Thank you 6"
+			}
+		]
+	},
+	"SE_H_2": {
+		"text": "This is a great mindset to have.",
+		"emotion": "happy",
+		"audio": "SE_H_2",
+		"choices": [
+			{
+				"text": "{next}",
+				"label": "SE_H_3"
+			}
+		]
+	},
+	"SE_H_3": {
+		"text": "But be careful!",
+		"emotion": "worried",
+		"audio": "SE_H_3",
+		"choices": [
+			{
+				"text": "{next}",
+				"label": "SE_H_4"
+			}
+		]
+	},
+	"SE_H_4": {
+		"text": "Sometimes, when people are very confident, setbacks can be more difficult to handle.",
+		"emotion": "dwayne",
+		"audio": "SE_H_4",
+		"choices": [
+			{
+				"text": "{next}",
+				"label": "SE_H_5"
+			}
+		]
+	},
+	"SE_H_5": {
+		"text": "Try to think about what you are going to do if you do not get a good grade.",
+		"emotion": "glad",
+		"audio": "SE_H_5",
 		"choices": [
 			{
 				"text": "{next}",
@@ -5350,14 +5557,17 @@
 		"conditional": {
 			"{Q}Control_Belief < 4.7": {
 				"text": "You tend to think that if you work hard it will not lead to good results.",
+				"emotion": "worried",
 				"audio": "Control_1_Low"
 			},
 			"{Q}Control_Belief < 6.6": {
 				"text": "You believe that hard work sometimes leads to good results.",
+				"emotion": "dwayne",
 				"audio": "Control_1_Mid"
 			},
 			"{Q}Control_Belief >= 6.6": {
 				"text": "You believe that hard work will lead to good results!",
+				"emotion": "glad",
 				"audio": "Control_1_High"
 			}
 		},
@@ -5384,6 +5594,7 @@
 	},
 	"CLB_L_2": {
 		"text": "It is important to know that more studying has been shown to lead to better results.",
+		"emotion": "glad",
 		"audio": "CLB_L_2",
 		"choices": [
 			{
@@ -5394,6 +5605,7 @@
 	},
 	"CLB_L_3": {
 		"text": "This means that people can improve themselves, and improve how they learn.",
+		"emotion": "happy",
 		"audio": "CLB_L_3",
 		"choices": [
 			{
@@ -5404,6 +5616,7 @@
 	},
 	"CLB_L_4": {
 		"text": "It can be hard as a student with a disability, as you might find that you have to put more time in than some of your peers.",
+		"emotion": "worried",
 		"audio": "CLB_L_4",
 		"choices": [
 			{
@@ -5414,6 +5627,7 @@
 	},
 	"CLB_L_5": {
 		"text": "But stick with it, and science tells us you will see better results!",
+		"emotion": "glad",
 		"audio": "CLB_L_5",
 		"choices": [
 			{
@@ -5423,7 +5637,8 @@
 		]
 	},
 	"CLB_L_6": {
-		"text": "If you haven’t seen results in the past, /n it may be because the studying you are doing /n doesn't match you or your class.",
+		"text": "If you haven’t seen results in the past, it may be because the studying you are doing doesn't match you or your class.",
+		"emotion": "dwayne",
 		"audio": "CLB_L_6",
 		"choices": [
 			{
@@ -5434,6 +5649,7 @@
 	},
 	"CLB_L_7": {
 		"text": "In this program there is a study strategies module. When you get there, take a look and see if there is anything new you can try!",
+		"emotion": "glad",
 		"audio": "CLB_L_7",
 		"choices": [
 			{
@@ -5443,7 +5659,8 @@
 		]
 	},
 	"CLB_M_2": {
-		"text": "When it comes to studying, /n psychologists know that more studying does lead to good results!",
+		"text": "When it comes to studying, psychologists know that more studying does lead to good results!",
+		"emotion": "glad",
 		"audio": "CLB_M_2",
 		"choices": [
 			{
@@ -5453,7 +5670,8 @@
 		]
 	},
 	"CLB_M_3": {
-		"text": "Try to keep this in mind if you find yourself /n thinking that studying won’t be worth your time.",
+		"text": "Try to keep this in mind if you find yourself thinking that studying won’t be worth your time.",
+		"emotion": "dwayne",
 		"audio": "CLB_M_3",
 		"choices": [
 			{
@@ -5464,6 +5682,7 @@
 	},
 	"CLB_H_2": {
 		"text": "This is a great way to think!",
+		"emotion": "glad",
 		"audio": "CLB_H_2",
 		"choices": [
 			{
@@ -5474,6 +5693,7 @@
 	},
 	"CLB_H_3": {
 		"text": "In post-secondary, this means that you likely think that if you study hard you will get better grades.",
+		"emotion": "glad",
 		"audio": "CLB_H_3",
 		"choices": [
 			{
@@ -5484,6 +5704,7 @@
 	},
 	"CLB_H_4": {
 		"text": "And you are right!",
+		"emotion": "happy",
 		"audio": "CLB_H_4",
 		"choices": [
 			{
@@ -5494,6 +5715,7 @@
 	},
 	"CLB_H_5": {
 		"text": "Try some of the strategies in the study strategy section!",
+		"emotion": "glad",
 		"audio": "CLB_H_5",
 		"choices": [
 			{
@@ -5503,7 +5725,8 @@
 		]
 	},
 	"CLB_H_6": {
-		"text": "But be careful; /n if you study too much you might become burnt out. ",
+		"text": "But be careful; if you study too much you might become burnt out. ",
+		"emotion": "worried",
 		"audio": "CLB_H_6",
 		"choices": [
 			{
@@ -5514,6 +5737,7 @@
 	},
 	"CLB_H_7": {
 		"text": "Make sure to do some self care too.",
+		"emotion": "dwayne",
 		"audio": "CLB_H_7",
 		"choices": [
 			{
@@ -5524,6 +5748,7 @@
 	},
 	"Both 1": {
 		"text": "I hope these results helped you understand more about yourself.",
+		"emotion": "glad",
 		"audio": "Both_1",
 		"choices": [
 			{
@@ -5534,6 +5759,7 @@
 	},
 	"Both 2": {
 		"text": "There is still much more to learn about post-secondary that I alone can't teach you!",
+		"emotion": "surprised",
 		"audio": "Both_2",
 		"choices": [
 			{
@@ -5544,6 +5770,7 @@
 	},
 	"Both 3": {
 		"text": "Which is why Kai will teach you module 1 at the Counseling Office not to far from here.",
+		"emotion": "glad",
 		"audio": "Both_3",
 		"choices": [
 			{
@@ -5554,6 +5781,7 @@
 	},
 	"Both 4": {
 		"text": "We COULD magically get there by letting you go to the menu and have you move to the right then pressing spacebar.",
+		"emotion": "surprised",
 		"audio": "Both_4",
 		"choices": [
 			{
@@ -5564,6 +5792,7 @@
 	},
 	"Both 5": {
 		"text": "Buttt I think it's more fun to work for it!",
+		"emotion": "glad",
 		"audio": "Both_5",
 		"choices": [
 			{
@@ -5573,7 +5802,8 @@
 		]
 	},
 	"Both 7": {
-		"text": "Think of it as...initiation!",
+		"text": "It's a tradition!",
+		"emotion": "glad",
 		"audio": "Both_7",
 		"choices": [
 			{
@@ -5583,7 +5813,8 @@
 		]
 	},
 	"Both 8": {
-		"text": "No its NOT a hazing.",
+		"text": "New students chase the mascott!",
+		"emotion": "happy",
 		"audio": "Both_8",
 		"choices": [
 			{
@@ -5594,6 +5825,7 @@
 	},
 	"Both 9": {
 		"text": "It's simple! All you gotta do is chase me to the counseling office.",
+		"emotion": "glad",
 		"audio": "Both_9",
 		"choices": [
 			{
@@ -5604,6 +5836,7 @@
 	},
 	"Both 10": {
 		"text": "Mind you I am quite fast.",
+		"emotion": "dwayne",
 		"audio": "Both_10",
 		"choices": [
 			{
@@ -5614,6 +5847,7 @@
 	},
 	"Both 11": {
 		"text": "But that shouldn't be a problem. Remember those stars you have on you?",
+		"emotion": "surprised",
 		"audio": "Both_11",
 		"choices": [
 			{
@@ -5624,6 +5858,7 @@
 	},
 	"Both 12": {
 		"text": "Fun stuff happens when you have them. It just needs a wish. The wish gets stronger for every star you have.",
+		"emotion": "glad",
 		"audio": "Both_12",
 		"choices": [
 			{
@@ -5634,6 +5869,7 @@
 	},
 	"Both 13": {
 		"text": "Just wish \"I want to catch Pompom\" and you're good to go! ",
+		"emotion": "dwayne",
 		"audio": "Both_13",
 		"choices": [
 			{
@@ -5644,6 +5880,7 @@
 	},
 	"Both 14": {
 		"text": "[color=blue]A surge of energy runs through you[/color] ",
+		"emotion": "dwayne-transparent",
 		"audio": "Both_14",
 		"choices": [
 			{
@@ -5654,6 +5891,7 @@
 	},
 	"Both 15": {
 		"text": "Sounds like you're good to go!",
+		"emotion": "surprised",
 		"audio": "Both_15",
 		"choices": [
 			{
@@ -5664,6 +5902,7 @@
 	},
 	"Both 16": {
 		"text": "I will also be questioning you about our tour material as we have our little game of tag",
+		"emotion": "glad",
 		"audio": "Both_16",
 		"choices": [
 			{
@@ -5673,7 +5912,8 @@
 		]
 	},
 	"Both 17": {
-		"text": "Get them right or I'll have to stop to teach you some of it again. Oh! And watchout for people and stuffs you may bump into.",
+		"text": "Oh! And watchout for people and stuffs you may bump into.",
+		"emotion": "worried",
 		"audio": "Both_17",
 		"choices": [
 			{
@@ -5684,6 +5924,7 @@
 	},
 	"Both 18": {
 		"text": "You don't want an accident now and lose some star power. But I'm sure you got this!",
+		"emotion": "blank",
 		"audio": "Both_18",
 		"choices": [
 			{
@@ -5694,6 +5935,7 @@
 	},
 	"Both 19": {
 		"text": "Alright counting down!",
+		"emotion": "surprised",
 		"audio": "Both_19",
 		"choices": [
 			{
@@ -5704,6 +5946,7 @@
 	},
 	"Both 20": {
 		"text": "2",
+		"emotion": "glad",
 		"audio": "Both_20",
 		"choices": [
 			{
@@ -5714,6 +5957,7 @@
 	},
 	"Both 21": {
 		"text": "[color=blue]Pompom runs like lighting leaving a gust of wind behind![/color]\nSee you laterrr!!",
+		"emotion": "happy",
 		"audio": "Both_21",
 		"choices": [
 			{
@@ -5724,6 +5968,7 @@
 	},
 	"Both 22": {
 		"text": "[color=blue](THE FINAL QUIZ BEGINS!)[/color]",
+		"emotion": "happy-transparent",
 		"audio": "Both_22",
 		"choices": [
 			{
