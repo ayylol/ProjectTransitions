@@ -22,6 +22,18 @@ length = 0.001
 resource_name = "Run"
 loop = true
 
+[sub_resource type="AtlasTexture" id=9]
+atlas = ExtResource( 7 )
+region = Rect2( 0, 192, 80, 64 )
+
+[sub_resource type="AtlasTexture" id=10]
+atlas = ExtResource( 7 )
+region = Rect2( 80, 192, 80, 64 )
+
+[sub_resource type="AtlasTexture" id=11]
+atlas = ExtResource( 7 )
+region = Rect2( 160, 192, 80, 64 )
+
 [sub_resource type="AtlasTexture" id=5]
 atlas = ExtResource( 7 )
 region = Rect2( 0, 128, 80, 64 )
@@ -38,18 +50,6 @@ region = Rect2( 160, 128, 80, 64 )
 atlas = ExtResource( 7 )
 region = Rect2( 240, 128, 80, 64 )
 
-[sub_resource type="AtlasTexture" id=9]
-atlas = ExtResource( 7 )
-region = Rect2( 0, 192, 80, 64 )
-
-[sub_resource type="AtlasTexture" id=10]
-atlas = ExtResource( 7 )
-region = Rect2( 80, 192, 80, 64 )
-
-[sub_resource type="AtlasTexture" id=11]
-atlas = ExtResource( 7 )
-region = Rect2( 160, 192, 80, 64 )
-
 [sub_resource type="AtlasTexture" id=12]
 atlas = ExtResource( 7 )
 region = Rect2( 0, 256, 80, 64 )
@@ -64,14 +64,14 @@ region = Rect2( 160, 256, 80, 64 )
 
 [sub_resource type="SpriteFrames" id=15]
 animations = [ {
-"frames": [ SubResource( 5 ), SubResource( 6 ), SubResource( 7 ), SubResource( 8 ) ],
-"loop": true,
-"name": "run1",
-"speed": 5.0
-}, {
 "frames": [ SubResource( 9 ), SubResource( 10 ), SubResource( 11 ) ],
 "loop": true,
 "name": "run2",
+"speed": 5.0
+}, {
+"frames": [ SubResource( 5 ), SubResource( 6 ), SubResource( 7 ), SubResource( 8 ) ],
+"loop": true,
+"name": "run1",
 "speed": 5.0
 }, {
 "frames": [ SubResource( 12 ), SubResource( 13 ), SubResource( 14 ) ],
@@ -88,11 +88,21 @@ script = ExtResource( 3 )
 [node name="Lanes" type="Node2D" parent="Game"]
 script = ExtResource( 6 )
 
+[node name="ColorRect" type="ColorRect" parent="Game/Lanes"]
+visible = false
+margin_left = -157.0
+margin_top = -287.0
+margin_right = 500.0
+margin_bottom = -127.0
+color = Color( 0.196078, 0.168627, 0.0980392, 1 )
+
 [node name="Label" type="RichTextLabel" parent="Game/Lanes"]
+visible = false
 margin_left = -146.0
 margin_top = -283.0
 margin_right = 497.0
 margin_bottom = -128.0
+rect_clip_content = false
 custom_fonts/normal_font = ExtResource( 1 )
 scroll_active = false
 
@@ -134,7 +144,7 @@ anims/Run = SubResource( 3 )
 scale = Vector2( 1.1625, 1.14062 )
 frames = SubResource( 15 )
 animation = "run1"
-frame = 2
+frame = 1
 speed_scale = 2.4
 playing = true
 
@@ -177,7 +187,6 @@ margin_bottom = 166.0
 color = Color( 0.196078, 0.168627, 0.0980392, 1 )
 
 [node name="QuizResult" type="Label" parent="Camera/EndScreen/ColorRect"]
-unique_name_in_owner = true
 margin_left = 505.0
 margin_top = 96.0
 margin_right = 809.0
@@ -185,7 +194,6 @@ margin_bottom = 199.0
 custom_fonts/font = ExtResource( 8 )
 
 [node name="Score" type="Label" parent="Camera/EndScreen/ColorRect"]
-unique_name_in_owner = true
 anchor_right = 1.0
 anchor_bottom = 1.0
 margin_left = 106.0
