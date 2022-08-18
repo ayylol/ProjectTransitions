@@ -134,7 +134,7 @@ anims/Run = SubResource( 3 )
 scale = Vector2( 1.1625, 1.14062 )
 frames = SubResource( 15 )
 animation = "run1"
-frame = 3
+frame = 2
 speed_scale = 2.4
 playing = true
 

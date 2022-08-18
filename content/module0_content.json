@@ -174,7 +174,7 @@
 	},
 	"intro 5-05": {
 		"emotion": "glad",
-		"text": "Their called wish stars and are local to this university, and they do some stuff when you get a hold of a couple! Try and get as many as you can",
+		"text": "They're called wish stars, and they do some stuff when you get a hold of a couple! Try and get as many as you can",
 		"audio": "intro_5-05",
 		"choices": [
 			{
@@ -3977,7 +3977,7 @@
 
 	"Fac 6-1": {
 		"emotion": "happy",
-		"text": "Including strategies specifically for people with ADHD and Learning Disabilities",
+		"text": "Including strategies specifically for people with ADHD and Learning Difficulties",
 		"audio": "Fac_6-1",
 		"choices": [
 			{
