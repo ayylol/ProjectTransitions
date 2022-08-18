@@ -20,6 +20,8 @@ const quiz_choices_text = [
 
 signal goto_adventure
 
+var changed_character_anim = false
+
 export var text_speed := 100.0
 export var options_size := 1.0
 export var options_delta_size := 10.0
@@ -49,6 +51,8 @@ onready var audio = $AudioSource
 onready var anim = $AnimationPlayer
 
 func _unhandled_input(event):
+	if event.is_action_pressed("ui_cancel"):
+		_on_Back_Button_button_down()
 	if state == State.IDLE:
 		if event.is_action_pressed("ui_accept"):
 				state = State.HIDE_OPTIONS
@@ -260,21 +264,26 @@ func load_module(module_name : String):
 	_module_name = module_name 
 
 func _process(delta):
-	#TODO: Change to use tweens for option growing/shrinking
 	match state:
 		State.IDLE:
 			set_process(false)
 		State.SHOW_TEXT:
+			if not changed_character_anim:
+				representation.change_character_anim("walking")
+				changed_character_anim = true
 			if dialogue_box.visible_characters < dialogue_box.text.length():
 				_visible_char_float += text_speed * delta
 				dialogue_box.visible_characters = round(_visible_char_float)
 			elif _is_audio_done:
 				state = State.SHOW_OPTIONS
+				changed_character_anim = false
 		State.SHOW_OPTIONS:
 			if "text" in choices[0] and choices[0]["text"] == "{next}":
 				continue_indicator.show()
+				representation.change_character_anim("idle")
 				state = State.IDLE
 			else:
+				representation.change_character_anim("ask")
 				anim.play("slide")
 				anim.connect("animation_finished", self, "done_showing_optionbox")
 				set_process(false)
@@ -313,6 +322,7 @@ func select():
 		update_menu(choices[_selected_option]["label"])
 
 func _on_Back_Button_button_down():
+	audio.stop()
 	emit_signal("goto_adventure")
 
 func _audio_done():

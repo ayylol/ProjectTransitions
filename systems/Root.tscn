@@ -35,3 +35,4 @@ visible = false
 [connection signal="goto_mainmenu" from="UI/AdventureMenu" to="." method="_show_menu" binds= [ "MainMenu" ]]
 [connection signal="goto_module" from="UI/AdventureMenu" to="." method="_show_menu" binds= [ "Module" ]]
 [connection signal="visibility_changed" from="UI/Quiz" to="UI/Quiz" method="_on_Quiz_visibility_changed"]
+[connection signal="goto_adventure" from="UI/Module" to="." method="_show_menu" binds= [ "AdventureMenu" ]]

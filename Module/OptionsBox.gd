@@ -16,7 +16,8 @@ var options
 
 onready var options_container = $MarginContainer/InnerBox/MarginContainer/OptionsContainer
 
-func initialize_options(choices, default_select):
+func initialize_options(choices: Array, default_select: int):
+	assert(not choices.empty(), "No choices available")
 	delete_children(options_container)
 	var font_size
 	for num_options in options_to_font_size.keys():

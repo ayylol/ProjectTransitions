@@ -1,6 +1,7 @@
-[gd_scene load_steps=2 format=2]
+[gd_scene load_steps=3 format=2]
 
 [ext_resource path="res://quiz_game/Lane.gd" type="Script" id=1]
+[ext_resource path="res://resources/fonts/default_font_small.tres" type="DynamicFont" id=2]
 
 [node name="Lane" type="Node2D" groups=["Lane"]]
 script = ExtResource( 1 )
@@ -10,21 +11,36 @@ position = Vector2( 1000, 0 )
 
 [node name="Text" type="Node2D" parent="."]
 visible = false
-z_index = 1
+position = Vector2( 300, 1 )
+z_index = -1
 
 [node name="Label" type="RichTextLabel" parent="Text"]
-margin_right = 400.0
-margin_bottom = 70.0
+margin_top = -32.0
+margin_right = 652.0
+margin_bottom = 65.0
+custom_fonts/normal_font = ExtResource( 2 )
 bbcode_enabled = true
 bbcode_text = "Penis Poop Man"
 text = "Penis Poop Man"
+scroll_active = false
 
 [node name="TextRestPos" type="Node2D" parent="."]
-position = Vector2( 650, 0 )
+position = Vector2( 300, 0 )
 
 [node name="TextAnim" type="Tween" parent="."]
 
 [node name="TextEndPos" type="Node2D" parent="."]
 position = Vector2( -400, 0 )
+
+[node name="ground" type="Node2D" parent="."]
+position = Vector2( -400, 0 )
+z_index = -2
+
+[node name="ColorRect" type="ColorRect" parent="ground"]
+margin_left = 150.0
+margin_top = -32.0
+margin_right = 1675.0
+margin_bottom = 65.0
+color = Color( 0.196078, 0.168627, 0.0980392, 1 )
 
 [connection signal="tween_all_completed" from="TextAnim" to="." method="_on_TextAnim_tween_all_completed"]

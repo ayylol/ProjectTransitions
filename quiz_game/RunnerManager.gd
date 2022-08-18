@@ -23,10 +23,13 @@ onready var question_timer = $Game/QuestionTimer
 onready var end_game_timer = $Game/EndGameTimer
 onready var score_label = $Game/ScoreLabel
 
+onready var final_quiz_result = $"%QuizResult"
+onready var final_score_result = $"%Score"
+
 func _ready():
 	player_lane = int(lanes.size()/2)
 	player.move_to(lanes[player_lane].position, [0.75,1,1.25][player_lane])
-	questions = Database.get_content("res://content/test_quiz.json")
+	questions = Database.get_content("res://content/module0_quiz.json")
 	prompts = questions.keys()
 
 func show_question():
@@ -55,7 +58,7 @@ func _on_Player_moving(direction):
 	var next_lane = player_lane + direction
 	if next_lane >= 0 and next_lane < lanes.size():
 		player_lane = next_lane
-	player.move_to(lanes[player_lane].position, [0.75,1,1.25][player_lane])
+	player.move_to(lanes[player_lane].position, [0.95,1,1.05][player_lane])
 
 func _on_Player_answer_question():
 	answer_question()
@@ -78,8 +81,8 @@ func _on_EndGameTimer_timeout():
 	game_going = false
 	$Game.hide()
 	$Camera/EndScreen.show()
-	$Camera/EndScreen/Score.text = "Score: " + String(score)
-	$Camera/EndScreen/QuizResult.text = "Quiz Result: " + String(_right_questions) + "/" + String(_total_questions)
+	final_quiz_result.text = "Score: " + String(score)
+	final_score_result.text = "Quiz Result: " + String(_right_questions) + "/" + String(_total_questions)
 
 
 func _on_Button_button_down():

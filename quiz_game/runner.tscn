@@ -1,11 +1,13 @@
-[gd_scene load_steps=22 format=2]
+[gd_scene load_steps=24 format=2]
 
+[ext_resource path="res://resources/fonts/default_font.tres" type="DynamicFont" id=1]
 [ext_resource path="res://quiz_game/Player.gd" type="Script" id=2]
 [ext_resource path="res://quiz_game/RunnerManager.gd" type="Script" id=3]
-[ext_resource path="res://resources/assets/frame.png" type="Texture" id=4]
+[ext_resource path="res://resources/fonts/tex_bolditalic.tres" type="DynamicFont" id=4]
 [ext_resource path="res://quiz_game/Lane.tscn" type="PackedScene" id=5]
 [ext_resource path="res://quiz_game/Lanes.gd" type="Script" id=6]
 [ext_resource path="res://resources/assets/Man.png" type="Texture" id=7]
+[ext_resource path="res://resources/fonts/tex_bold.tres" type="DynamicFont" id=8]
 
 [sub_resource type="RectangleShape2D" id=4]
 extents = Vector2( 200, 400 )
@@ -87,40 +89,21 @@ script = ExtResource( 3 )
 script = ExtResource( 6 )
 
 [node name="Label" type="RichTextLabel" parent="Game/Lanes"]
-margin_left = -10.0
-margin_top = -290.0
-margin_right = 490.0
-margin_bottom = -170.0
+margin_left = -146.0
+margin_top = -283.0
+margin_right = 497.0
+margin_bottom = -128.0
+custom_fonts/normal_font = ExtResource( 1 )
+scroll_active = false
 
 [node name="Lane1" parent="Game/Lanes" instance=ExtResource( 5 )]
-position = Vector2( -450, -150 )
-
-[node name="Sprite2" type="Sprite" parent="Game/Lanes/Lane1"]
-position = Vector2( 446, 23 )
-scale = Vector2( 60, 2.25 )
-z_index = -1
-z_as_relative = false
-texture = ExtResource( 4 )
+position = Vector2( -447, -84 )
 
 [node name="Lane2" parent="Game/Lanes" instance=ExtResource( 5 )]
-position = Vector2( -450, -30 )
-
-[node name="Sprite2" type="Sprite" parent="Game/Lanes/Lane2"]
-position = Vector2( 448, 31 )
-scale = Vector2( 60, 3 )
-z_index = -1
-z_as_relative = false
-texture = ExtResource( 4 )
+position = Vector2( -447, 42 )
 
 [node name="Lane3" parent="Game/Lanes" instance=ExtResource( 5 )]
-position = Vector2( -450, 130 )
-
-[node name="Sprite2" type="Sprite" parent="Game/Lanes/Lane3"]
-position = Vector2( 448, 31 )
-scale = Vector2( 60, 3.75 )
-z_index = -1
-z_as_relative = false
-texture = ExtResource( 4 )
+position = Vector2( -447, 166 )
 
 [node name="ObstacleTimer" type="Timer" parent="Game/Lanes"]
 wait_time = 0.6
@@ -151,19 +134,20 @@ anims/Run = SubResource( 3 )
 scale = Vector2( 1.1625, 1.14062 )
 frames = SubResource( 15 )
 animation = "run1"
+frame = 2
 speed_scale = 2.4
 playing = true
 
 [node name="QuestionTimer" type="Timer" parent="Game"]
-wait_time = 10.0
 one_shot = true
 autostart = true
 
 [node name="ScoreLabel" type="Label" parent="Game"]
 margin_left = -487.0
 margin_top = -275.0
-margin_right = -447.0
+margin_right = -361.0
 margin_bottom = -216.0
+custom_fonts/font = ExtResource( 4 )
 text = "0"
 
 [node name="EndGameTimer" type="Timer" parent="Game"]
@@ -177,26 +161,45 @@ visible = false
 anchor_right = 1.0
 anchor_bottom = 1.0
 
-[node name="Score" type="Label" parent="Camera/EndScreen"]
-anchor_right = 1.0
-anchor_bottom = 1.0
-margin_left = -370.0
-margin_top = -90.0
-margin_right = -292.0
-margin_bottom = -31.0
-
-[node name="QuizResult" type="Label" parent="Camera/EndScreen"]
-margin_left = -370.0
-margin_top = 15.0
-margin_right = -330.0
-margin_bottom = 74.0
-
 [node name="Button" type="Button" parent="Camera/EndScreen"]
 margin_left = -59.0
 margin_top = 187.0
 margin_right = 55.0
 margin_bottom = 252.0
 text = "Back"
+
+[node name="ColorRect" type="ColorRect" parent="Camera/EndScreen"]
+margin_left = -446.0
+margin_top = -92.0
+margin_right = 439.0
+margin_bottom = 166.0
+color = Color( 0.196078, 0.168627, 0.0980392, 1 )
+
+[node name="QuizResult" type="Label" parent="Camera/EndScreen/ColorRect"]
+unique_name_in_owner = true
+margin_left = 505.0
+margin_top = 96.0
+margin_right = 809.0
+margin_bottom = 199.0
+custom_fonts/font = ExtResource( 8 )
+
+[node name="Score" type="Label" parent="Camera/EndScreen/ColorRect"]
+unique_name_in_owner = true
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 106.0
+margin_top = 96.0
+margin_right = -583.0
+margin_bottom = -67.0
+custom_fonts/font = ExtResource( 8 )
+
+[node name="Label" type="Label" parent="Camera/EndScreen"]
+margin_left = -116.0
+margin_top = -221.0
+margin_right = 117.0
+margin_bottom = -156.0
+custom_fonts/font = ExtResource( 4 )
+text = "Quiz Over!"
 
 [connection signal="chose_answer" from="." to="Game/Lanes" method="_on_Runner_chose_answer"]
 [connection signal="show_question" from="." to="Game/Lanes" method="_on_Runner_show_question"]

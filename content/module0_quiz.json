@@ -1,0 +1,54 @@
+{
+
+  "The Success Loop refers to:":
+  {
+    "choices":
+    [ "Doing something well, feeling good because of it, and experiencing increased motivation and self-esteem.",
+      "When we struggle we may assume there is something wrong with us or that we're not good enough.",
+      "When we avoid challenging tasks, we don't improve."],
+    "answer": 0
+  },
+
+  "The problem with experiencing the Struggle Loop is:":
+  {
+    "choices":
+    [
+      "We improve in the areas we find challenging.",
+      "we have increased self-esteem.",
+      "We avoid opportunities in areas we find difficult, to overcome the challenges, and to grow."
+    ],
+    "answer": 2
+  },
+
+  "A growth mindset includes":
+  {
+    "choices":
+    [
+      "Giving up quickly.",
+      "Trying new strategies, not giving up, believing in my ability to be successful, and learning what works for me to be successful.",
+      "Fear of failing."
+    ],
+    "answer": 1
+  },
+
+  "It is possible to change from a fixed to a growth mindset.":
+  {
+    "choices":
+    [ 
+      "Yes, it's quick and easy to change my mindset.",
+      "Yes, with awareness and reflection, it is possible to change from a fixed to a growth mindset.",
+      "No, it's not possible."
+    ],
+    "answer": 1
+  },
+
+  "If you believe that you can succeed with effort, interest, and support, you can learn to:":
+  {
+    "choices":
+    [ "Bounce back from failure and use the experience to improve.",
+      "Upgrade your skills and address your challenges.",
+      "Both are correct."],
+    "answer": 2
+  }
+
+}

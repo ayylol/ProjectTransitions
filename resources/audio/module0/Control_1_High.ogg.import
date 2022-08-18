@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/Control_1_High.ogg-bce967eb05505dd08c8fceda40814a71.oggstr"
+
+[deps]
+
+source_file="res://resources/audio/module0/Control_1_High.ogg"
+dest_files=[ "res://.import/Control_1_High.ogg-bce967eb05505dd08c8fceda40814a71.oggstr" ]
+
+[params]
+
+loop=false
+loop_offset=0

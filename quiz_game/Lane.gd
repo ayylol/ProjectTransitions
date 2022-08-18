@@ -25,7 +25,7 @@ func spawn(speed : int):
 func show_text(msg: String):
 	text.show()
 	text.position = spawn_point.position
-	label.bbcode_text = "[color=#474920]" + msg + "[/color]"
+	label.bbcode_text = msg
 	text_tween.interpolate_property(
 		text, "position",
 		text.position, text_rest_pos.position, move_time, 

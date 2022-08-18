@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/CLB_H_7.ogg-6f156016227c9e58faa944ccc13d99ed.oggstr"
+
+[deps]
+
+source_file="res://resources/audio/module0/CLB_H_7.ogg"
+dest_files=[ "res://.import/CLB_H_7.ogg-6f156016227c9e58faa944ccc13d99ed.oggstr" ]
+
+[params]
+
+loop=false
+loop_offset=0
