@@ -2,13 +2,31 @@
 // Project Transition's Dialogue System Example/Documentation //
 ////////////////////////////////////////////////////////////////
 
-// [Quick JSON guide]
+/////////////////////////
+// [JSON syntax guide] //
+/////////////////////////
+// See: https://www.w3schools.com/js/js_json_datatypes.asp
 
+// NOTE:
+// Text editors made for editing code will likely have JSON syntax highlighting.
+// For example, vscode.
 
-// [Dialogue System]
+// NOTE:
+// JSON syntax does not support the use of comments, therefore to use this file
+// inside the game, use the attached remove_comments.py script to make a new file
+// without the comments. You can do this by running:
+// ./remove_comments.py documentation_commented.json documentation_content.json
+
+///////////////////////
+// [Dialogue System] //
+///////////////////////
+// Modules are contained within a dictionary, which has unique string keys,
+// referred to as "Labels", with a corresponding nested dictionary, referred
+// to as the "Content" of a given label.
+// The labels are used to find and use the content.
 
 {
-  // [Labels and Content]
+  // [Content]
 
   "intro":
   {
