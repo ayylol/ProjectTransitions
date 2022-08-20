@@ -23,8 +23,10 @@ onready var question_timer = $Game/QuestionTimer
 onready var end_game_timer = $Game/EndGameTimer
 onready var score_label = $Game/ScoreLabel
 
-onready var final_quiz_result = $"%QuizResult"
-onready var final_score_result = $"%Score"
+onready var final_quiz_result = $Camera/EndScreen/ColorRect/QuizResult
+onready var final_score_result = $Camera/EndScreen/ColorRect/Score
+#onready var final_quiz_result = $"%QuizResult"
+#onready var final_score_result = $"%Score"
 
 func _ready():
 	player_lane = int(lanes.size()/2)

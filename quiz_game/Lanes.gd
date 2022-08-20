@@ -21,11 +21,13 @@ var _last_pattern = 0
 var _was_hit = false
 
 onready var label = $Label
+onready var label_box = $ColorRect
 onready var obstacle_timer = $ObstacleTimer
 onready var lanes = get_tree().get_nodes_in_group("Lane")
 
 func _on_Runner_show_question(question, answers):
 	label.show()
+	label_box.show()
 	label.bbcode_text = question
 	var i = 0
 	for lane in lanes:
@@ -47,6 +49,7 @@ func _on_ObstacleTrash_area_entered(area):
 
 func _on_Runner_chose_answer(answer):
 	label.hide()
+	label_box.hide()
 	for lane in lanes:
 		lane.hide_text()
 
