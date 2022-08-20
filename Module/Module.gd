@@ -72,7 +72,7 @@ func _ready():
 func start():
 	#GameState.load_game()
 	load_flags("flags")
-	load_module("module0")
+	load_module("documentation")
 	update_menu(topic)
 
 func update_menu(label : String):
@@ -84,8 +84,7 @@ func update_menu(label : String):
 	# Check for correct formating
 	assert(label in _module_content, "label not in module")
 	var content = _module_content[label]
-	assert("text" in content, "No text in label") # probably doesn't need to be asserted
-	assert("choices" in content, "No choices in label") # ?
+	assert("choices" in content, "No choices in label")
 	
 	if "effect" in content:
 		for key in content["effect"]:

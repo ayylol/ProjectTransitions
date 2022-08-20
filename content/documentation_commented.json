@@ -1,0 +1,34 @@
+////////////////////////////////////////////////////////////////
+// Project Transition's Dialogue System Example/Documentation //
+////////////////////////////////////////////////////////////////
+
+// [Quick JSON guide]
+
+
+// [Dialogue System]
+
+{
+  // [Labels and Content]
+
+  "intro":
+  {
+    "text": "test text",
+    "choices":
+    [
+      {
+        "text": "{next}",
+        "label": "text_explained"
+      }
+    ]
+  }
+  // [Text] //
+
+  // [Choices] //
+
+  // [Conditional] //
+
+  // [Character/Emotion] //
+
+  // [Audio] //
+
+}
