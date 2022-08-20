@@ -4,7 +4,7 @@
   // If a flag has a boolean value they can be changed through the effect key
   // within a label in a module
   "flag1": true,
-  "flag2": false
+  "flag2": false,
 
   // A flag can also be a gdscript expression. see Expressions, and Flags under
   // [Choices] in the documentation_content_commented.json document

@@ -71,8 +71,8 @@ func _ready():
 
 func start():
 	#GameState.load_game()
-	load_flags("documentation_flags")
-	load_module("documentation")
+	load_flags("flags")
+	load_module("module0")
 	update_menu(topic)
 
 func update_menu(label : String):

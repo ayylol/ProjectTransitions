@@ -32,6 +32,8 @@
 // folder. Then, edit the "load_module" function call within start to use the 
 // part of the file name before the "_content.json" as an argument.
 // i.e., to load the file documentation_content.json use load_module("documentation")
+// The documentation_flags.json should be loaded along with this file with the load_flags
+// function in the start function as well
 
 {
   ///////////////
