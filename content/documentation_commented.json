@@ -25,12 +25,35 @@
 // to as the "Content" of a given label.
 // The labels are used to find and use the content.
 
-{
-  // [Content]
+// IMPORTANT:
+// Currently the specific module loaded into the game is defined in the "start"
+// function within the file "Module.gd". To Specify the module to be loaded
+// ensure that the json file ends with "_content.json" and is within the content
+// folder. Then, edit the "load_module" function call within start to use the 
+// part of the file name before the "_content.json" as an argument.
+// i.e., to load the file documentation_content.json use load_module("documentation")
 
+{
+  ///////////////
+  // [Content] //
+  ///////////////
+  // The content of a given label describes what will happen when the game goes to
+  // that label. These effects can relate to what is being displayed, like changing 
+  // the dialogue text, or to the state of the game, like editing the value of a flag.
+
+  // currently the following features are implemented into the content parsing:
+  // "text",        see [Text]
+  // "choices",     see [Choices]
+  // "conditional"  see [Conditional]
+  // "effect"       see [Effect]
+  // "character"    see [Character/Emotion]
+  // "emotion"      see [Character/Emotion]
+  // "audio"        see [Audio]
+
+  // The following is an example of a label:
   "intro":
   {
-    "text": "test text",
+    "text": "this is the intro",
     "choices":
     [
       {
@@ -38,15 +61,58 @@
         "label": "text_explained"
       }
     ]
-  }
+  },
+  ////////////
   // [Text] //
+  ////////////
+  // the value corresponding to "text" is used to alter the text in the bottom
+  // dialogue box.
 
+  // When reaching the following label the text "hello world" will appear at
+  // the bottom of the screen.
+  "text_explained":
+  {
+    "text": "hello world",
+    "choices":
+    [
+      {
+        "text": "{next}",
+        "label": "text_explained2"
+      }
+    ]
+  },
+  // Text can be formatted through the use of bbcode to add things such as
+  // movement effects, and colors.
+  "text_explained2":
+  {
+    "text": "[color=#8E5DE2][i]hello[/i][/color] [wave][b]world[/b][/wave]",
+    "choices":
+    [
+      {
+        "text": "{next}",
+        "label": "text_explained2"
+      }
+    ]
+  }
+
+  ///////////////
   // [Choices] //
+  ///////////////
 
+  ///////////////////
   // [Conditional] //
+  ///////////////////
 
+  //////////////
+  // [Effect] //
+  //////////////
+
+  /////////////////////////
   // [Character/Emotion] //
+  /////////////////////////
 
+  /////////////
   // [Audio] //
+  /////////////
 
 }

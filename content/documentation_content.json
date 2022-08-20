@@ -1,0 +1,35 @@
+{
+  "intro":
+  {
+    "text": "this is the intro",
+    "choices":
+    [
+      {
+        "text": "{next}",
+        "label": "text_explained"
+      }
+    ]
+  },
+  "text_explained":
+  {
+    "text": "hello world",
+    "choices":
+    [
+      {
+        "text": "{next}",
+        "label": "text_explained2"
+      }
+    ]
+  },
+  "text_explained2":
+  {
+    "text": "[color=#8E5DE2][i]hello[/i][/color] [wave][b]world[/b][/wave]",
+    "choices":
+    [
+      {
+        "text": "{next}",
+        "label": "text_explained2"
+      }
+    ]
+  }
+}
