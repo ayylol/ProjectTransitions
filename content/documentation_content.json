@@ -23,12 +23,313 @@
   },
   "text_explained2":
   {
-    "text": "[color=#8E5DE2][i]hello[/i][/color] [wave][b]world[/b][/wave]",
+    "text": "[color=#8E5DE2][i]hello[/i][/color] [color=aqua][wave][b]world[/b][/wave][/color]",
     "choices":
     [
       {
         "text": "{next}",
-        "label": "text_explained2"
+        "label": "choices_explained"
+      }
+    ]
+  },
+  "choices_explained":
+  {
+    "text": "This label has 2 choices.",
+    "choices":
+    [
+      {
+        "text": "choice 1",
+        "label": "choices_explained_o1"
+      },
+      {
+        "text": "choice 2",
+        "label": "choices_explained_o2"
+      }
+    ]
+  },
+  "choices_explained_o1":
+  {
+    "text": "you picked choice 1!",
+    "choices":
+    [
+      {
+        "text": "{next}",
+        "label": "choices_explained2"
+      }
+    ]
+  },
+  "choices_explained_o2":
+  {
+    "text": "you picked choice 2!",
+    "choices":
+    [
+      {
+        "text": "{next}",
+        "label": "choices_explained2"
+      }
+    ]
+  },
+  "choices_explained2":
+  {
+    "text": "No option box will show up.",
+    "choices":
+    [
+      {
+        "text": "{next}",
+        "label": "choices_explained3"
+      }
+    ]
+  },
+  "choices_explained3":
+  {
+    "text": "multiple next choices, will go to the first",
+    "choices":
+    [
+      {
+        "text": "{next}",
+        "label": "choices_explained4"
+      },
+      {
+        "text": "{next}",
+        "label": "final_quiz"
+      }
+    ]
+  },
+  "choices_explained4":
+  {
+    "text": "In quiz options 7 options will appear, and your response is saved.",
+    "choices":
+    [
+      {
+        "text": "{quiz}",
+        "group": "test_quiz", 
+        "name": "q1",         
+        "reversed": false,     
+        "label": "choices_explained5"
+      }
+    ]
+  },
+  "choices_explained5":
+  {
+    "text": "if a flag evaluates to false it will not be shown",
+    "choices":
+    [
+      {
+        "text": "Only this choice appears",
+        "label": "choices_explained6",
+        "flag": true 
+      },
+      {
+        "text": "This choice will not appear",
+        "label": "choices_explained6",
+        "flag": false
+      }
+    ]
+  },
+  "choices_explained6":
+  {
+    "text": "gdscript expressions can be used in strings",
+    "choices":
+    [
+      {
+        "text": "2 is greater than 1 so this choice appears",
+        "label": "choices_explained7",
+        "flag": "2 > 1"
+      },
+      {
+        "text": "true and false is false so this choice will not appear",
+        "label": "choices_explained7",
+        "flag": "true and false"
+      }
+    ]
+  },
+  "choices_explained7":
+  {
+    "text": "flags can be used in expressions",
+    "choices":
+    [
+      {
+        "text": "flag1 is true",
+        "label": "choices_explained8",
+        "flag": "{F}flag1"
+      },
+      {
+        "text": "flag1 is false",
+        "label": "choices_explained8",
+        "flag": "not {F}flag1"
+      }
+    ]
+  },
+  "choices_explained8":
+  {
+    "text": "Quiz results can be used in expressions.",
+    "choices":
+    [
+      {
+        "text": "You answered below 4 in the test quiz.",
+        "label": "rep_explained",
+        "flag": "{Q}test_quiz < 4"
+      },
+      {
+        "text": "You answered 4 or above in the test quiz.",
+        "label": "rep_explained",
+        "flag": "{Q}test_quiz >= 4"
+      }
+    ]
+  },
+  "final_quiz":
+  {
+    "text": "Next comes the final quiz.",
+    "choices":
+    [
+      {
+        "text": "{next}",
+        "label": "{quiz}"
+      }
+    ]
+  },
+  "rep_explained":
+  {
+    "character": "pompom",
+    "emotion": "dwayne",
+    "text": "The portrait of the character can be changed",
+    "choices":
+    [
+      {
+        "text": "{next}",
+        "label": "rep_explained2"
+      }
+    ]
+  },
+  "rep_explained2":
+  {
+    "emotion": "angry",
+    "text": "We now change the portrait without defining the character again",
+    "choices":
+    [
+      {
+        "text": "{next}",
+        "label": "audio_explained"
+      }
+    ]
+  },
+  "audio_explained":
+  {
+    "audio": "test_audio",
+    "text": "This label will play audio.",
+    "choices":
+    [
+      {
+        "text": "{next}",
+        "label": "conditional_explained"
+      }
+    ]
+  },
+  "conditional_explained":
+  {
+    "text": "This is the default text",
+    "conditional":
+    {
+      "true":
+      {
+        "text": "The condition in conditional is true, so the text is changed",
+        "emotion": "happy"
+      }
+    },
+    "choices":
+    [
+      {
+        "text": "{next}",
+        "label": "conditional_explained2"
+      }
+    ]
+  },
+  "conditional_explained2":
+  {
+    "text": "this is the default text",
+    "conditional":
+    {
+      "{Q}test_quiz < 3":
+      {
+        "text": "your answer was less than 3 on the quiz"
+      },
+      "{Q}test_quiz < 5":
+      {
+        "text": "your answer was less than 5 on the quiz"
+      },
+      "{Q}test_quiz <= 7":
+      {
+        "text": "your answer was less than or equal to 7 on the quiz"
+      },
+      "true":
+      {
+        "text": "this condition is never checked because the quiz result must be less than or equal to 7" 
+      }
+    },
+    "choices":
+    [
+      {
+        "text": "{next}",
+        "label": "effect_explained"
+      }
+    ]
+  },
+  "effect_explained":
+  {
+    "text": "flag1 is changed to false",
+    "choices":
+    [
+      {
+        "text": "{next}",
+        "label": "effect_explained2"
+      }
+    ],
+    "effect":
+    {
+      "flag1": false
+    }
+  },
+  "effect_explained2":
+  {
+    "text": "default text",
+    "conditional":
+    {
+      "not {F}flag1": 
+      {
+        "text":"flag1 is now not true"
+      }
+    },
+    "choices":
+    [
+      {
+        "text": "{next}",
+        "label": "effect explained3"
+      }
+    ],
+    "effect":
+    {
+      "flag2": "{Q}test_quiz > 3"
+    }
+  },
+  "effect_explained2":
+  {
+    "text": "default text",
+    "conditional":
+    {
+      "{F}flag2": 
+      {
+        "text":"flag2 is true, which means test_quiz was greater than 3"
+      },
+      "not {F}flag2": 
+      {
+        "text":"flag2 is not true, which means test_quiz was less than or equal to 3"
+      }
+    },
+    "choices":
+    [
+      {
+        "text": "{next}",
+        "label": "final_quiz"
       }
     ]
   }

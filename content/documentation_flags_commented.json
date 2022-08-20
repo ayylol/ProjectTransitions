@@ -1,0 +1,14 @@
+{
+  // flags must have a name and a value corresponding to them
+  
+  // If a flag has a boolean value they can be changed through the effect key
+  // within a label in a module
+  "flag1": true,
+  "flag2": false
+
+  // A flag can also be a gdscript expression. see Expressions, and Flags under
+  // [Choices] in the documentation_content_commented.json document
+  // Expression flags will be evaluated when they are referenced
+  // These flags cannot be changed through the effect key in a label
+  "expression_flag": "{F}flag1 and {F}flag2"
+}

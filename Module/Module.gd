@@ -71,7 +71,7 @@ func _ready():
 
 func start():
 	#GameState.load_game()
-	load_flags("flags")
+	load_flags("documentation_flags")
 	load_module("documentation")
 	update_menu(topic)
 
@@ -165,8 +165,11 @@ func get_label_vals(input: Dictionary, to_show: Dictionary):
 	if "emotion" in input:
 		to_show["emotion"] = input["emotion"]
 
-func eval(command: String) -> bool:
+func eval(command) -> bool:
 	#Getting Variables to replace
+	if typeof(command) == TYPE_BOOL:
+		return command
+	assert(typeof(command) == TYPE_STRING, "expression must be string or boolean")
 	var parsed = command
 	var regex = RegEx.new()
 	regex.compile("{[A-Z]}[a-zA-Z0-9_]+")

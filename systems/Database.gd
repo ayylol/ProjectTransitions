@@ -8,5 +8,4 @@ func get_content(file_path : String):
 	var text = file.get_as_text()
 	var content = parse_json(text)
 	file.close()
-	print(content)
 	return content

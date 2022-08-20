@@ -50,6 +50,8 @@
   // "emotion"      see [Character/Emotion]
   // "audio"        see [Audio]
 
+  // All features except "choices" are optional, labels will work without them
+
   // The following is an example of a label:
   "intro":
   {
@@ -82,37 +84,428 @@
     ]
   },
   // Text can be formatted through the use of bbcode to add things such as
-  // movement effects, and colors.
+  // movement effects, color, and bold or italic fonts.
+  // See: https://docs.godotengine.org/en/stable/tutorials/ui/bbcode_in_richtextlabel.html
+
+  // In the following label the word "hello" will be italicized and in a lilac
+  // color, while the word "world" will be bold, aqua-colored, and move in a 
+  // wave-like pattern.
   "text_explained2":
   {
-    "text": "[color=#8E5DE2][i]hello[/i][/color] [wave][b]world[/b][/wave]",
+    "text": "[color=#8E5DE2][i]hello[/i][/color] [color=aqua][wave][b]world[/b][/wave][/color]",
     "choices":
     [
       {
         "text": "{next}",
-        "label": "text_explained2"
+        "label": "choices_explained"
       }
     ]
-  }
+  },
 
   ///////////////
   // [Choices] //
   ///////////////
+  // The value corresponding to "choices" is an array of dictionaries.
+  // each entry contains at least a "label" which instructs the game,
+  // which label to display next if selected, and a "text" which instructs
+  // the game what to write for a given option. Like the text option, bbcode
+  // can be used to format the text.
+
+  // When reaching the following label two options will appear, one with the
+  // text "choice 1", and another with the text "choice 2". If the player
+  // chooses the first option they will be taken to the label "choices_explained_o1",
+  // and if they choose the second option they go to the "choices_explained_o2"
+  // label.
+  "choices_explained":
+  {
+    "text": "This label has 2 choices.",
+    "choices":
+    [
+      {
+        "text": "choice 1",
+        "label": "choices_explained_o1"
+      },
+      {
+        "text": "choice 2",
+        "label": "choices_explained_o2"
+      }
+    ]
+  },
+  "choices_explained_o1":
+  {
+    "text": "you picked choice 1!",
+    "choices":
+    [
+      {
+        "text": "{next}",
+        "label": "choices_explained2"
+      }
+    ]
+  },
+  "choices_explained_o2":
+  {
+    "text": "you picked choice 2!",
+    "choices":
+    [
+      {
+        "text": "{next}",
+        "label": "choices_explained2"
+      }
+    ]
+  },
+  // The text of an option can be changed to "{next}".
+  // When doing this an option box will not be displayed,
+  // instead a continue arrow will appear.
+  "choices_explained2":
+  {
+    "text": "No option box will show up.",
+    "choices":
+    [
+      {
+        "text": "{next}",
+        "label": "choices_explained3"
+      }
+    ]
+  },
+  // If there are multiple options with {next} as the text, the first will be used.
+  "choices_explained3":
+  {
+    "text": "multiple next choices, will go to the first",
+    "choices":
+    [
+      {
+        // This option will be the one selected
+        "text": "{next}",
+        "label": "choices_explained4"
+      },
+      {
+        // This option is ignored
+        "text": "{next}",
+        "label": "final_quiz"
+      }
+    ]
+  },
+  // If the text of an option is set to "{quiz}" 7 options will appear for the 
+  // player to choose from. Their answer is then saved in the corresponding 
+  // group and name, then the game will go to the label specified.
+  // quiz choice labels have special keys:
+  // "group" - group name for the quiz, used to access the quiz average
+  // "name" - question name, used for storing individual responses
+  // "reversed" - reverses the answers (if player picks 7 1 is stored, if they pick 1 7 is stored)
+  // group and name are required, while reversed defaults to false if not present.
+  "choices_explained4":
+  {
+    "text": "In quiz options 7 options will appear, and your response is saved.",
+    "choices":
+    [
+      {
+        "text": "{quiz}",
+        "group": "test_quiz", // group name must not contain any white-space
+        "name": "q1",         // if a quiz has the same group and name it will be overwritten with the new player-input
+        "reversed": false,     // Can be a boolean or a string corresponding to an expression
+        "label": "choices_explained5"
+      }
+    ]
+  },
+
+  // Expressions, and Flags
+  // The value of flag is an expression, which will be used to either
+  // show or hide options.
+  // literal json boolean values can be used, as well as strings
+  // corresponding to gdscript boolean expressions (with new syntax 
+  // for accessing flag variables and quiz results).
+  "choices_explained5":
+  {
+    "text": "if a flag evaluates to false it will not be shown",
+    "choices":
+    [
+      // The flag of the first choice evaluates to true, thus
+      // it will be shown. The second choice will not be shown
+      // however because the value of its flag is false.
+      {
+        "text": "Only this choice appears",
+        "label": "choices_explained6",
+        "flag": true 
+      },
+      {
+        "text": "This choice will not appear",
+        "label": "choices_explained6",
+        "flag": false
+      }
+    ]
+  },
+  // One can use gdscript expressions inside strings as the value for flag. 
+  // When the game reaches this label the flags will be evaluated to see if 
+  // they are true or false. Errors will default to false.
+  "choices_explained6":
+  {
+    "text": "gdscript expressions can be used in strings",
+    "choices":
+    [
+      {
+        "text": "2 is greater than 1 so this choice appears",
+        "label": "choices_explained7",
+        "flag": "2 > 1"
+      },
+      {
+        "text": "true and false is false so this choice will not appear",
+        "label": "choices_explained7",
+        "flag": "true and false"
+      }
+    ]
+  },
+  // Flags defined in the flags file can be used by putting "{F}" before their
+  // names within an expression.
+  "choices_explained7":
+  {
+    "text": "flags can be used in expressions",
+    "choices":
+    [
+      {
+        // Will display if flag1 is true
+        "text": "flag1 is true",
+        "label": "choices_explained8",
+        "flag": "{F}flag1"
+      },
+      {
+        // Will display if not flag1 is true
+        "text": "flag1 is false",
+        "label": "choices_explained8",
+        "flag": "not {F}flag1"
+      }
+    ]
+  },
+  // Quiz results can be used in expressions by putting "{Q}" before the
+  // group name of a quiz
+  "choices_explained8":
+  {
+    "text": "Quiz results can be used in expressions.",
+    "choices":
+    [
+      // {Q}test_quiz evaluates to the average of all the responses in the
+      // quiz group "test_quiz"
+      {
+        "text": "You answered below 4 in the test quiz.",
+        "label": "rep_explained",
+        "flag": "{Q}test_quiz < 4"
+      },
+      {
+        "text": "You answered 4 or above in the test quiz.",
+        "label": "rep_explained",
+        "flag": "{Q}test_quiz >= 4"
+      }
+    ]
+  },
+
+  // the label of a choice can also be the special value "{quiz}", which will 
+  // initiate the final quiz.
+
+  // Note: this label is not connected to the previous label in this document,
+  // like all the others.
+  "final_quiz":
+  {
+    "text": "Next comes the final quiz.",
+    "choices":
+    [
+      {
+        "text": "{next}",
+        "label": "{quiz}"
+      }
+    ]
+  },
+
+  /////////////////////////
+  // [Character/Emotion] //
+  /////////////////////////
+  
+  // The character and emotion keys change the representation of the character.
+  // The game will look for the file "resources/portraits/{character}/{emotion}.png",
+  // where {character} is the last valid value of "character", and {emotion} is 
+  // the last valid value for "emotion".
+  "rep_explained":
+  {
+    // This will change the portrait to the file "resources/portraits/pompom/dwayne.png"
+    "character": "pompom",
+    "emotion": "dwayne",
+    "text": "The portrait of the character can be changed",
+    "choices":
+    [
+      {
+        "text": "{next}",
+        "label": "rep_explained2"
+      }
+    ]
+  },
+  // Since the game uses the last valid value of character and emotion, one can
+  // change just one of those values to get a new portrait.
+  "rep_explained2":
+  {
+    // Here we look for pompom's angry portrait. we do not need to say what 
+    // character we are looking for again because that was previously defined.
+    "emotion": "angry",
+    "text": "We now change the portrait without defining the character again",
+    "choices":
+    [
+      {
+        "text": "{next}",
+        "label": "audio_explained"
+      }
+    ]
+  },
+
+  /////////////
+  // [Audio] //
+  /////////////
+  
+  // Audio can be played through the use of the "audio" key. The game will play
+  // the file at "resources/audio/{module_name}/{audio_name}.ogg", where
+  // "module_name" is the part before "_content.json" on the file name of the
+  // current module loaded, and "audio_name" is the value corresponding to the
+  // "audio" key.
+  "audio_explained":
+  {
+    // The file at "resources/audio/documentation/test_audio.ogg" will be played.
+    "audio": "test_audio",
+    "text": "This label will play audio.",
+    "choices":
+    [
+      {
+        "text": "{next}",
+        "label": "conditional_explained"
+      }
+    ]
+  },
 
   ///////////////////
   // [Conditional] //
   ///////////////////
+  
+  // The value of the conditional key can be used to change what is displayed
+  // given an expression.
+  // the text, audio, character, and emotion can be altered within the conditional
+  "conditional_explained":
+  {
+    "text": "This is the default text",
+    "conditional":
+    {
+      // The expression on the key will be evaluated, if it is true
+      // then the values in the corresponding dictionary will be used.
+      "true":
+      {
+        // Every key here is optional. Put whatever needs to be changed out of
+        // the available options.
+        "text": "The condition in conditional is true, so the text is changed",
+        "emotion": "happy"
+      }
+    },
+    "choices":
+    [
+      {
+        "text": "{next}",
+        "label": "conditional_explained2"
+      }
+    ]
+  },
+  // conditionals act as a stack of if-elseif statements. The first conditional that evaluates to true
+  // will be used and the rest will be ignored
+  "conditional_explained2":
+  {
+    "text": "this is the default text",
+    "conditional":
+    {
+      "{Q}test_quiz < 3":
+      {
+        "text": "your answer was less than 3 on the quiz"
+      },
+      "{Q}test_quiz < 5":
+      {
+        "text": "your answer was less than 5 on the quiz"
+      },
+      "{Q}test_quiz <= 7":
+      {
+        "text": "your answer was less than or equal to 7 on the quiz"
+      },
+      "true":
+      {
+        "text": "this condition is never checked because the quiz result must be less than or equal to 7" 
+      }
+    },
+    "choices":
+    [
+      {
+        "text": "{next}",
+        "label": "effect_explained"
+      }
+    ]
+  },
 
   //////////////
   // [Effect] //
   //////////////
 
-  /////////////////////////
-  // [Character/Emotion] //
-  /////////////////////////
-
-  /////////////
-  // [Audio] //
-  /////////////
-
+  // The effect flag can be used to change the saved value of flags defined in
+  // the flag file.
+  // Note: only boolean flags can be changed through effect, expression flags
+  // will not change
+  "effect_explained":
+  {
+    "text": "flag1 is changed to false",
+    "choices":
+    [
+      {
+        "text": "{next}",
+        "label": "effect_explained2"
+      }
+    ],
+    "effect":
+    {
+      // NOTE: the flag name itself is used, do not put {F} before the flag
+      "flag1": false
+    }
+  },
+  "effect_explained2":
+  {
+    "text": "default text",
+    "conditional":
+    {
+      "not {F}flag1": 
+      {
+        "text":"flag1 is now not true"
+      }
+    },
+    "choices":
+    [
+      {
+        "text": "{next}",
+        "label": "effect explained3"
+      }
+    ],
+    "effect":
+    {
+      // Expressions can also be used as the value to change to
+      "flag2": "{Q}test_quiz > 3"
+    }
+  },
+  "effect_explained2":
+  {
+    "text": "default text",
+    "conditional":
+    {
+      "{F}flag2": 
+      {
+        "text":"flag2 is true, which means test_quiz was greater than 3"
+      },
+      "not {F}flag2": 
+      {
+        "text":"flag2 is not true, which means test_quiz was less than or equal to 3"
+      }
+    },
+    "choices":
+    [
+      {
+        "text": "{next}",
+        "label": "final_quiz"
+      }
+    ]
+  }
 }
