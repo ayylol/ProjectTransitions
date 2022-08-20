@@ -485,8 +485,9 @@
     "effect":
     {
       // Expressions can also be used as the value to change to
-      "flag2": "{Q}test_quiz > 3"
-    }
+      "flag2": "{Q}test_quiz > 3",
+      "flag1": true // multiple flags can be changed at the same time
+    } 
   },
   "effect_explained2":
   {
